@@ -1,21 +1,23 @@
 import React from 'react'
 import {StatusBar} from 'expo-status-bar'
-import {StyleSheet, Text, View} from 'react-native'
+import styled from '@emotion/native'
 
 export default function App() {
 	return (
-		<View style={styles.container}>
-			<Text>Open up App.tsx to start working on your app!</Text>
+		<StyledView>
+			<StyledText>Open up App.tsx to start working on your app!</StyledText>
 			<StatusBar style="auto"/>
-		</View>
+		</StyledView>
 	)
 }
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-})
+const StyledView = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+`
+
+const StyledText = styled.Text`
+  font-size: 20px;
+  color: red;
+`
