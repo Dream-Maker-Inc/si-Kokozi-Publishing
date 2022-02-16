@@ -1,36 +1,37 @@
 import React from 'react'
-import styled from '@emotion/native'
+import {Image, SafeAreaView, ScrollView} from 'react-native'
+
 import {backgroundColor} from '../../../../common/Colors'
-import {ScrollView} from 'react-native'
 
-const Atti = () => <PageWrapper>
-	<ScrollView>
-		<BackgroundText
-			resizeMode="contain"
-			source={require('../../../../../assets/atti/all/blank-text.png')}/>
-		<BackgroundImage
-			resizeMode="contain"
-			source={require('../../../../../assets/atti/all/blank-image.png')}/>
-	</ScrollView>
-</PageWrapper>
-
-
-const PageWrapper = styled.SafeAreaView`
-  width: 100%;
-  flex: 1;
-  background-color: ${backgroundColor};
-`
-
-const BackgroundText = styled.Image`
-  width: 70%;
-  margin: 0 auto;
-  z-index: 1;
-`
-
-const BackgroundImage = styled.Image`
-  width: 100%;
-  height: 500px;
-  margin: -180px auto 0;
-`
+const Atti = () => <>
+	<SafeAreaView
+		style={{
+			width: '100%',
+			flex: 1,
+			backgroundColor: backgroundColor
+		}}>
+		<ScrollView>
+			<Image
+				style={{
+					width: '70%',
+					marginLeft: 'auto',
+					marginRight: 'auto',
+					zIndex: 1
+				}}
+				resizeMode="contain"
+				source={require('../../../../../assets/atti/all/blank-text.png')}/>
+			<Image
+				style={{
+					width: '100%',
+					height: 500,
+					marginTop: -180,
+					marginLeft: 'auto',
+					marginRight: 'auto'
+				}}
+				resizeMode="contain"
+				source={require('../../../../../assets/atti/all/blank-image.png')}/>
+		</ScrollView>
+	</SafeAreaView>
+</>
 
 export default Atti

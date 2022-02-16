@@ -2,7 +2,7 @@ import React from 'react'
 import {Text} from 'react-native'
 
 const StoryTopTabs = () => <>
-	<Text>TopTabs</Text>
+	<Text>이야기</Text>
 </>
 
 export default StoryTopTabs

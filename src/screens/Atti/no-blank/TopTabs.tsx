@@ -1,47 +1,53 @@
 import React, {useLayoutEffect} from 'react'
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
+import {Image, TouchableOpacity} from 'react-native'
+import {ProgressBar, Text} from 'react-native-paper'
+import styled from '@emotion/native'
+
+import {backgroundColor, placeholderTextColor, playerBackgroundColor, primaryColor} from '../../../common/Colors'
+
 import Atti from './atti/Atti'
 import MagicAtti from './magic-atti/MagicAtti'
 import All from './all/All'
-import {Image, TouchableOpacity} from 'react-native'
-import {backgroundColor, placeholderTextColor, primaryColor} from '../../../common/Colors'
-import styled from '@emotion/native'
-import {ProgressBar} from 'react-native-paper'
 
 const Tab = createMaterialTopTabNavigator()
 
+const HeaderLeftIcon = () => <>
+	<TouchableOpacity
+		onPress={() => alert('알림')}
+		style={{marginLeft: 10}}
+	>
+		<Image
+			resizeMode="contain"
+			style={{height: 20}}
+			source={require('../../../../assets/tab/notification.png')}
+		/>
+	</TouchableOpacity>
+</>
+
+const HeaderRightIcon = () => <>
+	<TouchableOpacity
+		onPress={() => alert('더보기')}
+		style={{marginRight: 20}}
+	>
+		<Image
+			resizeMode="contain"
+			style={{height: 20}}
+			source={require('../../../../assets/tab/more.png')}
+		/>
+	</TouchableOpacity>
+</>
+
+const NavigationOptions = {
+	headerStyle: {backgroundColor: '#FAEFE3'},
+	headerTintColor: {backgroundColor: '#109724'},
+	headerLeft: () => <HeaderLeftIcon/>,
+	headerRight: () => <HeaderRightIcon/>
+}
+
 const AttiTopTabs = ({navigation}) => {
 
-	useLayoutEffect(() => {
-		navigation.setOptions({
-			headerStyle: {backgroundColor: '#FAEFE3'},
-			headerTintColor: {backgroundColor: '#109724'},
-			headerLeft: () => (
-				<TouchableOpacity
-					onPress={() => alert('알림')}
-					style={{marginLeft: 10}}
-				>
-					<Image
-						resizeMode="contain"
-						style={{height: 20}}
-						source={require('../../../../assets/tab/notification.png')}
-					/>
-				</TouchableOpacity>
-			),
-			headerRight: () => (
-				<TouchableOpacity
-					onPress={() => alert('더보기')}
-					style={{marginRight: 20}}
-				>
-					<Image
-						resizeMode="contain"
-						style={{height: 20}}
-						source={require('../../../../assets/tab/more.png')}
-					/>
-				</TouchableOpacity>
-			)
-		})
-	})
+	useLayoutEffect(() => navigation.setOptions(NavigationOptions))
 
 	return <>
 
@@ -64,26 +70,44 @@ const AttiTopTabs = ({navigation}) => {
 		/>
 
 		<PlayContainer>
-			<ThumbnailImage
+			<Image
+				style={{width: 46}}
 				resizeMode="contain"
 				source={require('../../../../assets/atti/blank-thumbnail.png')}
 			/>
-			<ThumbnailText>하우스 안에 아띠를 넣어주세요</ThumbnailText>
+			<Text
+				style={{
+					marginLeft: 4,
+					color: placeholderTextColor
+				}}
+			>하우스 안에 아띠를 넣어주세요</Text>
 			<ControllerWrapper>
 				<TouchableOpacity>
-					<ControllerImage
+					<Image
+						style={{
+							width: 36,
+							marginRight: 10
+						}}
 						resizeMode="contain"
 						source={require('../../../../assets/atti/previous.png')}
 					/>
 				</TouchableOpacity>
 				<TouchableOpacity>
-					<ControllerImage
+					<Image
+						style={{
+							width: 36,
+							marginRight: 10
+						}}
 						resizeMode="contain"
 						source={require('../../../../assets/atti/next.png')}
 					/>
 				</TouchableOpacity>
 				<TouchableOpacity>
-					<ControllerImage
+					<Image
+						style={{
+							width: 36,
+							marginRight: 10
+						}}
 						resizeMode="contain"
 						source={require('../../../../assets/atti/playlist.png')}
 					/>
@@ -103,16 +127,7 @@ const PlayContainer = styled.View`
 
   height: 60px;
   padding: 0 10px;
-  background-color: white;
-`
-
-const ThumbnailImage = styled.Image`
-  width: 46px;
-`
-
-const ThumbnailText = styled.Text`
-  margin-left: 4px;
-  color: ${placeholderTextColor};
+  background-color: ${playerBackgroundColor};
 `
 
 const ControllerWrapper = styled.View`
@@ -123,11 +138,6 @@ const ControllerWrapper = styled.View`
   flex-direction: row;
 
   right: 10px;
-`
-
-const ControllerImage = styled.Image`
-  width: 36px;
-  margin-right: 10px;
 `
 
 export default AttiTopTabs

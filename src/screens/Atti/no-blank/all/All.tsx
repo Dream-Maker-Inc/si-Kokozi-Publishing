@@ -1,15 +1,21 @@
 import React, {useState} from 'react'
-import styled from '@emotion/native'
-import {backgroundColor, secondaryColor} from '../../../../common/Colors'
 import {FlatList, Text} from 'react-native'
+import styled from '@emotion/native'
+
+import {backgroundColor, playerBackgroundColor, secondaryColor} from '../../../../common/Colors'
 
 const All = () => {
 	const [dataSource, setDataSource] = useState([])
 
 	useState(() => {
-		const items = Array.apply(null, Array(60)).map((v, i) => {
-			return {id: i, src: '../../../../../assets/atti/all/thumbnail.png'}
-		})
+		const items = Array
+			.apply(null, Array(10))
+			.map((v, i) => {
+				return {
+					id: i,
+					src: '../../../../../assets/atti/all/thumbnail.png'
+				}
+			})
 		setDataSource(items)
 	}, [])
 
@@ -23,9 +29,25 @@ const All = () => {
 						resizeMode="center"
 						source={require('../../../../../assets/atti/all/thumbnail.png')}
 					/>
-					<ItemText>
-						<Text>코코지</Text>
-					</ItemText>
+					<ItemTextContainer
+						style={{
+							shadowColor: '#999',
+							shadowOffset: {
+								width: 0,
+								height: 2,
+							},
+							shadowOpacity: 0.25,
+							shadowRadius: 3.84,
+
+							elevation: 5,
+						}}>
+						<Text
+							style={{
+								fontWeight: 'bold',
+								textAlign: 'center'
+							}}
+						>코코지</Text>
+					</ItemTextContainer>
 				</ListItem>
 			)}
 		/>
@@ -33,18 +55,13 @@ const All = () => {
 }
 
 const PageWrapper = styled.SafeAreaView`
-  flex: 1;
-  padding: 10px;
   background-color: ${backgroundColor};
 `
 
 const ListItem = styled.TouchableOpacity`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
+  flex-grow: 1;
 
-  margin: 10px;
+  margin: 14px;
 
   border-radius: 20px;
   background-color: ${secondaryColor};
@@ -55,16 +72,14 @@ const ItemImage = styled.Image`
   height: 180px;
 `
 
-const ItemText = styled.View`
+const ItemTextContainer = styled.View`
   display: flex;
-  align-items: center;
   justify-content: center;
 
   width: 100%;
   height: 60px;
 
-  font-weight: bold;
-  background-color: white;
+  background-color: ${playerBackgroundColor};
 
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;

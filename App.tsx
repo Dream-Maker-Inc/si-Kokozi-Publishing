@@ -9,7 +9,7 @@ import RegisterSuccess from './src/screens/Atti/blank/magic-atti/sub/RegisterSuc
 
 const App = () => <>
 	{/*<BottomTabs/>*/}
-	<RegisterSuccess/>
+	<BottomTabs/>
 </>
 
 export default App
