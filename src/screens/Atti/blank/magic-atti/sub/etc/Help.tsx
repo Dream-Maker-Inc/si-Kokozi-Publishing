@@ -1,6 +1,6 @@
 import React from 'react'
 import {Image, StatusBar, View} from 'react-native'
-import {backgroundColor, primaryColor, textCaptionColor, textDarkColor} from '../../../../../common/Colors'
+import {backgroundColor, primaryColor, textCaptionColor, textDarkColor} from '../../../../../../common/Colors'
 import styled from '@emotion/native'
 import {Caption, Divider, Paragraph, Subheading, Title} from 'react-native-paper'
 
@@ -10,7 +10,7 @@ const Help = () => <PageWrapper>
 			<Image
 				resizeMode="contain"
 				style={{height: '40%'}}
-				source={require('../../../../../../assets/atti/register/back.png')}
+				source={require('../../../../../../../assets/atti/register/back.png')}
 			/>
 		</BackButtonContainer>
 		<HeaderTitle>
