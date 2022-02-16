@@ -1,23 +1,9 @@
 import React from 'react'
-import {StatusBar} from 'expo-status-bar'
-import styled from '@emotion/native'
+import BottomTabs from './src/screens/BottomTabs'
 
-export default function App() {
-	return (
-		<StyledView>
-			<StyledText>Open up App.tsx to start working on your app!</StyledText>
-			<StatusBar style="auto"/>
-		</StyledView>
-	)
-}
+const App = () => <>
+	<BottomTabs/>
+	{/*<Text>asdf</Text>*/}
+</>
 
-const StyledView = styled.View`
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-`
-
-const StyledText = styled.Text`
-  font-size: 20px;
-  color: red;
-`
+export default App
