@@ -2,7 +2,7 @@ import * as React from 'react'
 import {NavigationContainer} from '@react-navigation/native'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import KokoziHouse from './kokozi-house/KokoziHouse'
-import AttiTopTabs from './Atti/TopTabs'
+import BlankAttiTopTabs from './Atti/blank/BlankTopTabs'
 import StoryTopTabs from './story/StoryTopTabs'
 import MyPage from './mypage/MyPage'
 import {primaryColor} from '../common/Colors'
@@ -28,7 +28,7 @@ export const BottomTabs = () => {
 					tabBarActiveTintColor: primaryColor
 				}}>
 				<Tab.Screen name="코코지 하우스" component={KokoziHouse}/>
-				<Tab.Screen name="아띠" component={AttiTopTabs}/>
+				<Tab.Screen name="아띠" component={BlankAttiTopTabs}/>
 				<Tab.Screen name="이야기" component={StoryTopTabs}/>
 				<Tab.Screen name="마이페이지" component={MyPage}/>
 			</Tab.Navigator>

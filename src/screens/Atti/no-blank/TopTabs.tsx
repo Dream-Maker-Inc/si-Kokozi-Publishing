@@ -4,8 +4,9 @@ import Atti from './atti/Atti'
 import MagicAtti from './magic-atti/MagicAtti'
 import All from './all/All'
 import {Image, TouchableOpacity} from 'react-native'
-import {backgroundColor, placeholderTextColor, primaryColor} from '../../common/Colors'
+import {backgroundColor, placeholderTextColor, primaryColor} from '../../../common/Colors'
 import styled from '@emotion/native'
+import {ProgressBar} from 'react-native-paper'
 
 const Tab = createMaterialTopTabNavigator()
 
@@ -23,7 +24,7 @@ const AttiTopTabs = ({navigation}) => {
 					<Image
 						resizeMode="contain"
 						style={{height: 20}}
-						source={require('../../../assets/tab/notification.png')}
+						source={require('../../../../assets/tab/notification.png')}
 					/>
 				</TouchableOpacity>
 			),
@@ -35,7 +36,7 @@ const AttiTopTabs = ({navigation}) => {
 					<Image
 						resizeMode="contain"
 						style={{height: 20}}
-						source={require('../../../assets/tab/more.png')}
+						source={require('../../../../assets/tab/more.png')}
 					/>
 				</TouchableOpacity>
 			)
@@ -43,6 +44,7 @@ const AttiTopTabs = ({navigation}) => {
 	})
 
 	return <>
+
 		<Tab.Navigator
 			screenOptions={{
 				tabBarLabelStyle: {fontWeight: 'bold'},
@@ -54,33 +56,41 @@ const AttiTopTabs = ({navigation}) => {
 			<Tab.Screen name="아띠" component={Atti}/>
 			<Tab.Screen name="매직 아띠" component={MagicAtti}/>
 		</Tab.Navigator>
+
+		<ProgressBar
+			progress={0.5}
+			color={primaryColor}
+			style={{backgroundColor: '#CEC0AF'}}
+		/>
+
 		<PlayContainer>
 			<ThumbnailImage
 				resizeMode="contain"
-				source={require('../../../assets/atti/blank-thumbnail.png')}
+				source={require('../../../../assets/atti/blank-thumbnail.png')}
 			/>
 			<ThumbnailText>하우스 안에 아띠를 넣어주세요</ThumbnailText>
 			<ControllerWrapper>
 				<TouchableOpacity>
 					<ControllerImage
 						resizeMode="contain"
-						source={require('../../../assets/atti/previous.png')}
+						source={require('../../../../assets/atti/previous.png')}
 					/>
 				</TouchableOpacity>
 				<TouchableOpacity>
 					<ControllerImage
 						resizeMode="contain"
-						source={require('../../../assets/atti/next.png')}
+						source={require('../../../../assets/atti/next.png')}
 					/>
 				</TouchableOpacity>
 				<TouchableOpacity>
 					<ControllerImage
 						resizeMode="contain"
-						source={require('../../../assets/atti/playlist.png')}
+						source={require('../../../../assets/atti/playlist.png')}
 					/>
 				</TouchableOpacity>
 			</ControllerWrapper>
 		</PlayContainer>
+
 	</>
 }
 
@@ -94,9 +104,6 @@ const PlayContainer = styled.View`
   height: 60px;
   padding: 0 10px;
   background-color: white;
-
-  border-top-width: 3px;
-  border-top-color: #CEC0AF;
 `
 
 const ThumbnailImage = styled.Image`

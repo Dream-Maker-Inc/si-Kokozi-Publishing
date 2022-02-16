@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {backgroundColor, primaryColor} from '../../../common/Colors'
+import {backgroundColor, primaryColor} from '../../../../common/Colors'
 import PagerView from 'react-native-pager-view'
 import {View} from 'react-native'
 
@@ -11,10 +11,10 @@ const MagicAtti = () => <PageWrapper>
 		<View>
 			<StyledText
 				resizeMode="contain"
-				source={require('../../../../assets/atti/magic-atti/blank-text-1.png')}/>
+				source={require('../../../../../assets/atti/magic-atti/blank-text-1.png')}/>
 			<StyledImage
 				resizeMode="contain"
-				source={require('../../../../assets/atti/magic-atti/blank-image-1.png')}/>
+				source={require('../../../../../assets/atti/magic-atti/blank-image-1.png')}/>
 			<StyledButton>
 				<StyledButtonText>매직아띠 등록하기</StyledButtonText>
 			</StyledButton>
@@ -23,10 +23,10 @@ const MagicAtti = () => <PageWrapper>
 			<StyledText
 				style={{width: '60%'}}
 				resizeMode="contain"
-				source={require('../../../../assets/atti/magic-atti/blank-text-2.png')}/>
+				source={require('../../../../../assets/atti/magic-atti/blank-text-2.png')}/>
 			<StyledImage
 				resizeMode="contain"
-				source={require('../../../../assets/atti/magic-atti/blank-image-2.png')}/>
+				source={require('../../../../../assets/atti/magic-atti/blank-image-2.png')}/>
 			<StyledButton>
 				<StyledButtonText>매직아띠 등록하기</StyledButtonText>
 			</StyledButton>
