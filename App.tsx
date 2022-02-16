@@ -1,9 +1,10 @@
 import React from 'react'
-import BottomTabs from './src/screens/BottomTabs'
+import RegisterFirst from './src/screens/Atti/blank/magic-atti/sub/RegisterFirst'
+import Help from './src/screens/Atti/blank/magic-atti/sub/Help'
 
 const App = () => <>
-	<BottomTabs/>
-	{/*<Text>asdf</Text>*/}
+	{/*<BottomTabs/>*/}
+	<Help/>
 </>
 
 export default App
