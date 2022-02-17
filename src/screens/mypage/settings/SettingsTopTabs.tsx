@@ -9,7 +9,7 @@ import Notice from './Notice'
 
 const Tab = createMaterialTopTabNavigator()
 
-const TopTabs = () => <>
+const SettingsTopTabs = () => <>
 	<NavigationContainer>
 		<HeaderBack title={'알림'}/>
 		<Tab.Navigator
@@ -25,4 +25,4 @@ const TopTabs = () => <>
 	</NavigationContainer>
 </>
 
-export default TopTabs
+export default SettingsTopTabs
