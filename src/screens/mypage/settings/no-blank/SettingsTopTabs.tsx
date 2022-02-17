@@ -1,10 +1,10 @@
 import React from 'react'
 import {NavigationContainer} from '@react-navigation/native'
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
-import {backgroundColor, primaryColor} from '../../../common/Colors'
+import {backgroundColor, primaryColor} from '../../../../common/Colors'
 import Notification from './Notification'
 import {StatusBar} from 'react-native'
-import HeaderBack from '../../../components/header/HeaderBack'
+import HeaderBack from '../../../../components/header/HeaderBack'
 import Notice from './Notice'
 
 const Tab = createMaterialTopTabNavigator()

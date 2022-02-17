@@ -1,10 +1,8 @@
 import React from 'react'
-import BottomTabs from './src/screens/BottomTabs'
-import MyPage from './src/screens/mypage/MyPage'
-import SettingsTopTabs from './src/screens/mypage/settings/SettingsTopTabs'
+import SettingsBlankTopTabs from './src/screens/mypage/settings/blank/SettingsBlankTopTabs'
 
 const App = () => <>
-	<SettingsTopTabs/>
+	<SettingsBlankTopTabs/>
 </>
 
 export default App

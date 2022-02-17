@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from '@emotion/native'
 import {Paragraph, Subheading} from 'react-native-paper'
-import {backgroundColor, primaryColor, secondaryColor, textDarkColor} from '../../../common/Colors'
+import {backgroundColor, primaryColor, secondaryColor, textDarkColor} from '../../../../common/Colors'
 import {FlatList} from 'react-native'
-import {noticeData, notificationData} from './data/data'
+import {notificationData} from './data/data'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -57,14 +57,14 @@ const RenderItem = ({item}) => <>
 			<ItemTitle>{item.title}</ItemTitle>
 			<ItemContent>{item.content}</ItemContent>
 		</ItemTextContainer>
-		<Arrow source={require('../../../../assets/mypage/arrow-right.png')}/>
+		<Arrow source={require('../../../../../assets/mypage/arrow-right.png')}/>
 	</ListItem>
 </>
 
-const Notice = () => {
+const Notification = () => {
 	return <PageWrapper>
-		<FlatList data={noticeData} renderItem={RenderItem}/>
+		<FlatList data={notificationData} renderItem={RenderItem}/>
 	</PageWrapper>
 }
 
-export default Notice
+export default Notification
