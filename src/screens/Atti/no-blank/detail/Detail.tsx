@@ -9,7 +9,7 @@ import {
 	textCaptionColor,
 	textDarkColor
 } from '../../../../common/Colors'
-import {Image, StatusBar} from 'react-native'
+import {Image, StatusBar, StyleSheet} from 'react-native'
 import {Button, Headline, Subheading, Title} from 'react-native-paper'
 
 const ProfileWrapper = styled.View`
@@ -78,17 +78,7 @@ const Detail = () => <>
 			}}
 		>호기</Title>
 		<LicenseContainer
-			style={{
-				shadowColor: '#999',
-				shadowOffset: {
-					width: 0,
-					height: 2,
-				},
-				shadowOpacity: 0.25,
-				shadowRadius: 3.84,
-
-				elevation: 5,
-			}}>
+			style={styles.container}>
 			<Image
 				resizeMode="contain"
 				style={{width: 50, height: 50}}
@@ -111,5 +101,19 @@ const Detail = () => <>
 	</StoryWrapper>
 	<StatusBar barStyle="dark-content" backgroundColor={backgroundSecondaryColor}/>
 </>
+
+const styles = StyleSheet.create({
+	container: {
+		shadowColor: '#999',
+		shadowOffset: {
+			width: 0,
+			height: 2,
+		},
+		shadowOpacity: 0.25,
+		shadowRadius: 3.84,
+
+		elevation: 5,
+	}
+})
 
 export default Detail

@@ -18,6 +18,15 @@ const Body = styled.View`
   flex: 1;
 `
 
+const ImageText = styled.Image`
+  margin-top: 40px;
+`
+
+const ThumbImage = styled.Image`
+  height: 260px;
+  margin-top: 100px;
+`
+
 const ConfirmButton = styled(Button)`
   margin-top: 140px;
   padding-top: 6px;
@@ -27,6 +36,11 @@ const ConfirmButton = styled(Button)`
   width: 94%;
 `
 
+const HeadlineText = styled(Headline)`
+  color: white;
+  background-color: ${backgroundColor};
+`
+
 const CannotFind = () => <PageWrapper>
 	<HeaderClose title="매직 아띠 등록"/>
 	<Body>
@@ -34,18 +48,16 @@ const CannotFind = () => <PageWrapper>
 			resizeMode="contain"
 			source={require('../../../../../../../assets/atti/register/step1.png')}
 		/>
-		<Image
-			style={{marginTop: 40}}
+		<ImageText
 			resizeMode="contain"
 			source={require('../../../../../../../assets/atti/register/error/cannot-find-text.png')}
 		/>
-		<Image
-			style={{height: 260, marginTop: 100}}
+		<ThumbImage
 			resizeMode="center"
 			source={require('../../../../../../../assets/atti/register/image1.png')}
 		/>
 		<ConfirmButton mode="contained">
-			<Headline style={{color: 'white', fontWeight: 'bold'}}>올렸어요</Headline>
+			<HeadlineText>올렸어요</HeadlineText>
 		</ConfirmButton>
 	</Body>
 

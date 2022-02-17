@@ -1,5 +1,4 @@
 import React from 'react'
-import {Title} from 'react-native-paper'
 import {primaryColor} from '../../common/Colors'
 import styled from '@emotion/native'
 
@@ -24,6 +23,11 @@ const HeaderTitle = styled.View`
   height: 100%;
 `
 
+const HeaderTitleText = styled.Text`
+  color: ${primaryColor};
+  font-weight: bold;
+`
+
 const CloseButtonContainer = styled.TouchableOpacity`
   position: absolute;
 
@@ -46,7 +50,7 @@ type HeaderCancelModel = {
 const HeaderClose = (props: HeaderCancelModel) => <>
 	<Header>
 		<HeaderTitle>
-			<Title style={{color: primaryColor, fontWeight: 'bold'}}>{props.title}</Title>
+			<HeaderTitleText>{props.title}</HeaderTitleText>
 		</HeaderTitle>
 		<CloseButtonContainer>
 			<CloseButton

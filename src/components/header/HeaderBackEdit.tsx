@@ -1,5 +1,4 @@
 import React from 'react'
-import {Image} from 'react-native'
 import {Title} from 'react-native-paper'
 import {primaryColor} from '../../common/Colors'
 import styled from '@emotion/native'
@@ -25,6 +24,11 @@ const HeaderTitle = styled.View`
   height: 100%;
 `
 
+const HeaderTitleText = styled(Title)`
+  color: ${primaryColor};
+  font-weight: bold;
+`
+
 const BackButtonContainer = styled.TouchableOpacity`
   position: absolute;
 
@@ -34,6 +38,10 @@ const BackButtonContainer = styled.TouchableOpacity`
 
   left: 20px;
   height: 100%;
+`
+
+const BackButton = styled.Image`
+  width: 40%;
 `
 
 const EditButtonContainer = styled.TouchableOpacity`
@@ -53,14 +61,13 @@ type HeaderBackEditModel = {
 const HeaderBackEdit = (props: HeaderBackEditModel) => <>
 	<Header>
 		<BackButtonContainer>
-			<Image
+			<BackButton
 				resizeMode="contain"
-				style={{height: '40%'}}
 				source={require('../../../assets/atti/register/back.png')}
 			/>
 		</BackButtonContainer>
 		<HeaderTitle>
-			<Title style={{color: primaryColor, fontWeight: 'bold'}}>{props.title}</Title>
+			<HeaderTitleText style={{color: primaryColor, fontWeight: 'bold'}}>{props.title}</HeaderTitleText>
 		</HeaderTitle>
 		<EditButtonContainer>
 			<Title>편집</Title>

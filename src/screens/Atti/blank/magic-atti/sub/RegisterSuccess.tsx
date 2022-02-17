@@ -18,6 +18,41 @@ const Body = styled.View`
   flex: 1;
 `
 
+const SuccessText = styled.Image`
+  margin-top: 40px;
+  width: 50%;
+`
+
+const SuccessImage = styled.Image`
+  height: 260px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+`
+
+const ConfirmButton = styled(Button)`
+  width: 94%;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: ${primaryColor};
+  border-radius: 10px;
+`
+
+const ButtonText = styled(Paragraph)`
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+`
+
+const CaptionView = styled(TouchableOpacity)`
+  margin-top: 20px;
+`
+
+const CaptionText = styled(Paragraph)`
+  color: ${primaryColor};
+  font-weight: bold;
+`
+
 const RegisterSuccess = () => <PageWrapper>
 	<HeaderClose title="매직 아띠 등록"/>
 	<Body>
@@ -25,42 +60,20 @@ const RegisterSuccess = () => <PageWrapper>
 			resizeMode="contain"
 			source={require('../../../../../../assets/atti/register/success-step.png')}
 		/>
-		<Image
-			style={{marginTop: 40, width: '50%'}}
+		<SuccessText
 			resizeMode="contain"
 			source={require('../../../../../../assets/atti/register/success-text.png')}
 		/>
-		<Image
-			style={{height: 260, marginTop: 100, marginBottom: 100}}
+		<SuccessImage
 			resizeMode="contain"
 			source={require('../../../../../../assets/atti/register/success-image.png')}
 		/>
-		<Button
-			style={{
-				width: '94%',
-				marginTop: 20,
-				paddingTop: 10,
-				paddingBottom: 10,
-				backgroundColor: primaryColor,
-				borderRadius: 10,
-			}}
-			mode="contained">
-			<Paragraph
-				style={{
-					color: 'white',
-					fontWeight: 'bold',
-					fontSize: 20
-				}}
-			> 플레이리스트 만들기 </Paragraph>
-		</Button>
-		<TouchableOpacity style={{marginTop: 20}}>
-			<Paragraph
-				style={{
-					color: primaryColor,
-					fontWeight: 'bold'
-				}}
-			>나중에 할게요</Paragraph>
-		</TouchableOpacity>
+		<ConfirmButton mode="contained">
+			<ButtonText> 플레이리스트 만들기 </ButtonText>
+		</ConfirmButton>
+		<CaptionView>
+			<CaptionText>나중에 할게요</CaptionText>
+		</CaptionView>
 	</Body>
 
 	<StatusBar barStyle="dark-content" backgroundColor={backgroundColor}/>

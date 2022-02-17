@@ -18,6 +18,27 @@ const Body = styled.View`
   flex: 1;
 `
 
+const TitleText = styled.Image`
+  margin-top: 40px;
+`
+
+const TitleImage = styled.Image`
+  height: 260px;
+  margin-top: 100px;
+`
+
+const CaptionText = styled(Caption)`
+  width: 100%;
+  text-align: left;
+  margin-left: 30px;
+`
+
+const Input = styled(TextInput)`
+  width: 94%;
+  height: 50px;
+  border-radius: 20px;
+`
+
 const ConfirmButton = styled(Button)`
   width: 94%;
   margin-top: 20px;
@@ -27,6 +48,12 @@ const ConfirmButton = styled(Button)`
   border-radius: 10px;
 `
 
+const ButtonText = styled(Paragraph)`
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+`
+
 const RegisterSecond = () => <PageWrapper>
 	<HeaderClose title="매직 아띠 등록"/>
 	<Body>
@@ -34,40 +61,21 @@ const RegisterSecond = () => <PageWrapper>
 			resizeMode="contain"
 			source={require('../../../../../../assets/atti/register/step2.png')}
 		/>
-		<Image
-			style={{marginTop: 40}}
+		<TitleText
 			resizeMode="contain"
 			source={require('../../../../../../assets/atti/register/title2.png')}
 		/>
-		<Image
-			style={{height: 260, marginTop: 100}}
+		<TitleImage
 			resizeMode="center"
 			source={require('../../../../../../assets/atti/register/image2.png')}
 		/>
-		<Caption
-			style={{
-				width: '100%',
-				textAlign: 'left',
-				marginLeft: 30
-			}}
-		>매직아띠 이름</Caption>
-		<TextInput
-			style={{
-				width: '94%',
-				height: 50,
-				borderRadius: 20
-			}}
+		<CaptionText>매직아띠 이름</CaptionText>
+		<Input
 			mode="outlined"
 			placeholder="공백 포함 8자"
 		/>
 		<ConfirmButton mode="contained">
-			<Paragraph
-				style={{
-					color: 'white',
-					fontWeight: 'bold',
-					fontSize: 20
-				}}
-			> 매직아띠 등록 </Paragraph>
+			<ButtonText> 매직아띠 등록 </ButtonText>
 		</ConfirmButton>
 	</Body>
 

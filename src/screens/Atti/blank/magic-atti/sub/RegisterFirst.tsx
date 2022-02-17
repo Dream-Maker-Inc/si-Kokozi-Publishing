@@ -19,6 +19,21 @@ const Body = styled.View`
   flex: 1;
 `
 
+const TitleText = styled.Image`
+  margin-top: 40px;
+`
+
+const TitleImage = styled.Image`
+  height: 260px;
+  margin-top: 100px;
+`
+
+const SubHeadingText = styled(Subheading)`
+  margin-top: 140px;
+  color: ${primaryColor};
+  font-weight: bold;
+`
+
 const RegisterFirst = () => <PageWrapper>
 	<HeaderClose title="매직 아띠 등록"/>
 	<Body>
@@ -26,17 +41,15 @@ const RegisterFirst = () => <PageWrapper>
 			resizeMode="contain"
 			source={require('../../../../../../assets/atti/register/step1.png')}
 		/>
-		<Image
-			style={{marginTop: 40}}
+		<TitleText
 			resizeMode="contain"
 			source={require('../../../../../../assets/atti/register/title1.png')}
 		/>
-		<Image
-			style={{height: 260, marginTop: 100}}
+		<TitleImage
 			resizeMode="center"
 			source={require('../../../../../../assets/atti/register/image1.png')}
 		/>
-		<Subheading style={{marginTop: 140, color: primaryColor, fontWeight: 'bold'}}> 도움이 필요해요 </Subheading>
+		<SubHeadingText> 도움이 필요해요 </SubHeadingText>
 	</Body>
 
 	<StatusBar barStyle="dark-content" backgroundColor={backgroundColor}/>

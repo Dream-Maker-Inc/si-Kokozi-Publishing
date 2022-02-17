@@ -12,6 +12,10 @@ const PageWrapper = styled.SafeAreaView`
   background-color: ${backgroundColor};
 `
 
+const ViewPager = styled(PagerView)`
+  flex: 1;
+`
+
 const StyledText = styled.Image`
   width: 50%;
   margin: 14% auto 0;
@@ -44,10 +48,12 @@ const StyledImage = styled.Image`
   height: 50%;
 `
 
+const SecondText = styled.Text`
+  width: 60%;
+`
+
 const MagicAtti = () => <PageWrapper>
-	<PagerView
-		style={{flex: 1}}
-		showPageIndicator>
+	<ViewPager showPageIndicator>
 		<View>
 			<StyledText
 				resizeMode="contain"
@@ -60,8 +66,7 @@ const MagicAtti = () => <PageWrapper>
 			</StyledButton>
 		</View>
 		<View>
-			<StyledText
-				style={{width: '60%'}}
+			<SecondText
 				resizeMode="contain"
 				source={require('../../../../../assets/atti/magic-atti/blank-text-2.png')}/>
 			<StyledImage
@@ -71,7 +76,7 @@ const MagicAtti = () => <PageWrapper>
 				<StyledButtonText>매직아띠 등록하기</StyledButtonText>
 			</StyledButton>
 		</View>
-	</PagerView>
+	</ViewPager>
 </PageWrapper>
 
 export default MagicAtti

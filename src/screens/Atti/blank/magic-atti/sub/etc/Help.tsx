@@ -1,5 +1,5 @@
 import React from 'react'
-import {StatusBar, View} from 'react-native'
+import {StatusBar} from 'react-native'
 import {backgroundColor, textCaptionColor, textDarkColor} from '../../../../../../common/Colors'
 import styled from '@emotion/native'
 import {Caption, Divider, Paragraph, Subheading, Title} from 'react-native-paper'
@@ -10,21 +10,41 @@ const PageWrapper = styled.SafeAreaView`
   background-color: ${backgroundColor};
 `
 
+const ViewContainer = styled.View`
+  margin: 30px;
+`
+
+const CaptionText = styled(Caption)`
+  color: ${textCaptionColor};
+`
+
+const TitleText = styled(Title)`
+  color: ${textDarkColor};
+`
+
+const SubHeadingText = styled(Subheading)`
+  font-weight: bold;
+`
+
+const ParagraphText = styled(Paragraph)`
+  margin-top: 30px;
+`
+
 const Help = () => <PageWrapper>
 	<HeaderBack title="도움말"/>
 
-	<View style={{margin: 30}}>
-		<Caption style={{color: textCaptionColor}}>매직아띠 등록</Caption>
-		<Title style={{color: textDarkColor}}>아띠를 하우스에 넣어도 인식되지 않아요.</Title>
-	</View>
+	<ViewContainer>
+		<CaptionText>매직아띠 등록</CaptionText>
+		<TitleText>아띠를 하우스에 넣어도 인식되지 않아요.</TitleText>
+	</ViewContainer>
 
 	<Divider/>
 
-	<View style={{margin: 30}}>
-		<Subheading style={{fontWeight: 'bold'}}>아래와 같은 경우가 아닌지 확인해주세요.</Subheading>
-		<Paragraph style={{marginTop: 30}}>1. 넣은 아띠가 매직아띠가 아닌 경우</Paragraph>
+	<ViewContainer>
+		<SubHeadingText>아래와 같은 경우가 아닌지 확인해주세요.</SubHeadingText>
+		<ParagraphText>1. 넣은 아띠가 매직아띠가 아닌 경우</ParagraphText>
 		<Paragraph>2. 이미 등록한 아띠인 경우</Paragraph>
-	</View>
+	</ViewContainer>
 
 	<StatusBar barStyle="dark-content" backgroundColor={backgroundColor}/>
 </PageWrapper>

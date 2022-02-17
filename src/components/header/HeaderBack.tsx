@@ -1,5 +1,4 @@
 import React from 'react'
-import {Image} from 'react-native'
 import {Title} from 'react-native-paper'
 import {primaryColor} from '../../common/Colors'
 import styled from '@emotion/native'
@@ -25,6 +24,11 @@ const HeaderTitle = styled.View`
   height: 100%;
 `
 
+const HeaderTitleText = styled(Title)`
+  color: ${primaryColor};
+  font-weight: bold;
+`
+
 const BackButtonContainer = styled.TouchableOpacity`
   position: absolute;
 
@@ -36,6 +40,10 @@ const BackButtonContainer = styled.TouchableOpacity`
   height: 100%;
 `
 
+const BackButton = styled.Image`
+  height: 40%;
+`
+
 type HeaderBackModel = {
 	title: string
 }
@@ -43,14 +51,13 @@ type HeaderBackModel = {
 const HeaderBack = (props: HeaderBackModel) => <>
 	<Header>
 		<BackButtonContainer>
-			<Image
+			<BackButton
 				resizeMode="contain"
-				style={{height: '40%'}}
 				source={require('../../../assets/atti/register/back.png')}
 			/>
 		</BackButtonContainer>
 		<HeaderTitle>
-			<Title style={{color: primaryColor, fontWeight: 'bold'}}>{props.title}</Title>
+			<HeaderTitleText>{props.title}</HeaderTitleText>
 		</HeaderTitle>
 	</Header>
 </>

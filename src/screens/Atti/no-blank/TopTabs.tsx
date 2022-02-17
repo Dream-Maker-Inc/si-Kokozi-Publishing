@@ -1,7 +1,7 @@
 import React, {useLayoutEffect} from 'react'
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
-import {Image, TouchableOpacity} from 'react-native'
-import {ProgressBar, Text} from 'react-native-paper'
+import {TouchableOpacity} from 'react-native'
+import {ProgressBar} from 'react-native-paper'
 import styled from '@emotion/native'
 
 import {backgroundColor, placeholderTextColor, playerBackgroundColor, primaryColor} from '../../../common/Colors'
@@ -28,6 +28,15 @@ const PlayContainer = styled.View`
   background-color: ${playerBackgroundColor};
 `
 
+const PlayerThumbnail = styled.Image`
+  width: 46px;
+`
+
+const PlayerTitle = styled.Text`
+  margin-left: 4px;
+  color: ${placeholderTextColor};
+`
+
 const ControllerWrapper = styled.View`
   position: absolute;
 
@@ -43,28 +52,31 @@ const ControllerIcon = styled.Image`
   margin-right: 10px;
 `
 
+const MenuIcon = styled(TouchableOpacity)`
+  margin-left: 10px;
+  margin-right: 10px;
+`
+
 const HeaderLeftIcon = () => <>
-	<TouchableOpacity
+	<MenuIcon
 		onPress={() => alert('알림')}
-		style={{marginLeft: 10}}
 	>
 		<IconImage
 			resizeMode="contain"
 			source={require('../../../../assets/tab/notification.png')}
 		/>
-	</TouchableOpacity>
+	</MenuIcon>
 </>
 
 const HeaderRightIcon = () => <>
-	<TouchableOpacity
+	<MenuIcon
 		onPress={() => alert('더보기')}
-		style={{marginRight: 20}}
 	>
 		<IconImage
 			resizeMode="contain"
 			source={require('../../../../assets/tab/more.png')}
 		/>
-	</TouchableOpacity>
+	</MenuIcon>
 </>
 
 const NavigationOptions = {
@@ -99,17 +111,11 @@ const AttiTopTabs = ({navigation}) => {
 		/>
 
 		<PlayContainer>
-			<Image
-				style={{width: 46}}
+			<PlayerThumbnail
 				resizeMode="contain"
 				source={require('../../../../assets/atti/blank-thumbnail.png')}
 			/>
-			<Text
-				style={{
-					marginLeft: 4,
-					color: placeholderTextColor
-				}}
-			>하우스 안에 아띠를 넣어주세요</Text>
+			<PlayerTitle>하우스 안에 아띠를 넣어주세요</PlayerTitle>
 			<ControllerWrapper>
 				<TouchableOpacity>
 					<ControllerIcon

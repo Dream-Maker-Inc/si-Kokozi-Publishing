@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {FlatList} from 'react-native'
+import {FlatList, StyleSheet} from 'react-native'
 
 import {backgroundColor, playerBackgroundColor, secondaryColor} from '../../../../common/Colors'
 import styled from '@emotion/native'
@@ -66,17 +66,7 @@ const Atti = () => {
 						source={require('../../../../../assets/atti/all/thumbnail.png')}
 					/>
 					<ItemTextContainer
-						style={{
-							shadowColor: '#999',
-							shadowOffset: {
-								width: 0,
-								height: 2,
-							},
-							shadowOpacity: 0.25,
-							shadowRadius: 3.84,
-
-							elevation: 5,
-						}}>
+						style={styles.container}>
 						<ItemText>코코지</ItemText>
 					</ItemTextContainer>
 				</ListItem>
@@ -84,5 +74,19 @@ const Atti = () => {
 		/>
 	</PageWrapper>
 }
+
+const styles = StyleSheet.create({
+	container: {
+		shadowColor: '#999',
+		shadowOffset: {
+			width: 0,
+			height: 2,
+		},
+		shadowOpacity: 0.25,
+		shadowRadius: 3.84,
+
+		elevation: 5,
+	}
+})
 
 export default Atti
