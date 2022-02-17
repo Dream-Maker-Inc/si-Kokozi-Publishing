@@ -52,7 +52,7 @@ const SecondText = styled.Text`
   width: 60%;
 `
 
-const MagicAtti = () => <PageWrapper>
+const MagicArti = () => <PageWrapper>
 	<ViewPager showPageIndicator>
 		<View>
 			<StyledText
@@ -79,4 +79,4 @@ const MagicAtti = () => <PageWrapper>
 	</ViewPager>
 </PageWrapper>
 
-export default MagicAtti
+export default MagicArti

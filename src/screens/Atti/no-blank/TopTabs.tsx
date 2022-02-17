@@ -6,8 +6,8 @@ import styled from '@emotion/native'
 
 import {backgroundColor, placeholderTextColor, playerBackgroundColor, primaryColor} from '../../../common/Colors'
 
-import Atti from './atti/Atti'
-import MagicAtti from './magic-atti/MagicAtti'
+import Arti from './arti/Arti'
+import MagicArti from './magic-atti/MagicArti'
 import All from './all/All'
 
 const Tab = createMaterialTopTabNavigator()
@@ -100,8 +100,8 @@ const AttiTopTabs = ({navigation}) => {
 			}}
 		>
 			<Tab.Screen name="모두" component={All}/>
-			<Tab.Screen name="아띠" component={Atti}/>
-			<Tab.Screen name="매직 아띠" component={MagicAtti}/>
+			<Tab.Screen name="아띠" component={Arti}/>
+			<Tab.Screen name="매직 아띠" component={MagicArti}/>
 		</Tab.Navigator>
 
 		<ProgressBar

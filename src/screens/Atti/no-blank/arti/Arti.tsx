@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import {FlatList, StyleSheet} from 'react-native'
-import styled from '@emotion/native'
 
 import {backgroundColor, playerBackgroundColor, secondaryColor} from '../../../../common/Colors'
+import styled from '@emotion/native'
 
 const PageWrapper = styled.SafeAreaView`
   background-color: ${backgroundColor};
@@ -40,7 +40,7 @@ const ItemText = styled.Text`
   text-align: center;
 `
 
-const MagicAtti = () => {
+const Arti = () => {
 	const [dataSource, setDataSource] = useState([])
 
 	useState(() => {
@@ -89,4 +89,4 @@ const styles = StyleSheet.create({
 	}
 })
 
-export default MagicAtti
+export default Arti

@@ -1,7 +1,7 @@
 import React, {useLayoutEffect} from 'react'
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
-import Atti from './atti/Atti'
-import MagicAtti from './magic-atti/MagicAtti'
+import Arti from './arti/Arti'
+import MagicArti from './magic-atti/MagicArti'
 import All from './all/All'
 import {Image, TouchableOpacity} from 'react-native'
 import {backgroundColor, primaryColor} from '../../../common/Colors'
@@ -52,8 +52,8 @@ const BlankAttiTopTabs = ({navigation}) => {
 			}}
 		>
 			<Tab.Screen name="모두" component={All}/>
-			<Tab.Screen name="아띠" component={Atti}/>
-			<Tab.Screen name="매직 아띠" component={MagicAtti}/>
+			<Tab.Screen name="아띠" component={Arti}/>
+			<Tab.Screen name="매직 아띠" component={MagicArti}/>
 		</Tab.Navigator>
 		<PageBottomPlayerBlank/>
 	</>

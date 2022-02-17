@@ -21,7 +21,7 @@ const BackgroundImage = styled.Image`
   margin: -180px auto 0;
 `
 
-const Atti = () => <PageWrapper>
+const Arti = () => <PageWrapper>
 	<ScrollView>
 		<BackgroundText
 			resizeMode="contain"
@@ -32,4 +32,4 @@ const Atti = () => <PageWrapper>
 	</ScrollView>
 </PageWrapper>
 
-export default Atti
+export default Arti
