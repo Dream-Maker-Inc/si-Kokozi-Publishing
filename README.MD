@@ -146,8 +146,8 @@
 
 ### 기타
 
-- A. 알림 `./src/screens/mypage/settings/SettingsTopTabs`
-    - [ ] 알림 - N/A
-    - [x] **~~알림~~** 
-    - [ ] 공지사항 - N/A
-    - [x] **~~공지사항~~**
+- A. 알림
+    - [x] **~~알림 - N/A~~** `./src/screens/mypage/settings/SettingsBlankTopTabs`
+    - [x] **~~알림~~** `./src/screens/mypage/settings/SettingsTopTabs`
+    - [x] **~~공지사항 - N/A~~** `./src/screens/mypage/settings/SettingsBlankTopTabs`
+    - [x] **~~공지사항~~** `./src/screens/mypage/settings/SettingsTopTabs`
