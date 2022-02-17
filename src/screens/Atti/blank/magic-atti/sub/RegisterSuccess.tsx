@@ -5,6 +5,19 @@ import styled from '@emotion/native'
 import {Button, Paragraph} from 'react-native-paper'
 import HeaderClose from '../../../../../components/header/HeaderClose'
 
+const PageWrapper = styled.SafeAreaView`
+  flex: 1;
+  background-color: ${backgroundColor};
+`
+
+const Body = styled.View`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+`
+
 const RegisterSuccess = () => <PageWrapper>
 	<HeaderClose title="매직 아띠 등록"/>
 	<Body>
@@ -52,18 +65,5 @@ const RegisterSuccess = () => <PageWrapper>
 
 	<StatusBar barStyle="dark-content" backgroundColor={backgroundColor}/>
 </PageWrapper>
-
-const PageWrapper = styled.SafeAreaView`
-  flex: 1;
-  background-color: ${backgroundColor};
-`
-
-const Body = styled.View`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  flex: 1;
-`
 
 export default RegisterSuccess

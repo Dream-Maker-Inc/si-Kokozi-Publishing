@@ -7,6 +7,28 @@ import {backgroundColor, primaryColor} from '../../../../../../common/Colors'
 
 import HeaderClose from '../../../../../../components/header/HeaderClose'
 
+const PageWrapper = styled.SafeAreaView`
+  flex: 1;
+  background-color: ${backgroundColor};
+`
+
+const Body = styled.View`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+`
+
+const ConfirmButton = styled(Button)`
+  margin-top: 140px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 10px;
+  background-color: ${primaryColor};
+  width: 94%;
+`
+
 const AlreadyRegistered = () => <PageWrapper>
 	<HeaderClose title="매직 아띠 등록"/>
 	<Body>
@@ -31,27 +53,5 @@ const AlreadyRegistered = () => <PageWrapper>
 
 	<StatusBar barStyle="dark-content" backgroundColor={backgroundColor}/>
 </PageWrapper>
-
-const PageWrapper = styled.SafeAreaView`
-  flex: 1;
-  background-color: ${backgroundColor};
-`
-
-const Body = styled.View`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  flex: 1;
-`
-
-const ConfirmButton = styled(Button)`
-  margin-top: 140px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  border-radius: 10px;
-  background-color: ${primaryColor};
-  width: 94%;
-`
 
 export default AlreadyRegistered

@@ -1,8 +1,44 @@
 import React, {useState} from 'react'
-import {FlatList, Image, SafeAreaView, ScrollView} from 'react-native'
+import {FlatList} from 'react-native'
 
 import {backgroundColor, playerBackgroundColor, secondaryColor} from '../../../../common/Colors'
 import styled from '@emotion/native'
+
+const PageWrapper = styled.SafeAreaView`
+  background-color: ${backgroundColor};
+`
+
+const ListItem = styled.TouchableOpacity`
+  flex-grow: 1;
+
+  margin: 14px;
+
+  border-radius: 20px;
+  background-color: ${secondaryColor};
+`
+
+const ItemImage = styled.Image`
+  width: 100px;
+  height: 180px;
+`
+
+const ItemTextContainer = styled.View`
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 60px;
+
+  background-color: ${playerBackgroundColor};
+
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+`
+
+const ItemText = styled.Text`
+  font-weight: bold;
+  text-align: center;
+`
 
 const Atti = () => {
 	const [dataSource, setDataSource] = useState([])
@@ -48,41 +84,5 @@ const Atti = () => {
 		/>
 	</PageWrapper>
 }
-
-const PageWrapper = styled.SafeAreaView`
-  background-color: ${backgroundColor};
-`
-
-const ListItem = styled.TouchableOpacity`
-  flex-grow: 1;
-
-  margin: 14px;
-
-  border-radius: 20px;
-  background-color: ${secondaryColor};
-`
-
-const ItemImage = styled.Image`
-  width: 100px;
-  height: 180px;
-`
-
-const ItemTextContainer = styled.View`
-  display: flex;
-  justify-content: center;
-
-  width: 100%;
-  height: 60px;
-
-  background-color: ${playerBackgroundColor};
-
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-`
-
-const ItemText = styled.Text`
-  font-weight: bold;
-  text-align: center;
-`
 
 export default Atti

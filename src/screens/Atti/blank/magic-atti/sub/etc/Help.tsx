@@ -5,6 +5,11 @@ import styled from '@emotion/native'
 import {Caption, Divider, Paragraph, Subheading, Title} from 'react-native-paper'
 import HeaderBack from '../../../../../../components/header/HeaderBack'
 
+const PageWrapper = styled.SafeAreaView`
+  flex: 1;
+  background-color: ${backgroundColor};
+`
+
 const Help = () => <PageWrapper>
 	<HeaderBack title="도움말"/>
 
@@ -23,10 +28,5 @@ const Help = () => <PageWrapper>
 
 	<StatusBar barStyle="dark-content" backgroundColor={backgroundColor}/>
 </PageWrapper>
-
-const PageWrapper = styled.SafeAreaView`
-  flex: 1;
-  background-color: ${backgroundColor};
-`
 
 export default Help

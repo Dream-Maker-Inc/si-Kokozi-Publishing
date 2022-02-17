@@ -1,4 +1,5 @@
 import React from 'react'
+import {Image} from 'react-native'
 import {Title} from 'react-native-paper'
 import {primaryColor} from '../../common/Colors'
 import styled from '@emotion/native'
@@ -24,9 +25,19 @@ const HeaderTitle = styled.View`
   height: 100%;
 `
 
-const CloseButtonContainer = styled.TouchableOpacity`
+const BackButtonContainer = styled.TouchableOpacity`
   position: absolute;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  left: 20px;
+  height: 100%;
+`
+
+const EditButtonContainer = styled.TouchableOpacity`
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,26 +46,26 @@ const CloseButtonContainer = styled.TouchableOpacity`
   height: 100%;
 `
 
-const CloseButton = styled.Image`
-  height: 40%;
-`
-
-type HeaderCancelModel = {
+type HeaderBackEditModel = {
 	title: string
 }
 
-const HeaderClose = (props: HeaderCancelModel) => <>
+const HeaderBackEdit = (props: HeaderBackEditModel) => <>
 	<Header>
+		<BackButtonContainer>
+			<Image
+				resizeMode="contain"
+				style={{height: '40%'}}
+				source={require('../../../assets/atti/register/back.png')}
+			/>
+		</BackButtonContainer>
 		<HeaderTitle>
 			<Title style={{color: primaryColor, fontWeight: 'bold'}}>{props.title}</Title>
 		</HeaderTitle>
-		<CloseButtonContainer>
-			<CloseButton
-				resizeMode="contain"
-				source={require('../../../assets/atti/register/close.png')}
-			/>
-		</CloseButtonContainer>
+		<EditButtonContainer>
+			<Title>편집</Title>
+		</EditButtonContainer>
 	</Header>
 </>
 
-export default HeaderClose
+export default HeaderBackEdit

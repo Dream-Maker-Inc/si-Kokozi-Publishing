@@ -12,6 +12,37 @@ import All from './all/All'
 
 const Tab = createMaterialTopTabNavigator()
 
+const IconImage = styled.Image`
+  height: 20px;
+`
+
+const PlayContainer = styled.View`
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  height: 60px;
+  padding: 0 10px;
+  background-color: ${playerBackgroundColor};
+`
+
+const ControllerWrapper = styled.View`
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  right: 10px;
+`
+
+const ControllerIcon = styled.Image`
+  width: 36px;
+  margin-right: 10px;
+`
+
 const HeaderLeftIcon = () => <>
 	<TouchableOpacity
 		onPress={() => alert('알림')}
@@ -103,36 +134,5 @@ const AttiTopTabs = ({navigation}) => {
 
 	</>
 }
-
-const IconImage = styled.Image`
-  height: 20px;
-`
-
-const PlayContainer = styled.View`
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-
-  height: 60px;
-  padding: 0 10px;
-  background-color: ${playerBackgroundColor};
-`
-
-const ControllerWrapper = styled.View`
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-
-  right: 10px;
-`
-
-const ControllerIcon = styled.Image`
-  width: 36px;
-  margin-right: 10px;
-`
 
 export default AttiTopTabs

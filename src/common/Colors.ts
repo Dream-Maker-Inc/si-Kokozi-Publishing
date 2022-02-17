@@ -1,5 +1,6 @@
 export const primaryColor = '#109724'
 export const backgroundColor = '#FAEFE3'
+export const backgroundSecondaryColor = '#FFF8F1'
 export const placeholderTextColor = '#CEC0AF'
 export const playerBackgroundColor = '#FFF8F1'
 export const secondaryColor = '#EEE1D2'

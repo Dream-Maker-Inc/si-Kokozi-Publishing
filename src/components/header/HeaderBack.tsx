@@ -4,25 +4,6 @@ import {Title} from 'react-native-paper'
 import {primaryColor} from '../../common/Colors'
 import styled from '@emotion/native'
 
-type HeaderBackModel = {
-	title: string
-}
-
-const HeaderBack = (props: HeaderBackModel) => <>
-	<Header>
-		<BackButtonContainer>
-			<Image
-				resizeMode="contain"
-				style={{height: '40%'}}
-				source={require('../../../assets/atti/register/back.png')}
-			/>
-		</BackButtonContainer>
-		<HeaderTitle>
-			<Title style={{color: primaryColor, fontWeight: 'bold'}}>{props.title}</Title>
-		</HeaderTitle>
-	</Header>
-</>
-
 const Header = styled.View`
   position: relative;
 
@@ -54,5 +35,24 @@ const BackButtonContainer = styled.TouchableOpacity`
   left: 20px;
   height: 100%;
 `
+
+type HeaderBackModel = {
+	title: string
+}
+
+const HeaderBack = (props: HeaderBackModel) => <>
+	<Header>
+		<BackButtonContainer>
+			<Image
+				resizeMode="contain"
+				style={{height: '40%'}}
+				source={require('../../../assets/atti/register/back.png')}
+			/>
+		</BackButtonContainer>
+		<HeaderTitle>
+			<Title style={{color: primaryColor, fontWeight: 'bold'}}>{props.title}</Title>
+		</HeaderTitle>
+	</Header>
+</>
 
 export default HeaderBack

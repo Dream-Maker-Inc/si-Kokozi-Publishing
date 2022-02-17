@@ -5,6 +5,28 @@ import styled from '@emotion/native'
 import {Button, Caption, Paragraph, TextInput} from 'react-native-paper'
 import HeaderClose from '../../../../../components/header/HeaderClose'
 
+const PageWrapper = styled.SafeAreaView`
+  flex: 1;
+  background-color: ${backgroundColor};
+`
+
+const Body = styled.View`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+`
+
+const ConfirmButton = styled(Button)`
+  width: 94%;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: ${primaryColor};
+  border-radius: 10px;
+`
+
 const RegisterSecond = () => <PageWrapper>
 	<HeaderClose title="매직 아띠 등록"/>
 	<Body>
@@ -51,27 +73,5 @@ const RegisterSecond = () => <PageWrapper>
 
 	<StatusBar barStyle="dark-content" backgroundColor={backgroundColor}/>
 </PageWrapper>
-
-const PageWrapper = styled.SafeAreaView`
-  flex: 1;
-  background-color: ${backgroundColor};
-`
-
-const Body = styled.View`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  flex: 1;
-`
-
-const ConfirmButton = styled(Button)`
-  width: 94%;
-  margin-top: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: ${primaryColor};
-  border-radius: 10px;
-`
 
 export default RegisterSecond

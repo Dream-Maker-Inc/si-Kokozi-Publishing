@@ -5,9 +5,10 @@ import RegisterSecond from './src/screens/Atti/blank/magic-atti/sub/RegisterSeco
 import RegisterSuccess from './src/screens/Atti/blank/magic-atti/sub/RegisterSuccess'
 import Help from './src/screens/Atti/blank/magic-atti/sub/etc/Help'
 import AlreadyRegistered from './src/screens/Atti/blank/magic-atti/sub/error/AlreadyRegistered'
+import Detail from './src/screens/Atti/no-blank/detail/Detail'
 
 const App = () => <>
-	<AlreadyRegistered/>
+	<Detail/>
 </>
 
 export default App
