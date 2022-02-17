@@ -9,50 +9,50 @@ import StoryTopTabs from './story/StoryTopTabs'
 import MyPage from './mypage/MyPage'
 import AttiTopTabs from './Atti/no-blank/TopTabs'
 import {Image} from 'react-native'
+import styled from '@emotion/native'
+import BlankAttiTopTabs from './Atti/blank/BlankTopTabs'
 
 const Tab = createBottomTabNavigator()
+
+const TabIconImage = styled.Image`
+	width: 30px;
+`
 
 const TabBarIconOptions = (route, focused) => {
 	switch (route.name) {
 	case '코코지 하우스':
 		if (focused) {
-			return <Image
+			return <TabIconImage
 				resizeMode="contain"
-				style={{width: 30}}
 				source={require('../../assets/tab/icons/kokozi-active.png')}
 			/>
 		} else {
-			return <Image
+			return <TabIconImage
 				resizeMode="contain"
-				style={{width: 30}}
 				source={require('../../assets/tab/icons/kokozi.png')}
 			/>
 		}
 	case '아띠':
 		if (focused) {
-			return <Image
+			return <TabIconImage
 				resizeMode="contain"
-				style={{width: 30}}
 				source={require('../../assets/tab/icons/atti-active.png')}
 			/>
 		} else {
-			return <Image
+			return <TabIconImage
 				resizeMode="contain"
-				style={{width: 30}}
 				source={require('../../assets/tab/icons/atti.png')}
 			/>
 		}
 	case '이야기':
 		if (focused) {
-			return <Image
+			return <TabIconImage
 				resizeMode="contain"
-				style={{width: 30}}
 				source={require('../../assets/tab/icons/story-active.png')}
 			/>
 		} else {
-			return <Image
+			return <TabIconImage
 				resizeMode="contain"
-				style={{width: 30}}
 				source={require('../../assets/tab/icons/story.png')}
 			/>
 		}
@@ -60,13 +60,11 @@ const TabBarIconOptions = (route, focused) => {
 		if (focused) {
 			return <Image
 				resizeMode="contain"
-				style={{width: 30}}
 				source={require('../../assets/tab/icons/mypage-active.png')}
 			/>
 		} else {
 			return <Image
 				resizeMode="contain"
-				style={{width: 30}}
 				source={require('../../assets/tab/icons/mypage.png')}
 			/>
 		}

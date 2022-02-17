@@ -17,9 +17,8 @@ const HeaderLeftIcon = () => <>
 		onPress={() => alert('알림')}
 		style={{marginLeft: 10}}
 	>
-		<Image
+		<IconImage
 			resizeMode="contain"
-			style={{height: 20}}
 			source={require('../../../../assets/tab/notification.png')}
 		/>
 	</TouchableOpacity>
@@ -30,9 +29,8 @@ const HeaderRightIcon = () => <>
 		onPress={() => alert('더보기')}
 		style={{marginRight: 20}}
 	>
-		<Image
+		<IconImage
 			resizeMode="contain"
-			style={{height: 20}}
 			source={require('../../../../assets/tab/more.png')}
 		/>
 	</TouchableOpacity>
@@ -83,31 +81,19 @@ const AttiTopTabs = ({navigation}) => {
 			>하우스 안에 아띠를 넣어주세요</Text>
 			<ControllerWrapper>
 				<TouchableOpacity>
-					<Image
-						style={{
-							width: 36,
-							marginRight: 10
-						}}
+					<ControllerIcon
 						resizeMode="contain"
 						source={require('../../../../assets/atti/previous.png')}
 					/>
 				</TouchableOpacity>
 				<TouchableOpacity>
-					<Image
-						style={{
-							width: 36,
-							marginRight: 10
-						}}
+					<ControllerIcon
 						resizeMode="contain"
 						source={require('../../../../assets/atti/next.png')}
 					/>
 				</TouchableOpacity>
 				<TouchableOpacity>
-					<Image
-						style={{
-							width: 36,
-							marginRight: 10
-						}}
+					<ControllerIcon
 						resizeMode="contain"
 						source={require('../../../../assets/atti/playlist.png')}
 					/>
@@ -117,6 +103,10 @@ const AttiTopTabs = ({navigation}) => {
 
 	</>
 }
+
+const IconImage = styled.Image`
+  height: 20px;
+`
 
 const PlayContainer = styled.View`
   position: relative;
@@ -138,6 +128,11 @@ const ControllerWrapper = styled.View`
   flex-direction: row;
 
   right: 10px;
+`
+
+const ControllerIcon = styled.Image`
+  width: 36px;
+  margin-right: 10px;
 `
 
 export default AttiTopTabs

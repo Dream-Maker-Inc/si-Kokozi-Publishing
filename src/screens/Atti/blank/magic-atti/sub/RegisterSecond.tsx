@@ -3,20 +3,10 @@ import {Image, StatusBar} from 'react-native'
 import {backgroundColor, primaryColor} from '../../../../../common/Colors'
 import styled from '@emotion/native'
 import {Button, Caption, Paragraph, TextInput} from 'react-native-paper'
+import HeaderClose from '../../../../../components/header/HeaderClose'
 
 const RegisterSecond = () => <PageWrapper>
-	<Header>
-		<HeaderTitle>
-			<TitleText>매직아띠 등록</TitleText>
-		</HeaderTitle>
-		<CloseButtonContainer>
-			<CloseButton
-				resizeMode="contain"
-				source={require('../../../../../../assets/atti/register/close.png')}
-			/>
-		</CloseButtonContainer>
-	</Header>
-
+	<HeaderClose title="매직 아띠 등록"/>
 	<Body>
 		<Image
 			resizeMode="contain"
@@ -48,16 +38,7 @@ const RegisterSecond = () => <PageWrapper>
 			mode="outlined"
 			placeholder="공백 포함 8자"
 		/>
-		<Button
-			style={{
-				width: '94%',
-				marginTop: 20,
-				paddingTop: 10,
-				paddingBottom: 10,
-				backgroundColor: primaryColor,
-				borderRadius: 10,
-			}}
-			mode="contained">
+		<ConfirmButton mode="contained">
 			<Paragraph
 				style={{
 					color: 'white',
@@ -65,7 +46,7 @@ const RegisterSecond = () => <PageWrapper>
 					fontSize: 20
 				}}
 			> 매직아띠 등록 </Paragraph>
-		</Button>
+		</ConfirmButton>
 	</Body>
 
 	<StatusBar barStyle="dark-content" backgroundColor={backgroundColor}/>
@@ -76,54 +57,21 @@ const PageWrapper = styled.SafeAreaView`
   background-color: ${backgroundColor};
 `
 
-const Header = styled.View`
-  position: relative;
-
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-  height: 60px;
-`
-
-const HeaderTitle = styled.View`
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 100%;
-`
-
-const TitleText = styled.Text`
-  color: ${primaryColor};
-  font-weight: bold;
-  font-size: 20px;
-`
-
-const CloseButtonContainer = styled.TouchableOpacity`
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  right: 20px;
-  height: 100%;
-`
-
-const CloseButton = styled.Image`
-  height: 40%;
-`
-
 const Body = styled.View`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   flex: 1;
+`
+
+const ConfirmButton = styled(Button)`
+  width: 94%;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: ${primaryColor};
+  border-radius: 10px;
 `
 
 export default RegisterSecond

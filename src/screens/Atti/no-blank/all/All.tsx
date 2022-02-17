@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {FlatList, Text} from 'react-native'
+import {FlatList} from 'react-native'
 import styled from '@emotion/native'
 
 import {backgroundColor, playerBackgroundColor, secondaryColor} from '../../../../common/Colors'
@@ -41,12 +41,7 @@ const All = () => {
 
 							elevation: 5,
 						}}>
-						<Text
-							style={{
-								fontWeight: 'bold',
-								textAlign: 'center'
-							}}
-						>코코지</Text>
+						<ItemText>코코지</ItemText>
 					</ItemTextContainer>
 				</ListItem>
 			)}
@@ -83,6 +78,11 @@ const ItemTextContainer = styled.View`
 
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+`
+
+const ItemText = styled.Text`
+  font-weight: bold;
+  text-align: center;
 `
 
 export default All

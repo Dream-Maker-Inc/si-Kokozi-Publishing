@@ -3,20 +3,10 @@ import {Image, StatusBar, TouchableOpacity} from 'react-native'
 import {backgroundColor, primaryColor} from '../../../../../common/Colors'
 import styled from '@emotion/native'
 import {Button, Paragraph} from 'react-native-paper'
+import HeaderClose from '../../../../../components/header/HeaderClose'
 
 const RegisterSuccess = () => <PageWrapper>
-	<Header>
-		<HeaderTitle>
-			<TitleText>매직아띠 등록</TitleText>
-		</HeaderTitle>
-		<CloseButtonContainer>
-			<CloseButton
-				resizeMode="contain"
-				source={require('../../../../../../assets/atti/register/close.png')}
-			/>
-		</CloseButtonContainer>
-	</Header>
-
+	<HeaderClose title="매직 아띠 등록"/>
 	<Body>
 		<Image
 			resizeMode="contain"
@@ -66,48 +56,6 @@ const RegisterSuccess = () => <PageWrapper>
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
   background-color: ${backgroundColor};
-`
-
-const Header = styled.View`
-  position: relative;
-
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-  height: 60px;
-`
-
-const HeaderTitle = styled.View`
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 100%;
-`
-
-const TitleText = styled.Text`
-  color: ${primaryColor};
-  font-weight: bold;
-  font-size: 20px;
-`
-
-const CloseButtonContainer = styled.TouchableOpacity`
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  right: 20px;
-  height: 100%;
-`
-
-const CloseButton = styled.Image`
-  height: 40%;
 `
 
 const Body = styled.View`

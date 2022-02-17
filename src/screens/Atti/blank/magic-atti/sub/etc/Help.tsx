@@ -1,22 +1,12 @@
 import React from 'react'
-import {Image, StatusBar, View} from 'react-native'
-import {backgroundColor, primaryColor, textCaptionColor, textDarkColor} from '../../../../../../common/Colors'
+import {StatusBar, View} from 'react-native'
+import {backgroundColor, textCaptionColor, textDarkColor} from '../../../../../../common/Colors'
 import styled from '@emotion/native'
 import {Caption, Divider, Paragraph, Subheading, Title} from 'react-native-paper'
+import HeaderBack from '../../../../../../components/header/HeaderBack'
 
 const Help = () => <PageWrapper>
-	<Header>
-		<BackButtonContainer>
-			<Image
-				resizeMode="contain"
-				style={{height: '40%'}}
-				source={require('../../../../../../../assets/atti/register/back.png')}
-			/>
-		</BackButtonContainer>
-		<HeaderTitle>
-			<Title style={{color: primaryColor, fontWeight: 'bold'}}>도움말</Title>
-		</HeaderTitle>
-	</Header>
+	<HeaderBack title="도움말"/>
 
 	<View style={{margin: 30}}>
 		<Caption style={{color: textCaptionColor}}>매직아띠 등록</Caption>
@@ -37,38 +27,6 @@ const Help = () => <PageWrapper>
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
   background-color: ${backgroundColor};
-`
-
-const Header = styled.View`
-  position: relative;
-
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-  height: 60px;
-`
-
-const HeaderTitle = styled.View`
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 100%;
-`
-
-const BackButtonContainer = styled.TouchableOpacity`
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  left: 20px;
-  height: 100%;
 `
 
 export default Help

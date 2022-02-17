@@ -1,22 +1,14 @@
 import React from 'react'
-import {Image, StatusBar, Text} from 'react-native'
-import {backgroundColor, primaryColor} from '../../../../../../common/Colors'
 import styled from '@emotion/native'
-import {Button} from 'react-native-paper'
+import {Image, StatusBar} from 'react-native'
+import {Button, Headline} from 'react-native-paper'
+
+import {backgroundColor, primaryColor} from '../../../../../../common/Colors'
+
+import HeaderClose from '../../../../../../components/header/HeaderClose'
 
 const AlreadyRegistered = () => <PageWrapper>
-	<Header>
-		<HeaderTitle>
-			<TitleText>매직 아띠 등록</TitleText>
-		</HeaderTitle>
-		<CloseButtonContainer>
-			<CloseButton
-				resizeMode="contain"
-				source={require('../../../../../../../assets/atti/register/close.png')}
-			/>
-		</CloseButtonContainer>
-	</Header>
-
+	<HeaderClose title="매직 아띠 등록"/>
 	<Body>
 		<Image
 			resizeMode="contain"
@@ -32,18 +24,9 @@ const AlreadyRegistered = () => <PageWrapper>
 			resizeMode="center"
 			source={require('../../../../../../../assets/atti/register/error/already-registered-image.png')}
 		/>
-		<Button
-			mode="contained"
-			style={{
-				marginTop: 140,
-				paddingTop: 6,
-				paddingBottom: 6,
-				borderRadius: 10,
-				backgroundColor: primaryColor,
-				width: '94%',
-			}}>
-			<Text style={{fontSize: 20, color: 'white', fontWeight: 'bold'}}>올렸어요</Text>
-		</Button>
+		<ConfirmButton mode="contained">
+			<Headline style={{color: 'white', fontWeight: 'bold'}}>올렸어요</Headline>
+		</ConfirmButton>
 	</Body>
 
 	<StatusBar barStyle="dark-content" backgroundColor={backgroundColor}/>
@@ -54,48 +37,6 @@ const PageWrapper = styled.SafeAreaView`
   background-color: ${backgroundColor};
 `
 
-const Header = styled.View`
-  position: relative;
-
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-  height: 60px;
-`
-
-const HeaderTitle = styled.View`
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 100%;
-`
-
-const TitleText = styled.Text`
-  color: ${primaryColor};
-  font-weight: bold;
-  font-size: 20px;
-`
-
-const CloseButtonContainer = styled.TouchableOpacity`
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  right: 20px;
-  height: 100%;
-`
-
-const CloseButton = styled.Image`
-  height: 40%;
-`
-
 const Body = styled.View`
   display: flex;
   align-items: center;
@@ -104,7 +45,13 @@ const Body = styled.View`
   flex: 1;
 `
 
-const CaptionText = styled.Text`
+const ConfirmButton = styled(Button)`
+  margin-top: 140px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 10px;
+  background-color: ${primaryColor};
+  width: 94%;
 `
 
 export default AlreadyRegistered

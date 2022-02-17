@@ -1,94 +1,88 @@
-import React from 'react'
-import {Image, View} from 'react-native'
+import React, {useState} from 'react'
+import {FlatList} from 'react-native'
 import styled from '@emotion/native'
-import PagerView from 'react-native-pager-view'
-import {Text} from 'react-native-paper'
 
-import {backgroundColor, primaryColor} from '../../../../common/Colors'
+import {backgroundColor, playerBackgroundColor, secondaryColor} from '../../../../common/Colors'
 
-const MagicAtti = () => <PageWrapper>
-	<PagerView
-		style={{flex: 1}}
-		showPageIndicator>
-		<View>
-			<Image
-				style={{
-					width: '50%',
-					marginTop: '14%',
-					marginLeft: 'auto',
-					marginRight: 'auto'
-				}}
-				resizeMode="contain"
-				source={require('../../../../../assets/atti/magic-atti/blank-text-1.png')}/>
-			<Image
-				style={{
-					width: '100%',
-					height: '50%'
-				}}
-				resizeMode="contain"
-				source={require('../../../../../assets/atti/magic-atti/blank-image-1.png')}/>
-			<StyledButton>
-				<Text
-					style={{
-						color: 'white',
-						fontWeight: 'bold',
-						fontSize: 18
-					}}
-				>매직아띠 등록하기</Text>
-			</StyledButton>
-		</View>
-		<View>
-			<Image
-				style={{
-					width: '60%',
-					marginTop: '14%',
-					marginLeft: 'auto',
-					marginRight: 'auto'
-				}}
-				resizeMode="contain"
-				source={require('../../../../../assets/atti/magic-atti/blank-text-2.png')}/>
-			<Image
-				style={{
-					width: '100%',
-					height: '50%'
-				}}
-				resizeMode="contain"
-				source={require('../../../../../assets/atti/magic-atti/blank-image-2.png')}/>
-			<StyledButton>
-				<Text
-					style={{
-						color: 'white',
-						fontWeight: 'bold',
-						fontSize: 18
-					}}
-				>매직아띠 등록하기</Text>
-			</StyledButton>
-		</View>
-	</PagerView>
-</PageWrapper>
+const MagicAtti = () => {
+	const [dataSource, setDataSource] = useState([])
+
+	useState(() => {
+		const items = Array
+			.apply(null, Array(10))
+			.map((v, i) => {
+				return {
+					id: i,
+					src: '../../../../../assets/atti/all/thumbnail.png'
+				}
+			})
+		setDataSource(items)
+	}, [])
+
+	return <PageWrapper>
+		<FlatList
+			data={dataSource}
+			numColumns={2}
+			renderItem={() => (
+				<ListItem>
+					<ItemImage
+						resizeMode="center"
+						source={require('../../../../../assets/atti/all/thumbnail.png')}
+					/>
+					<ItemTextContainer
+						style={{
+							shadowColor: '#999',
+							shadowOffset: {
+								width: 0,
+								height: 2,
+							},
+							shadowOpacity: 0.25,
+							shadowRadius: 3.84,
+
+							elevation: 5,
+						}}>
+						<ItemText>코코지</ItemText>
+					</ItemTextContainer>
+				</ListItem>
+			)}
+		/>
+	</PageWrapper>
+}
 
 const PageWrapper = styled.SafeAreaView`
-  display: flex;
-  flex: 1;
-
-  width: 100%;
   background-color: ${backgroundColor};
 `
 
-const StyledButton = styled.TouchableOpacity`
+const ListItem = styled.TouchableOpacity`
+  flex-grow: 1;
+
+  margin: 14px;
+
+  border-radius: 20px;
+  background-color: ${secondaryColor};
+`
+
+const ItemImage = styled.Image`
+  width: 100px;
+  height: 180px;
+`
+
+const ItemTextContainer = styled.View`
   display: flex;
-  align-items: center;
   justify-content: center;
 
-  width: 80%;
-  height: 50px;
+  width: 100%;
+  height: 60px;
 
-  border-radius: 10px;
+  background-color: ${playerBackgroundColor};
 
-  margin-left: auto;
-  margin-right: auto;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+`
 
-  background-color: ${primaryColor};
+const ItemText = styled.Text`
+  font-weight: bold;
+  text-align: center;
 `
 
 export default MagicAtti
