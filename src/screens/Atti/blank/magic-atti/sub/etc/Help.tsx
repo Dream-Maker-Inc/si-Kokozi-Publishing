@@ -3,7 +3,7 @@ import {StatusBar} from 'react-native'
 import {backgroundColor, textCaptionColor, textDarkColor} from '../../../../../../common/Colors'
 import styled from '@emotion/native'
 import {Caption, Divider, Paragraph, Subheading, Title} from 'react-native-paper'
-import HeaderBack from '../../../../../../components/header/HeaderBack'
+import HeaderBackLight from '../../../../../../components/header/light/HeaderBackLight'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -31,7 +31,7 @@ const ParagraphText = styled(Paragraph)`
 `
 
 const Help = () => <PageWrapper>
-	<HeaderBack title="도움말"/>
+	<HeaderBackLight title="도움말"/>
 
 	<ViewContainer>
 		<CaptionText>매직아띠 등록</CaptionText>

@@ -3,7 +3,7 @@ import {Image, StatusBar} from 'react-native'
 import {backgroundColor, primaryColor} from '../../../../../../common/Colors'
 import styled from '@emotion/native'
 import {Button, Headline} from 'react-native-paper'
-import HeaderClose from '../../../../../../components/header/HeaderClose'
+import HeaderCloseLight from '../../../../../../components/header/light/HeaderCloseLight'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -42,7 +42,7 @@ const HeadlineText = styled(Headline)`
 `
 
 const CannotFind = () => <PageWrapper>
-	<HeaderClose title="매직 아띠 등록"/>
+	<HeaderCloseLight title="매직 아띠 등록"/>
 	<Body>
 		<Image
 			resizeMode="contain"

@@ -4,7 +4,7 @@ import {Image, StatusBar} from 'react-native'
 import {Subheading} from 'react-native-paper'
 
 import {backgroundColor, primaryColor} from '../../../../../common/Colors'
-import HeaderClose from '../../../../../components/header/HeaderClose'
+import HeaderCloseLight from '../../../../../components/header/light/HeaderCloseLight'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -35,7 +35,7 @@ const SubHeadingText = styled(Subheading)`
 `
 
 const RegisterFirst = () => <PageWrapper>
-	<HeaderClose title="매직 아띠 등록"/>
+	<HeaderCloseLight title="매직 아띠 등록"/>
 	<Body>
 		<Image
 			resizeMode="contain"

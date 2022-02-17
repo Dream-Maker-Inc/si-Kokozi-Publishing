@@ -51,26 +51,26 @@ const PageBottomPlayerBlank = () => <>
 	<PlayContainer>
 		<ThumbnailImage
 			resizeMode="contain"
-			source={require('../../../../assets/atti/blank-thumbnail.png')}
+			source={require('../../../assets/atti/blank-thumbnail.png')}
 		/>
 		<ThumbnailText>하우스 안에 아띠를 넣어주세요</ThumbnailText>
 		<ControllerWrapper>
 			<TouchableOpacity>
 				<ControllerImage
 					resizeMode="contain"
-					source={require('../../../../assets/atti/previous.png')}
+					source={require('../../../assets/atti/previous.png')}
 				/>
 			</TouchableOpacity>
 			<TouchableOpacity>
 				<ControllerImage
 					resizeMode="contain"
-					source={require('../../../../assets/atti/next.png')}
+					source={require('../../../assets/atti/next.png')}
 				/>
 			</TouchableOpacity>
 			<TouchableOpacity>
 				<ControllerImage
 					resizeMode="contain"
-					source={require('../../../../assets/atti/playlist.png')}
+					source={require('../../../assets/atti/playlist.png')}
 				/>
 			</TouchableOpacity>
 		</ControllerWrapper>

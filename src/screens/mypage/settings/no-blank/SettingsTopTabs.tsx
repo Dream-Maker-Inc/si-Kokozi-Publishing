@@ -4,14 +4,14 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 import {backgroundColor, primaryColor} from '../../../../common/Colors'
 import Notification from './Notification'
 import {StatusBar} from 'react-native'
-import HeaderBack from '../../../../components/header/HeaderBack'
+import HeaderBackLight from '../../../../components/header/light/HeaderBackLight'
 import Notice from './Notice'
 
 const Tab = createMaterialTopTabNavigator()
 
 const SettingsTopTabs = () => <>
 	<NavigationContainer>
-		<HeaderBack title={'알림'}/>
+		<HeaderBackLight title={'알림'}/>
 		<Tab.Navigator
 			screenOptions={{
 				tabBarLabelStyle: {fontWeight: 'bold'},

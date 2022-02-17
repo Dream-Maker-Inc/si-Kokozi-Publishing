@@ -1,6 +1,6 @@
 import React from 'react'
 import {Title} from 'react-native-paper'
-import {primaryColor} from '../../common/Colors'
+import {backgroundSecondaryColor, primaryColor} from '../../../common/Colors'
 import styled from '@emotion/native'
 
 const Header = styled.View`
@@ -11,6 +11,7 @@ const Header = styled.View`
 
   width: 100%;
   height: 60px;
+  background-color: ${backgroundSecondaryColor};
 `
 
 const HeaderTitle = styled.View`
@@ -58,12 +59,12 @@ type HeaderBackEditModel = {
 	title: string
 }
 
-const HeaderBackEdit = (props: HeaderBackEditModel) => <>
+const HeaderBackEditLight = (props: HeaderBackEditModel) => <>
 	<Header>
 		<BackButtonContainer>
 			<BackButton
 				resizeMode="contain"
-				source={require('../../../assets/atti/register/back.png')}
+				source={require('../../../../assets/atti/register/back.png')}
 			/>
 		</BackButtonContainer>
 		<HeaderTitle>
@@ -75,4 +76,4 @@ const HeaderBackEdit = (props: HeaderBackEditModel) => <>
 	</Header>
 </>
 
-export default HeaderBackEdit
+export default HeaderBackEditLight

@@ -1,5 +1,6 @@
 import React from 'react'
-import {primaryColor} from '../../common/Colors'
+import {Title} from 'react-native-paper'
+import {backgroundColor, primaryColor, secondaryColor} from '../../../common/Colors'
 import styled from '@emotion/native'
 
 const Header = styled.View`
@@ -10,6 +11,8 @@ const Header = styled.View`
 
   width: 100%;
   height: 60px;
+
+  background-color: ${secondaryColor};
 `
 
 const HeaderTitle = styled.View`
@@ -23,42 +26,42 @@ const HeaderTitle = styled.View`
   height: 100%;
 `
 
-const HeaderTitleText = styled.Text`
+const HeaderTitleText = styled(Title)`
   color: ${primaryColor};
   font-weight: bold;
 `
 
-const CloseButtonContainer = styled.TouchableOpacity`
+const BackButtonContainer = styled.TouchableOpacity`
   position: absolute;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  right: 20px;
+  left: 20px;
   height: 100%;
 `
 
-const CloseButton = styled.Image`
+const BackButton = styled.Image`
   height: 40%;
 `
 
-type HeaderCancelModel = {
+type HeaderBackModel = {
 	title: string
 }
 
-const HeaderClose = (props: HeaderCancelModel) => <>
+const HeaderBackDark = (props: HeaderBackModel) => <>
 	<Header>
+		<BackButtonContainer>
+			<BackButton
+				resizeMode="contain"
+				source={require('../../../../assets/atti/register/back.png')}
+			/>
+		</BackButtonContainer>
 		<HeaderTitle>
 			<HeaderTitleText>{props.title}</HeaderTitleText>
 		</HeaderTitle>
-		<CloseButtonContainer>
-			<CloseButton
-				resizeMode="contain"
-				source={require('../../../assets/atti/register/close.png')}
-			/>
-		</CloseButtonContainer>
 	</Header>
 </>
 
-export default HeaderClose
+export default HeaderBackDark
