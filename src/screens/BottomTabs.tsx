@@ -2,7 +2,7 @@ import * as React from 'react'
 import {NavigationContainer} from '@react-navigation/native'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 
-import {primaryColor} from '../common/Colors'
+import {BeigeSecondColor, primaryColor} from '../common/Colors'
 
 import KokoziHouse from './kokozi-house/KokoziHouse'
 import StoryTopTabs from './story/StoryTopTabs'
@@ -10,12 +10,11 @@ import MyPage from './mypage/MyPage'
 import AttiTopTabs from './Atti/no-blank/TopTabs'
 import {Image} from 'react-native'
 import styled from '@emotion/native'
-import BlankAttiTopTabs from './Atti/blank/BlankTopTabs'
 
 const Tab = createBottomTabNavigator()
 
 const TabIconImage = styled.Image`
-	width: 30px;
+  width: 30px;
 `
 
 const TabBarIconOptions = (route, focused) => {
@@ -78,7 +77,7 @@ export const BottomTabs = () => <>
 			screenOptions={({route}) => ({
 				tabBarIcon: ({focused}) => TabBarIconOptions(route, focused),
 				tabBarStyle: {
-					backgroundColor: '#FAEFE3',
+					backgroundColor: BeigeSecondColor,
 					height: 70,
 					paddingBottom: 10
 				},

@@ -1,5 +1,5 @@
 import React from 'react'
-import {backgroundSecondaryColor, primaryColor} from '../../../common/Colors'
+import {BeigeSecondColor, primaryColor} from '../../../common/Colors'
 import styled from '@emotion/native'
 import {Title} from 'react-native-paper'
 
@@ -12,7 +12,7 @@ const Header = styled.View`
   width: 100%;
   height: 60px;
 
-  background-color: ${backgroundSecondaryColor};
+  background-color: ${BeigeSecondColor};
 `
 
 const HeaderTitle = styled.View`

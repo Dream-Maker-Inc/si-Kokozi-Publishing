@@ -40,7 +40,6 @@ const ConfirmButton = styled(Button)`
 
 const HeadlineText = styled(Headline)`
   color: white;
-  background-color: ${BeigeSecondColor};
 `
 
 const AlreadyRegistered = () => <PageWrapper>
