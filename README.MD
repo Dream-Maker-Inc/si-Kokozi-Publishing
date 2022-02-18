@@ -9,8 +9,8 @@
 
 - A.Pre-login
     - [ ] Splash
-    - [x] **~~Tab 1~~**
-    - [x] **~~Tab 6~~**
+    - [x] **~~Tab 1~~** `./src/screens/pre-login/Intro`
+    - [x] **~~Tab 6~~** `./src/screens/pre-login/Welcome`
 
 ### 코코지 하우스
 
