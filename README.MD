@@ -60,7 +60,7 @@
     - [ ] 매직아띠 삭제
 
 
-- D. 아띠 상세페이지 `./src/screens/Atti/no-blank/detail/Detail`
+- D. **~~아띠 상세페이지~~** `./src/screens/Atti/no-blank/detail/Detail`
     - [x] **~~아띠 상세페이지~~**
 
 
