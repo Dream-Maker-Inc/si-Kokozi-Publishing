@@ -1,13 +1,13 @@
 import React from 'react'
 import {ScrollView, StatusBar, TouchableOpacity} from 'react-native'
 import styled from '@emotion/native'
-import {backgroundColor, secondaryColor, textDarkColor} from '../../common/Colors'
+import {BeigeSecondColor, secondaryColor, textDarkColor} from '../../common/Colors'
 import {Paragraph, Title} from 'react-native-paper'
 import {settingListData} from './data'
 
 const PageWrapper = styled(ScrollView)`
   flex: 1;
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
 `
 
 const ProfileContainer = styled(TouchableOpacity)`
@@ -106,7 +106,7 @@ const MyPage = () => <PageWrapper>
 		)}
 	</ListContainer>
 
-	<StatusBar barStyle="dark-content" backgroundColor={backgroundColor}/>
+	<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 </PageWrapper>
 
 export default MyPage

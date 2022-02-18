@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {backgroundColor} from '../../../../common/Colors'
+import {BeigeSecondColor} from '../../../../common/Colors'
 import {ScrollView} from 'react-native'
 
 const PageWrapper = styled.SafeAreaView`
   width: 100%;
   flex: 1;
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
 `
 
 const BackgroundText = styled.Image`

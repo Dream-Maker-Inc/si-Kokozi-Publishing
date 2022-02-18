@@ -2,10 +2,10 @@ import React, {useState} from 'react'
 import {FlatList, StyleSheet} from 'react-native'
 import styled from '@emotion/native'
 
-import {backgroundColor, playerBackgroundColor, secondaryColor} from '../../../../common/Colors'
+import {BeigeSecondColor, playerBackgroundColor, secondaryColor} from '../../../../common/Colors'
 
 const PageWrapper = styled.SafeAreaView`
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
 `
 
 const ListItem = styled.TouchableOpacity`

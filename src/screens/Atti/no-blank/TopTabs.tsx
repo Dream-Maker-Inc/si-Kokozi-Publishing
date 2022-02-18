@@ -4,7 +4,7 @@ import {TouchableOpacity} from 'react-native'
 import {ProgressBar} from 'react-native-paper'
 import styled from '@emotion/native'
 
-import {backgroundColor, placeholderTextColor, playerBackgroundColor, primaryColor} from '../../../common/Colors'
+import {BeigeSecondColor, placeholderTextColor, playerBackgroundColor, primaryColor} from '../../../common/Colors'
 
 import Arti from './arti/Arti'
 import MagicArti from './magic-atti/MagicArti'
@@ -95,7 +95,7 @@ const AttiTopTabs = ({navigation}) => {
 		<Tab.Navigator
 			screenOptions={{
 				tabBarLabelStyle: {fontWeight: 'bold'},
-				tabBarStyle: {backgroundColor: backgroundColor},
+				tabBarStyle: {backgroundColor: BeigeSecondColor},
 				tabBarIndicatorStyle: {backgroundColor: primaryColor}
 			}}
 		>

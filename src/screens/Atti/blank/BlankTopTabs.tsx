@@ -4,7 +4,7 @@ import Arti from './arti/Arti'
 import MagicArti from './magic-atti/MagicArti'
 import All from './all/All'
 import {Image, TouchableOpacity} from 'react-native'
-import {backgroundColor, primaryColor} from '../../../common/Colors'
+import {BeigeSecondColor, primaryColor} from '../../../common/Colors'
 import PageBottomPlayerBlank from '../../../components/player/PageBottomPlayerBlank'
 
 const Tab = createMaterialTopTabNavigator()
@@ -47,7 +47,7 @@ const BlankAttiTopTabs = ({navigation}) => {
 		<Tab.Navigator
 			screenOptions={{
 				tabBarLabelStyle: {fontWeight: 'bold'},
-				tabBarStyle: {backgroundColor: backgroundColor},
+				tabBarStyle: {backgroundColor: BeigeSecondColor},
 				tabBarIndicatorStyle: {backgroundColor: primaryColor}
 			}}
 		>

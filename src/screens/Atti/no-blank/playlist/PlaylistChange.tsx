@@ -1,8 +1,9 @@
 import React from 'react'
-import {backgroundSecondaryColor} from '../../../../common/Colors'
+import {backgroundSecondaryColor, primaryColor} from '../../../../common/Colors'
 import {ScrollView, StatusBar, StyleSheet, Text} from 'react-native'
 import {
-	ArtiImage, ButtonText,
+	ArtiImage,
+	ButtonText,
 	ChangeButton,
 	ChangeButtonContainer,
 	Header,
@@ -78,6 +79,26 @@ const Detail = () => <>
 		{renderStoryList}
 	</ScrollView>
 	<ChangeButtonContainer>
+		<Text
+			style={{
+				position: 'absolute',
+				width: '80%',
+				height: 40,
+				top: 0,
+				zIndex: 1,
+				textAlign: 'center',
+				color: 'white',
+				backgroundColor: primaryColor,
+				padding: 10,
+				borderRadius: 10,
+				fontWeight: '100',
+				marginLeft: 'auto',
+				marginRight: 'auto',
+				transform: [
+					{translateY: -50}
+				]
+			}}
+		>한번에 하나의 플레이리스트만 담을 수 있어요</Text>
 		<ChangeButton>
 			<ButtonText>교체하기</ButtonText>
 		</ChangeButton>

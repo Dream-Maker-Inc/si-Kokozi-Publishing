@@ -1,13 +1,13 @@
 import React from 'react'
 import {Image, StatusBar} from 'react-native'
-import {backgroundColor, primaryColor} from '../../../../../common/Colors'
+import {BeigeSecondColor, primaryColor} from '../../../../../common/Colors'
 import styled from '@emotion/native'
 import {Button, Caption, Paragraph, TextInput} from 'react-native-paper'
 import HeaderCloseLight from '../../../../../components/header/light/HeaderCloseLight'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
 `
 
 const Body = styled.View`
@@ -79,7 +79,7 @@ const RegisterSecond = () => <PageWrapper>
 		</ConfirmButton>
 	</Body>
 
-	<StatusBar barStyle="dark-content" backgroundColor={backgroundColor}/>
+	<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 </PageWrapper>
 
 export default RegisterSecond

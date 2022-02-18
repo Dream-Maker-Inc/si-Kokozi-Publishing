@@ -1,13 +1,13 @@
 import React from 'react'
 import {SafeAreaView, StatusBar} from 'react-native'
-import {backgroundColor} from '../../../../common/Colors'
+import {BeigeSecondColor} from '../../../../common/Colors'
 import HeaderBackDark from '../../../../components/header/dark/HeaderBackDark'
 import styled from '@emotion/native'
 import OutlinedAddButton from '../../../../components/buttons/outlined/OutlinedAddButton'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
 `
 
 const PageContainer = styled.View`
@@ -15,7 +15,7 @@ const PageContainer = styled.View`
   align-items: center;
   justify-content: center;
   flex: 1;
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
 `
 
 const EmptyText = styled.Image`
@@ -36,7 +36,7 @@ const PlaylistEmpty = () => <PageWrapper>
 		<EmptyImage resizeMode="contain" source={require('../../../../../assets/atti/playlist/empty-image.png')}/>
 		<OutlinedAddButton title="플레이리스트 만들기"/>
 	</PageContainer>
-	<StatusBar backgroundColor={backgroundColor} barStyle="dark-content"/>
+	<StatusBar backgroundColor={BeigeSecondColor} barStyle="dark-content"/>
 </PageWrapper>
 
 export default PlaylistEmpty

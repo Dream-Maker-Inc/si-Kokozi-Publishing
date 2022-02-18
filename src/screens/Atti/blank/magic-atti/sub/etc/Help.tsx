@@ -1,13 +1,13 @@
 import React from 'react'
 import {StatusBar} from 'react-native'
-import {backgroundColor, textCaptionColor, textDarkColor} from '../../../../../../common/Colors'
+import {BeigeSecondColor, textCaptionColor, textDarkColor} from '../../../../../../common/Colors'
 import styled from '@emotion/native'
 import {Caption, Divider, Paragraph, Subheading, Title} from 'react-native-paper'
 import HeaderBackLight from '../../../../../../components/header/light/HeaderBackLight'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
 `
 
 const ViewContainer = styled.View`
@@ -46,7 +46,7 @@ const Help = () => <PageWrapper>
 		<Paragraph>2. 이미 등록한 아띠인 경우</Paragraph>
 	</ViewContainer>
 
-	<StatusBar barStyle="dark-content" backgroundColor={backgroundColor}/>
+	<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 </PageWrapper>
 
 export default Help

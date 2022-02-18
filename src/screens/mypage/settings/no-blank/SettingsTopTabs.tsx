@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavigationContainer} from '@react-navigation/native'
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
-import {backgroundColor, primaryColor} from '../../../../common/Colors'
+import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
 import Notification from './Notification'
 import {StatusBar} from 'react-native'
 import HeaderBackLight from '../../../../components/header/light/HeaderBackLight'
@@ -15,13 +15,13 @@ const SettingsTopTabs = () => <>
 		<Tab.Navigator
 			screenOptions={{
 				tabBarLabelStyle: {fontWeight: 'bold'},
-				tabBarStyle: {backgroundColor: backgroundColor},
+				tabBarStyle: {backgroundColor: BeigeSecondColor},
 				tabBarIndicatorStyle: {backgroundColor: primaryColor}
 			}}>
 			<Tab.Screen name="알림" component={Notification}/>
 			<Tab.Screen name="공지사항" component={Notice}/>
 		</Tab.Navigator>
-		<StatusBar barStyle="dark-content" backgroundColor={backgroundColor}/>
+		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</NavigationContainer>
 </>
 

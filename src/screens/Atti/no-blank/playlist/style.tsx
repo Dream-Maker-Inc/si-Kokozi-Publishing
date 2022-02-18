@@ -1,6 +1,6 @@
 import styled from '@emotion/native'
 import {
-	backgroundColor,
+	BeigeSecondColor,
 	backgroundSecondaryColor,
 	primaryColor,
 	secondaryColor,
@@ -35,7 +35,7 @@ export const ImageCaptionText = styled(Paragraph)`
 export const StoryWrapper = styled.View`
   flex: 1;
   padding: 24px;
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
 `
 
 export const Header = styled.View`
@@ -61,7 +61,7 @@ export const ItemNumber = styled(Subheading)`
 `
 
 export const StoryListWrapper = styled(View)`
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
 `
 
 export const StoryItem = styled(TouchableOpacity)`
@@ -73,7 +73,7 @@ export const StoryItem = styled(TouchableOpacity)`
   height: 80px;
   margin: 0 30px;
 
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
   border-bottom-color: ${secondaryColor};
   border-bottom-width: 1px;
 `
@@ -102,11 +102,12 @@ export const ItemRunningTime = styled(Text)`
 `
 
 export const ChangeButtonContainer = styled.View`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
   border-top-width: 1px;
   border-top-color: ${secondaryColor};
 `
@@ -118,7 +119,7 @@ export const ChangeButton = styled(TouchableOpacity)`
   width: 90%;
   height: 60px;
   border-radius: 8px;
-  background-color: #CEC0AF;
+  background-color: ${primaryColor};
 `
 
 export const ButtonText = styled(Title)`

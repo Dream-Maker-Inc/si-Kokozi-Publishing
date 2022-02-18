@@ -10,7 +10,7 @@ import RegisterSecond from './src/screens/Atti/blank/magic-atti/sub/RegisterSeco
 import AlreadyRegistered from './src/screens/Atti/blank/magic-atti/sub/error/AlreadyRegistered'
 
 const App = () => <>
-	<RegisterSuccess/>
+	<PlaylistChange/>
 </>
 
 export default App

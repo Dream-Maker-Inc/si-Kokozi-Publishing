@@ -1,6 +1,6 @@
 import React from 'react'
 import {FlatList, SafeAreaView, StatusBar, TouchableOpacity} from 'react-native'
-import {backgroundColor, secondaryColor, textCaptionColor, textDarkColor} from '../../../../common/Colors'
+import {BeigeSecondColor, secondaryColor, textCaptionColor, textDarkColor} from '../../../../common/Colors'
 import styled from '@emotion/native'
 import {playlistData} from './data'
 import {Caption, Title} from 'react-native-paper'
@@ -8,7 +8,7 @@ import HeaderBackDark from '../../../../components/header/dark/HeaderBackDark'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
 `
 
 const ListItemWrapper = styled(TouchableOpacity)`
@@ -86,7 +86,7 @@ const ListItem = ({item}) => <ListItemWrapper>
 const Playlist = () => <PageWrapper>
 	<HeaderBackDark title="플레이리스트"/>
 	<FlatList data={playlistData} renderItem={ListItem}/>
-	<StatusBar backgroundColor={backgroundColor} barStyle="dark-content"/>
+	<StatusBar backgroundColor={BeigeSecondColor} barStyle="dark-content"/>
 </PageWrapper>
 
 export default Playlist

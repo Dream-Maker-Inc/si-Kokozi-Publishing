@@ -1,14 +1,14 @@
 import React from 'react'
 import {Image} from 'react-native'
 import styled from '@emotion/native'
-import {backgroundColor} from '../../../../common/Colors'
+import {BeigeSecondColor} from '../../../../common/Colors'
 
 const PageWrapper = styled.SafeAreaView`
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
 `
 
 const BlankImage = styled.Image`

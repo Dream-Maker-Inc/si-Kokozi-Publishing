@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from '@emotion/native'
 import {Paragraph, Subheading} from 'react-native-paper'
-import {backgroundColor, primaryColor, secondaryColor, textDarkColor} from '../../../../common/Colors'
+import {BeigeSecondColor, primaryColor, secondaryColor, textDarkColor} from '../../../../common/Colors'
 import {FlatList} from 'react-native'
 import {notificationData} from './data/data'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
 `
 
 const ListItem = styled.TouchableOpacity`

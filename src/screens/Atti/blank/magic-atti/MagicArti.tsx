@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {backgroundColor, primaryColor} from '../../../../common/Colors'
+import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
 import PagerView from 'react-native-pager-view'
 import {View} from 'react-native'
 
@@ -9,7 +9,7 @@ const PageWrapper = styled.SafeAreaView`
   flex: 1;
 
   width: 100%;
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
 `
 
 const ViewPager = styled(PagerView)`

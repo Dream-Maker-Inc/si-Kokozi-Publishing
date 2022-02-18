@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {backgroundColor} from '../../../../common/Colors'
+import {BeigeSecondColor} from '../../../../common/Colors'
 import {Image} from 'react-native'
 
 const PageWrapper = styled.SafeAreaView`
@@ -8,7 +8,7 @@ const PageWrapper = styled.SafeAreaView`
   align-items: center;
   justify-content: center;
   flex: 1;
-  background-color: ${backgroundColor};
+  background-color: ${BeigeSecondColor};
 `
 
 const BlankImage = styled.Image`
