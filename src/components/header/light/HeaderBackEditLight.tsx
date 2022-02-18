@@ -37,6 +37,7 @@ const BackButtonContainer = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
 
+  width: 32px;
   left: 20px;
   height: 100%;
 `

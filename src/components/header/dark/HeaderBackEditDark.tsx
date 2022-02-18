@@ -1,6 +1,6 @@
 import React from 'react'
 import {Title} from 'react-native-paper'
-import {backgroundColor, primaryColor, secondaryColor} from '../../../common/Colors'
+import {primaryColor, secondaryColor} from '../../../common/Colors'
 import styled from '@emotion/native'
 
 const Header = styled.View`
@@ -36,6 +36,8 @@ const BackButtonContainer = styled.TouchableOpacity`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 32px;
 
   left: 20px;
   height: 100%;

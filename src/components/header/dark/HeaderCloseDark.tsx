@@ -1,6 +1,7 @@
 import React from 'react'
 import {primaryColor, secondaryColor} from '../../../common/Colors'
 import styled from '@emotion/native'
+import {Title} from 'react-native-paper'
 
 const Header = styled.View`
   position: relative;
@@ -25,7 +26,7 @@ const HeaderTitle = styled.View`
   height: 100%;
 `
 
-const HeaderTitleText = styled.Text`
+const HeaderTitleText = styled(Title)`
   color: ${primaryColor};
   font-weight: bold;
 `
