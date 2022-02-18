@@ -49,11 +49,11 @@
     - [x] **~~모두 - 아이템 리스트~~**
 
 
-- B. 매직아띠 등록
-    - [ ] 매직 아띠 등록
-    - [ ] 매직 아띠 등록 2
-    - [ ] 이미 등록됨
-    - [ ] 등록 완료
+- B. **~~매직아띠 등록~~**
+    - [x] **~~매직 아띠 등록~~** `./src/screens/Atti/blank/magic-atti/sub/RegisterFirst`
+    - [x] **~~매직 아띠 등록 2~~** `./src/screens/Atti/blank/magic-atti/sub/RegisterSecond`
+    - [x] **~~이미 등록됨~~** `./src/screens/Atti/blank/magic-atti/sub/error/AlreadyRegistered`
+    - [x] **~~등록 완료~~** `./src/screens/Atti/blank/magic-atti/sub/RegisterSuccess`
 
 
 - C. 아띠 삭제
