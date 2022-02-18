@@ -68,7 +68,7 @@
     - [x] **~~플레이리스트 순서 변경~~** `./src/screens/Atti/no-blank/edit/Edit`
     - [x] **~~플레이리스트 교체~~** `./src/screens/Atti/no-blank/playlist/Playlist`
     - [x] **~~교체 가능한 플레이리스트~~** `./src/screens/Atti/no-blank/playlist/PlaylistChange`
-    - [ ] 플레이리스트가 존재하지 않을 때
+    - [x] **~~플레이리스트가 존재하지 않을 때~~** `./src/screens/Atti/no-blank/playlist/PlaylistEmpty`
 
 ### 이야기
 
