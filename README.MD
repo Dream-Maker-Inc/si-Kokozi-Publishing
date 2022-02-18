@@ -64,7 +64,7 @@
     - [x] **~~아띠 상세페이지~~**
 
 
-- E. 매직아띠 프로필 편집
+- E. **~~매직아띠 프로필 편집~~**
     - [x] **~~플레이리스트 순서 변경~~** `./src/screens/Atti/no-blank/edit/Edit`
     - [x] **~~플레이리스트 교체~~** `./src/screens/Atti/no-blank/playlist/Playlist`
     - [x] **~~교체 가능한 플레이리스트~~** `./src/screens/Atti/no-blank/playlist/PlaylistChange`
