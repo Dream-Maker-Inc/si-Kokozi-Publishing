@@ -3,11 +3,11 @@
 전체 진행 상황 :
 
 - 전체 화면 개수 `71`
-- 완성 화면 개수 `20`
+- 완성 화면 개수 `21`
 
 ### Pre-login
 
-- A.Pre-login
+- A.**~~Pre-login~~**
     - [x] **~~Splash~~** `./src/screens/pre-login/Splash`
     - [x] **~~Tab 1~~** `./src/screens/pre-login/Intro`
     - [x] **~~Tab 6~~** `./src/screens/pre-login/Welcome`
