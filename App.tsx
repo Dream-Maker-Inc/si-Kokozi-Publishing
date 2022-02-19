@@ -1,8 +1,9 @@
 import React from 'react'
 import Welcome from './src/screens/pre-login/Welcome'
+import Splash from './src/screens/pre-login/Splash'
 
 const App = () => <>
-	<Welcome/>
+	<Splash/>
 </>
 
 export default App
