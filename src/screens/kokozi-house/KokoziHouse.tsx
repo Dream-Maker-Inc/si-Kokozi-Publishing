@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {SafeAreaView, StatusBar, TouchableOpacity} from 'react-native'
 import {BeigeFifthColor, BeigeForthColor, BeigeSecondColor, BeigeThirdColor, primaryColor} from '../../common/Colors'
-import HeaderNotiMoreDark from '../../components/header/dark/HeaderNotiMoreDark'
+import HeaderNotiMoreDark from '../../components/header/dark/IconHeaderNotiMoreDark'
 import styled from '@emotion/native'
 import {Picker} from '@react-native-picker/picker'
 import PageBottomPlayerBlank from '../../components/player/PageBottomPlayerBlank'

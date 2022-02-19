@@ -9,6 +9,7 @@ import {BeigeSecondColor, placeholderTextColor, playerBackgroundColor, primaryCo
 import Arti from './arti/Arti'
 import MagicArti from './magic-atti/MagicArti'
 import All from './all/All'
+import IconHeaderNotiMoreDark from '../../../components/header/dark/IconHeaderNotiMoreDark'
 
 const Tab = createMaterialTopTabNavigator()
 
@@ -91,6 +92,8 @@ const AttiTopTabs = ({navigation}) => {
 	useLayoutEffect(() => navigation.setOptions(NavigationOptions))
 
 	return <>
+
+		<IconHeaderNotiMoreDark title={'아띠'}/>
 
 		<Tab.Navigator
 			screenOptions={{

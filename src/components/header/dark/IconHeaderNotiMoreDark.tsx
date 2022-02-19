@@ -1,6 +1,5 @@
 import React from 'react'
-import {Title} from 'react-native-paper'
-import {backgroundSecondaryColor, BeigeSecondColor, primaryColor} from '../../../common/Colors'
+import {BeigeSecondColor} from '../../../common/Colors'
 import styled from '@emotion/native'
 
 const Header = styled.View`
@@ -8,26 +7,11 @@ const Header = styled.View`
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
   width: 100%;
   height: 60px;
   background-color: ${BeigeSecondColor};
-`
-
-const HeaderTitle = styled.View`
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 100%;
-`
-
-const HeaderTitleText = styled(Title)`
-  color: ${primaryColor};
-  font-weight: bold;
 `
 
 const NotificationIconContainer = styled.TouchableOpacity`
@@ -61,11 +45,11 @@ const MoreIcon = styled.Image`
   width: 100%;
 `
 
-type HeaderBackEditModel = {
-	title: string
-}
+const LogoImage = styled.Image`
+  height: 20px;
+`
 
-const HeaderBackEditLight = (props: HeaderBackEditModel) => <>
+const IconHeaderNotiMoreDark = () => <>
 	<Header>
 		<NotificationIconContainer>
 			<NotificationIcon
@@ -73,9 +57,7 @@ const HeaderBackEditLight = (props: HeaderBackEditModel) => <>
 				source={require('../../../../assets/tab/notification.png')}
 			/>
 		</NotificationIconContainer>
-		<HeaderTitle>
-			<HeaderTitleText style={{color: primaryColor, fontWeight: 'bold'}}>{props.title}</HeaderTitleText>
-		</HeaderTitle>
+		<LogoImage resizeMode="contain" source={require('../../../../assets/logo.png')}/>
 		<MoreButtonContainer>
 			<MoreIcon
 				resizeMode="contain"
@@ -85,4 +67,4 @@ const HeaderBackEditLight = (props: HeaderBackEditModel) => <>
 	</Header>
 </>
 
-export default HeaderBackEditLight
+export default IconHeaderNotiMoreDark

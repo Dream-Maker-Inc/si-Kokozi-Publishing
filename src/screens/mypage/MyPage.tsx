@@ -4,6 +4,7 @@ import styled from '@emotion/native'
 import {BeigeSecondColor, secondaryColor, textDarkColor} from '../../common/Colors'
 import {Paragraph, Title} from 'react-native-paper'
 import {settingListData} from './data'
+import HeaderDark from '../../components/header/dark/HeaderDark'
 
 const PageWrapper = styled(ScrollView)`
   flex: 1;
@@ -80,6 +81,8 @@ const ListItem = styled(Paragraph)`
 `
 
 const MyPage = () => <PageWrapper>
+
+	<HeaderDark title={'마이페이지'}/>
 
 	<ProfileContainer>
 		<ProfileInformation>
