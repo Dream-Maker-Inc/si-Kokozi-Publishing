@@ -75,6 +75,7 @@ export const BottomTabs = () => <>
 		<Tab.Navigator
 			initialRouteName="코코지 하우스"
 			screenOptions={({route}) => ({
+				headerShown: false,
 				tabBarIcon: ({focused}) => TabBarIconOptions(route, focused),
 				tabBarStyle: {
 					backgroundColor: BeigeSecondColor,
