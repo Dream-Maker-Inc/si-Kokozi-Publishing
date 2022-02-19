@@ -8,7 +8,7 @@
 ### Pre-login
 
 - A.Pre-login
-    - [ ] Splash
+    - [x] **~~Splash~~** `./src/screens/pre-login/Splash`
     - [x] **~~Tab 1~~** `./src/screens/pre-login/Intro`
     - [x] **~~Tab 6~~** `./src/screens/pre-login/Welcome`
 
