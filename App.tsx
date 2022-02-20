@@ -1,10 +1,8 @@
 import React from 'react'
-import Welcome from './src/screens/pre-login/Welcome'
-import Splash from './src/screens/pre-login/Splash'
-import BottomTabs from './src/screens/BottomTabs'
+import Playlist from './src/screens/kokozi-house/Playlist'
 
 const App = () => <>
-	<BottomTabs/>
+	<Playlist/>
 </>
 
 export default App
