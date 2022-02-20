@@ -16,7 +16,7 @@
 
 - A. 코코지 하우스
     - [x] **~~하우스가 비어있을 때 / 아띠를 넣었을 때~~** `./src/screens/BottomTabs`
-    - [ ] 반복 재생 / 셔플 재생
+    - [x] **~~반복 재생 / 셔플 재생~~** `./src/screens/kokozi-house/Playlist`
     - [ ] 다락방 불빛 도움말
     - [ ] 코코지 하우스 설정
 
