@@ -3,7 +3,7 @@
 전체 진행 상황 :
 
 - 전체 화면 개수 `71`
-- 완성 화면 개수 `23`
+- 완성 화면 개수 `24`
 
 ### Pre-login
 
@@ -17,7 +17,7 @@
 - A. 코코지 하우스
     - [x] **~~하우스가 비어있을 때 / 아띠를 넣었을 때~~** `./src/screens/BottomTabs`
     - [x] **~~반복 재생 / 셔플 재생~~** `./src/screens/kokozi-house/Playlist`
-    - [ ] 다락방 불빛 도움말
+    - [x] **~~다락방 불빛 도움말~~** `./src/screens/kokozi-house/Help`
     - [ ] 코코지 하우스 설정
 
 
