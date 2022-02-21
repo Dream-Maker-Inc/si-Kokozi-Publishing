@@ -1,8 +1,8 @@
 import React from 'react'
-import Help from './src/screens/kokozi-house/Help'
+import Setting from './src/screens/kokozi-house/Setting'
 
 const App = () => <>
-	<Help/>
+	<Setting/>
 </>
 
 export default App
