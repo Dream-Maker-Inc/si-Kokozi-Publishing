@@ -1,9 +1,10 @@
 import React from 'react'
-import {Image, StatusBar, TouchableOpacity} from 'react-native'
+import {StatusBar, TouchableOpacity} from 'react-native'
 import {BeigeSecondColor, primaryColor} from '../../../../../common/Colors'
 import styled from '@emotion/native'
 import {Button, Paragraph} from 'react-native-paper'
 import HeaderCloseLight from '../../../../../components/header/light/HeaderCloseLight'
+import {StepperThird} from '../../../../../components/stepper/Stepper'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -56,10 +57,7 @@ const CaptionText = styled(Paragraph)`
 const RegisterSuccess = () => <PageWrapper>
 	<HeaderCloseLight title="매직 아띠 등록"/>
 	<Body>
-		<Image
-			resizeMode="contain"
-			source={require('../../../../../../assets/components/stepper/step-3.png')}
-		/>
+		<StepperThird/>
 		<SuccessText
 			resizeMode="contain"
 			source={require('../../../../../../assets/atti/register/success/text.png')}

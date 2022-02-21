@@ -5,6 +5,7 @@ import {BeigeSecondColor, primaryColor, textDarkColor} from '../../../../common/
 import AutoHeightImage from 'react-native-auto-height-image'
 import HeaderBackCloseDark from '../../../../components/header/dark/HeaderBackCloseDark'
 import {Caption, Paragraph} from 'react-native-paper'
+import {StepperThird} from '../../../../components/stepper/Stepper'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -12,10 +13,6 @@ const PageWrapper = styled(SafeAreaView)`
   align-items: center;
   flex: 1;
   background-color: ${BeigeSecondColor};
-`
-
-const ProgressImage = styled(AutoHeightImage)`
-  margin: 16px 0;
 `
 
 const TitleImage = styled(AutoHeightImage)`
@@ -62,11 +59,7 @@ const CaptionText = styled(Caption)`
 const ConnectSuccess = () =>
 	<PageWrapper>
 		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
-
-		<ProgressImage
-			source={require('../../../../../assets/components/stepper/step-3.png')}
-			width={84}
-		/>
+		<StepperThird marginTop={16} marginBottom={16}/>
 
 		<TitleImage
 			source={require('../../../../../assets/kokozi-house/wifi/complete/text.png')}

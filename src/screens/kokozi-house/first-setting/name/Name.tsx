@@ -5,6 +5,7 @@ import {BeigeForthColor, BeigeSecondColor, primaryColor} from '../../../../commo
 import HeaderCloseLight from '../../../../components/header/light/HeaderCloseLight'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {Caption, Paragraph, TextInput} from 'react-native-paper'
+import {StepperThird} from '../../../../components/stepper/Stepper'
 
 const PageWrapper = styled(SafeAreaView)`
   display: flex;
@@ -64,10 +65,7 @@ const Name = () =>
 	<PageWrapper>
 		<HeaderCloseLight title={'코코지 하우스 세팅'}/>
 
-		<StepperImage
-			source={require('../../../../../assets/components/stepper/step-3.png')}
-			width={84}
-		/>
+		<StepperThird marginTop={16} marginBottom={16}/>
 		<TitleText
 			source={require('../../../../../assets/kokozi-house/initialize/name/text.png')}
 			width={252}

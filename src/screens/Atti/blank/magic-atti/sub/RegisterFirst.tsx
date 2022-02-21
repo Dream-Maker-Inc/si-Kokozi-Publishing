@@ -5,6 +5,7 @@ import {Subheading} from 'react-native-paper'
 
 import {BeigeSecondColor, primaryColor} from '../../../../../common/Colors'
 import HeaderCloseLight from '../../../../../components/header/light/HeaderCloseLight'
+import {StepperFirst} from '../../../../../components/stepper/Stepper'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -37,10 +38,7 @@ const SubHeadingText = styled(Subheading)`
 const RegisterFirst = () => <PageWrapper>
 	<HeaderCloseLight title="매직 아띠 등록"/>
 	<Body>
-		<Image
-			resizeMode="contain"
-			source={require('../../../../../../assets/components/stepper/step-1.png')}
-		/>
+		<StepperFirst/>
 		<TitleText
 			resizeMode="contain"
 			source={require('../../../../../../assets/atti/register/put-in/title1.png')}

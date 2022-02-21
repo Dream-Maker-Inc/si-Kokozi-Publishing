@@ -1,9 +1,10 @@
 import React from 'react'
-import {Image, StatusBar} from 'react-native'
+import {StatusBar} from 'react-native'
 import {BeigeForthColor, BeigeSecondColor, primaryColor} from '../../../../../common/Colors'
 import styled from '@emotion/native'
 import {Button, Caption, Paragraph, TextInput} from 'react-native-paper'
 import HeaderCloseLight from '../../../../../components/header/light/HeaderCloseLight'
+import {StepperSecond} from '../../../../../components/stepper/Stepper'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -57,10 +58,7 @@ const ButtonText = styled(Paragraph)`
 const RegisterSecond = () => <PageWrapper>
 	<HeaderCloseLight title="매직 아띠 등록"/>
 	<Body>
-		<Image
-			resizeMode="contain"
-			source={require('../../../../../../assets/components/stepper/step-2.png')}
-		/>
+		<StepperSecond/>
 		<TitleText
 			resizeMode="contain"
 			source={require('../../../../../../assets/atti/register/name/title2.png')}

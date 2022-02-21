@@ -6,6 +6,7 @@ import AutoHeightImage from 'react-native-auto-height-image'
 import {Caption, Paragraph, TextInput} from 'react-native-paper'
 import {Picker} from '@react-native-picker/picker'
 import HeaderBackCloseDark from '../../../../components/header/dark/HeaderBackCloseDark'
+import {StepperSecond} from '../../../../components/stepper/Stepper'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -13,10 +14,6 @@ const PageWrapper = styled(SafeAreaView)`
   align-items: center;
   flex: 1;
   background-color: ${BeigeSecondColor};
-`
-
-const ProgressImage = styled(AutoHeightImage)`
-  margin: 16px 0;
 `
 
 const TitleImage = styled(AutoHeightImage)`
@@ -125,10 +122,7 @@ const Information = () =>
 
 	<PageWrapper>
 		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
-		<ProgressImage
-			width={84}
-			source={require('../../../../../assets/components/stepper/step-2.png')}
-		/>
+		<StepperSecond marginTop={16} marginBottom={16}/>
 		<TitleImage
 			width={288}
 			source={require('../../../../../assets/kokozi-house/wifi/information/connection-information-text.png')}

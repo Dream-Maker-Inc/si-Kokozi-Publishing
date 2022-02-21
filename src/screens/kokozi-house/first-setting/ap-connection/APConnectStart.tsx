@@ -5,6 +5,7 @@ import HeaderBackCloseDark from '../../../../components/header/dark/HeaderBackCl
 import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {Paragraph} from 'react-native-paper'
+import {StepperFirst} from '../../../../components/stepper/Stepper'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -49,10 +50,7 @@ const ButtonText = styled(Paragraph)`
 const APConnectStart = () =>
 	<PageWrapper>
 		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
-		<StepperImage
-			source={require('../../../../../assets/components/stepper/step-1.png')}
-			width={84}
-		/>
+		<StepperFirst marginTop={16}/>
 		<TitleText
 			source={require('../../../../../assets/kokozi-house/initialize/ap-connect/start/text.png')}
 			width={228}

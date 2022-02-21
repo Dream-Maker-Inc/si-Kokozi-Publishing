@@ -61,10 +61,7 @@ const ButtonText = styled(Paragraph)`
 const RegisterComplete = () =>
 	<PageWrapper>
 		<HeaderCloseLight title={'코코지 하우스 세팅'}/>
-		<StepperThird
-			marginTop={32}
-			marginBottom={16}
-		/>
+		<StepperThird marginTop={32} marginBottom={16}/>
 		<TitleImage
 			source={require('../../../../assets/kokozi-house/complete/text.png')}
 			width={112}

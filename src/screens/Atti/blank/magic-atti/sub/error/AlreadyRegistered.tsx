@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {Image, StatusBar} from 'react-native'
+import {StatusBar} from 'react-native'
 import {Button, Headline} from 'react-native-paper'
 
 import {BeigeSecondColor, primaryColor} from '../../../../../../common/Colors'
 
 import HeaderCloseLight from '../../../../../../components/header/light/HeaderCloseLight'
+import {StepperFirst} from '../../../../../../components/stepper/Stepper'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -45,10 +46,7 @@ const HeadlineText = styled(Headline)`
 const AlreadyRegistered = () => <PageWrapper>
 	<HeaderCloseLight title="매직 아띠 등록"/>
 	<Body>
-		<Image
-			resizeMode="contain"
-			source={require('../../../../../../../assets/components/stepper/step-1.png')}
-		/>
+		<StepperFirst/>
 		<ImageText
 			resizeMode="contain"
 			source={require('../../../../../../../assets/atti/register/error/already-registered/text.png')}

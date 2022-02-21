@@ -5,6 +5,7 @@ import {BeigeSecondColor, BeigeThirdColor, primaryColor, textDarkColor} from '..
 import HeaderBackCloseDark from '../../../../components/header/dark/HeaderBackCloseDark'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {Caption, Paragraph} from 'react-native-paper'
+import {StepperSecond} from '../../../../components/stepper/Stepper'
 
 const WifiListData = [
 	'kokozi wifi',
@@ -19,10 +20,6 @@ const PageWrapper = styled(SafeAreaView)`
   align-items: center;
   flex: 1;
   background-color: ${BeigeSecondColor};
-`
-
-const ProgressImage = styled(AutoHeightImage)`
-  margin: 16px 0;
 `
 
 const TitleImage = styled(AutoHeightImage)`
@@ -61,10 +58,7 @@ const renderListItem = ({item}) =>
 const ConnectList = () =>
 	<PageWrapper>
 		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
-		<ProgressImage
-			width={84}
-			source={require('../../../../../assets/components/stepper/step-2.png')}
-		/>
+		<StepperSecond marginTop={16} marginBottom={16}/>
 		<TitleImage
 			width={248}
 			source={require('../../../../../assets/kokozi-house/wifi/checklist/text.png')}
