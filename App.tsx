@@ -1,8 +1,8 @@
 import React from 'react'
-import Playlist from './src/screens/kokozi-house/Playlist'
+import Help from './src/screens/kokozi-house/Help'
 
 const App = () => <>
-	<Playlist/>
+	<Help/>
 </>
 
 export default App
