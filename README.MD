@@ -14,14 +14,14 @@
 
 ### 코코지 하우스
 
-- A. 코코지 하우스
+- A. **~~코코지 하우스~~**
     - [x] **~~하우스가 비어있을 때 / 아띠를 넣었을 때~~** `./src/screens/BottomTabs`
     - [x] **~~반복 재생 / 셔플 재생~~** `./src/screens/kokozi-house/Playlist`
     - [x] **~~다락방 불빛 도움말~~** `./src/screens/kokozi-house/LighteningHelp`
     - [x] **~~코코지 하우스 설정~~** `./src/screens/kokozi-house/SleepingModeSetting`
 
 
-- B. 코코지 하우스 초기 세팅
+- B. **~~코코지 하우스 초기 세팅~~**
     - [x] **~~코코지 하우스 세팅 1~~** `./src/screens/kokozi-house/first-setting/setting/SettingStart`
     - [x] **~~코코지 하우스 세팅 2~~** `./src/screens/kokozi-house/first-setting/setting/SettingChecklist`
     - [x] **~~AP모드 연결~~** `./src/screens/kokozi-house/first-setting/ap-connection/APConnectStart`
