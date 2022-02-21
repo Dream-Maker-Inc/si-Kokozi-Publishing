@@ -36,9 +36,9 @@
     - [x] **~~세팅 완료~~** `./src/screens/kokozi-house/sub/RegisterComplete`
 
 
-- C. 코코지 하우스 세팅 기타 화면
-    - [ ] 이미 등록된 하우스
-    - [ ] 정품 코코지 하우스가 아닌 경우
+- C. **~~코코지 하우스 세팅 기타 화면~~**
+    - [x] **~~이미 등록된 하우스~~** `./src/screens/kokozi-house/setting-etc/AlreadyRegistered`
+    - [x] **~~정품 코코지 하우스가 아닌 경우~~** `./src/screens/kokozi-house/setting-etc/IllegalProduct`
 
 ### 아띠
 
