@@ -56,8 +56,8 @@
     - [x] **~~등록 완료~~** `./src/screens/Atti/blank/magic-atti/sub/RegisterSuccess`
 
 
-- C. 아띠 삭제
-    - [ ] 매직아띠 삭제
+- C. **~~아띠 삭제~~**
+    - [x] **~~매직아띠 삭제 - 상태관리라 제작 필요 없음~~**
 
 
 - D. **~~아띠 상세페이지~~** `./src/screens/Atti/no-blank/detail/Detail`
