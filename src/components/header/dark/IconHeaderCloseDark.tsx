@@ -36,11 +36,11 @@ const CloseButton = styled.Image`
 
 const IconHeaderCloseDark = () => <>
 	<Header>
-		<LogoImage resizeMode="contain" source={require('../../../../assets/logo.png')}/>
+		<LogoImage resizeMode="contain" source={require('../../../../assets/logo/text.png')}/>
 		<CloseButtonContainer>
 			<CloseButton
 				resizeMode="contain"
-				source={require('../../../../assets/atti/register/close.png')}
+				source={require('../../../../assets/components/icons/close.png')}
 			/>
 		</CloseButtonContainer>
 	</Header>

@@ -58,7 +58,7 @@ const HeaderCloseLight = (props: HeaderCancelModel) => <>
 		<CloseButtonContainer>
 			<CloseButton
 				resizeMode="contain"
-				source={require('../../../../assets/atti/register/close.png')}
+				source={require('../../../../assets/components/icons/close.png')}
 			/>
 		</CloseButtonContainer>
 	</Header>

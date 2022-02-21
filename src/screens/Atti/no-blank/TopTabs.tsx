@@ -64,7 +64,7 @@ const HeaderLeftIcon = () => <>
 	>
 		<IconImage
 			resizeMode="contain"
-			source={require('../../../../assets/tab/notification.png')}
+			source={require('../../../../assets/components/icons/notification.png')}
 		/>
 	</MenuIcon>
 </>
@@ -75,7 +75,7 @@ const HeaderRightIcon = () => <>
 	>
 		<IconImage
 			resizeMode="contain"
-			source={require('../../../../assets/tab/more.png')}
+			source={require('../../../../assets/components/icons/more.png')}
 		/>
 	</MenuIcon>
 </>
@@ -123,19 +123,19 @@ const AttiTopTabs = ({navigation}) => {
 				<TouchableOpacity>
 					<ControllerIcon
 						resizeMode="contain"
-						source={require('../../../../assets/atti/previous.png')}
+						source={require('../../../../assets/components/icons/previous.png')}
 					/>
 				</TouchableOpacity>
 				<TouchableOpacity>
 					<ControllerIcon
 						resizeMode="contain"
-						source={require('../../../../assets/atti/next.png')}
+						source={require('../../../../assets/components/icons/next.png')}
 					/>
 				</TouchableOpacity>
 				<TouchableOpacity>
 					<ControllerIcon
 						resizeMode="contain"
-						source={require('../../../../assets/atti/playlist.png')}
+						source={require('../../../../assets/components/icons/playlist.png')}
 					/>
 				</TouchableOpacity>
 			</ControllerWrapper>

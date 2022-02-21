@@ -34,7 +34,7 @@ type CreatePlaylistButtonModel = {
 
 const OutlinedAddButton = (props: CreatePlaylistButtonModel) => <>
 	<ButtonWrapper>
-		<ButtonImage resizeMode="contain" source={require('../../../../assets/components/plus.png')}/>
+		<ButtonImage resizeMode="contain" source={require('../../../../assets/components/icons/plus.png')}/>
 		<ButtonText>{props.title}</ButtonText>
 	</ButtonWrapper>
 </>

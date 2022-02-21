@@ -186,21 +186,21 @@ const renderButtons = <>
 		<RepeatButton>
 			<RepeatImage
 				resizeMode="contain"
-				source={require('../../../assets/atti/detail/repeat.png')}
+				source={require('../../../assets/components/icons/repeat.png')}
 			/>
 			<ButtonText>반복재생</ButtonText>
 		</RepeatButton>
 		<ShuffleButton>
 			<RepeatImage
 				resizeMode="contain"
-				source={require('../../../assets/atti/detail/shuffle.png')}
+				source={require('../../../assets/components/icons/shuffle.png')}
 			/>
 			<ButtonText>셔플재생</ButtonText>
 		</ShuffleButton>
 	</ButtonWrapper>
 </>
 
-const renderListItem = item => <StoryListWrapper>
+const renderListItem = () => <StoryListWrapper>
 	{storyData.map((item, idx) => (
 		<Item key={idx}>
 			<ItemNumber>0{item.number}</ItemNumber>

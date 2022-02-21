@@ -152,7 +152,7 @@ const KokoziHouse = () =>
 			<RenderPicker/>
 			<QuestionIcon
 				resizeMode="cover"
-				source={require('../../../assets/kokozi-house/question.png')}
+				source={require('../../../assets/components/icons/question.png')}
 			/>
 		</HeaderContainer>
 		<BodyContainer>
@@ -169,7 +169,7 @@ const KokoziHouse = () =>
 				<TouchableOpacity>
 					<EditButton
 						resizeMode="contain"
-						source={require('../../../assets/atti/edit/edit.png')}
+						source={require('../../../assets/components/icons/edit.png')}
 					/>
 				</TouchableOpacity>
 			</TitleContainer>
@@ -177,20 +177,20 @@ const KokoziHouse = () =>
 			<ComponentContainer>
 				<ComponentIcon
 					resizeMode="contain"
-					source={require('../../../assets/kokozi-house/wifi.png')}
+					source={require('../../../assets/components/icons/wifi.png')}
 				/>
 				<WifiText>U+Net369C</WifiText>
 				<TouchableOpacity>
 					<ComponentIcon
 						resizeMode="contain"
-						source={require('../../../assets/kokozi-house/refresh.png')}
+						source={require('../../../assets/components/icons/refresh.png')}
 					/>
 				</TouchableOpacity>
 			</ComponentContainer>
 			<ComponentContainer>
 				<ComponentIcon
 					resizeMode="contain"
-					source={require('../../../assets/kokozi-house/audio.png')}
+					source={require('../../../assets/components/icons/audio.png')}
 				/>
 				<MultiSlider
 					containerStyle={{marginLeft: 16}}

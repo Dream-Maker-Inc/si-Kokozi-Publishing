@@ -58,15 +58,15 @@ const RegisterSuccess = () => <PageWrapper>
 	<Body>
 		<Image
 			resizeMode="contain"
-			source={require('../../../../../../assets/atti/register/success-step.png')}
+			source={require('../../../../../../assets/components/stepper/step-3.png')}
 		/>
 		<SuccessText
 			resizeMode="contain"
-			source={require('../../../../../../assets/atti/register/success-text.png')}
+			source={require('../../../../../../assets/atti/register/success/text.png')}
 		/>
 		<SuccessImage
 			resizeMode="contain"
-			source={require('../../../../../../assets/atti/register/success-image.png')}
+			source={require('../../../../../../assets/atti/register/success/image.png')}
 		/>
 		<ConfirmButton mode="contained">
 			<ButtonText> 플레이리스트 만들기 </ButtonText>

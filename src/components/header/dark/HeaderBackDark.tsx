@@ -55,7 +55,7 @@ const HeaderBackDark = (props: HeaderBackModel) => <>
 		<BackButtonContainer>
 			<BackButton
 				resizeMode="contain"
-				source={require('../../../../assets/atti/register/back.png')}
+				source={require('../../../../assets/components/icons/back.png')}
 			/>
 		</BackButtonContainer>
 		<HeaderTitle>

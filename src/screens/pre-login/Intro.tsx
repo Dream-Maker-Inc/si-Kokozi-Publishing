@@ -33,16 +33,16 @@ const Intro = () => <PageWrapper>
 
 	<ViewPager showPageIndicator>
 		<ContentsContainer>
-			<AutoHeightImage source={require('../../../assets/pre-login/intro-text.png')} width={200}/>
-			<AutoHeightImage source={require('../../../assets/pre-login/intro-image.png')} width={400}/>
+			<AutoHeightImage source={require('../../../assets/pre-login/intro/text.png')} width={200}/>
+			<AutoHeightImage source={require('../../../assets/pre-login/intro/image.png')} width={400}/>
 		</ContentsContainer>
 		<ContentsContainer>
-			<AutoHeightImage source={require('../../../assets/pre-login/intro-text.png')} width={200}/>
-			<AutoHeightImage source={require('../../../assets/pre-login/intro-image.png')} width={400}/>
+			<AutoHeightImage source={require('../../../assets/pre-login/intro/text.png')} width={200}/>
+			<AutoHeightImage source={require('../../../assets/pre-login/intro/image.png')} width={400}/>
 		</ContentsContainer>
 		<ContentsContainer>
-			<AutoHeightImage source={require('../../../assets/pre-login/intro-text.png')} width={200}/>
-			<AutoHeightImage source={require('../../../assets/pre-login/intro-image.png')} width={400}/>
+			<AutoHeightImage source={require('../../../assets/pre-login/intro/text.png')} width={200}/>
+			<AutoHeightImage source={require('../../../assets/pre-login/intro/image.png')} width={400}/>
 		</ContentsContainer>
 	</ViewPager>
 

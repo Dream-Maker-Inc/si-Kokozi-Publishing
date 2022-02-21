@@ -67,8 +67,8 @@ const AppleButton = styled(AutoHeightImage)`
 
 const renderImages = <>
 	<ImagesContainer>
-		<TitleImage source={require('../../../assets/pre-login/intro-text.png')} width={200}/>
-		<TitleText source={require('../../../assets/pre-login/welcome-image.png')} width={400}/>
+		<TitleImage source={require('../../../assets/pre-login/intro/text.png')} width={200}/>
+		<TitleText source={require('../../../assets/pre-login/welcome/image.png')} width={400}/>
 	</ImagesContainer>
 </>
 
@@ -84,10 +84,10 @@ const renderSNS = <>
 	<CaptionText>또는 다른 서비스 계정으로 회원가입</CaptionText>
 	<SNSButtons>
 		<TouchableOpacity>
-			<AutoHeightImage source={require('../../../assets/pre-login/kakao.png')} width={50}/>
+			<AutoHeightImage source={require('../../../assets/components/sns/kakao.png')} width={50}/>
 		</TouchableOpacity>
 		<TouchableOpacity>
-			<AppleButton source={require('../../../assets/pre-login/apple.png')} width={50}/>
+			<AppleButton source={require('../../../assets/components/sns/apple.png')} width={50}/>
 		</TouchableOpacity>
 	</SNSButtons>
 </>

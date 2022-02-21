@@ -58,19 +58,19 @@ const PageBottomPlayerBlank = () => <>
 			<TouchableOpacity>
 				<ControllerImage
 					resizeMode="contain"
-					source={require('../../../assets/atti/previous.png')}
+					source={require('../../../assets/components/icons/previous.png')}
 				/>
 			</TouchableOpacity>
 			<TouchableOpacity>
 				<ControllerImage
 					resizeMode="contain"
-					source={require('../../../assets/atti/next.png')}
+					source={require('../../../assets/components/icons/next.png')}
 				/>
 			</TouchableOpacity>
 			<TouchableOpacity>
 				<ControllerImage
 					resizeMode="contain"
-					source={require('../../../assets/atti/playlist.png')}
+					source={require('../../../assets/components/icons/playlist.png')}
 				/>
 			</TouchableOpacity>
 		</ControllerWrapper>

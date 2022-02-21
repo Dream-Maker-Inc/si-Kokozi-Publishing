@@ -50,7 +50,7 @@ const renderProfile = <>
 			source={require('../../../../../assets/atti/detail/thumbnail.png')}/>
 		<ImageCaptionText>매직아띠
 			<TouchableOpacity>
-				<EditButton resizeMode="contain" source={require('../../../../../assets/atti/edit/edit.png')}/>
+				<EditButton resizeMode="contain" source={require('../../../../../assets/components/icons/edit.png')}/>
 			</TouchableOpacity>
 		</ImageCaptionText>
 		<ImageCaptionDescription>플레이리스트 A</ImageCaptionDescription>
@@ -66,7 +66,7 @@ const renderStoryList = <StoryListWrapper>
 			</StoryTextContainer>
 			<StoryInfoContainer>
 				<ItemRunningTime>{item.runningTime}</ItemRunningTime>
-				<ItemPlayButton resizeMode="contain" source={require('../../../../../assets/atti/edit/handle.png')}/>
+				<ItemPlayButton resizeMode="contain" source={require('../../../../../assets/components/icons/handle.png')}/>
 			</StoryInfoContainer>
 		</StoryItem>
 	))}
@@ -81,12 +81,12 @@ const renderStory = <>
 		<ButtonWrapper>
 			<RepeatButton>
 				<RepeatImage resizeMode="contain"
-							 source={require('../../../../../assets/atti/detail/repeat.png')}/>
+							 source={require('../../../../../assets/components/icons/repeat.png')}/>
 				<ButtonText>반복재생</ButtonText>
 			</RepeatButton>
 			<ShuffleButton>
 				<RepeatImage resizeMode="contain"
-							 source={require('../../../../../assets/atti/detail/shuffle.png')}/>
+							 source={require('../../../../../assets/components/icons/shuffle.png')}/>
 				<ButtonText>셔플재생</ButtonText>
 			</ShuffleButton>
 		</ButtonWrapper>

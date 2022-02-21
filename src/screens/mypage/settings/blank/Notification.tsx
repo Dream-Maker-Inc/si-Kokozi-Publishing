@@ -17,9 +17,9 @@ const BlankImage = styled.Image`
 `
 
 const Notification = () => <PageWrapper>
-	<Image source={require('../../../../../assets/mypage/settings/notification/notification-text.png')}/>
+	<Image source={require('../../../../../assets/mypage/settings/notification/text.png')}/>
 	<BlankImage resizeMode="contain"
-		source={require('../../../../../assets/mypage/settings/notification/notification-image.png')}/>
+		source={require('../../../../../assets/mypage/settings/notification/image.png')}/>
 </PageWrapper>
 
 export default Notification

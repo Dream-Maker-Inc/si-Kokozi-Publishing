@@ -57,7 +57,7 @@ const RenderItem = ({item}) => <>
 			<ItemTitle>{item.title}</ItemTitle>
 			<ItemContent>{item.content}</ItemContent>
 		</ItemTextContainer>
-		<Arrow source={require('../../../../../assets/mypage/arrow-right.png')}/>
+		<Arrow source={require('../../../../../assets/components/icons/arrow-right.png')}/>
 	</ListItem>
 </>
 

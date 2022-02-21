@@ -23,48 +23,48 @@ const TabBarIconOptions = (route, focused) => {
 		if (focused) {
 			return <TabIconImage
 				resizeMode="contain"
-				source={require('../../assets/tab/icons/kokozi-active.png')}
+				source={require('../../assets/tab/icons/kokozi/on.png')}
 			/>
 		} else {
 			return <TabIconImage
 				resizeMode="contain"
-				source={require('../../assets/tab/icons/kokozi.png')}
+				source={require('../../assets/tab/icons/kokozi/off.png')}
 			/>
 		}
 	case '아띠':
 		if (focused) {
 			return <TabIconImage
 				resizeMode="contain"
-				source={require('../../assets/tab/icons/atti-active.png')}
+				source={require('../../assets/tab/icons/atri/on.png')}
 			/>
 		} else {
 			return <TabIconImage
 				resizeMode="contain"
-				source={require('../../assets/tab/icons/atti.png')}
+				source={require('../../assets/tab/icons/atri/off.png')}
 			/>
 		}
 	case '이야기':
 		if (focused) {
 			return <TabIconImage
 				resizeMode="contain"
-				source={require('../../assets/tab/icons/story-active.png')}
+				source={require('../../assets/tab/icons/story/on.png')}
 			/>
 		} else {
 			return <TabIconImage
 				resizeMode="contain"
-				source={require('../../assets/tab/icons/story.png')}
+				source={require('../../assets/tab/icons/story/off.png')}
 			/>
 		}
 	case '마이페이지':
 		if (focused) {
 			return <Image
 				resizeMode="contain"
-				source={require('../../assets/tab/icons/mypage-active.png')}
+				source={require('../../assets/tab/icons/mypage/on.png')}
 			/>
 		} else {
 			return <Image
 				resizeMode="contain"
-				source={require('../../assets/tab/icons/mypage.png')}
+				source={require('../../assets/tab/icons/mypage/off.png')}
 			/>
 		}
 	}

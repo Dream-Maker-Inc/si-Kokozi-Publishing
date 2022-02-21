@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import {SafeAreaView, StatusBar} from 'react-native'
-import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, textCaptionColor, textDarkColor} from '../../common/Colors'
+import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, textCaptionColor, textDarkColor} from '../../../common/Colors'
 import styled from '@emotion/native'
-import HeaderBackDark from '../../components/header/dark/HeaderBackDark'
+import HeaderBackDark from '../../../components/header/dark/HeaderBackDark'
 import {Caption, Headline, Paragraph} from 'react-native-paper'
 import {Picker} from '@react-native-picker/picker'
 
@@ -58,7 +58,7 @@ const CaptionText = styled(Caption)`
   color: ${textCaptionColor};
 `
 
-const Setting = () => {
+const SleepingModeSetting = () => {
 	const [selectedLanguage, setSelectedLanguage] = useState()
 
 	return <>
@@ -109,4 +109,4 @@ const Setting = () => {
 	</>
 }
 
-export default Setting
+export default SleepingModeSetting

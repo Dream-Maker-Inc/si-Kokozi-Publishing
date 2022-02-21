@@ -57,10 +57,10 @@ const MagicArti = () => <PageWrapper>
 		<View>
 			<StyledText
 				resizeMode="contain"
-				source={require('../../../../../assets/atti/magic-atti/blank-text-1.png')}/>
+				source={require('../../../../../assets/atti/magic-atti/blank/first/text.png')}/>
 			<StyledImage
 				resizeMode="contain"
-				source={require('../../../../../assets/atti/magic-atti/blank-image-1.png')}/>
+				source={require('../../../../../assets/atti/magic-atti/blank/first/image.png')}/>
 			<StyledButton>
 				<StyledButtonText>매직아띠 등록하기</StyledButtonText>
 			</StyledButton>
@@ -68,10 +68,10 @@ const MagicArti = () => <PageWrapper>
 		<View>
 			<SecondText
 				resizeMode="contain"
-				source={require('../../../../../assets/atti/magic-atti/blank-text-2.png')}/>
+				source={require('../../../../../assets/atti/magic-atti/blank/second/text.png')}/>
 			<StyledImage
 				resizeMode="contain"
-				source={require('../../../../../assets/atti/magic-atti/blank-image-2.png')}/>
+				source={require('../../../../../assets/atti/magic-atti/blank/second/image.png')}/>
 			<StyledButton>
 				<StyledButtonText>매직아띠 등록하기</StyledButtonText>
 			</StyledButton>

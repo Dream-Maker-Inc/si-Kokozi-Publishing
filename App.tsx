@@ -1,8 +1,6 @@
 import React from 'react'
-import Setting from './src/screens/kokozi-house/Setting'
+import RegisterComplete from './src/screens/kokozi-house/sub/RegisterComplete'
 
-const App = () => <>
-	<Setting/>
-</>
+const App = () => <RegisterComplete/>
 
 export default App

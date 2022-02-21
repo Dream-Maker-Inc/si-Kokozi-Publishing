@@ -86,10 +86,10 @@ const MyPage = () => <PageWrapper>
 
 	<ProfileContainer>
 		<ProfileInformation>
-			<ProfileImage resizeMode="contain" source={require('../../../assets/mypage/profile-image.png')}/>
+			<ProfileImage resizeMode="contain" source={require('../../../assets/components/icons/profile-image.png')}/>
 			<ProfileName>코코지</ProfileName>
 		</ProfileInformation>
-		<Arrow resizeMode="cover" source={require('../../../assets/mypage/arrow-right.png')}/>
+		<Arrow resizeMode="cover" source={require('../../../assets/components/icons/arrow-right.png')}/>
 	</ProfileContainer>
 
 	<Divider/>
@@ -101,7 +101,7 @@ const MyPage = () => <PageWrapper>
 				{setting.item.map(list => (
 					<ListItemContainer>
 						<ListItem>{list}</ListItem>
-						<Arrow resizeMode="contain" source={require('../../../assets/mypage/arrow-right.png')}/>
+						<Arrow resizeMode="contain" source={require('../../../assets/components/icons/arrow-right.png')}/>
 					</ListItemContainer>
 				))}
 				<Divider/>

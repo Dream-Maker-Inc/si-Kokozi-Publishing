@@ -23,7 +23,7 @@ const BlankAttiTopTabs = ({navigation}) => {
 					<Image
 						resizeMode="contain"
 						style={{height: 20}}
-						source={require('../../../../assets/tab/notification.png')}
+						source={require('../../../../assets/components/icons/notification.png')}
 					/>
 				</TouchableOpacity>
 			),
@@ -35,7 +35,7 @@ const BlankAttiTopTabs = ({navigation}) => {
 					<Image
 						resizeMode="contain"
 						style={{height: 20}}
-						source={require('../../../../assets/tab/more.png')}
+						source={require('../../../../assets/components/icons/more.png')}
 					/>
 				</TouchableOpacity>
 			)

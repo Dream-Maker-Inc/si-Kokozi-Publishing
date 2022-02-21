@@ -47,15 +47,15 @@ const AlreadyRegistered = () => <PageWrapper>
 	<Body>
 		<Image
 			resizeMode="contain"
-			source={require('../../../../../../../assets/atti/register/step1.png')}
+			source={require('../../../../../../../assets/components/stepper/step-1.png')}
 		/>
 		<ImageText
 			resizeMode="contain"
-			source={require('../../../../../../../assets/atti/register/error/already-registered-text.png')}
+			source={require('../../../../../../../assets/atti/register/error/already-registered/text.png')}
 		/>
 		<ThumbImage
 			resizeMode="center"
-			source={require('../../../../../../../assets/atti/register/error/already-registered-image.png')}
+			source={require('../../../../../../../assets/atti/register/error/already-registered/image.png')}
 		/>
 		<ConfirmButton mode="contained">
 			<HeadlineText>올렸어요</HeadlineText>

@@ -17,7 +17,7 @@ const LogoImage = styled.Image`
 `
 
 const Splash = () => <PageWrapper>
-	<LogoImage resizeMode="contain" source={require('../../../assets/logo-brand.png')}/>
+	<LogoImage resizeMode="contain" source={require('../../../assets/logo/image.png')}/>
 </PageWrapper>
 
 export default Splash

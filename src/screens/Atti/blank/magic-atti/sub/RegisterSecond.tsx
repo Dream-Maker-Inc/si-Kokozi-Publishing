@@ -1,6 +1,6 @@
 import React from 'react'
 import {Image, StatusBar} from 'react-native'
-import {BeigeSecondColor, primaryColor} from '../../../../../common/Colors'
+import {BeigeForthColor, BeigeSecondColor, primaryColor} from '../../../../../common/Colors'
 import styled from '@emotion/native'
 import {Button, Caption, Paragraph, TextInput} from 'react-native-paper'
 import HeaderCloseLight from '../../../../../components/header/light/HeaderCloseLight'
@@ -59,20 +59,22 @@ const RegisterSecond = () => <PageWrapper>
 	<Body>
 		<Image
 			resizeMode="contain"
-			source={require('../../../../../../assets/atti/register/step2.png')}
+			source={require('../../../../../../assets/components/stepper/step-2.png')}
 		/>
 		<TitleText
 			resizeMode="contain"
-			source={require('../../../../../../assets/atti/register/title2.png')}
+			source={require('../../../../../../assets/atti/register/name/title2.png')}
 		/>
 		<TitleImage
 			resizeMode="center"
-			source={require('../../../../../../assets/atti/register/image2.png')}
+			source={require('../../../../../../assets/atti/register/name/image2.png')}
 		/>
 		<CaptionText>매직아띠 이름</CaptionText>
 		<Input
 			mode="outlined"
 			placeholder="공백 포함 8자"
+			activeOutlineColor={BeigeForthColor}
+			placeholderTextColor={BeigeForthColor}
 		/>
 		<ConfirmButton mode="contained">
 			<ButtonText> 매직아띠 등록 </ButtonText>

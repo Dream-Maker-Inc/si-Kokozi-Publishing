@@ -32,8 +32,8 @@ const EmptyImage = styled.Image`
 const PlaylistEmpty = () => <PageWrapper>
 	<HeaderBackDark title="플레이리스트"/>
 	<PageContainer>
-		<EmptyText resizeMode="contain" source={require('../../../../../assets/atti/playlist/empty-text.png')}/>
-		<EmptyImage resizeMode="contain" source={require('../../../../../assets/atti/playlist/empty-image.png')}/>
+		<EmptyText resizeMode="contain" source={require('../../../../../assets/atti/playlist/blank/text.png')}/>
+		<EmptyImage resizeMode="contain" source={require('../../../../../assets/atti/playlist/imagfe\'.png')}/>
 		<OutlinedAddButton title="플레이리스트 만들기"/>
 	</PageContainer>
 	<StatusBar backgroundColor={BeigeSecondColor} barStyle="dark-content"/>

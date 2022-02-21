@@ -39,15 +39,15 @@ const RegisterFirst = () => <PageWrapper>
 	<Body>
 		<Image
 			resizeMode="contain"
-			source={require('../../../../../../assets/atti/register/step1.png')}
+			source={require('../../../../../../assets/components/stepper/step-1.png')}
 		/>
 		<TitleText
 			resizeMode="contain"
-			source={require('../../../../../../assets/atti/register/title1.png')}
+			source={require('../../../../../../assets/atti/register/put-in/title1.png')}
 		/>
 		<TitleImage
 			resizeMode="center"
-			source={require('../../../../../../assets/atti/register/image1.png')}
+			source={require('../../../../../../assets/atti/register/put-in/image1.png')}
 		/>
 		<SubHeadingText> 도움이 필요해요 </SubHeadingText>
 	</Body>

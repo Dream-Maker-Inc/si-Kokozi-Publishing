@@ -2,8 +2,8 @@ import React from 'react'
 import {ScrollView, StatusBar} from 'react-native'
 import styled from '@emotion/native'
 import {Caption, Divider, Subheading, Title} from 'react-native-paper'
-import {BeigeSecondColor, textCaptionColor, textDarkColor} from '../../common/Colors'
-import HeaderBackDark from '../../components/header/dark/HeaderBackDark'
+import {BeigeSecondColor, textCaptionColor, textDarkColor} from '../../../common/Colors'
+import HeaderBackDark from '../../../components/header/dark/HeaderBackDark'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -30,7 +30,7 @@ const HelpImage = styled.Image`
   margin-top: 24px;
 `
 
-const Help = () => <PageWrapper>
+const LighteningHelp = () => <PageWrapper>
 	<HeaderBackDark title="도움말"/>
 
 	<ScrollView>
@@ -46,7 +46,7 @@ const Help = () => <PageWrapper>
 			<Subheading>불빛의 의미는 다음과 같아요.</Subheading>
 			<HelpImage
 				resizeMode="contain"
-				source={require('../../../assets/kokozi-house/help.png')}
+				source={require('../../../../assets/kokozi-house/help.png')}
 			/>
 		</ViewContainer>
 	</ScrollView>
@@ -54,4 +54,4 @@ const Help = () => <PageWrapper>
 	<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 </PageWrapper>
 
-export default Help
+export default LighteningHelp

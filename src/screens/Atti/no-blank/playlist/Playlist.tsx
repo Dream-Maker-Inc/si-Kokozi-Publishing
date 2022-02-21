@@ -69,7 +69,7 @@ const Arrow = styled.Image`
 `
 
 const ListItem = ({item}) => <ListItemWrapper>
-	<ItemImage resizeMode="contain" source={require('../../../../../assets/atti/playlist/playlist.png')}/>
+	<ItemImage resizeMode="contain" source={require('../../../../../assets/atti/playlist/thumbnail.png')}/>
 	<ContentsContainer>
 		<TextContainer>
 			<ItemTitle>{item.title}</ItemTitle>
@@ -79,7 +79,7 @@ const ListItem = ({item}) => <ListItemWrapper>
 				<ItemCaption>{item.runningTime}</ItemCaption>
 			</TextCaptionWrapper>
 		</TextContainer>
-		<Arrow resizeMode="contain" source={require('../../../../../assets/mypage/arrow-right.png')}/>
+		<Arrow resizeMode="contain" source={require('../../../../../assets/components/icons/arrow-right.png')}/>
 	</ContentsContainer>
 </ListItemWrapper>
 

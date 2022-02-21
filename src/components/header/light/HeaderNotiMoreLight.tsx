@@ -70,7 +70,7 @@ const HeaderBackEditLight = (props: HeaderBackEditModel) => <>
 		<NotificationIconContainer>
 			<NotificationIcon
 				resizeMode="cover"
-				source={require('../../../../assets/tab/notification.png')}
+				source={require('../../../../assets/components/icons/notification.png')}
 			/>
 		</NotificationIconContainer>
 		<HeaderTitle>
@@ -79,7 +79,7 @@ const HeaderBackEditLight = (props: HeaderBackEditModel) => <>
 		<MoreButtonContainer>
 			<MoreIcon
 				resizeMode="contain"
-				source={require('../../../../assets/tab/more.png')}
+				source={require('../../../../assets/components/icons/more.png')}
 			/>
 		</MoreButtonContainer>
 	</Header>

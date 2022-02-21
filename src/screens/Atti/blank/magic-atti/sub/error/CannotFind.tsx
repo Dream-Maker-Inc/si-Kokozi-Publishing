@@ -46,15 +46,15 @@ const CannotFind = () => <PageWrapper>
 	<Body>
 		<Image
 			resizeMode="contain"
-			source={require('../../../../../../../assets/atti/register/step1.png')}
+			source={require('../../../../../../../assets/components/stepper/step-1.png')}
 		/>
 		<ImageText
 			resizeMode="contain"
-			source={require('../../../../../../../assets/atti/register/error/cannot-find-text.png')}
+			source={require('../../../../../../../assets/atti/register/error/cannot-find/text.png')}
 		/>
 		<ThumbImage
 			resizeMode="center"
-			source={require('../../../../../../../assets/atti/register/image1.png')}
+			source={require('../../../../../../../assets/atti/register/put-in/image1.png')}
 		/>
 		<ConfirmButton mode="contained">
 			<HeadlineText>올렸어요</HeadlineText>

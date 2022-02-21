@@ -54,14 +54,14 @@ const IconHeaderNotiMoreDark = () => <>
 		<NotificationIconContainer>
 			<NotificationIcon
 				resizeMode="cover"
-				source={require('../../../../assets/tab/notification.png')}
+				source={require('../../../../assets/components/icons/notification.png')}
 			/>
 		</NotificationIconContainer>
-		<LogoImage resizeMode="contain" source={require('../../../../assets/logo.png')}/>
+		<LogoImage resizeMode="contain" source={require('../../../../assets/logo/text.png')}/>
 		<MoreButtonContainer>
 			<MoreIcon
 				resizeMode="contain"
-				source={require('../../../../assets/tab/more.png')}
+				source={require('../../../../assets/components/icons/more.png')}
 			/>
 		</MoreButtonContainer>
 	</Header>
