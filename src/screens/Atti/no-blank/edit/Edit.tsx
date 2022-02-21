@@ -66,7 +66,8 @@ const renderStoryList = <StoryListWrapper>
 			</StoryTextContainer>
 			<StoryInfoContainer>
 				<ItemRunningTime>{item.runningTime}</ItemRunningTime>
-				<ItemPlayButton resizeMode="contain" source={require('../../../../../assets/components/icons/handle.png')}/>
+				<ItemPlayButton resizeMode="contain"
+					source={require('../../../../../assets/components/icons/handle.png')}/>
 			</StoryInfoContainer>
 		</StoryItem>
 	))}

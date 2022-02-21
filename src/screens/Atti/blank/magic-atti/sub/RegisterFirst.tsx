@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {Image, StatusBar} from 'react-native'
+import {StatusBar} from 'react-native'
 import {Subheading} from 'react-native-paper'
 
 import {BeigeSecondColor, primaryColor} from '../../../../../common/Colors'

@@ -101,7 +101,8 @@ const MyPage = () => <PageWrapper>
 				{setting.item.map(list => (
 					<ListItemContainer>
 						<ListItem>{list}</ListItem>
-						<Arrow resizeMode="contain" source={require('../../../assets/components/icons/arrow-right.png')}/>
+						<Arrow resizeMode="contain"
+							   source={require('../../../assets/components/icons/arrow-right.png')}/>
 					</ListItemContainer>
 				))}
 				<Divider/>

@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {Button, Caption, Title} from 'react-native-paper'
+import {Caption} from 'react-native-paper'
 import {SafeAreaView, StatusBar, TouchableOpacity} from 'react-native'
 import AutoHeightImage from 'react-native-auto-height-image'
 import IconHeaderCloseDark from '../../components/header/dark/IconHeaderCloseDark'
-import {BeigeSecondColor, primaryColor, textCaptionColor} from '../../common/Colors'
+import {BeigeSecondColor, textCaptionColor} from '../../common/Colors'
+import FilledButton from '../../components/buttons/filled/FilledButton'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
@@ -22,28 +23,6 @@ const TitleImage = styled(AutoHeightImage)`
 
 const TitleText = styled(AutoHeightImage)`
   margin-top: -20px;
-`
-
-const ButtonContainer = styled(TouchableOpacity)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-top: 32px;
-`
-
-const LoginButton = styled(Button)`
-  width: 90%;
-  margin: 0 auto;
-  padding: 4px;
-  background-color: ${primaryColor};
-  border-radius: 8px;
-`
-
-const LoginText = styled(Title)`
-  font-size: 16px;
-  color: white;
-  font-weight: bold;
 `
 
 const CaptionText = styled(Caption)`
@@ -73,11 +52,7 @@ const renderImages = <>
 </>
 
 const renderButton = <>
-	<ButtonContainer>
-		<LoginButton>
-			<LoginText>로그인 또는 회원가입</LoginText>
-		</LoginButton>
-	</ButtonContainer>
+	<FilledButton backgroundColor={'green'} text={'로그인 또는 회원가입'}/>
 </>
 
 const renderSNS = <>

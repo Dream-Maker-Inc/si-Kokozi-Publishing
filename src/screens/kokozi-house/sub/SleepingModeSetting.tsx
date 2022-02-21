@@ -1,6 +1,12 @@
 import React, {useState} from 'react'
 import {SafeAreaView, StatusBar} from 'react-native'
-import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, textCaptionColor, textDarkColor} from '../../../common/Colors'
+import {
+	BeigeFifthColor,
+	BeigeSecondColor,
+	BeigeThirdColor,
+	textCaptionColor,
+	textDarkColor
+} from '../../../common/Colors'
 import styled from '@emotion/native'
 import HeaderBackDark from '../../../components/header/dark/HeaderBackDark'
 import {Caption, Headline, Paragraph} from 'react-native-paper'

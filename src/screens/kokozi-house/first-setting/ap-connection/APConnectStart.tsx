@@ -15,10 +15,6 @@ const PageWrapper = styled(SafeAreaView)`
   background-color: ${BeigeSecondColor};
 `
 
-const StepperImage = styled(AutoHeightImage)`
-  margin-top: 16px;
-`
-
 const TitleText = styled(AutoHeightImage)`
   margin-top: 32px;
 `

@@ -29,7 +29,7 @@ const SubmitButton = styled.TouchableOpacity`
 
   width: 90%;
   height: 48px;
-  
+
   bottom: 34px;
   left: 5%;
   right: 5%;

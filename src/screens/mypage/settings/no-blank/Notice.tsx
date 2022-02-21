@@ -3,7 +3,7 @@ import styled from '@emotion/native'
 import {Paragraph, Subheading} from 'react-native-paper'
 import {BeigeSecondColor, primaryColor, secondaryColor, textDarkColor} from '../../../../common/Colors'
 import {FlatList} from 'react-native'
-import {noticeData, notificationData} from './data/data'
+import {noticeData} from './data/data'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;

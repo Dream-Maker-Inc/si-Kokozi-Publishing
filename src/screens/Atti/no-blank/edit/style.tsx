@@ -1,7 +1,7 @@
 import styled from '@emotion/native'
 import {
-	BeigeSecondColor,
 	backgroundSecondaryColor,
+	BeigeSecondColor,
 	primaryColor,
 	secondaryColor,
 	textCaptionColor,
