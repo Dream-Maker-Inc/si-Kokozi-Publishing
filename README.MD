@@ -22,18 +22,18 @@
 
 
 - B. 코코지 하우스 초기 세팅
-    - [x] 코코지 하우스 세팅 1 `./src/screens/kokozi-house/first-setting/setting/SettingStart`
-    - [x] 코코지 하우스 세팅 2 `./src/screens/kokozi-house/first-setting/setting/SettingChecklist`
-    - [x] AP모드 연결 `./src/screens/kokozi-house/first-setting/ap-connection/APConnectStart`
-    - [x] AP 모두 연결 완료 `./src/screens/kokozi-house/first-setting/ap-connection/APConnectFinish`
-    - [x] 와이파이 연결 1 `./src/screens/kokozi-house/first-setting/wifi-connection/ConnectList`
-    - [x] 와이파이 연결 2 `./src/screens/kokozi-house/first-setting/wifi-connection/Information`
-    - [x] 와이파이 연결 3 `./src/screens/kokozi-house/first-setting/wifi-connection/ConnectProcess`
-    - [x] 와이파이 연결 4 `./src/screens/kokozi-house/first-setting/setting/ConnectSuccess`
-    - [x] 코코지 하우스 등록 `./src/screens/kokozi-house/first-setting/setting/ConnectionComplete`
-    - [x] 이름 등록 `./src/screens/kokozi-house/first-setting/name/Name`
-    - [x] 아이 정보 등록 `./src/screens/kokozi-house/first-setting/kids/Kids`
-    - [x] 세팅 완료 `./src/screens/kokozi-house/sub/RegisterComplete`
+    - [x] **~~코코지 하우스 세팅 1~~** `./src/screens/kokozi-house/first-setting/setting/SettingStart`
+    - [x] **~~코코지 하우스 세팅 2~~** `./src/screens/kokozi-house/first-setting/setting/SettingChecklist`
+    - [x] **~~AP모드 연결~~** `./src/screens/kokozi-house/first-setting/ap-connection/APConnectStart`
+    - [x] **~~AP 모두 연결 완료~~** `./src/screens/kokozi-house/first-setting/ap-connection/APConnectFinish`
+    - [x] **~~와이파이 연결 1~~** `./src/screens/kokozi-house/first-setting/wifi-connection/ConnectList`
+    - [x] **~~와이파이 연결 2~~** `./src/screens/kokozi-house/first-setting/wifi-connection/Information`
+    - [x] **~~와이파이 연결 3~~** `./src/screens/kokozi-house/first-setting/wifi-connection/ConnectProcess`
+    - [x] **~~와이파이 연결 4~~** `./src/screens/kokozi-house/first-setting/setting/ConnectSuccess`
+    - [x] **~~코코지 하우스 등록~~** `./src/screens/kokozi-house/first-setting/setting/ConnectionComplete`
+    - [x] **~~이름 등록~~** `./src/screens/kokozi-house/first-setting/name/Name`
+    - [x] **~~아이 정보 등록~~** `./src/screens/kokozi-house/first-setting/kids/Kids`
+    - [x] **~~세팅 완료~~** `./src/screens/kokozi-house/sub/RegisterComplete`
 
 
 - C. 코코지 하우스 세팅 기타 화면
