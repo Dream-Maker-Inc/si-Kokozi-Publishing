@@ -1,6 +1,6 @@
 import React from 'react'
-import GuestProfile from './src/screens/mypage/user/GuestProfile'
+import AppVersion from './src/screens/mypage/information/AppVersion'
 
-const App = () => <GuestProfile/>
+const App = () => <AppVersion/>
 
 export default App
