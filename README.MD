@@ -152,7 +152,7 @@
 ### 기타
 
 - A. 알림
-    - [x] **~~알림 - N/A~~** `./src/screens/mypage/settings/SettingsBlankTopTabs`
-    - [x] **~~알림~~** `./src/screens/mypage/settings/SettingsTopTabs`
-    - [x] **~~공지사항 - N/A~~** `./src/screens/mypage/settings/SettingsBlankTopTabs`
-    - [x] **~~공지사항~~** `./src/screens/mypage/settings/SettingsTopTabs`
+    - [x] **~~알림 - N/A~~** `./src/screens/mypage/notification/SettingsBlankTopTabs`
+    - [x] **~~알림~~** `./src/screens/mypage/notification/SettingsTopTabs`
+    - [x] **~~공지사항 - N/A~~** `./src/screens/mypage/notification/SettingsBlankTopTabs`
+    - [x] **~~공지사항~~** `./src/screens/mypage/notification/SettingsTopTabs`
