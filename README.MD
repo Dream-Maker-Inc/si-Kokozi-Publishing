@@ -130,12 +130,12 @@
     - [x] **~~로그인 상태일 때~~**
 
 
-- B. 프로필 변경
-    - [ ] 프로필 변경
+- B. **~~프로필 변경~~**
+    - [x] **~~프로필 변경~~** `./src/screens/mypage/profile-edit/ProfileEdit`
 
 
 - C. 설정
-    - [ ] 이벤트 / 혜택 알림 설정
+    - [x] **~~이벤트 / 혜택 알림 설정~~** `./src/screens/mypage/setting/NotificationSetting`
     - [ ] 코코지 하우스 정보
 
 
