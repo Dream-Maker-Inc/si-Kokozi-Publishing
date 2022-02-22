@@ -3,7 +3,7 @@
 전체 진행 상황 :
 
 - 전체 화면 개수 `71`
-- 완성 화면 개수 `44`
+- 완성 화면 개수 `45`
 
 ### Pre-login
 
@@ -136,7 +136,7 @@
 
 - C. 설정
     - [x] **~~이벤트 / 혜택 알림 설정~~** `./src/screens/mypage/setting/NotificationSetting`
-    - [ ] 코코지 하우스 정보
+    - [x] **~~코코지 하우스 정보~~**  `./src/screens/mypage/information/HouseVersion`
 
 
 - D. **~~사용자 설정~~**
@@ -146,7 +146,7 @@
 
 
 - E. 기타
-    - [ ] 도움말
+    - [ ] 도움말 - 디자인 보류 `./src/screens/mypage/information/Help`
     - [ ] 버전 정보
 
 ### 기타
