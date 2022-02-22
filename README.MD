@@ -147,7 +147,7 @@
 
 - E. 기타
     - [ ] 도움말 - 디자인 보류 `./src/screens/mypage/information/Help`
-    - [ ] 버전 정보
+    - [x] **~~버전 정보~~** `./src/screens/mypage/information/AppVersion`
 
 ### 기타
 
