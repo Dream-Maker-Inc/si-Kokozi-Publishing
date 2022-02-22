@@ -1,6 +1,6 @@
 import React from 'react'
-import NotificationSetting from './src/screens/mypage/setting/NotificationSetting'
+import GuestProfile from './src/screens/mypage/user/GuestProfile'
 
-const App = () => <NotificationSetting/>
+const App = () => <GuestProfile/>
 
 export default App
