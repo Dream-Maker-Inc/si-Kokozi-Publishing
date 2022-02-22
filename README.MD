@@ -139,10 +139,10 @@
     - [ ] 코코지 하우스 정보
 
 
-- D. 사용자 설정
-    - [x] 초대한 게스트가 없을 때 `./src/screens/mypage/user/NoGuests`
-    - [ ] 게스트 관리
-    - [ ] 게스트 프로필
+- D. **~~사용자 설정~~**
+    - [x] **~~초대한 게스트가 없을 때~~** `./src/screens/mypage/user/NoGuests`
+    - [x] **~~게스트 관리~~** `./src/screens/mypage/user/Guests`
+    - [x] **~~게스트 프로필~~** `./src/screens/mypage/user/GuestProfile`
 
 
 - E. 기타
