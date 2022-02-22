@@ -1,6 +1,6 @@
 import React from 'react'
-import IllegalProduct from './src/screens/kokozi-house/setting-etc/IllegalProduct'
+import NotificationSetting from './src/screens/mypage/setting/NotificationSetting'
 
-const App = () => <IllegalProduct/>
+const App = () => <NotificationSetting/>
 
 export default App
