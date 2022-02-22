@@ -35,7 +35,7 @@ type HeaderBackModel = {
 	title: string
 }
 
-const HeaderBackDark = (props: HeaderBackModel) => <>
+const HeaderDark = (props: HeaderBackModel) => <>
 	<Header>
 		<HeaderTitle>
 			<HeaderTitleText>{props.title}</HeaderTitleText>
@@ -43,4 +43,4 @@ const HeaderBackDark = (props: HeaderBackModel) => <>
 	</Header>
 </>
 
-export default HeaderBackDark
+export default HeaderDark
