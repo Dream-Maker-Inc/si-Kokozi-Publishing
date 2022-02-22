@@ -134,7 +134,7 @@
     - [x] **~~프로필 변경~~** `./src/screens/mypage/profile-edit/ProfileEdit`
 
 
-- C. 설정
+- C. **~~설정~~**
     - [x] **~~이벤트 / 혜택 알림 설정~~** `./src/screens/mypage/setting/NotificationSetting`
     - [x] **~~코코지 하우스 정보~~**  `./src/screens/mypage/information/HouseVersion`
 
