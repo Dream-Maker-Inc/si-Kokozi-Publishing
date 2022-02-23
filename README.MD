@@ -72,10 +72,11 @@
 
 ### 이야기
 
-- A. 이야기 탭
-    - [ ] 이야기 탭
-    - [ ] 전체보기 - 내 이야기
-    - [ ] 전체보기 - 게스트 이야기
+- A. **~~이야기 탭~~**
+    - [x] **~~이야기 탭~~** `./src/screens/story/no-blank/StoryTopTabs`
+      (`BottomTabs` 에서 사용하는 컴포넌트이므올 실행은 `BottomTabs` 에서 하셔야 합니다)
+    - [x] **~~전체보기 - 내 이야기~~** `./src/screens/story/no-blank/story/MyStory`
+    - [x] **~~전체보기 - 게스트 이야기~~** `./src/screens/story/no-blank/story/GuestStory`
 
 
 - B. 이야기 삭제
