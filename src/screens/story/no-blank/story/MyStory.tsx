@@ -1,34 +1,16 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {TouchableOpacity} from 'react-native'
+import {MyStoryData} from '../data/story'
+import {SafeAreaView} from 'react-native'
 import ImagePaths from '../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {GuestStoryData} from '../../../../screens/story/no-blank/data/story'
-import {BeigeFifthColor, BeigeThirdColor, navyColor} from '../../../../common/Colors'
-import {renderGuestProfile} from './RenderGuestProfile'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
+import RenderFilter from '../../../../components/sub/story/my-story/RenderFilter'
+import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor} from '../../../../common/Colors'
 
-const GuestStoryWrapper = styled.View`
-  display: flex;
-`
-
-const Header = styled.View`
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 74px;
-  padding: 0 16px;
-`
-
-const HeaderTitleText = styled.Text`
-  font-size: 17px;
-  font-weight: bold;
-  color: ${navyColor};
-`
-
-const HeaderCaptionText = styled.Text`
-  font-size: 12px;
-  color: ${BeigeFifthColor};
+const PageWrapper = styled(SafeAreaView)`
+  flex: 1;
+  background-color: ${BeigeSecondColor};
 `
 
 const ListItemWrapper = styled.TouchableOpacity`
@@ -38,8 +20,8 @@ const ListItemWrapper = styled.TouchableOpacity`
   flex-direction: row;
   width: 100%;
   height: 68px;
-  border-top-color: ${BeigeThirdColor};
-  border-top-width: 1px;
+  border-bottom-color: ${BeigeThirdColor};
+  border-bottom-width: 1px;
   padding: 0 24px;
 `
 
@@ -72,13 +54,14 @@ const RunningTimeText = styled.Text`
   color: ${BeigeFifthColor};
 `
 
-type GuestStoryListItemModel = {
+
+type MyStoryListItemModel = {
 	title: string,
 	host: string,
 	runningTime: string
 }
 
-const renderGuestStoryListItem = (data: GuestStoryListItemModel) =>
+const renderMyStoryListItem = (data: MyStoryListItemModel) =>
 	<ListItemWrapper>
 		<VerticalView>
 			<TitleText>{data.title}</TitleText>
@@ -90,16 +73,12 @@ const renderGuestStoryListItem = (data: GuestStoryListItemModel) =>
 		</CaptionView>
 	</ListItemWrapper>
 
-const renderGuestStory =
-	<GuestStoryWrapper>
-		<Header>
-			<HeaderTitleText>게스트 이야기</HeaderTitleText>
-			<TouchableOpacity>
-				<HeaderCaptionText>전체보기</HeaderCaptionText>
-			</TouchableOpacity>
-		</Header>
-		{renderGuestProfile}
-		{GuestStoryData.map(data => renderGuestStoryListItem(data))}
-	</GuestStoryWrapper>
+const MyStory = () => {
+	return <PageWrapper>
+		<CustomHeader statusBarColor="dark" left="back" title="내 이야기" right="record"/>
+		<RenderFilter/>
+		{MyStoryData.map(data => renderMyStoryListItem(data))}
+	</PageWrapper>
+}
 
-export default renderGuestStory
+export default MyStory

@@ -30,7 +30,7 @@ const renderGuestProfileListItem = (data: GuestProfileModel) =>
 		<GuestNameText>{data.name}</GuestNameText>
 	</ListItemWrapper>
 
-export const renderGuestProfile =
+const renderGuestStoryAllProfile =
 	<ScrollView horizontal>
 		<ListItemWrapper>
 			<AutoHeightImage source={ImagePaths.story.story.noBlank.addGuest} width={60}/>
@@ -38,3 +38,5 @@ export const renderGuestProfile =
 		</ListItemWrapper>
 		{GuestProfileData.map(data => renderGuestProfileListItem(data))}
 	</ScrollView>
+
+export default renderGuestStoryAllProfile

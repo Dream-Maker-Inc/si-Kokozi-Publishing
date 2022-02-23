@@ -2,8 +2,8 @@ import React from 'react'
 import styled from '@emotion/native'
 import {SafeAreaView, ScrollView, View} from 'react-native'
 import {BeigeSecondColor, BeigeThirdColor} from '../../../../common/Colors'
-import renderMyStory from '../../../../components/sub/story/story/RenderMyStory'
-import renderGuestStory from '../../../../components/sub/story/story/RenderGuestStory'
+import renderMyStory from '../../../../components/sub/story/story-main/RenderMyStory'
+import renderGuestStory from '../../../../components/sub/story/story-main/RenderGuestStory'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
