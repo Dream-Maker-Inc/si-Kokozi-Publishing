@@ -11,6 +11,7 @@ const componentsPaths = {
 		edit: require(PATH + 'icons/edit.png'),
 		handle: require(PATH + 'icons/handle.png'),
 		more: require(PATH + 'icons/more.png'),
+		moreBeige: require(PATH + 'icons/more-beige.png'),
 		notification: require(PATH + 'icons/notification.png'),
 		next: require(PATH + 'icons/next.png'),
 		play: require(PATH + 'icons/play.png'),

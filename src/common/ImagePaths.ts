@@ -5,6 +5,7 @@ import artiPaths from './path/arti'
 import kokoziHousePaths from './path/kokoziHouse'
 import mypagePaths from './path/mypage'
 import tabPaths from './path/tab'
+import storyPaths from './path/story'
 
 export const ImagePaths = {
 	components: {...componentsPaths},
@@ -13,7 +14,8 @@ export const ImagePaths = {
 	arti: {...artiPaths},
 	kokoziHouse: {...kokoziHousePaths},
 	mypage: {...mypagePaths},
-	tab: {...tabPaths}
+	tab: {...tabPaths},
+	story: {...storyPaths}
 }
 
 export default ImagePaths

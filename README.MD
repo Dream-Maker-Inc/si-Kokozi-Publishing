@@ -16,7 +16,7 @@
 
 - A. **~~코코지 하우스~~**
     - [x] **~~하우스가 비어있을 때 / 아띠를 넣었을 때~~** `./src/screens/BottomTabs`
-    - [x] **~~반복 재생 / 셔플 재생~~** `./src/screens/kokozi-house/Playlist`
+    - [x] **~~반복 재생 / 셔플 재생~~** `./src/screens/kokozi-house/BlankPlaylist`
     - [x] **~~다락방 불빛 도움말~~** `./src/screens/kokozi-house/LighteningHelp`
     - [x] **~~코코지 하우스 설정~~** `./src/screens/kokozi-house/SleepingModeSetting`
 
@@ -66,7 +66,7 @@
 
 - E. **~~매직아띠 프로필 편집~~**
     - [x] **~~플레이리스트 순서 변경~~** `./src/screens/Atti/no-blank/edit/Edit`
-    - [x] **~~플레이리스트 교체~~** `./src/screens/Atti/no-blank/playlist/Playlist`
+    - [x] **~~플레이리스트 교체~~** `./src/screens/Atti/no-blank/playlist/BlankPlaylist`
     - [x] **~~교체 가능한 플레이리스트~~** `./src/screens/Atti/no-blank/playlist/PlaylistChange`
     - [x] **~~플레이리스트가 존재하지 않을 때~~** `./src/screens/Atti/no-blank/playlist/PlaylistEmpty`
 

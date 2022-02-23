@@ -5,9 +5,9 @@ import AutoHeightImage from 'react-native-auto-height-image'
 import {BeigeSecondColor, primaryColor} from '../common/Colors'
 import ImagePaths from '../common/ImagePaths'
 import KokoziHouse from './kokozi-house/KokoziHouse'
-import StoryTopTabs from './story/StoryTopTabs'
 import MyPage from './mypage/MyPage'
 import AttiTopTabs from './Atti/no-blank/TopTabs'
+import StoryTopTabs from './story/no-blank/StoryTopTabs'
 
 const Tab = createBottomTabNavigator()
 
