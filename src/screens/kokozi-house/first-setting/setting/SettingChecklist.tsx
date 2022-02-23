@@ -3,10 +3,10 @@ import {SafeAreaView, StatusBar, Text} from 'react-native'
 import styled from '@emotion/native'
 import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
 import AutoHeightImage from 'react-native-auto-height-image'
-import HeaderBackCloseDark from '../../../../components/global/header/dark/HeaderBackCloseDark'
 import ImagePaths from '../../../../common/ImagePaths'
 import renderChecklist
 	from '../../../../components/sub/kokozi-house/first-setting/setting/setting-checklist/renderChecklist'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -44,7 +44,7 @@ const ButtonText = styled(Text)`
 
 const SettingChecklist = () =>
 	<PageWrapper>
-		<HeaderBackCloseDark title="코코지 하우스 세팅"/>
+		<CustomHeader statusBarColor="dark" title="코코지 하우스 세팅" left="back" right="close"/>
 		<ScreenText width={214} source={ImagePaths.kokoziHouse.firstSetting.setting.checklist.text}/>
 		{renderChecklist}
 

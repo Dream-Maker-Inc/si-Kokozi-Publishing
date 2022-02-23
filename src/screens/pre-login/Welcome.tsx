@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {SafeAreaView, StatusBar} from 'react-native'
+import {SafeAreaView} from 'react-native'
 import {BeigeSecondColor} from '../../common/Colors'
-import IconHeaderCloseDark from '../../components/global/header/dark/IconHeaderCloseDark'
+import {renderSNS} from '../../components/sub/pre-login/welcome/renderSNS'
 import renderImages from '../../components/sub/pre-login/welcome/renderImages'
 import renderButton from '../../components/sub/pre-login/welcome/renderButton'
-import {renderSNS} from '../../components/sub/pre-login/welcome/renderSNS'
+import CustomHeader from '../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
@@ -14,11 +14,10 @@ const PageWrapper = styled(SafeAreaView)`
 
 const Welcome = () =>
 	<PageWrapper>
-		<IconHeaderCloseDark/>
+		<CustomHeader statusBarColor="dark" logo right="close"/>
 		{renderImages}
 		{renderButton}
 		{renderSNS}
-		<StatusBar backgroundColor={BeigeSecondColor} barStyle="dark-content"/>
 	</PageWrapper>
 
 export default Welcome

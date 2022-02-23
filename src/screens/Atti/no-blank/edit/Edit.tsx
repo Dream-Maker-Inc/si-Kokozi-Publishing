@@ -5,11 +5,11 @@ import BottomPlayer from '../../../../components/global/player/BottomPlayer'
 import renderStory from '../../../../components/sub/arti/no-blank/edit/renderStory'
 import renderProfile from '../../../../components/sub/arti/no-blank/edit/renderProfile'
 import renderStoryList from '../../../../components/sub/arti/no-blank/edit/renderStoryList'
-import HeaderBackEditLight from '../../../../components/global/header/light/HeaderBackEditLight'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 const Edit = () =>
 	<>
-		<HeaderBackEditLight title="아띠 프로필"/>
+		<CustomHeader statusBarColor="light" left="back" title="아띠 프로필" right="edit"/>
 
 		<ScrollView>
 			{renderProfile}

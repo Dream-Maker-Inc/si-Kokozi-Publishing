@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {SafeAreaView, StatusBar, Text} from 'react-native'
+import {SafeAreaView, Text} from 'react-native'
 import AutoHeightImage from 'react-native-auto-height-image'
 import ImagePaths from '../../../../common/ImagePaths'
 import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
 import {StepperThird} from '../../../../components/global/stepper/Stepper'
-import HeaderBackCloseDark from '../../../../components/global/header/dark/HeaderBackCloseDark'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   display: flex;
@@ -48,7 +48,7 @@ const ButtonText = styled(Text)`
 
 const ConnectionComplete = () =>
 	<PageWrapper>
-		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
+		<CustomHeader statusBarColor="dark" left="back" title="코코지 하우스 세팅" right="close"/>
 
 		<StepperThird marginTop={16} marginBottom={16}/>
 		<ScreenTitle width={176} source={ImagePaths.kokoziHouse.firstSetting.setting.connectionComplete.text}/>
@@ -57,8 +57,6 @@ const ConnectionComplete = () =>
 		<SubmitButton>
 			<ButtonText>다음</ButtonText>
 		</SubmitButton>
-
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default ConnectionComplete

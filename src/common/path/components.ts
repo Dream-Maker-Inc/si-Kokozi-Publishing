@@ -20,6 +20,7 @@ const componentsPaths = {
 		profileImage: require(PATH + 'icons/profile-image.png'),
 		question: require(PATH + 'icons/question.png'),
 		refresh: require(PATH + 'icons/refresh.png'),
+		record: require(PATH + 'icons/record.png'),
 		repeat: require(PATH + 'icons/repeat.png'),
 		shuffle: require(PATH + 'icons/shuffle.png'),
 		wifi: require(PATH + 'icons/wifi.png')

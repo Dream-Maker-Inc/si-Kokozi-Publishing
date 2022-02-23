@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from '@emotion/native'
+import {SafeAreaView, View} from 'react-native'
 import ImagePaths from '../../../common/ImagePaths'
 import {BeigeSecondColor} from '../../../common/Colors'
-import {SafeAreaView, StatusBar, View} from 'react-native'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {StepperThird} from '../../../components/global/stepper/Stepper'
 import FilledButton from '../../../components/global/buttons/filled/FilledButton'
-import HeaderBackCloseDark from '../../../components/global/header/dark/HeaderBackCloseDark'
+import CustomHeader from '../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -28,14 +28,13 @@ const BottomContainer = styled(View)`
 
 const AlreadyRegistered = () =>
 	<PageWrapper>
-		<HeaderBackCloseDark title="코코지 하우스 세팅"/>
+		<CustomHeader statusBarColor="dark" left="back" right="close" title="코코지 하우스 세팅"/>
 		<StepperThird marginTop={16} marginBottom={24}/>
 		<AutoHeightImage width={284} source={ImagePaths.kokoziHouse.settingEtc.alreadyRegistered.text}/>
 		<ScreenImage width={284} source={ImagePaths.kokoziHouse.settingEtc.alreadyRegistered.image}/>
 		<BottomContainer>
 			<FilledButton backgroundColor={'green'} text={'다음'}/>
 		</BottomContainer>
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default AlreadyRegistered

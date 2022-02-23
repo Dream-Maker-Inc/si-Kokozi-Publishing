@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {ScrollView, StatusBar} from 'react-native'
+import {ScrollView} from 'react-native'
 import {BeigeSecondColor} from '../../common/Colors'
-import HeaderDark from '../../components/global/header/dark/HeaderDark'
 import renderProfile from '../../components/sub/mypage/mypage/RenderProfile'
 import renderList, {Divider} from '../../components/sub/mypage/mypage/RenderList'
+import CustomHeader from '../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(ScrollView)`
   flex: 1;
@@ -14,12 +14,11 @@ const PageWrapper = styled(ScrollView)`
 const MyPage = () =>
 	<PageWrapper>
 
-		<HeaderDark title={'마이페이지'}/>
+		<CustomHeader statusBarColor="dark" title="마이페이지"/>
 		{renderProfile}
 		<Divider/>
 		{renderList}
 
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default MyPage

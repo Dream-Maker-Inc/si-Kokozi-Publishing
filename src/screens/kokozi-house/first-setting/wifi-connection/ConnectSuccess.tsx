@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {SafeAreaView, StatusBar, Text} from 'react-native'
+import {SafeAreaView, Text} from 'react-native'
 import {BeigeSecondColor, navyColor, primaryColor} from '../../../../common/Colors'
 import AutoHeightImage from 'react-native-auto-height-image'
-import HeaderBackCloseDark from '../../../../components/global/header/dark/HeaderBackCloseDark'
 import {StepperSecond} from '../../../../components/global/stepper/Stepper'
 import ImagePaths from '../../../../common/ImagePaths'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -58,7 +58,7 @@ const CaptionText = styled(Text)`
 
 const ConnectSuccess = () =>
 	<PageWrapper>
-		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
+		<CustomHeader statusBarColor="dark" left="back" title="코코지 하우스 세팅" right="close"/>
 		<StepperSecond marginTop={16} marginBottom={16}/>
 		<ScreenImage width={176} source={ImagePaths.kokoziHouse.wifi.complete.text}/>
 
@@ -69,8 +69,6 @@ const ConnectSuccess = () =>
 			<ButtonText>다음</ButtonText>
 		</SubmitButton>
 		<CaptionText>도움이 필요해요</CaptionText>
-
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default ConnectSuccess

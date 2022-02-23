@@ -1,12 +1,12 @@
 import React from 'react'
-import {FlatList, SafeAreaView, StatusBar, View} from 'react-native'
+import {FlatList, SafeAreaView, View} from 'react-native'
 import styled from '@emotion/native'
 import {BeigeFirstColor, BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../common/Colors'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {Caption, Title} from 'react-native-paper'
-import HeaderNotiMoreLight from '../../../components/global/header/light/HeaderNotiMoreLight'
 import RenderStory from '../../../components/sub/mypage/guests-profile/RenderStory'
 import ImagePaths from '../../../common/ImagePaths'
+import CustomHeader from '../../../components/global/header/CustomHeader'
 
 const data = [
 	{
@@ -91,8 +91,7 @@ const CounterText = styled(Caption)`
 
 const GuestProfile = () =>
 	<PageWrapper>
-		<HeaderNotiMoreLight title={'게스트 프로필'}/>
-
+		<CustomHeader statusBarColor="light" left="notification" right="more" title="게스트 프로필"/>
 		<ThumbnailImage width={100} source={ImagePaths.mypage.user.guest}/>
 		<ThumbnailCaption>친구</ThumbnailCaption>
 
@@ -104,7 +103,6 @@ const GuestProfile = () =>
 			<FlatList data={data} renderItem={RenderStory}/>
 		</SharedWrapper>
 
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeFirstColor}/>
 	</PageWrapper>
 
 export default GuestProfile

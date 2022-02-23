@@ -1,9 +1,9 @@
 import React from 'react'
-import {SafeAreaView, StatusBar} from 'react-native'
+import {SafeAreaView} from 'react-native'
 import styled from '@emotion/native'
 import {BeigeSecondColor} from '../../common/Colors'
 import BottomPlayer from '../../components/global/player/BottomPlayer'
-import IconHeaderNotiMoreDark from '../../components/global/header/dark/IconHeaderNotiMoreDark'
+import CustomHeader from '../../components/global/header/CustomHeader'
 import {renderBody} from '../../components/sub/kokozi-house/kokozi-house/renderBody'
 import {renderHeader} from '../../components/sub/kokozi-house/kokozi-house/renderHeader'
 
@@ -20,11 +20,10 @@ const Player = styled(BottomPlayer)`
 
 const KokoziHouse = () =>
 	<PageWrapper>
-		<IconHeaderNotiMoreDark/>
+		<CustomHeader statusBarColor="dark" logo left="notification" right="more"/>
 		{renderHeader}
 		{renderBody}
 		<Player/>
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default KokoziHouse

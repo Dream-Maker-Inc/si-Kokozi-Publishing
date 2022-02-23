@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {SafeAreaView, StatusBar} from 'react-native'
+import {SafeAreaView} from 'react-native'
 import ImagePaths from '../../../../common/ImagePaths'
 import {BeigeSecondColor} from '../../../../common/Colors'
 import AutoHeightImage from 'react-native-auto-height-image'
-import HeaderBackDark from '../../../../components/global/header/dark/HeaderBackDark'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 import OutlinedAddButton from '../../../../components/global/buttons/outlined/OutlinedAddButton'
 
 const PageWrapper = styled(SafeAreaView)`
@@ -25,13 +25,11 @@ const ScreenImage = styled(AutoHeightImage)`
 
 const PlaylistEmpty = () =>
 	<PageWrapper>
-		<HeaderBackDark title="플레이리스트"/>
+		<CustomHeader statusBarColor="dark" left="back" title="플레이리스트"/>
 
 		<ScreenTitle width={273} source={ImagePaths.arti.playlist.blank.text}/>
 		<ScreenImage width={200} source={ImagePaths.arti.playlist.blank.image}/>
 		<OutlinedAddButton title="플레이리스트 만들기"/>
-
-		<StatusBar backgroundColor={BeigeSecondColor} barStyle="dark-content"/>
 	</PageWrapper>
 
 export default PlaylistEmpty

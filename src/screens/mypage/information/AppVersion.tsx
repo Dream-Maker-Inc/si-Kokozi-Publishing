@@ -2,9 +2,9 @@ import React from 'react'
 import styled from '@emotion/native'
 import ImagePaths from '../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {SafeAreaView, StatusBar, StyleSheet, Text, View} from 'react-native'
-import HeaderBackDark from '../../../components/global/header/dark/HeaderBackDark'
+import {SafeAreaView, StyleSheet, Text, View} from 'react-native'
 import {BeigeFifthColor, BeigeSecondColor, navyColor} from '../../../common/Colors'
+import CustomHeader from '../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
 
 const AppVersion = () =>
 	<PageWrapper>
-		<HeaderBackDark title="버전 정보"/>
+		<CustomHeader statusBarColor="dark" left="back" title="버전 정보"/>
 
 		<BodyWrapper>
 			<AppVersionContainer style={styles.shadowContainer}>
@@ -81,8 +81,6 @@ const AppVersion = () =>
 				<VersionCaption>최신버전: Version 0.0.50</VersionCaption>
 			</AppVersionContainer>
 		</BodyWrapper>
-
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default AppVersion

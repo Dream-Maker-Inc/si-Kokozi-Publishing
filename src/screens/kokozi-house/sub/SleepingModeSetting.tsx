@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import {SafeAreaView, StatusBar, Text} from 'react-native'
+import {SafeAreaView, Text} from 'react-native'
 import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor} from '../../../common/Colors'
 import styled from '@emotion/native'
 import {Picker} from '@react-native-picker/picker'
-import HeaderBackDark from '../../../components/global/header/dark/HeaderBackDark'
+import CustomHeader from '../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
@@ -61,7 +61,7 @@ const SleepingModeSetting = () => {
 	const [selectedLanguage, setSelectedLanguage] = useState()
 
 	return <>
-		<HeaderBackDark title="코코지 하우스 설정"/>
+		<CustomHeader statusBarColor="dark" title="코코지 하우스 설정" left="back"/>
 
 		<PageWrapper>
 			<TitleText>잠자기 모드 설정</TitleText>
@@ -85,8 +85,6 @@ const SleepingModeSetting = () => {
 			<CaptionText>잠자기 모드는 코코지 하우스의 배터리 사용을 절약해줘요.</CaptionText>
 			<CaptionText>다락방 지붕을 터치하면 잠자기 모드를 해제할 수 있어요.</CaptionText>
 		</PageWrapper>
-
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</>
 }
 

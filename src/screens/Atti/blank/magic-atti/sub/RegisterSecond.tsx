@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {StatusBar, Text, TouchableOpacity} from 'react-native'
+import {Text, TouchableOpacity} from 'react-native'
 import {TextInput} from 'react-native-paper'
 import {BeigeFifthColor, BeigeForthColor, BeigeSecondColor, primaryColor} from '../../../../../common/Colors'
-import HeaderCloseLight from '../../../../../components/global/header/light/HeaderCloseLight'
 import {StepperSecond} from '../../../../../components/global/stepper/Stepper'
 import ImagePaths from '../../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
+import CustomHeader from '../../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -58,7 +58,7 @@ const ButtonText = styled(Text)`
 `
 
 const RegisterSecond = () => <PageWrapper>
-	<HeaderCloseLight title="매직 아띠 등록"/>
+	<CustomHeader statusBarColor="dark" title="매직아띠 등록" right="close"/>
 	<Body>
 		<StepperSecond marginTop={16} marginBottom={32}/>
 		<AutoHeightImage width={328} source={ImagePaths.arti.register.name.text}/>
@@ -76,8 +76,6 @@ const RegisterSecond = () => <PageWrapper>
 			<ButtonText> 매직아띠 등록 </ButtonText>
 		</ConfirmButton>
 	</Body>
-
-	<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 </PageWrapper>
 
 export default RegisterSecond

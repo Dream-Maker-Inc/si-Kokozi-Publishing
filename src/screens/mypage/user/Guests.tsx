@@ -2,9 +2,9 @@ import React from 'react'
 import styled from '@emotion/native'
 import {Paragraph} from 'react-native-paper'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {FlatList, SafeAreaView, StatusBar, TouchableOpacity} from 'react-native'
+import {FlatList, SafeAreaView, TouchableOpacity} from 'react-native'
 import {BeigeSecondColor, BeigeThirdColor, navyColor} from '../../../common/Colors'
-import HeaderNotiMoreLight from '../../../components/global/header/light/HeaderNotiMoreLight'
+import CustomHeader from '../../../components/global/header/CustomHeader'
 
 const data = [
 	'할머니', '친구', '할아버지', 'English teacher', '안나'
@@ -51,9 +51,8 @@ const RenderGuests = ({item}) =>
 
 const Guests = () =>
 	<PageWrapper>
-		<HeaderNotiMoreLight title={'게스트 관리'}/>
+		<CustomHeader statusBarColor="dark" left="notification" right="more" title="게스트 관리"/>
 		<FlatList data={data} renderItem={RenderGuests}/>
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default Guests

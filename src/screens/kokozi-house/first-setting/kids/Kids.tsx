@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from '@emotion/native'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {SafeAreaView, StatusBar, TouchableOpacity, View} from 'react-native'
+import {SafeAreaView, TouchableOpacity, View} from 'react-native'
 import {Caption, Paragraph} from 'react-native-paper'
 import ImagePaths from '../../../../common/ImagePaths'
 import {StepperThird} from '../../../../components/global/stepper/Stepper'
-import HeaderBackCloseLight from '../../../../components/global/header/light/HeaderBackCloseLight'
 import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, primaryColor} from '../../../../common/Colors'
 import RenderInput from '../../../../components/sub/kokozi-house/first-setting/kids/RenderInput'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -75,14 +75,11 @@ const renderFooter = <>
 const Kids = () => {
 
 	return <PageWrapper>
-		<HeaderBackCloseLight title={'아이 정보 등록'}/>
-
+		<CustomHeader statusBarColor="dark" left="back" title="아이 정보 등록" right="close"/>
 		<StepperThird marginTop={16}/>
 		<ScreenText width={196} source={ImagePaths.kokoziHouse.firstSetting.kids.text}/>
 		<RenderInput/>
-
 		{renderFooter}
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 }
 

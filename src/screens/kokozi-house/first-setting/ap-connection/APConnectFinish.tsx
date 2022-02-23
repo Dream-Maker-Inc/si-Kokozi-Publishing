@@ -5,7 +5,7 @@ import AutoHeightImage from 'react-native-auto-height-image'
 import ImagePaths from '../../../../common/ImagePaths'
 import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
 import {StepperSecond} from '../../../../components/global/stepper/Stepper'
-import HeaderBackCloseDark from '../../../../components/global/header/dark/HeaderBackCloseDark'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -52,7 +52,7 @@ const CaptionText = styled(Text)`
 
 const APConnectFinish = () =>
 	<PageWrapper>
-		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
+		<CustomHeader statusBarColor="dark" title="코코지 하우스 세팅" left="back" right="close"/>
 		<StepperSecond marginTop={16}/>
 		<ScreenImage width={178} source={ImagePaths.kokoziHouse.firstSetting.apConnect.finish.text}/>
 		<ScreenImage width={240} source={ImagePaths.kokoziHouse.firstSetting.apConnect.finish.image}/>

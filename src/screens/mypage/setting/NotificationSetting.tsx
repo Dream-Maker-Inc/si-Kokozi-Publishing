@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from '@emotion/native'
 import {Switch, Title} from 'react-native-paper'
-import {SafeAreaView, StatusBar, Text, View} from 'react-native'
-import HeaderBackDark from '../../../components/global/header/dark/HeaderBackDark'
+import {SafeAreaView, Text, View} from 'react-native'
 import {BeigeFifthColor, BeigeForthColor, BeigeSecondColor, navyColor, primaryColor} from '../../../common/Colors'
+import CustomHeader from '../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
@@ -53,8 +53,7 @@ const NotificationSetting = () => {
 	const [isSwitchOn, setIsSwitchOn] = React.useState(false)
 
 	return <PageWrapper>
-		<HeaderBackDark title={'알림 설정'}/>
-
+		<CustomHeader statusBarColor="dark" left="back" title="알림 설정"/>
 		<Wrapper>
 			<TitleText>알림 설정</TitleText>
 
@@ -88,8 +87,6 @@ const NotificationSetting = () => {
 				</CaptionText>
 			</SettingsContainer>
 		</Wrapper>
-
-		<StatusBar backgroundColor={BeigeSecondColor} barStyle="dark-content"/>
 	</PageWrapper>
 }
 

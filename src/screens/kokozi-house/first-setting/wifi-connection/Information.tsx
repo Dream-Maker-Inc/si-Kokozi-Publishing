@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {SafeAreaView, StatusBar} from 'react-native'
+import {SafeAreaView} from 'react-native'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {Paragraph} from 'react-native-paper'
 import ImagePaths from '../../../../common/ImagePaths'
 import {StepperSecond} from '../../../../components/global/stepper/Stepper'
-import HeaderBackCloseDark from '../../../../components/global/header/dark/HeaderBackCloseDark'
 import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
 import RenderInputContainer
 	from '../../../../components/sub/kokozi-house/first-setting/wifi-connection/information/RenderInputContainer'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -49,7 +49,7 @@ const ButtonText = styled(Paragraph)`
 
 const Information = () =>
 	<PageWrapper>
-		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
+		<CustomHeader statusBarColor="dark" left="back" right="close" title="코코지 하우스 세팅"/>
 		<StepperSecond marginTop={16} marginBottom={16}/>
 		<TitleImage width={288} source={ImagePaths.kokoziHouse.wifi.information.text}/>
 		<RenderInputContainer/>
@@ -57,7 +57,6 @@ const Information = () =>
 		<SubmitButton>
 			<ButtonText>다음</ButtonText>
 		</SubmitButton>
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default Information

@@ -3,9 +3,9 @@ import styled from '@emotion/native'
 import {TextInput} from 'react-native-paper'
 import ImagePaths from '../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {SafeAreaView, StatusBar, Text, TouchableOpacity, View} from 'react-native'
-import HeaderBackEditLight from '../../../components/global/header/light/HeaderBackEditLight'
+import {SafeAreaView, Text, TouchableOpacity, View} from 'react-native'
 import {beigeColor, BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../common/Colors'
+import CustomHeader from '../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   display: flex;
@@ -68,8 +68,7 @@ const ButtonText = styled(Text)`
 
 const ProfileEdit = () =>
 	<PageWrapper>
-		<HeaderBackEditLight title={'내 프로필'}/>
-
+		<CustomHeader statusBarColor="dark" left="back" title="내 프로필" right="change"/>
 		<ProfileImageContainer>
 			<AutoHeightImage width={32} source={ImagePaths.components.icons.camera}/>
 		</ProfileImageContainer>
@@ -89,8 +88,6 @@ const ProfileEdit = () =>
 				</ValidateButton>
 			</HorizontalContainer>
 		</NicknameContainer>
-
-		<StatusBar backgroundColor={BeigeSecondColor} barStyle="dark-content"/>
 	</PageWrapper>
 
 export default ProfileEdit

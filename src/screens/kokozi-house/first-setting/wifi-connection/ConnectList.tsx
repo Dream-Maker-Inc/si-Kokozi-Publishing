@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {FlatList, SafeAreaView, StatusBar, Text, TouchableOpacity} from 'react-native'
+import {FlatList, SafeAreaView, Text, TouchableOpacity} from 'react-native'
 import ImagePaths from '../../../../common/ImagePaths'
 import {StepperSecond} from '../../../../components/global/stepper/Stepper'
-import HeaderBackCloseDark from '../../../../components/global/header/dark/HeaderBackCloseDark'
 import {BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../../common/Colors'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 const WifiListData = [
 	'kokozi wifi',
@@ -57,14 +57,12 @@ const renderListItem = ({item}) =>
 
 const ConnectList = () =>
 	<PageWrapper>
-		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
+		<CustomHeader statusBarColor="dark" left="back" right="close" title="코코지 하우스 세팅"/>
 		<StepperSecond marginTop={16} marginBottom={16}/>
 
 		<TitleImage width={248} source={ImagePaths.kokoziHouse.wifi.checklist.text}/>
 		<WifiFlatList data={WifiListData} renderItem={renderListItem}/>
 		<HelpText>도움이 필요해요</HelpText>
-
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default ConnectList

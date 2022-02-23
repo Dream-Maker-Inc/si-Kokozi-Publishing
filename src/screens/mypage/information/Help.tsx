@@ -1,10 +1,10 @@
 import React from 'react'
-import {SafeAreaView, StatusBar, View} from 'react-native'
+import {SafeAreaView, View} from 'react-native'
 import styled from '@emotion/native'
-import {BeigeSecondColor, BeigeForthColor, BeigeThirdColor, navyColor} from '../../../common/Colors'
-import HeaderBackDark from '../../../components/header/dark/HeaderBackDark'
+import {BeigeForthColor, BeigeSecondColor, BeigeThirdColor, navyColor} from '../../../common/Colors'
 import {Caption, TextInput} from 'react-native-paper'
 import {Picker} from '@react-native-picker/picker'
+import CustomHeader from '../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   display: flex;
@@ -47,11 +47,6 @@ const CaptionText = styled(Caption)`
   color: ${navyColor};
 `
 
-const FAQListWrapper = styled(View)`
-  width: 100%;
-
-`
-
 const renderSearchContainer =
 	<SearchWrapper>
 		<SearchInput
@@ -70,17 +65,11 @@ const renderSearchContainer =
 		</FilterWrapper>
 	</SearchWrapper>
 
-const RenderFAQList = () =>
-	<>
-
-	</>
-
 const Help = () =>
 	<PageWrapper>
-		<HeaderBackDark title={'도움말'}/>
+		<CustomHeader statusBarColor="dark" left="back" title="도움말"/>
 		{renderSearchContainer}
 		<CaptionText>자주 묻는 질문</CaptionText>
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default Help

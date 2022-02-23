@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {SafeAreaView, StatusBar, Text} from 'react-native'
+import {SafeAreaView, Text} from 'react-native'
 import AutoHeightImage from 'react-native-auto-height-image'
 import ImagePaths from '../../../../common/ImagePaths'
 import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
 import {StepperSecond} from '../../../../components/global/stepper/Stepper'
-import HeaderBackCloseDark from '../../../../components/global/header/dark/HeaderBackCloseDark'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -29,14 +29,13 @@ const HelpText = styled(Text)`
 
 const ConnectProcess = () =>
 	<PageWrapper>
-		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
+		<CustomHeader statusBarColor="dark" left="back" title="코코지 하우스 세팅" right="close"/>
 		<StepperSecond marginTop={16} marginBottom={16}/>
 
 		<TitleImage width={152} source={ImagePaths.kokoziHouse.wifi.process.text}/>
 		<AutoHeightImage width={240} source={ImagePaths.kokoziHouse.wifi.process.image}/>
 
 		<HelpText>도움이 필요해요</HelpText>
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default ConnectProcess

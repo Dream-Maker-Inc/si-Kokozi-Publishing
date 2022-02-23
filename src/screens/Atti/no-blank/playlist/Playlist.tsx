@@ -2,9 +2,9 @@ import React from 'react'
 import styled from '@emotion/native'
 import {playlistData} from './data'
 import {BeigeSecondColor} from '../../../../common/Colors'
-import {FlatList, SafeAreaView, StatusBar} from 'react-native'
-import HeaderBackDark from '../../../../components/global/header/dark/HeaderBackDark'
+import {FlatList, SafeAreaView} from 'react-native'
 import RenderListItem from '../../../../components/sub/arti/no-blank/playlist/playlist/RenderListItem'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
@@ -13,9 +13,8 @@ const PageWrapper = styled(SafeAreaView)`
 
 const Playlist = () =>
 	<PageWrapper>
-		<HeaderBackDark title="플레이리스트"/>
+		<CustomHeader statusBarColor="dark" left="back" title="플레이리스트"/>
 		<FlatList data={playlistData} renderItem={RenderListItem}/>
-		<StatusBar backgroundColor={BeigeSecondColor} barStyle="dark-content"/>
 	</PageWrapper>
 
 export default Playlist

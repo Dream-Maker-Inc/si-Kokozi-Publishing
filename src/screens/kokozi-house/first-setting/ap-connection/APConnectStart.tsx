@@ -4,9 +4,9 @@ import {Paragraph} from 'react-native-paper'
 import {SafeAreaView, StatusBar} from 'react-native'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
-import HeaderBackCloseDark from '../../../../components/global/header/dark/HeaderBackCloseDark'
 import {StepperFirst} from '../../../../components/global/stepper/Stepper'
 import ImagePaths from '../../../../common/ImagePaths'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -46,7 +46,7 @@ const ButtonText = styled(Paragraph)`
 
 const APConnectStart = () =>
 	<PageWrapper>
-		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
+		<CustomHeader statusBarColor="dark" title="코코지 하우스 세팅" left="back" right="close"/>
 		<StepperFirst marginTop={16}/>
 		<TitleText width={228} source={ImagePaths.kokoziHouse.firstSetting.apConnect.start.text}/>
 		<TitleText width={255} source={ImagePaths.kokoziHouse.firstSetting.apConnect.start.image}/>

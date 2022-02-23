@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import styled from '@emotion/native'
 import {FlatList, StyleSheet} from 'react-native'
-import {BeigeFirstColor, BeigeSecondColor, BeigeThirdColor} from '../../../../common/Colors'
 import ImagePaths from '../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
+import {BeigeFirstColor, BeigeSecondColor, BeigeThirdColor} from '../../../../common/Colors'
 
 const PageWrapper = styled.SafeAreaView`
   background-color: ${BeigeSecondColor};

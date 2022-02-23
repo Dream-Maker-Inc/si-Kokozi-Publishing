@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {StatusBar, View} from 'react-native'
-import {BeigeForthColor, BeigeSecondColor} from '../../../common/Colors'
-import HeaderBackDark from '../../../components/global/header/dark/HeaderBackDark'
+import {View} from 'react-native'
+import {BeigeForthColor} from '../../../common/Colors'
 import renderVersionInformation, {PageWrapper} from '../../../components/sub/mypage/information/house-version/renderVersionInformation'
 import renderModelInformation from '../../../components/sub/mypage/information/house-version/renderModelInformation'
+import CustomHeader from '../../../components/global/header/CustomHeader'
 
 const Divider = styled(View)`
   width: 90%;
@@ -15,11 +15,10 @@ const Divider = styled(View)`
 
 const HouseVersion = () =>
 	<PageWrapper>
-		<HeaderBackDark title={'코코지 하우스 정보'}/>
+		<CustomHeader statusBarColor="dark" left="back" title="코코지 하우스 정보"/>
 		{renderVersionInformation}
 		<Divider/>
 		{renderModelInformation}
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default HouseVersion

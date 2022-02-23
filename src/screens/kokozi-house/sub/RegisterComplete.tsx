@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {SafeAreaView, StatusBar, Text} from 'react-native'
+import {SafeAreaView, Text} from 'react-native'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {BeigeSecondColor, navyColor, primaryColor} from '../../../common/Colors'
-import HeaderCloseLight from '../../../components/global/header/light/HeaderCloseLight'
 import {StepperThird} from '../../../components/global/stepper/Stepper'
 import ImagePaths from '../../../common/ImagePaths'
+import CustomHeader from '../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   display: flex;
@@ -60,7 +60,7 @@ const ButtonText = styled(Text)`
 
 const RegisterComplete = () =>
 	<PageWrapper>
-		<HeaderCloseLight title={'코코지 하우스 세팅'}/>
+		<CustomHeader statusBarColor="dark" title="코코지 하우스 세팅" right="close"/>
 		<StepperThird marginTop={32} marginBottom={16}/>
 		<ScreenTitle width={112} source={ImagePaths.kokoziHouse.complete.text}/>
 
@@ -70,8 +70,6 @@ const RegisterComplete = () =>
 		<SubmitButton>
 			<ButtonText>아따 맞이하러 가기</ButtonText>
 		</SubmitButton>
-
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default RegisterComplete

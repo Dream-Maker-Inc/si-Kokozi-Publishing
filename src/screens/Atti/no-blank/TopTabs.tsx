@@ -8,8 +8,8 @@ import MagicArti from './magic-atti/MagicArti'
 import ImagePaths from '../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
+import CustomHeader from '../../../components/global/header/CustomHeader'
 import {BeigeFirstColor, BeigeForthColor, BeigeSecondColor, primaryColor} from '../../../common/Colors'
-import IconHeaderNotiMoreDark from '../../../components/global/header/dark/IconHeaderNotiMoreDark'
 
 const Tab = createMaterialTopTabNavigator()
 
@@ -76,8 +76,7 @@ const AttiTopTabs = ({navigation}) => {
 	}
 
 	return <>
-
-		<IconHeaderNotiMoreDark/>
+		<CustomHeader statusBarColor="dark" logo left="notification" right="more"/>
 
 		<Tab.Navigator screenOptions={tabOptions}>
 			<Tab.Screen name="모두" component={All}/>
@@ -106,7 +105,6 @@ const AttiTopTabs = ({navigation}) => {
 					<ControllerIcon width={32} source={ImagePaths.components.icons.playlist}/>
 				</TouchableOpacity>
 			</ControllerWrapper>
-
 		</PlayContainer>
 
 	</>

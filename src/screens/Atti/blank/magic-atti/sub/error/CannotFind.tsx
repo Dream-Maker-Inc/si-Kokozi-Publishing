@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {StatusBar, Text, TouchableOpacity} from 'react-native'
+import {Text, TouchableOpacity} from 'react-native'
 import ImagePaths from '../../../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {BeigeSecondColor, primaryColor} from '../../../../../../common/Colors'
 import {StepperFirst} from '../../../../../../components/global/stepper/Stepper'
-import HeaderCloseLight from '../../../../../../components/global/header/light/HeaderCloseLight'
+import CustomHeader from '../../../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -43,7 +43,7 @@ const ButtonText = styled(Text)`
 
 const CannotFind = () =>
 	<PageWrapper>
-		<HeaderCloseLight title="매직 아띠 등록"/>
+		<CustomHeader statusBarColor="dark" title="매직 아띠 등록" right="close"/>
 
 		<Body>
 			<StepperFirst marginTop={16} marginBottom={32}/>
@@ -54,7 +54,6 @@ const CannotFind = () =>
 			</ConfirmButton>
 		</Body>
 
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default CannotFind

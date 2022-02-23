@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from '@emotion/native'
 import {Title} from 'react-native-paper'
-import {ScrollView, StatusBar, TouchableOpacity} from 'react-native'
-import {BeigeFirstColor, BeigeSecondColor, BeigeThirdColor, primaryColor} from '../../../../common/Colors'
-import HeaderBackLight from '../../../../components/global/header/light/HeaderBackLight'
+import {ScrollView, TouchableOpacity} from 'react-native'
+import {BeigeSecondColor, BeigeThirdColor, primaryColor} from '../../../../common/Colors'
 import renderProfile from '../../../../components/sub/arti/no-blank/playlist/playlist-change/RenderProfile'
 import renderStoryList from '../../../../components/sub/arti/no-blank/playlist/playlist-change/renderStoryList'
 import renderStory from '../../../../components/sub/arti/no-blank/playlist/playlist-change/renderStory'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 export const ChangeButtonContainer = styled.View`
   position: relative;
@@ -36,7 +36,7 @@ export const ButtonText = styled(Title)`
 
 const PlaylistChange = () =>
 	<>
-		<HeaderBackLight title="플레이리스트"/>
+		<CustomHeader statusBarColor="light" left="back" title="아띠 프로필" right="edit"/>
 
 		<ScrollView>
 			{renderProfile}
@@ -49,8 +49,6 @@ const PlaylistChange = () =>
 				<ButtonText>교체하기</ButtonText>
 			</ChangeButton>
 		</ChangeButtonContainer>
-
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeFirstColor}/>
 	</>
 
 export default PlaylistChange

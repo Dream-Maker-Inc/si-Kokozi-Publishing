@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {StatusBar, Text, TouchableOpacity} from 'react-native'
+import {Text, TouchableOpacity} from 'react-native'
 import {BeigeSecondColor, primaryColor} from '../../../../../common/Colors'
-import HeaderCloseLight from '../../../../../components/global/header/light/HeaderCloseLight'
 import {StepperThird} from '../../../../../components/global/stepper/Stepper'
 import ImagePaths from '../../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
+import CustomHeader from '../../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -50,7 +50,7 @@ const CaptionText = styled(Text)`
 `
 
 const RegisterSuccess = () => <PageWrapper>
-	<HeaderCloseLight title="매직 아띠 등록"/>
+	<CustomHeader statusBarColor="dark" title="매직아띠 등록" right="close"/>
 	<Body>
 		<StepperThird marginTop={16} marginBottom={32}/>
 		<AutoHeightImage width={152} source={ImagePaths.arti.register.success.text}/>
@@ -62,8 +62,6 @@ const RegisterSuccess = () => <PageWrapper>
 			<CaptionText>나중에 할게요</CaptionText>
 		</CaptionView>
 	</Body>
-
-	<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 </PageWrapper>
 
 export default RegisterSuccess

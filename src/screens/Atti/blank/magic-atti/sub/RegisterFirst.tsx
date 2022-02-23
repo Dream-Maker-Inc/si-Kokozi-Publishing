@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {StatusBar, Text} from 'react-native'
+import {Text} from 'react-native'
 import {BeigeSecondColor, primaryColor} from '../../../../../common/Colors'
-import HeaderCloseLight from '../../../../../components/global/header/light/HeaderCloseLight'
 import {StepperFirst} from '../../../../../components/global/stepper/Stepper'
 import ImagePaths from '../../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
+import CustomHeader from '../../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -35,16 +35,13 @@ const CaptionText = styled(Text)`
 
 const RegisterFirst = () =>
 	<PageWrapper>
-		<HeaderCloseLight title="매직 아띠 등록"/>
-
+		<CustomHeader statusBarColor="dark" title="매직 아띠 등록" right="close"/>
 		<Body>
 			<StepperFirst marginTop={16}/>
 			<ScreenText width={304} source={ImagePaths.arti.register.putIn.text}/>
 			<ScreenImage width={328} source={ImagePaths.arti.register.putIn.image}/>
 			<CaptionText> 도움이 필요해요 </CaptionText>
 		</Body>
-
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default RegisterFirst

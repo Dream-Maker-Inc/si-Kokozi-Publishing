@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {StatusBar, Text} from 'react-native'
+import {Text} from 'react-native'
 import {Divider, Paragraph} from 'react-native-paper'
 import {BeigeFifthColor, BeigeSecondColor, navyColor} from '../../../../../../common/Colors'
-import HeaderBackLight from '../../../../../../components/global/header/light/HeaderBackLight'
+import CustomHeader from '../../../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -39,7 +39,7 @@ const ParagraphText = styled(Text)`
 
 const Help = () =>
 	<PageWrapper>
-		<HeaderBackLight title="도움말"/>
+		<CustomHeader statusBarColor="dark" left="back" title="도움말"/>
 
 		<ViewContainer>
 			<CaptionText>매직아띠 등록</CaptionText>
@@ -53,8 +53,6 @@ const Help = () =>
 			<ParagraphText>1. 넣은 아띠가 매직아띠가 아닌 경우</ParagraphText>
 			<Paragraph>2. 이미 등록한 아띠인 경우</Paragraph>
 		</ViewContainer>
-
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default Help

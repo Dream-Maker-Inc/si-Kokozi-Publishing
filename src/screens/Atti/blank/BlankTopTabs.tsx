@@ -7,7 +7,7 @@ import {BeigeSecondColor, primaryColor} from '../../../common/Colors'
 import BottomPlayer from '../../../components/global/player/BottomPlayer'
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {NavigationContainer} from '@react-navigation/native'
+import CustomHeader from '../../../components/global/header/CustomHeader'
 
 const Tab = createMaterialTopTabNavigator()
 
@@ -22,19 +22,18 @@ const BlankAttiTopTabs = ({navigation}) => {
 	useLayoutEffect(() => navigation.setOptions(NavigationOptions))
 
 	return <>
-		<NavigationContainer>
-			<Tab.Navigator
-				screenOptions={{
-					tabBarLabelStyle: {fontWeight: 'bold'},
-					tabBarStyle: {backgroundColor: BeigeSecondColor},
-					tabBarIndicatorStyle: {backgroundColor: primaryColor}
-				}}
-			>
-				<Tab.Screen name="모두" component={All}/>
-				<Tab.Screen name="아띠" component={Arti}/>
-				<Tab.Screen name="매직 아띠" component={MagicArti}/>
-			</Tab.Navigator>
-		</NavigationContainer>
+		<CustomHeader statusBarColor="dark" logo left="notification" right="more"/>
+		<Tab.Navigator
+			screenOptions={{
+				tabBarLabelStyle: {fontWeight: 'bold'},
+				tabBarStyle: {backgroundColor: BeigeSecondColor},
+				tabBarIndicatorStyle: {backgroundColor: primaryColor}
+			}}
+		>
+			<Tab.Screen name="모두" component={All}/>
+			<Tab.Screen name="아띠" component={Arti}/>
+			<Tab.Screen name="매직 아띠" component={MagicArti}/>
+		</Tab.Navigator>
 		<BottomPlayer/>
 	</>
 }

@@ -1,10 +1,10 @@
 import React from 'react'
-import {SafeAreaView, StatusBar, Text} from 'react-native'
+import {SafeAreaView, Text} from 'react-native'
 import styled from '@emotion/native'
 import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
 import AutoHeightImage from 'react-native-auto-height-image'
-import HeaderCloseLight from '../../../../components/global/header/light/HeaderCloseLight'
 import ImagePaths from '../../../../common/ImagePaths'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -44,15 +44,13 @@ const ButtonText = styled(Text)`
 
 const SettingStart = () =>
 	<PageWrapper>
-		<HeaderCloseLight title="코코지 하우스 세팅"/>
+		<CustomHeader statusBarColor="dark" title="코코지 하우스 세팅" right="close"/>
 		<ScreenText width={177} source={ImagePaths.kokoziHouse.firstSetting.setting.start.text}/>
 		<AutoHeightImage width={320} source={ImagePaths.kokoziHouse.firstSetting.setting.start.image}/>
 
 		<SubmitButton>
 			<ButtonText>시작하기</ButtonText>
 		</SubmitButton>
-
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default SettingStart

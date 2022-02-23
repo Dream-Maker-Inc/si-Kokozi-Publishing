@@ -1,12 +1,12 @@
 import React from 'react'
-import {SafeAreaView, StatusBar, Text} from 'react-native'
+import {SafeAreaView, Text} from 'react-native'
 import styled from '@emotion/native'
 import {BeigeForthColor, BeigeSecondColor, primaryColor} from '../../../../common/Colors'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {TextInput} from 'react-native-paper'
-import HeaderCloseLight from '../../../../components/global/header/light/HeaderCloseLight'
 import {StepperThird} from '../../../../components/global/stepper/Stepper'
 import ImagePaths from '../../../../common/ImagePaths'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`
   display: flex;
@@ -61,7 +61,7 @@ const ButtonText = styled(Text)`
 
 const Name = () =>
 	<PageWrapper>
-		<HeaderCloseLight title={'코코지 하우스 세팅'}/>
+		<CustomHeader statusBarColor="dark" title="코코지 하우스 세팅" right="close"/>
 
 		<StepperThird marginTop={16} marginBottom={16}/>
 		<TitleText width={252} source={ImagePaths.kokoziHouse.firstSetting.name.text}/>
@@ -79,8 +79,6 @@ const Name = () =>
 		<SubmitButton>
 			<ButtonText>다음</ButtonText>
 		</SubmitButton>
-
-		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default Name

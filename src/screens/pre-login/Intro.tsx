@@ -1,10 +1,10 @@
 import React from 'react'
-import {SafeAreaView, StatusBar} from 'react-native'
+import {SafeAreaView} from 'react-native'
 import styled from '@emotion/native'
 import {BeigeSecondColor} from '../../common/Colors'
-import IconHeaderCloseDark from '../../components/global/header/dark/IconHeaderCloseDark'
-import RenderViewPager from '../../components/sub/pre-login/intro/RenderViewPager'
 import RenderButton from '../../components/sub/pre-login/intro/RenderButton'
+import CustomHeader from '../../components/global/header/CustomHeader'
+import RenderViewPager from '../../components/sub/pre-login/intro/RenderViewPager'
 
 const PageWrapper = styled(SafeAreaView)`
   display: flex;
@@ -15,10 +15,9 @@ const PageWrapper = styled(SafeAreaView)`
 
 const Intro = () =>
 	<PageWrapper>
-		<IconHeaderCloseDark/>
+		<CustomHeader statusBarColor="dark" logo right="close"/>
 		<RenderViewPager/>
 		<RenderButton/>
-		<StatusBar backgroundColor={BeigeSecondColor} barStyle="dark-content"/>
 	</PageWrapper>
 
 export default Intro
