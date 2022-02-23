@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {StatusBar} from 'react-native'
-import {Subheading} from 'react-native-paper'
-
+import {StatusBar, Text} from 'react-native'
 import {BeigeSecondColor, primaryColor} from '../../../../../common/Colors'
-import HeaderCloseLight from '../../../../../components/header/light/HeaderCloseLight'
-import {StepperFirst} from '../../../../../components/stepper/Stepper'
+import HeaderCloseLight from '../../../../../components/global/header/light/HeaderCloseLight'
+import {StepperFirst} from '../../../../../components/global/stepper/Stepper'
+import ImagePaths from '../../../../../common/ImagePaths'
+import AutoHeightImage from 'react-native-auto-height-image'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -15,42 +15,36 @@ const PageWrapper = styled.SafeAreaView`
 const Body = styled.View`
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100%;
   flex: 1;
 `
 
-const TitleText = styled.Image`
+const ScreenText = styled(AutoHeightImage)`
   margin-top: 40px;
 `
 
-const TitleImage = styled.Image`
-  height: 260px;
+const ScreenImage = styled(AutoHeightImage)`
   margin-top: 100px;
 `
 
-const SubHeadingText = styled(Subheading)`
+const CaptionText = styled(Text)`
   margin-top: 140px;
-  color: ${primaryColor};
   font-weight: bold;
+  color: ${primaryColor};
 `
 
-const RegisterFirst = () => <PageWrapper>
-	<HeaderCloseLight title="매직 아띠 등록"/>
-	<Body>
-		<StepperFirst/>
-		<TitleText
-			resizeMode="contain"
-			source={require('../../../../../../assets/atti/register/put-in/title1.png')}
-		/>
-		<TitleImage
-			resizeMode="center"
-			source={require('../../../../../../assets/atti/register/put-in/image1.png')}
-		/>
-		<SubHeadingText> 도움이 필요해요 </SubHeadingText>
-	</Body>
+const RegisterFirst = () =>
+	<PageWrapper>
+		<HeaderCloseLight title="매직 아띠 등록"/>
 
-	<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
-</PageWrapper>
+		<Body>
+			<StepperFirst marginTop={16}/>
+			<ScreenText width={304} source={ImagePaths.arti.register.putIn.text}/>
+			<ScreenImage width={328} source={ImagePaths.arti.register.putIn.image}/>
+			<CaptionText> 도움이 필요해요 </CaptionText>
+		</Body>
+
+		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
+	</PageWrapper>
 
 export default RegisterFirst

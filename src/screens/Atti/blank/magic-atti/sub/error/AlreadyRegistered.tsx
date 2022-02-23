@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {StatusBar} from 'react-native'
-import {Button, Headline} from 'react-native-paper'
-
+import {StatusBar, Text, TouchableOpacity} from 'react-native'
 import {BeigeSecondColor, primaryColor} from '../../../../../../common/Colors'
-
-import HeaderCloseLight from '../../../../../../components/header/light/HeaderCloseLight'
-import {StepperFirst} from '../../../../../../components/stepper/Stepper'
+import HeaderCloseLight from '../../../../../../components/global/header/light/HeaderCloseLight'
+import {StepperFirst} from '../../../../../../components/global/stepper/Stepper'
+import ImagePaths from '../../../../../../common/ImagePaths'
+import AutoHeightImage from 'react-native-auto-height-image'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -16,22 +15,18 @@ const PageWrapper = styled.SafeAreaView`
 const Body = styled.View`
   display: flex;
   align-items: center;
+`
+
+const ScreenText = styled(AutoHeightImage)`
+  margin-bottom: 56px;
+`
+
+const ConfirmButton = styled(TouchableOpacity)`
+  display: flex;
+  align-items: center;
   justify-content: center;
-  width: 100%;
-  flex: 1;
-`
-
-const ImageText = styled.Image`
-  margin-top: 40px;
-`
-
-const ThumbImage = styled.Image`
-  height: 260px;
-  margin-top: 100px;
-`
-
-const ConfirmButton = styled(Button)`
-  margin-top: 140px;
+  height: 48px;
+  margin-top: 168px;
   padding-top: 6px;
   padding-bottom: 6px;
   border-radius: 10px;
@@ -39,24 +34,19 @@ const ConfirmButton = styled(Button)`
   width: 94%;
 `
 
-const HeadlineText = styled(Headline)`
+const ButtonText = styled(Text)`
   color: white;
+  font-size: 16px;
 `
 
 const AlreadyRegistered = () => <PageWrapper>
 	<HeaderCloseLight title="매직 아띠 등록"/>
 	<Body>
-		<StepperFirst/>
-		<ImageText
-			resizeMode="contain"
-			source={require('../../../../../../../assets/atti/register/error/already-registered/text.png')}
-		/>
-		<ThumbImage
-			resizeMode="center"
-			source={require('../../../../../../../assets/atti/register/error/already-registered/image.png')}
-		/>
-		<ConfirmButton mode="contained">
-			<HeadlineText>올렸어요</HeadlineText>
+		<StepperFirst marginTop={16} marginBottom={32}/>
+		<ScreenText width={312} source={ImagePaths.arti.register.error.alreadyRegistered.text}/>
+		<AutoHeightImage width={328} source={ImagePaths.arti.register.error.alreadyRegistered.image}/>
+		<ConfirmButton>
+			<ButtonText>올렸어요</ButtonText>
 		</ConfirmButton>
 	</Body>
 

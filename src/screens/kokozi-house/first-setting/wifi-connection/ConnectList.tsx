@@ -1,11 +1,11 @@
 import React from 'react'
-import {FlatList, SafeAreaView, StatusBar, TouchableOpacity} from 'react-native'
 import styled from '@emotion/native'
-import {BeigeSecondColor, BeigeThirdColor, primaryColor, textDarkColor} from '../../../../common/Colors'
-import HeaderBackCloseDark from '../../../../components/header/dark/HeaderBackCloseDark'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {Caption, Paragraph} from 'react-native-paper'
-import {StepperSecond} from '../../../../components/stepper/Stepper'
+import {FlatList, SafeAreaView, StatusBar, Text, TouchableOpacity} from 'react-native'
+import ImagePaths from '../../../../common/ImagePaths'
+import {StepperSecond} from '../../../../components/global/stepper/Stepper'
+import HeaderBackCloseDark from '../../../../components/global/header/dark/HeaderBackCloseDark'
+import {BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../../common/Colors'
 
 const WifiListData = [
 	'kokozi wifi',
@@ -38,12 +38,12 @@ const ListItem = styled(TouchableOpacity)`
   border-top-color: ${BeigeThirdColor};
 `
 
-const ItemText = styled(Paragraph)`
+const ItemText = styled(Text)`
   font-size: 16px;
-  color: ${textDarkColor};
+  color: ${navyColor};
 `
 
-const HelpText = styled(Caption)`
+const HelpText = styled(Text)`
   position: absolute;
   bottom: 47px;
   font-size: 16px;
@@ -51,7 +51,7 @@ const HelpText = styled(Caption)`
 `
 
 const renderListItem = ({item}) =>
-	<ListItem>
+	<ListItem key={item}>
 		<ItemText>{item}</ItemText>
 	</ListItem>
 
@@ -59,15 +59,11 @@ const ConnectList = () =>
 	<PageWrapper>
 		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
 		<StepperSecond marginTop={16} marginBottom={16}/>
-		<TitleImage
-			width={248}
-			source={require('../../../../../assets/kokozi-house/wifi/checklist/text.png')}
-		/>
-		<WifiFlatList
-			data={WifiListData}
-			renderItem={renderListItem}
-		/>
+
+		<TitleImage width={248} source={ImagePaths.kokoziHouse.wifi.checklist.text}/>
+		<WifiFlatList data={WifiListData} renderItem={renderListItem}/>
 		<HelpText>도움이 필요해요</HelpText>
+
 		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 

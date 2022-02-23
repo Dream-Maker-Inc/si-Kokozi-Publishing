@@ -1,11 +1,12 @@
 import React from 'react'
-import {SafeAreaView, StatusBar, View} from 'react-native'
 import styled from '@emotion/native'
+import ImagePaths from '../../../common/ImagePaths'
 import {BeigeSecondColor} from '../../../common/Colors'
-import HeaderBackCloseDark from '../../../components/header/dark/HeaderBackCloseDark'
-import {StepperThird} from '../../../components/stepper/Stepper'
+import {SafeAreaView, StatusBar, View} from 'react-native'
 import AutoHeightImage from 'react-native-auto-height-image'
-import FilledButton from '../../../components/buttons/filled/FilledButton'
+import {StepperThird} from '../../../components/global/stepper/Stepper'
+import FilledButton from '../../../components/global/buttons/filled/FilledButton'
+import HeaderBackCloseDark from '../../../components/global/header/dark/HeaderBackCloseDark'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -29,14 +30,8 @@ const AlreadyRegistered = () =>
 	<PageWrapper>
 		<HeaderBackCloseDark title="코코지 하우스 세팅"/>
 		<StepperThird marginTop={16} marginBottom={24}/>
-		<AutoHeightImage
-			source={require('../../../../assets/kokozi-house/setting-etc/already-registered/text.png')}
-			width={284}
-		/>
-		<ScreenImage
-			source={require('../../../../assets/kokozi-house/setting-etc/already-registered/image.png')}
-			width={284}
-		/>
+		<AutoHeightImage width={284} source={ImagePaths.kokoziHouse.settingEtc.alreadyRegistered.text}/>
+		<ScreenImage width={284} source={ImagePaths.kokoziHouse.settingEtc.alreadyRegistered.image}/>
 		<BottomContainer>
 			<FilledButton backgroundColor={'green'} text={'다음'}/>
 		</BottomContainer>

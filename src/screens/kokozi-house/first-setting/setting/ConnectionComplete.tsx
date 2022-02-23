@@ -1,11 +1,11 @@
 import React from 'react'
-import {SafeAreaView, StatusBar} from 'react-native'
 import styled from '@emotion/native'
-import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
-import HeaderBackCloseDark from '../../../../components/header/dark/HeaderBackCloseDark'
+import {SafeAreaView, StatusBar, Text} from 'react-native'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {Paragraph} from 'react-native-paper'
-import {StepperThird} from '../../../../components/stepper/Stepper'
+import ImagePaths from '../../../../common/ImagePaths'
+import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
+import {StepperThird} from '../../../../components/global/stepper/Stepper'
+import HeaderBackCloseDark from '../../../../components/global/header/dark/HeaderBackCloseDark'
 
 const PageWrapper = styled(SafeAreaView)`
   display: flex;
@@ -14,15 +14,11 @@ const PageWrapper = styled(SafeAreaView)`
   background-color: ${BeigeSecondColor};
 `
 
-const ProcessImage = styled(AutoHeightImage)`
+const ScreenTitle = styled(AutoHeightImage)`
   margin: 16px;
 `
 
-const TitleImage = styled(AutoHeightImage)`
-  margin: 16px;
-`
-
-const Picture = styled(AutoHeightImage)`
+const ScreenImage = styled(AutoHeightImage)`
   margin-top: 64px;
 `
 
@@ -44,7 +40,7 @@ const SubmitButton = styled.TouchableOpacity`
   background-color: ${primaryColor};
 `
 
-const ButtonText = styled(Paragraph)`
+const ButtonText = styled(Text)`
   color: white;
   font-weight: bold;
   font-size: 16px;
@@ -55,15 +51,8 @@ const ConnectionComplete = () =>
 		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
 
 		<StepperThird marginTop={16} marginBottom={16}/>
-
-		<TitleImage
-			source={require('../../../../../assets/kokozi-house/initialize/setting/connection-complete/text.png')}
-			width={176}
-		/>
-		<Picture
-			source={require('../../../../../assets/kokozi-house/initialize/ap-connect/finish/image.png')}
-			width={240}
-		/>
+		<ScreenTitle width={176} source={ImagePaths.kokoziHouse.firstSetting.setting.connectionComplete.text}/>
+		<ScreenImage width={240} source={ImagePaths.kokoziHouse.firstSetting.apConnect.finish.image}/>
 
 		<SubmitButton>
 			<ButtonText>다음</ButtonText>

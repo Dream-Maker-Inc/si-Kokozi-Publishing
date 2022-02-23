@@ -1,15 +1,9 @@
 import React from 'react'
-import {SafeAreaView, StatusBar, View} from 'react-native'
 import styled from '@emotion/native'
-import {
-	BeigeSecondColor,
-	placeholderTextColor,
-	primaryColor,
-	textCaptionColor,
-	textDarkColor
-} from '../../../common/Colors'
-import HeaderBackDark from '../../../components/header/dark/HeaderBackDark'
-import {Caption, Switch, Title} from 'react-native-paper'
+import {Switch, Title} from 'react-native-paper'
+import {SafeAreaView, StatusBar, Text, View} from 'react-native'
+import HeaderBackDark from '../../../components/global/header/dark/HeaderBackDark'
+import {BeigeFifthColor, BeigeForthColor, BeigeSecondColor, navyColor, primaryColor} from '../../../common/Colors'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
@@ -19,7 +13,7 @@ const PageWrapper = styled(SafeAreaView)`
 const TitleText = styled(Title)`
   font-size: 17px;
   font-weight: bold;
-  color: ${textDarkColor};
+  color: ${navyColor};
 `
 
 const Wrapper = styled(View)`
@@ -39,26 +33,24 @@ const SwitchContainer = styled(View)`
   align-items: center;
 `
 
-const SwitchName = styled(Title)`
+const SwitchName = styled(Text)`
   font-size: 14px;
-  color: ${textDarkColor};
+  color: ${navyColor};
 `
 
-const CaptionText = styled(Caption)`
+const CaptionText = styled(Text)`
   font-size: 12px;
-  color: ${textCaptionColor};
+  color: ${BeigeFifthColor};
 `
 
 const Divider = styled(View)`
   width: 100%;
   height: 1px;
-  background-color: ${placeholderTextColor};
+  background-color: ${BeigeForthColor};
 `
 
 const NotificationSetting = () => {
 	const [isSwitchOn, setIsSwitchOn] = React.useState(false)
-
-	const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn)
 
 	return <PageWrapper>
 		<HeaderBackDark title={'알림 설정'}/>
@@ -72,7 +64,7 @@ const NotificationSetting = () => {
 					<Switch
 						color={primaryColor}
 						value={isSwitchOn}
-						onValueChange={onToggleSwitch}
+						onValueChange={() => setIsSwitchOn(!isSwitchOn)}
 					/>
 				</SwitchContainer>
 				<CaptionText>
@@ -88,7 +80,7 @@ const NotificationSetting = () => {
 					<Switch
 						color={primaryColor}
 						value={isSwitchOn}
-						onValueChange={onToggleSwitch}
+						onValueChange={() => setIsSwitchOn(!isSwitchOn)}
 					/>
 				</SwitchContainer>
 				<CaptionText>

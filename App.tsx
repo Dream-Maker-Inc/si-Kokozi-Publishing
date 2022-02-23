@@ -1,6 +1,6 @@
 import React from 'react'
-import AppVersion from './src/screens/mypage/information/AppVersion'
+import BottomTabs from './src/screens/BottomTabs'
 
-const App = () => <AppVersion/>
+const App = () => <BottomTabs/>
 
 export default App

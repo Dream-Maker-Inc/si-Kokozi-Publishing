@@ -1,10 +1,10 @@
 import React from 'react'
-import {FlatList, SafeAreaView, StatusBar, TouchableOpacity} from 'react-native'
 import styled from '@emotion/native'
-import {BeigeSecondColor, secondaryColor, textDarkColor} from '../../../common/Colors'
-import HeaderNotiMoreLight from '../../../components/header/light/HeaderNotiMoreLight'
-import AutoHeightImage from 'react-native-auto-height-image'
 import {Paragraph} from 'react-native-paper'
+import AutoHeightImage from 'react-native-auto-height-image'
+import {FlatList, SafeAreaView, StatusBar, TouchableOpacity} from 'react-native'
+import {BeigeSecondColor, BeigeThirdColor, navyColor} from '../../../common/Colors'
+import HeaderNotiMoreLight from '../../../components/global/header/light/HeaderNotiMoreLight'
 
 const data = [
 	'할머니', '친구', '할아버지', 'English teacher', '안나'
@@ -24,20 +24,20 @@ const GuestItemWrapper = styled(TouchableOpacity)`
   padding-top: 16px;
   padding-bottom: 16px;
   border-bottom-width: 1px;
-  border-bottom-color: ${secondaryColor};
+  border-bottom-color: ${BeigeThirdColor};
 `
 
 const GuestItemThumbnail = styled(AutoHeightImage)`
   width: 56px;
   height: 56px;
   border-radius: 4px;
-  background-color: ${secondaryColor};
+  background-color: ${BeigeThirdColor};
 `
 
 const GuestItemTitle = styled(Paragraph)`
   font-size: 14px;
   margin-left: 16px;
-  color: ${textDarkColor};
+  color: ${navyColor};
 `
 
 const RenderGuests = ({item}) =>
@@ -52,9 +52,7 @@ const RenderGuests = ({item}) =>
 const Guests = () =>
 	<PageWrapper>
 		<HeaderNotiMoreLight title={'게스트 관리'}/>
-
 		<FlatList data={data} renderItem={RenderGuests}/>
-
 		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 

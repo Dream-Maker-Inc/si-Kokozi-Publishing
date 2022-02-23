@@ -2,7 +2,9 @@ import React, {useState} from 'react'
 import {FlatList, StyleSheet} from 'react-native'
 import styled from '@emotion/native'
 
-import {BeigeSecondColor, playerBackgroundColor, secondaryColor} from '../../../../common/Colors'
+import {BeigeFirstColor, BeigeSecondColor, BeigeThirdColor} from '../../../../common/Colors'
+import AutoHeightImage from 'react-native-auto-height-image'
+import ImagePaths from '../../../../common/ImagePaths'
 
 const PageWrapper = styled.SafeAreaView`
   background-color: ${BeigeSecondColor};
@@ -10,16 +12,9 @@ const PageWrapper = styled.SafeAreaView`
 
 const ListItem = styled.TouchableOpacity`
   flex-grow: 1;
-
   margin: 14px;
-
   border-radius: 20px;
-  background-color: ${secondaryColor};
-`
-
-const ItemImage = styled.Image`
-  width: 100px;
-  height: 180px;
+  background-color: ${BeigeThirdColor};
 `
 
 const ItemTextContainer = styled.View`
@@ -29,7 +24,7 @@ const ItemTextContainer = styled.View`
   width: 100%;
   height: 60px;
 
-  background-color: ${playerBackgroundColor};
+  background-color: ${BeigeFirstColor};
 
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -40,41 +35,6 @@ const ItemText = styled.Text`
   text-align: center;
 `
 
-const All = () => {
-	const [dataSource, setDataSource] = useState([])
-
-	useState(() => {
-		const items = Array
-			.apply(null, Array(10))
-			.map((v, i) => {
-				return {
-					id: i,
-					src: '../../../../../assets/atti/all/thumbnail.png'
-				}
-			})
-		setDataSource(items)
-	}, [])
-
-	return <PageWrapper>
-		<FlatList
-			data={dataSource}
-			numColumns={2}
-			renderItem={() => (
-				<ListItem>
-					<ItemImage
-						resizeMode="center"
-						source={require('../../../../../assets/atti/all/thumbnail.png')}
-					/>
-					<ItemTextContainer
-						style={styles.container}>
-						<ItemText>코코지</ItemText>
-					</ItemTextContainer>
-				</ListItem>
-			)}
-		/>
-	</PageWrapper>
-}
-
 const styles = StyleSheet.create({
 	container: {
 		shadowColor: '#999',
@@ -84,9 +44,39 @@ const styles = StyleSheet.create({
 		},
 		shadowOpacity: 0.25,
 		shadowRadius: 3.84,
-
 		elevation: 5,
 	}
 })
+
+const All = () => {
+	const [dataSource, setDataSource] = useState([])
+
+	useState(() => {
+		const items = Array
+			.apply(null, Array(10))
+			.map((v, i) => {
+				return {
+					id: i,
+					src: ImagePaths.arti.all.thumbnail
+				}
+			})
+		setDataSource(items)
+	}, [])
+
+	return <PageWrapper>
+		<FlatList
+			data={dataSource}
+			numColumns={2}
+			renderItem={() =>
+				<ListItem>
+					<AutoHeightImage width={100} source={ImagePaths.arti.all.thumbnail}/>
+					<ItemTextContainer style={styles.container}>
+						<ItemText>코코지</ItemText>
+					</ItemTextContainer>
+				</ListItem>
+			}
+		/>
+	</PageWrapper>
+}
 
 export default All

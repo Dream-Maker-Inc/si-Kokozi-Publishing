@@ -1,11 +1,11 @@
 import React from 'react'
-import {SafeAreaView, StatusBar} from 'react-native'
 import styled from '@emotion/native'
+import {SafeAreaView, StatusBar, Text} from 'react-native'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {Paragraph} from 'react-native-paper'
-import {BeigeSecondColor, primaryColor, textDarkColor} from '../../../common/Colors'
-import HeaderCloseLight from '../../../components/header/light/HeaderCloseLight'
-import {StepperThird} from '../../../components/stepper/Stepper'
+import {BeigeSecondColor, navyColor, primaryColor} from '../../../common/Colors'
+import HeaderCloseLight from '../../../components/global/header/light/HeaderCloseLight'
+import {StepperThird} from '../../../components/global/stepper/Stepper'
+import ImagePaths from '../../../common/ImagePaths'
 
 const PageWrapper = styled(SafeAreaView)`
   display: flex;
@@ -14,23 +14,23 @@ const PageWrapper = styled(SafeAreaView)`
   background-color: ${BeigeSecondColor};
 `
 
-const TitleImage = styled(AutoHeightImage)`
+const ScreenTitle = styled(AutoHeightImage)`
   margin-top: 32px;
   margin-bottom: 16px;
 `
 
-const HouseName = styled(Paragraph)`
-  color: ${textDarkColor};
+const HouseName = styled(Text)`
+  color: ${navyColor};
   font-size: 16px;
 `
 
-const TextMark = styled(Paragraph)`
-  color: ${textDarkColor};
+const TextMark = styled(Text)`
+  color: ${navyColor};
   font-size: 16px;
   font-weight: bold;
 `
 
-const Picture = styled(AutoHeightImage)`
+const ScreenImage = styled(AutoHeightImage)`
   margin-top: 64px;
 `
 
@@ -52,7 +52,7 @@ const SubmitButton = styled.TouchableOpacity`
   background-color: ${primaryColor};
 `
 
-const ButtonText = styled(Paragraph)`
+const ButtonText = styled(Text)`
   color: white;
   font-weight: bold;
   font-size: 16px;
@@ -62,16 +62,10 @@ const RegisterComplete = () =>
 	<PageWrapper>
 		<HeaderCloseLight title={'코코지 하우스 세팅'}/>
 		<StepperThird marginTop={32} marginBottom={16}/>
-		<TitleImage
-			source={require('../../../../assets/kokozi-house/complete/text.png')}
-			width={112}
-		/>
-		<HouseName>코코지 하우스 이름: <TextMark>코코지 하우스</TextMark></HouseName>
+		<ScreenTitle width={112} source={ImagePaths.kokoziHouse.complete.text}/>
 
-		<Picture
-			source={require('../../../../assets/kokozi-house/initialize/ap-connect/finish/image.png')}
-			width={240}
-		/>
+		<HouseName>코코지 하우스 이름: <TextMark>코코지 하우스</TextMark></HouseName>
+		<ScreenImage width={240} source={ImagePaths.kokoziHouse.firstSetting.apConnect.finish.image}/>
 
 		<SubmitButton>
 			<ButtonText>아따 맞이하러 가기</ButtonText>

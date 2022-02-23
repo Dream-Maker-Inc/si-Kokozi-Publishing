@@ -1,23 +1,21 @@
 import React from 'react'
-import {SafeAreaView, StatusBar} from 'react-native'
+import {SafeAreaView, StatusBar, Text} from 'react-native'
 import styled from '@emotion/native'
 import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
-import HeaderCloseLight from '../../../../components/header/light/HeaderCloseLight'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {Paragraph} from 'react-native-paper'
+import HeaderCloseLight from '../../../../components/global/header/light/HeaderCloseLight'
+import ImagePaths from '../../../../common/ImagePaths'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
+  display: flex;
+  align-items: center;
   flex: 1;
   background-color: ${BeigeSecondColor};
 `
 
-const TitleText = styled(AutoHeightImage)`
+const ScreenText = styled(AutoHeightImage)`
   margin: 32px auto;
-`
-
-const TitleImage = styled(AutoHeightImage)`
-  margin: 0 auto;
 `
 
 const SubmitButton = styled.TouchableOpacity`
@@ -38,7 +36,7 @@ const SubmitButton = styled.TouchableOpacity`
   background-color: ${primaryColor};
 `
 
-const ButtonText = styled(Paragraph)`
+const ButtonText = styled(Text)`
   color: white;
   font-weight: bold;
   font-size: 16px;
@@ -47,25 +45,14 @@ const ButtonText = styled(Paragraph)`
 const SettingStart = () =>
 	<PageWrapper>
 		<HeaderCloseLight title="코코지 하우스 세팅"/>
-
-		<TitleText
-			width={177}
-			source={require('../../../../../assets/kokozi-house/initialize/setting/start/text.png')}
-		/>
-
-		<TitleImage
-			width={320}
-			source={require('../../../../../assets/kokozi-house/initialize/setting/start/image.png')}
-		/>
+		<ScreenText width={177} source={ImagePaths.kokoziHouse.firstSetting.setting.start.text}/>
+		<AutoHeightImage width={320} source={ImagePaths.kokoziHouse.firstSetting.setting.start.image}/>
 
 		<SubmitButton>
 			<ButtonText>시작하기</ButtonText>
 		</SubmitButton>
 
-		<StatusBar
-			barStyle="dark-content"
-			backgroundColor={BeigeSecondColor}
-		/>
+		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default SettingStart

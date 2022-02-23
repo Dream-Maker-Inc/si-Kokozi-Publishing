@@ -1,10 +1,11 @@
 import React from 'react'
-import {StatusBar} from 'react-native'
-import {BeigeSecondColor, primaryColor} from '../../../../../../common/Colors'
 import styled from '@emotion/native'
-import {Button, Headline} from 'react-native-paper'
-import HeaderCloseLight from '../../../../../../components/header/light/HeaderCloseLight'
-import {StepperFirst} from '../../../../../../components/stepper/Stepper'
+import {StatusBar, Text, TouchableOpacity} from 'react-native'
+import ImagePaths from '../../../../../../common/ImagePaths'
+import AutoHeightImage from 'react-native-auto-height-image'
+import {BeigeSecondColor, primaryColor} from '../../../../../../common/Colors'
+import {StepperFirst} from '../../../../../../components/global/stepper/Stepper'
+import HeaderCloseLight from '../../../../../../components/global/header/light/HeaderCloseLight'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -14,22 +15,20 @@ const PageWrapper = styled.SafeAreaView`
 const Body = styled.View`
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100%;
   flex: 1;
 `
 
-const ImageText = styled.Image`
-  margin-top: 40px;
-`
-
-const ThumbImage = styled.Image`
-  height: 260px;
+const ScreenImage = styled(AutoHeightImage)`
   margin-top: 100px;
 `
 
-const ConfirmButton = styled(Button)`
-  margin-top: 140px;
+const ConfirmButton = styled(TouchableOpacity)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  margin-top: 168px;
   padding-top: 6px;
   padding-bottom: 6px;
   border-radius: 10px;
@@ -37,29 +36,25 @@ const ConfirmButton = styled(Button)`
   width: 94%;
 `
 
-const HeadlineText = styled(Headline)`
+const ButtonText = styled(Text)`
+  font-size: 16px;
   color: white;
-  background-color: ${BeigeSecondColor};
 `
 
-const CannotFind = () => <PageWrapper>
-	<HeaderCloseLight title="매직 아띠 등록"/>
-	<Body>
-		<StepperFirst/>
-		<ImageText
-			resizeMode="contain"
-			source={require('../../../../../../../assets/atti/register/error/cannot-find/text.png')}
-		/>
-		<ThumbImage
-			resizeMode="center"
-			source={require('../../../../../../../assets/atti/register/put-in/image1.png')}
-		/>
-		<ConfirmButton mode="contained">
-			<HeadlineText>올렸어요</HeadlineText>
-		</ConfirmButton>
-	</Body>
+const CannotFind = () =>
+	<PageWrapper>
+		<HeaderCloseLight title="매직 아띠 등록"/>
 
-	<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
-</PageWrapper>
+		<Body>
+			<StepperFirst marginTop={16} marginBottom={32}/>
+			<AutoHeightImage width={256} source={ImagePaths.arti.register.error.cannotFind.text}/>
+			<ScreenImage width={328} source={ImagePaths.arti.register.putIn.image}/>
+			<ConfirmButton>
+				<ButtonText>올렸어요</ButtonText>
+			</ConfirmButton>
+		</Body>
+
+		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
+	</PageWrapper>
 
 export default CannotFind

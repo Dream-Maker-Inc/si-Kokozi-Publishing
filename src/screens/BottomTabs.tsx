@@ -1,76 +1,47 @@
 import * as React from 'react'
 import {NavigationContainer} from '@react-navigation/native'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
-
+import AutoHeightImage from 'react-native-auto-height-image'
 import {BeigeSecondColor, primaryColor} from '../common/Colors'
-
+import ImagePaths from '../common/ImagePaths'
 import KokoziHouse from './kokozi-house/KokoziHouse'
 import StoryTopTabs from './story/StoryTopTabs'
 import MyPage from './mypage/MyPage'
 import AttiTopTabs from './Atti/no-blank/TopTabs'
-import {Image} from 'react-native'
-import styled from '@emotion/native'
 
 const Tab = createBottomTabNavigator()
 
-const TabIconImage = styled.Image`
-  width: 30px;
-`
-
 const TabBarIconOptions = (route, focused) => {
+	const iconPath = ImagePaths.tab.icons
+	let iconSource = ''
+
 	switch (route.name) {
 	case '코코지 하우스':
-		if (focused) {
-			return <TabIconImage
-				resizeMode="contain"
-				source={require('../../assets/tab/icons/kokozi/on.png')}
-			/>
-		} else {
-			return <TabIconImage
-				resizeMode="contain"
-				source={require('../../assets/tab/icons/kokozi/off.png')}
-			/>
-		}
+		focused
+			? iconSource = iconPath.kokozi.on
+			: iconSource = iconPath.kokozi.off
+		break
 	case '아띠':
-		if (focused) {
-			return <TabIconImage
-				resizeMode="contain"
-				source={require('../../assets/tab/icons/atri/on.png')}
-			/>
-		} else {
-			return <TabIconImage
-				resizeMode="contain"
-				source={require('../../assets/tab/icons/atri/off.png')}
-			/>
-		}
+		focused
+			? iconSource = iconPath.atri.on
+			: iconSource = iconPath.atri.off
+		break
 	case '이야기':
-		if (focused) {
-			return <TabIconImage
-				resizeMode="contain"
-				source={require('../../assets/tab/icons/story/on.png')}
-			/>
-		} else {
-			return <TabIconImage
-				resizeMode="contain"
-				source={require('../../assets/tab/icons/story/off.png')}
-			/>
-		}
+		focused
+			? iconSource = iconPath.story.on
+			: iconSource = iconPath.story.off
+		break
 	case '마이페이지':
-		if (focused) {
-			return <Image
-				resizeMode="contain"
-				source={require('../../assets/tab/icons/mypage/on.png')}
-			/>
-		} else {
-			return <Image
-				resizeMode="contain"
-				source={require('../../assets/tab/icons/mypage/off.png')}
-			/>
-		}
+		focused
+			? iconSource = iconPath.mypage.on
+			: iconSource = iconPath.mypage.off
+		break
 	}
+
+	return <AutoHeightImage width={24} source={iconSource}/>
 }
 
-export const BottomTabs = () => <>
+const BottomTabs = () =>
 	<NavigationContainer>
 		<Tab.Navigator
 			initialRouteName="코코지 하우스"
@@ -96,6 +67,5 @@ export const BottomTabs = () => <>
 			<Tab.Screen name="마이페이지" component={MyPage}/>
 		</Tab.Navigator>
 	</NavigationContainer>
-</>
 
 export default BottomTabs

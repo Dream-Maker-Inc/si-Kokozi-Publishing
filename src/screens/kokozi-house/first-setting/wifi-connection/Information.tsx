@@ -1,12 +1,14 @@
-import React, {useState} from 'react'
-import {SafeAreaView, StatusBar, View} from 'react-native'
+import React from 'react'
 import styled from '@emotion/native'
-import {BeigeFifthColor, BeigeForthColor, BeigeSecondColor, primaryColor} from '../../../../common/Colors'
+import {SafeAreaView, StatusBar} from 'react-native'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {Caption, Paragraph, TextInput} from 'react-native-paper'
-import {Picker} from '@react-native-picker/picker'
-import HeaderBackCloseDark from '../../../../components/header/dark/HeaderBackCloseDark'
-import {StepperSecond} from '../../../../components/stepper/Stepper'
+import {Paragraph} from 'react-native-paper'
+import ImagePaths from '../../../../common/ImagePaths'
+import {StepperSecond} from '../../../../components/global/stepper/Stepper'
+import HeaderBackCloseDark from '../../../../components/global/header/dark/HeaderBackCloseDark'
+import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
+import RenderInputContainer
+	from '../../../../components/sub/kokozi-house/first-setting/wifi-connection/information/RenderInputContainer'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -19,39 +21,6 @@ const PageWrapper = styled(SafeAreaView)`
 const TitleImage = styled(AutoHeightImage)`
   margin-top: 16px;
   margin-bottom: 32px;
-`
-
-const InputContainer = styled(View)`
-  width: 90%;
-  margin: 0 auto;
-`
-
-const InputLabel = styled(Caption)`
-  font-weight: bold;
-  font-size: 13px;
-  color: ${BeigeFifthColor};
-  margin-top: 16px;
-  margin-bottom: 8px;
-`
-
-const PickerWrapper = styled.View`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  border: 1px solid ${BeigeForthColor};
-  border-radius: 8px;
-  overflow: hidden;
-`
-
-const HousePicker = styled(Picker)`
-  width: 100%;
-  background-color: transparent;
-`
-
-const PasswordInput = styled(TextInput)`
-  width: 100%;
-  border-radius: 8px;
-  background-color: transparent;
 `
 
 const SubmitButton = styled.TouchableOpacity`
@@ -78,55 +47,11 @@ const ButtonText = styled(Paragraph)`
   font-size: 16px;
 `
 
-
-const RenderInputContainer = () => {
-	const [selectedLanguage, setSelectedLanguage] = useState()
-	const [password, setPassword] = useState('')
-
-	return <InputContainer>
-		<InputLabel>와이파이 네트워크</InputLabel>
-		<PickerWrapper>
-			<HousePicker
-				selectedValue={selectedLanguage}
-				dropdownIconColor={BeigeFifthColor}
-				mode="dropdown"
-			>
-				<Picker.Item
-					color={BeigeFifthColor}
-					label="Network A"
-					value="Network A"
-				/>
-				<Picker.Item
-					color={BeigeFifthColor}
-					label="Network B"
-					value="Network B"
-				/>
-				<Picker.Item
-					color={BeigeFifthColor}
-					label="Network C"
-					value="Network C"
-				/>
-			</HousePicker>
-		</PickerWrapper>
-		<InputLabel>와이파이 비밀번호</InputLabel>
-		<PasswordInput
-			mode="outlined"
-			placeholder="비밀번호"
-			secureTextEntry
-			right={<TextInput.Icon name="eye"/>}
-		/>
-	</InputContainer>
-}
-
 const Information = () =>
-
 	<PageWrapper>
 		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
 		<StepperSecond marginTop={16} marginBottom={16}/>
-		<TitleImage
-			width={288}
-			source={require('../../../../../assets/kokozi-house/wifi/information/connection-information-text.png')}
-		/>
+		<TitleImage width={288} source={ImagePaths.kokoziHouse.wifi.information.text}/>
 		<RenderInputContainer/>
 
 		<SubmitButton>
@@ -134,6 +59,5 @@ const Information = () =>
 		</SubmitButton>
 		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
-
 
 export default Information

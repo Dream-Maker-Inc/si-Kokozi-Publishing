@@ -1,21 +1,17 @@
 import React, {useLayoutEffect} from 'react'
-import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
-import {TouchableOpacity} from 'react-native'
-import {ProgressBar} from 'react-native-paper'
 import styled from '@emotion/native'
-
-import {BeigeSecondColor, placeholderTextColor, playerBackgroundColor, primaryColor} from '../../../common/Colors'
-
+import {TouchableOpacity} from 'react-native'
 import Arti from './arti/Arti'
-import MagicArti from './magic-atti/MagicArti'
 import All from './all/All'
-import IconHeaderNotiMoreDark from '../../../components/header/dark/IconHeaderNotiMoreDark'
+import {ProgressBar} from 'react-native-paper'
+import MagicArti from './magic-atti/MagicArti'
+import ImagePaths from '../../../common/ImagePaths'
+import AutoHeightImage from 'react-native-auto-height-image'
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
+import {BeigeFirstColor, BeigeForthColor, BeigeSecondColor, primaryColor} from '../../../common/Colors'
+import IconHeaderNotiMoreDark from '../../../components/global/header/dark/IconHeaderNotiMoreDark'
 
 const Tab = createMaterialTopTabNavigator()
-
-const IconImage = styled.Image`
-  height: 20px;
-`
 
 const PlayContainer = styled.View`
   position: relative;
@@ -26,16 +22,12 @@ const PlayContainer = styled.View`
 
   height: 60px;
   padding: 0 10px;
-  background-color: ${playerBackgroundColor};
-`
-
-const PlayerThumbnail = styled.Image`
-  width: 46px;
+  background-color: ${BeigeFirstColor};
 `
 
 const PlayerTitle = styled.Text`
   margin-left: 4px;
-  color: ${placeholderTextColor};
+  color: ${BeigeForthColor};
 `
 
 const ControllerWrapper = styled.View`
@@ -48,8 +40,7 @@ const ControllerWrapper = styled.View`
   right: 10px;
 `
 
-const ControllerIcon = styled.Image`
-  width: 36px;
+const ControllerIcon = styled(AutoHeightImage)`
   margin-right: 10px;
 `
 
@@ -58,50 +49,37 @@ const MenuIcon = styled(TouchableOpacity)`
   margin-right: 10px;
 `
 
-const HeaderLeftIcon = () => <>
-	<MenuIcon
-		onPress={() => alert('알림')}
-	>
-		<IconImage
-			resizeMode="contain"
-			source={require('../../../../assets/components/icons/notification.png')}
-		/>
+const renderHeaderLeftIcon =
+	<MenuIcon>
+		<AutoHeightImage width={24} source={ImagePaths.components.icons.notification}/>
 	</MenuIcon>
-</>
 
-const HeaderRightIcon = () => <>
-	<MenuIcon
-		onPress={() => alert('더보기')}
-	>
-		<IconImage
-			resizeMode="contain"
-			source={require('../../../../assets/components/icons/more.png')}
-		/>
+const renderHeaderRightIcon =
+	<MenuIcon>
+		<AutoHeightImage width={24} source={ImagePaths.components.icons.more}/>
 	</MenuIcon>
-</>
 
 const NavigationOptions = {
-	headerStyle: {backgroundColor: '#FAEFE3'},
-	headerTintColor: {backgroundColor: '#109724'},
-	headerLeft: () => <HeaderLeftIcon/>,
-	headerRight: () => <HeaderRightIcon/>
+	headerStyle: {backgroundColor: BeigeSecondColor},
+	headerTintColor: {backgroundColor: primaryColor},
+	headerLeft: () => renderHeaderLeftIcon,
+	headerRight: () => renderHeaderRightIcon
 }
 
 const AttiTopTabs = ({navigation}) => {
-
 	useLayoutEffect(() => navigation.setOptions(NavigationOptions))
+
+	const tabOptions = {
+		tabBarLabelStyle: {fontWeight: 'bold'},
+		tabBarStyle: {backgroundColor: BeigeSecondColor},
+		tabBarIndicatorStyle: {backgroundColor: primaryColor}
+	}
 
 	return <>
 
-		<IconHeaderNotiMoreDark title={'아띠'}/>
+		<IconHeaderNotiMoreDark/>
 
-		<Tab.Navigator
-			screenOptions={{
-				tabBarLabelStyle: {fontWeight: 'bold'},
-				tabBarStyle: {backgroundColor: BeigeSecondColor},
-				tabBarIndicatorStyle: {backgroundColor: primaryColor}
-			}}
-		>
+		<Tab.Navigator screenOptions={tabOptions}>
 			<Tab.Screen name="모두" component={All}/>
 			<Tab.Screen name="아띠" component={Arti}/>
 			<Tab.Screen name="매직 아띠" component={MagicArti}/>
@@ -110,35 +88,25 @@ const AttiTopTabs = ({navigation}) => {
 		<ProgressBar
 			progress={0.5}
 			color={primaryColor}
-			style={{backgroundColor: '#CEC0AF'}}
+			style={{backgroundColor: BeigeForthColor}}
 		/>
 
 		<PlayContainer>
-			<PlayerThumbnail
-				resizeMode="contain"
-				source={require('../../../../assets/atti/blank-thumbnail.png')}
-			/>
+			<AutoHeightImage width={40} source={ImagePaths.arti.blankThumbnail}/>
 			<PlayerTitle>하우스 안에 아띠를 넣어주세요</PlayerTitle>
+
 			<ControllerWrapper>
 				<TouchableOpacity>
-					<ControllerIcon
-						resizeMode="contain"
-						source={require('../../../../assets/components/icons/previous.png')}
-					/>
+					<ControllerIcon width={32} source={ImagePaths.components.icons.previous}/>
 				</TouchableOpacity>
 				<TouchableOpacity>
-					<ControllerIcon
-						resizeMode="contain"
-						source={require('../../../../assets/components/icons/next.png')}
-					/>
+					<ControllerIcon width={32} source={ImagePaths.components.icons.next}/>
 				</TouchableOpacity>
 				<TouchableOpacity>
-					<ControllerIcon
-						resizeMode="contain"
-						source={require('../../../../assets/components/icons/playlist.png')}
-					/>
+					<ControllerIcon width={32} source={ImagePaths.components.icons.playlist}/>
 				</TouchableOpacity>
 			</ControllerWrapper>
+
 		</PlayContainer>
 
 	</>

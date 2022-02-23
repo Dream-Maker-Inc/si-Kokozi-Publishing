@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {BeigeSecondColor} from '../../../../common/Colors'
 import {ScrollView} from 'react-native'
+import ImagePaths from '../../../../common/ImagePaths'
+import {BeigeSecondColor} from '../../../../common/Colors'
+import AutoHeightImage from 'react-native-auto-height-image'
 
 const PageWrapper = styled.SafeAreaView`
   width: 100%;
@@ -9,27 +11,17 @@ const PageWrapper = styled.SafeAreaView`
   background-color: ${BeigeSecondColor};
 `
 
-const BackgroundText = styled.Image`
-  width: 70%;
-  margin: 0 auto;
+const BackgroundText = styled(AutoHeightImage)`
+  margin: 40px auto 0;
   z-index: 1;
 `
 
-const BackgroundImage = styled.Image`
-  width: 100%;
-  height: 500px;
-  margin: -180px auto 0;
-`
-
-const Arti = () => <PageWrapper>
-	<ScrollView>
-		<BackgroundText
-			resizeMode="contain"
-			source={require('../../../../../assets/atti/all/blank-text.png')}/>
-		<BackgroundImage
-			resizeMode="contain"
-			source={require('../../../../../assets/atti/all/blank-image.png')}/>
-	</ScrollView>
-</PageWrapper>
+const Arti = () =>
+	<PageWrapper>
+		<ScrollView>
+			<BackgroundText width={224} source={ImagePaths.arti.all.blankText}/>
+			<AutoHeightImage width={360} source={ImagePaths.arti.all.blankImage}/>
+		</ScrollView>
+	</PageWrapper>
 
 export default Arti

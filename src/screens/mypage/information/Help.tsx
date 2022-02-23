@@ -1,7 +1,7 @@
 import React from 'react'
 import {SafeAreaView, StatusBar, View} from 'react-native'
 import styled from '@emotion/native'
-import {BeigeSecondColor, placeholderTextColor, secondaryColor, textDarkColor} from '../../../common/Colors'
+import {BeigeSecondColor, BeigeForthColor, BeigeThirdColor, navyColor} from '../../../common/Colors'
 import HeaderBackDark from '../../../components/header/dark/HeaderBackDark'
 import {Caption, TextInput} from 'react-native-paper'
 import {Picker} from '@react-native-picker/picker'
@@ -16,7 +16,7 @@ const PageWrapper = styled(SafeAreaView)`
 const SearchWrapper = styled(View)`
   width: 100%;
   border-bottom-width: 1px;
-  border-bottom-color: ${secondaryColor};
+  border-bottom-color: ${BeigeThirdColor};
 `
 
 const SearchInput = styled(TextInput)`
@@ -36,7 +36,7 @@ const FilterWrapper = styled(View)`
 const FilterPicker = styled(Picker)`
   width: 100%;
   height: 100%;
-  background-color: ${secondaryColor};
+  background-color: ${BeigeThirdColor};
 `
 
 const CaptionText = styled(Caption)`
@@ -44,7 +44,7 @@ const CaptionText = styled(Caption)`
   font-size: 15px;
   font-weight: bold;
   margin: 20px;
-  color: ${textDarkColor};
+  color: ${navyColor};
 `
 
 const FAQListWrapper = styled(View)`
@@ -57,9 +57,9 @@ const renderSearchContainer =
 		<SearchInput
 			mode="outlined"
 			placeholder="어떤 문제나 에러코드가 있나요?"
-			placeholderTextColor={placeholderTextColor}
-			activeOutlineColor={placeholderTextColor}
-			outlineColor={placeholderTextColor}
+			placeholderTextColor={BeigeForthColor}
+			activeOutlineColor={BeigeForthColor}
+			outlineColor={BeigeForthColor}
 		/>
 		<FilterWrapper>
 			<FilterPicker>

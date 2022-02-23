@@ -1,16 +1,9 @@
 import React, {useState} from 'react'
-import {SafeAreaView, StatusBar} from 'react-native'
-import {
-	BeigeFifthColor,
-	BeigeSecondColor,
-	BeigeThirdColor,
-	textCaptionColor,
-	textDarkColor
-} from '../../../common/Colors'
+import {SafeAreaView, StatusBar, Text} from 'react-native'
+import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor} from '../../../common/Colors'
 import styled from '@emotion/native'
-import HeaderBackDark from '../../../components/header/dark/HeaderBackDark'
-import {Caption, Headline, Paragraph} from 'react-native-paper'
 import {Picker} from '@react-native-picker/picker'
+import HeaderBackDark from '../../../components/global/header/dark/HeaderBackDark'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
@@ -18,10 +11,10 @@ const PageWrapper = styled(SafeAreaView)`
   padding: 20px;
 `
 
-const TitleText = styled(Headline)`
+const TitleText = styled(Text)`
   font-size: 17px;
   font-weight: bold;
-  color: ${textDarkColor};
+  color: ${navyColor};
 `
 
 const ContentContainer = styled.View`
@@ -36,9 +29,9 @@ const ContentContainer = styled.View`
   border-bottom-width: 1px;
 `
 
-const ItemText = styled(Paragraph)`
+const ItemText = styled(Text)`
   font-size: 14px;
-  color: ${textDarkColor};
+  color: ${navyColor};
 `
 
 const PickerWrapper = styled.View`
@@ -58,10 +51,10 @@ const HousePicker = styled(Picker)`
   background-color: ${BeigeThirdColor};
 `
 
-const CaptionText = styled(Caption)`
+const CaptionText = styled(Text)`
   margin-top: 8px;
   font-size: 12px;
-  color: ${textCaptionColor};
+  color: ${BeigeFifthColor};
 `
 
 const SleepingModeSetting = () => {
@@ -81,37 +74,19 @@ const SleepingModeSetting = () => {
 						dropdownIconColor={BeigeFifthColor}
 						mode="dropdown"
 					>
-						<Picker.Item
-							color={BeigeFifthColor}
-							label="3분"
-							value="kokozi"
-						/>
-						<Picker.Item
-							color={BeigeFifthColor}
-							label="5분"
-							value="kokozi"
-						/>
-						<Picker.Item
-							color={BeigeFifthColor}
-							label="10분"
-							value="kokozi"
-						/>
-						<Picker.Item
-							color={BeigeFifthColor}
-							label="잠자기 모드를 설정하지 않음"
-							value="kokozi"
-						/>
+						<Picker.Item color={BeigeFifthColor} label="3분" value="kokozi"/>
+						<Picker.Item color={BeigeFifthColor} label="5분" value="kokozi"/>
+						<Picker.Item color={BeigeFifthColor} label="10분" value="kokozi"/>
+						<Picker.Item color={BeigeFifthColor} label="잠자기 모드를 설정하지 않음" value="kokozi"/>
 					</HousePicker>
 				</PickerWrapper>
 			</ContentContainer>
+
 			<CaptionText>잠자기 모드는 코코지 하우스의 배터리 사용을 절약해줘요.</CaptionText>
 			<CaptionText>다락방 지붕을 터치하면 잠자기 모드를 해제할 수 있어요.</CaptionText>
 		</PageWrapper>
 
-		<StatusBar
-			barStyle="dark-content"
-			backgroundColor={BeigeSecondColor}
-		/>
+		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</>
 }
 

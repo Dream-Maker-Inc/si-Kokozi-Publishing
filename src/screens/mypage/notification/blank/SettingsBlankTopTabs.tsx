@@ -1,23 +1,24 @@
 import React from 'react'
-import {NavigationContainer} from '@react-navigation/native'
-import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
-import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
-import Notification from './Notification'
-import {StatusBar} from 'react-native'
 import Notice from './Notice'
-import HeaderBackDark from '../../../../components/header/dark/HeaderBackDark'
+import {StatusBar} from 'react-native'
+import Notification from './Notification'
+import {NavigationContainer} from '@react-navigation/native'
+import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
+import HeaderBackDark from '../../../../components/global/header/dark/HeaderBackDark'
 
 const Tab = createMaterialTopTabNavigator()
+
+const TabOptions = {
+	tabBarLabelStyle: {fontWeight: 'bold'},
+	tabBarStyle: {backgroundColor: BeigeSecondColor},
+	tabBarIndicatorStyle: {backgroundColor: primaryColor}
+}
 
 const SettingsBlankTopTabs = () => <>
 	<NavigationContainer>
 		<HeaderBackDark title={'알림'}/>
-		<Tab.Navigator
-			screenOptions={{
-				tabBarLabelStyle: {fontWeight: 'bold'},
-				tabBarStyle: {backgroundColor: BeigeSecondColor},
-				tabBarIndicatorStyle: {backgroundColor: primaryColor}
-			}}>
+		<Tab.Navigator screenOptions={TabOptions}>
 			<Tab.Screen name="알림" component={Notification}/>
 			<Tab.Screen name="공지사항" component={Notice}/>
 		</Tab.Navigator>

@@ -1,11 +1,12 @@
 import React from 'react'
-import {SafeAreaView, StatusBar} from 'react-native'
 import styled from '@emotion/native'
-import HeaderBackCloseDark from '../../../../components/header/dark/HeaderBackCloseDark'
-import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
-import AutoHeightImage from 'react-native-auto-height-image'
 import {Paragraph} from 'react-native-paper'
-import {StepperFirst} from '../../../../components/stepper/Stepper'
+import {SafeAreaView, StatusBar} from 'react-native'
+import AutoHeightImage from 'react-native-auto-height-image'
+import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
+import HeaderBackCloseDark from '../../../../components/global/header/dark/HeaderBackCloseDark'
+import {StepperFirst} from '../../../../components/global/stepper/Stepper'
+import ImagePaths from '../../../../common/ImagePaths'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -47,23 +48,14 @@ const APConnectStart = () =>
 	<PageWrapper>
 		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
 		<StepperFirst marginTop={16}/>
-		<TitleText
-			source={require('../../../../../assets/kokozi-house/initialize/ap-connect/start/text.png')}
-			width={228}
-		/>
-		<TitleText
-			source={require('../../../../../assets/kokozi-house/initialize/ap-connect/start/image.png')}
-			width={255}
-		/>
+		<TitleText width={228} source={ImagePaths.kokoziHouse.firstSetting.apConnect.start.text}/>
+		<TitleText width={255} source={ImagePaths.kokoziHouse.firstSetting.apConnect.start.image}/>
 
 		<SubmitButton>
 			<ButtonText>다음</ButtonText>
 		</SubmitButton>
 
-		<StatusBar
-			barStyle="dark-content"
-			backgroundColor={BeigeSecondColor}
-		/>
+		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default APConnectStart

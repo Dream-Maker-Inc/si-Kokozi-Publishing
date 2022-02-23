@@ -1,17 +1,12 @@
 import React from 'react'
-import {FlatList, SafeAreaView, StatusBar, TouchableOpacity, View} from 'react-native'
+import {FlatList, SafeAreaView, StatusBar, View} from 'react-native'
 import styled from '@emotion/native'
-import {
-	backgroundSecondaryColor,
-	BeigeSecondColor,
-	BeigeThirdColor,
-	primaryColor,
-	textCaptionColor,
-	textDarkColor
-} from '../../../common/Colors'
-import HeaderNotiMoreLight from '../../../components/header/light/HeaderNotiMoreLight'
+import {BeigeFirstColor, BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../common/Colors'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {Caption, Title} from 'react-native-paper'
+import HeaderNotiMoreLight from '../../../components/global/header/light/HeaderNotiMoreLight'
+import RenderStory from '../../../components/sub/mypage/guests-profile/RenderStory'
+import ImagePaths from '../../../common/ImagePaths'
 
 const data = [
 	{
@@ -50,7 +45,7 @@ const PageWrapper = styled(SafeAreaView)`
   display: flex;
   align-items: center;
   flex: 1;
-  background-color: ${backgroundSecondaryColor};
+  background-color: ${BeigeFirstColor};
 `
 
 const ThumbnailImage = styled(AutoHeightImage)`
@@ -63,14 +58,13 @@ const ThumbnailCaption = styled(Title)`
   font-size: 24px;
   font-weight: bold;
   margin-top: 16px;
-  color: ${textDarkColor};
+  color: ${navyColor};
 `
 
 const SharedWrapper = styled(View)`
   flex: 1;
   width: 100%;
   margin-top: 48px;
-  padding: 22px 16px;
   background-color: ${BeigeSecondColor};
 `
 
@@ -79,13 +73,13 @@ const SharedHeader = styled(View)`
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding-bottom: 24px;
+  padding: 22px 16px;
   border-bottom-width: 1px;
   border-bottom-color: ${BeigeThirdColor};
 `
 
 const TitleText = styled(Title)`
-  color: ${textDarkColor};
+  color: ${navyColor};
   font-size: 17px;
   font-weight: bold;
 `
@@ -95,56 +89,11 @@ const CounterText = styled(Caption)`
   color: ${primaryColor};
 `
 
-const StoryWrapper = styled(TouchableOpacity)`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  width: 100%;
-  padding: 14px 24px;
-  border-bottom-width: 1px;
-  border-bottom-color: ${BeigeThirdColor};
-`
-
-const VerticalContainer = styled(View)`
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-`
-
-const StoryTitle = styled(Title)`
-  font-size: 15px;
-  font-weight: bold;
-  color: ${textDarkColor};
-`
-
-const StoryAuthor = styled(Caption)`
-  font-size: 12px;
-  color: ${textCaptionColor};
-`
-
-const StoryRunningTime = styled(Caption)`
-  font-size: 13px;
-  color: ${textCaptionColor};
-`
-
-const RenderStory = ({item}) =>
-	<StoryWrapper>
-		<VerticalContainer>
-			<StoryTitle>{item.title}</StoryTitle>
-			<StoryAuthor>{item.author}</StoryAuthor>
-		</VerticalContainer>
-		<StoryRunningTime>{item.runningTime}</StoryRunningTime>
-	</StoryWrapper>
-
 const GuestProfile = () =>
 	<PageWrapper>
 		<HeaderNotiMoreLight title={'게스트 프로필'}/>
 
-		<ThumbnailImage
-			width={100}
-			source={require('../../../../assets/mypage/user/guest.png')}
-		/>
+		<ThumbnailImage width={100} source={ImagePaths.mypage.user.guest}/>
 		<ThumbnailCaption>친구</ThumbnailCaption>
 
 		<SharedWrapper>
@@ -155,7 +104,7 @@ const GuestProfile = () =>
 			<FlatList data={data} renderItem={RenderStory}/>
 		</SharedWrapper>
 
-		<StatusBar barStyle="dark-content" backgroundColor={backgroundSecondaryColor}/>
+		<StatusBar barStyle="dark-content" backgroundColor={BeigeFirstColor}/>
 	</PageWrapper>
 
 export default GuestProfile

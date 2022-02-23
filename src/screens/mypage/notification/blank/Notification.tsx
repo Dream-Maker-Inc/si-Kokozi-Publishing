@@ -1,7 +1,8 @@
 import React from 'react'
-import {Image} from 'react-native'
 import styled from '@emotion/native'
 import {BeigeSecondColor} from '../../../../common/Colors'
+import ImagePaths from '../../../../common/ImagePaths'
+import AutoHeightImage from 'react-native-auto-height-image'
 
 const PageWrapper = styled.SafeAreaView`
   display: flex;
@@ -11,15 +12,14 @@ const PageWrapper = styled.SafeAreaView`
   background-color: ${BeigeSecondColor};
 `
 
-const BlankImage = styled.Image`
-  width: 60%;
-  height: 300px;
+const ScreenTitle = styled(AutoHeightImage)`
+  margin-bottom: 40px;
 `
 
-const Notification = () => <PageWrapper>
-	<Image source={require('../../../../../assets/mypage/notification/text.png')}/>
-	<BlankImage resizeMode="contain"
-		source={require('../../../../../assets/mypage/notification/image.png')}/>
-</PageWrapper>
+const Notification = () =>
+	<PageWrapper>
+		<ScreenTitle width={242} source={ImagePaths.mypage.notification.text}/>
+		<AutoHeightImage width={200} source={ImagePaths.mypage.notification.image}/>
+	</PageWrapper>
 
 export default Notification

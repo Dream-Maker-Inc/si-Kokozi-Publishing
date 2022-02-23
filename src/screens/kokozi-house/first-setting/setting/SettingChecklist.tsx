@@ -1,10 +1,12 @@
 import React from 'react'
-import {SafeAreaView, StatusBar} from 'react-native'
+import {SafeAreaView, StatusBar, Text} from 'react-native'
 import styled from '@emotion/native'
-import {BeigeSecondColor, primaryColor, textDarkColor} from '../../../../common/Colors'
+import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {Paragraph} from 'react-native-paper'
-import HeaderBackCloseDark from '../../../../components/header/dark/HeaderBackCloseDark'
+import HeaderBackCloseDark from '../../../../components/global/header/dark/HeaderBackCloseDark'
+import ImagePaths from '../../../../common/ImagePaths'
+import renderChecklist
+	from '../../../../components/sub/kokozi-house/first-setting/setting/setting-checklist/renderChecklist'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -12,32 +14,8 @@ const PageWrapper = styled(SafeAreaView)`
   background-color: ${BeigeSecondColor};
 `
 
-const TitleText = styled(AutoHeightImage)`
+const ScreenText = styled(AutoHeightImage)`
   margin: 60px auto;
-`
-
-const ListContainer = styled.View`
-  margin-top: 100px;
-  padding-left: 24px;
-`
-
-const ListColumn = styled.View`
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  margin-top: 30px;
-`
-
-const ListText = styled(Paragraph)`
-  margin-left: 12px;
-  font-size: 14px;
-  color: ${textDarkColor};
-`
-
-const TextMark = styled(Paragraph)`
-  font-size: 14px;
-  font-weight: bold;
-  color: ${textDarkColor};
 `
 
 const SubmitButton = styled.TouchableOpacity`
@@ -58,67 +36,23 @@ const SubmitButton = styled.TouchableOpacity`
   background-color: ${primaryColor};
 `
 
-const ButtonText = styled(Paragraph)`
+const ButtonText = styled(Text)`
   color: white;
   font-weight: bold;
   font-size: 16px;
 `
 
-const renderChecklist =
-	<ListContainer>
-		<ListColumn>
-			<AutoHeightImage
-				width={16}
-				source={require('../../../../../assets/components/icons/check.png')}
-			/>
-			<ListText>
-				코코지 하우스의
-				<TextMark> 충전 케이블이 연결</TextMark>
-				되어 있나요?
-			</ListText>
-		</ListColumn>
-		<ListColumn>
-			<AutoHeightImage
-				width={16}
-				source={require('../../../../../assets/components/icons/check.png')}
-			/>
-			<ListText>
-				코코지 하우스의
-				<TextMark> 전원이 켜져 </TextMark>
-				있나요?
-			</ListText>
-		</ListColumn>
-		<ListColumn>
-			<AutoHeightImage
-				width={16}
-				source={require('../../../../../assets/components/icons/check.png')}
-			/>
-			<ListText>
-				<TextMark>스마트폰 와이파이(Wi-fi)에 연결</TextMark>
-				되어 있나요?
-			</ListText>
-		</ListColumn>
-	</ListContainer>
-
 const SettingChecklist = () =>
 	<PageWrapper>
 		<HeaderBackCloseDark title="코코지 하우스 세팅"/>
-
-		<TitleText
-			width={214}
-			source={require('../../../../../assets/kokozi-house/initialize/setting/checklist/text.png')}
-		/>
-
+		<ScreenText width={214} source={ImagePaths.kokoziHouse.firstSetting.setting.checklist.text}/>
 		{renderChecklist}
 
 		<SubmitButton>
 			<ButtonText>준비 완료</ButtonText>
 		</SubmitButton>
 
-		<StatusBar
-			barStyle="dark-content"
-			backgroundColor={BeigeSecondColor}
-		/>
+		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 
 export default SettingChecklist

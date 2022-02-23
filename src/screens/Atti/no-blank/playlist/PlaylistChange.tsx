@@ -1,109 +1,56 @@
 import React from 'react'
-import {backgroundSecondaryColor, primaryColor} from '../../../../common/Colors'
-import {ScrollView, StatusBar, StyleSheet, Text} from 'react-native'
-import {
-	ArtiImage,
-	ButtonText,
-	ChangeButton,
-	ChangeButtonContainer,
-	Header,
-	ImageCaptionText,
-	ImageTitleText,
-	ItemNumber,
-	ItemRunningTime,
-	ItemTitle,
-	ProfileWrapper,
-	StoryHeadline,
-	StoryInfoContainer,
-	StoryItem,
-	StoryListWrapper,
-	StorySubheading,
-	StoryTextContainer,
-	StoryWrapper
-} from './style'
-import {storyData} from '../detail/data'
-import HeaderBackLight from '../../../../components/header/light/HeaderBackLight'
+import styled from '@emotion/native'
+import {Title} from 'react-native-paper'
+import {ScrollView, StatusBar, TouchableOpacity} from 'react-native'
+import {BeigeFirstColor, BeigeSecondColor, BeigeThirdColor, primaryColor} from '../../../../common/Colors'
+import HeaderBackLight from '../../../../components/global/header/light/HeaderBackLight'
+import renderProfile from '../../../../components/sub/arti/no-blank/playlist/playlist-change/RenderProfile'
+import renderStoryList from '../../../../components/sub/arti/no-blank/playlist/playlist-change/renderStoryList'
+import renderStory from '../../../../components/sub/arti/no-blank/playlist/playlist-change/renderStory'
 
-const styles = StyleSheet.create({
-	container: {
-		shadowColor: '#999',
-		shadowOffset: {
-			width: 0,
-			height: 2,
-		},
-		shadowOpacity: 0.25,
-		shadowRadius: 3.84,
+export const ChangeButtonContainer = styled.View`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: ${BeigeSecondColor};
+  border-top-color: ${BeigeThirdColor};
+  border-top-width: 1px;
+`
 
-		elevation: 5,
-	}
-})
+export const ChangeButton = styled(TouchableOpacity)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 60px;
+  border-radius: 8px;
+  background-color: ${primaryColor};
+`
 
-const renderProfile = <>
-	<ProfileWrapper>
-		<ArtiImage
-			resizeMode="contain"
-			source={require('../../../../../assets/atti/detail/thumbnail.png')}/>
-		<ImageTitleText>플레이리스트 A</ImageTitleText>
-		<ImageCaptionText>내가 좋아하는 전래동화 모음</ImageCaptionText>
-	</ProfileWrapper>
-</>
+export const ButtonText = styled(Title)`
+  color: white;
+  font-weight: bold;
+`
 
-const renderStoryList = <StoryListWrapper>
-	{storyData.map(item => (
-		<StoryItem>
-			<StoryTextContainer>
-				<ItemNumber>0{item.number}</ItemNumber>
-				<ItemTitle>{item.title}</ItemTitle>
-			</StoryTextContainer>
-			<StoryInfoContainer>
-				<ItemRunningTime>{item.runningTime}</ItemRunningTime>
-			</StoryInfoContainer>
-		</StoryItem>
-	))}
-</StoryListWrapper>
+const PlaylistChange = () =>
+	<>
+		<HeaderBackLight title="플레이리스트"/>
 
-const renderStory = <>
-	<StoryWrapper>
-		<Header>
-			<StoryHeadline>이야기</StoryHeadline>
-			<StorySubheading>총 46분 37초</StorySubheading>
-		</Header>
-	</StoryWrapper>
-</>
+		<ScrollView>
+			{renderProfile}
+			{renderStory}
+			{renderStoryList}
+		</ScrollView>
 
-const Detail = () => <>
-	<HeaderBackLight title="플레이리스트"/>
-	<ScrollView>
-		{renderProfile}
-		{renderStory}
-		{renderStoryList}
-	</ScrollView>
-	<ChangeButtonContainer>
-		<Text
-			style={{
-				position: 'absolute',
-				width: '80%',
-				height: 40,
-				top: 0,
-				zIndex: 1,
-				textAlign: 'center',
-				color: 'white',
-				backgroundColor: primaryColor,
-				padding: 10,
-				borderRadius: 10,
-				fontWeight: '100',
-				marginLeft: 'auto',
-				marginRight: 'auto',
-				transform: [
-					{translateY: -50}
-				]
-			}}
-		>한번에 하나의 플레이리스트만 담을 수 있어요</Text>
-		<ChangeButton>
-			<ButtonText>교체하기</ButtonText>
-		</ChangeButton>
-	</ChangeButtonContainer>
-	<StatusBar barStyle="dark-content" backgroundColor={backgroundSecondaryColor}/>
-</>
+		<ChangeButtonContainer>
+			<ChangeButton>
+				<ButtonText>교체하기</ButtonText>
+			</ChangeButton>
+		</ChangeButtonContainer>
 
-export default Detail
+		<StatusBar barStyle="dark-content" backgroundColor={BeigeFirstColor}/>
+	</>
+
+export default PlaylistChange

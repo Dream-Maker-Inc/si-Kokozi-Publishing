@@ -1,17 +1,13 @@
-import React, {useState} from 'react'
-import {SafeAreaView, StatusBar, TouchableOpacity, View} from 'react-native'
+import React from 'react'
 import styled from '@emotion/native'
-import {
-	BeigeSecondColor,
-	BeigeThirdColor,
-	primaryColor,
-	textCaptionColor,
-	textDarkColor
-} from '../../../../common/Colors'
-import HeaderBackCloseLight from '../../../../components/header/light/HeaderBackCloseLight'
-import {StepperThird} from '../../../../components/stepper/Stepper'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {Caption, Paragraph, RadioButton, TextInput, Title} from 'react-native-paper'
+import {SafeAreaView, StatusBar, TouchableOpacity, View} from 'react-native'
+import {Caption, Paragraph} from 'react-native-paper'
+import ImagePaths from '../../../../common/ImagePaths'
+import {StepperThird} from '../../../../components/global/stepper/Stepper'
+import HeaderBackCloseLight from '../../../../components/global/header/light/HeaderBackCloseLight'
+import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, primaryColor} from '../../../../common/Colors'
+import RenderInput from '../../../../components/sub/kokozi-house/first-setting/kids/RenderInput'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -26,60 +22,10 @@ const ScreenText = styled(AutoHeightImage)`
   margin-bottom: 44px;
 `
 
-const InputContainer = styled(View)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 0 16px;
-  border-top-color: ${BeigeThirdColor};
-  border-top-width: 1px;
-`
-
-const ContainerColumn = styled(View)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  height: 68px;
-  border-bottom-width: 1px;
-  border-bottom-color: ${BeigeThirdColor};
-`
-
-const ColumnTitle = styled(Title)`
-  font-weight: bold;
-  font-size: 16px;
-  margin-left: 27px;
-  color: ${textDarkColor};
-`
-
-const ColumnInput = styled(TextInput)`
-  flex-grow: 1;
-  height: 100%;
-  background-color: transparent;
-  text-align: right;
-  color: ${textDarkColor};
-`
-
-const RadioWrapper = styled(View)`
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  margin-right: 16px;
-`
-
-const RadioLabel = styled(Paragraph)`
-  font-size: 14px;
-  font-weight: bold;
-  color: ${textDarkColor};
-`
-
 const CaptionText = styled(Caption)`
   margin-top: 112px;
   font-size: 12px;
-  color: ${textCaptionColor};
+  color: ${BeigeFifthColor};
 `
 
 const ConfirmButtonContainer = styled(View)`
@@ -112,77 +58,30 @@ const ButtonText = styled(Paragraph)`
   text-align: center;
 `
 
+const renderFooter = <>
+	<CaptionText>
+		{`아이의 생년월일을 입력하면 앱에서 보다 정확하게
+		아이의 연령에 맞는 콘텐츠와 기능을 제공합니다.`}
+	</CaptionText>
+
+	<ConfirmButtonContainer>
+		<ConfirmButton>
+			<ButtonText>완료</ButtonText>
+		</ConfirmButton>
+	</ConfirmButtonContainer>
+</>
+
+
 const Kids = () => {
-	const [checked, setChecked] = useState('남아')
 
 	return <PageWrapper>
 		<HeaderBackCloseLight title={'아이 정보 등록'}/>
 
 		<StepperThird marginTop={16}/>
-		<ScreenText
-			source={require('../../../../../assets/kokozi-house/initialize/kids/text.png')}
-			width={196}
-		/>
+		<ScreenText width={196} source={ImagePaths.kokoziHouse.firstSetting.kids.text}/>
+		<RenderInput/>
 
-		<InputContainer>
-			<ContainerColumn>
-				<ColumnTitle>애칭</ColumnTitle>
-				<ColumnInput
-					mode="outlined"
-					placeholder="아이의 애칭을 입력해주세요"
-					placeholderTextColor={textCaptionColor}
-					outlineColor="transparent"
-					activeOutlineColor="transparent"
-				/>
-			</ContainerColumn>
-			<ContainerColumn>
-				<ColumnTitle>성별</ColumnTitle>
-				<RadioWrapper>
-					<RadioButton
-						value="남아"
-						status={checked === '남아' ? 'checked' : 'unchecked'}
-						onPress={() => setChecked('남아')}
-					/>
-					<RadioLabel
-						onPress={
-							() => setChecked('남아')
-						}
-					>남아</RadioLabel>
-					<RadioButton
-						value="여아"
-						status={checked === '여아' ? 'checked' : 'unchecked'}
-						onPress={() => setChecked('여아')}
-					/>
-					<RadioLabel
-						onPress={
-							() => setChecked('여아')
-						}
-					>여아</RadioLabel>
-				</RadioWrapper>
-			</ContainerColumn>
-			<ContainerColumn>
-				<ColumnTitle>생일</ColumnTitle>
-				<ColumnInput
-					mode="outlined"
-					placeholder="생년월일 6자리를 입력해주세요"
-					placeholderTextColor={textCaptionColor}
-					outlineColor="transparent"
-					activeOutlineColor="transparent"
-				/>
-			</ContainerColumn>
-		</InputContainer>
-
-		<CaptionText>
-			{`아이의 생년월일을 입력하면 앱에서 보다 정확하게
-		아이의 연령에 맞는 콘텐츠와 기능을 제공합니다.`}
-		</CaptionText>
-
-		<ConfirmButtonContainer>
-			<ConfirmButton>
-				<ButtonText>완료</ButtonText>
-			</ConfirmButton>
-		</ConfirmButtonContainer>
-
+		{renderFooter}
 		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>
 	</PageWrapper>
 }

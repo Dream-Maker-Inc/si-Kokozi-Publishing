@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {SafeAreaView, StatusBar} from 'react-native'
-import {BeigeSecondColor, primaryColor, textDarkColor} from '../../../../common/Colors'
+import {SafeAreaView, StatusBar, Text} from 'react-native'
+import {BeigeSecondColor, navyColor, primaryColor} from '../../../../common/Colors'
 import AutoHeightImage from 'react-native-auto-height-image'
-import HeaderBackCloseDark from '../../../../components/header/dark/HeaderBackCloseDark'
-import {Caption, Paragraph} from 'react-native-paper'
-import {StepperThird} from '../../../../components/stepper/Stepper'
+import HeaderBackCloseDark from '../../../../components/global/header/dark/HeaderBackCloseDark'
+import {StepperSecond} from '../../../../components/global/stepper/Stepper'
+import ImagePaths from '../../../../common/ImagePaths'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -15,13 +15,13 @@ const PageWrapper = styled(SafeAreaView)`
   background-color: ${BeigeSecondColor};
 `
 
-const TitleImage = styled(AutoHeightImage)`
+const ScreenImage = styled(AutoHeightImage)`
   margin: 16px;
 `
 
-const WifiName = styled(Paragraph)`
+const WifiName = styled(Text)`
   font-size: 16px;
-  color: ${textDarkColor};
+  color: ${navyColor};
   margin-bottom: 77px;
 `
 
@@ -43,13 +43,13 @@ const SubmitButton = styled.TouchableOpacity`
   background-color: ${primaryColor};
 `
 
-const ButtonText = styled(Paragraph)`
+const ButtonText = styled(Text)`
   color: white;
   font-weight: bold;
   font-size: 16px;
 `
 
-const CaptionText = styled(Caption)`
+const CaptionText = styled(Text)`
   position: absolute;
   bottom: 47px;
   color: ${primaryColor};
@@ -59,24 +59,15 @@ const CaptionText = styled(Caption)`
 const ConnectSuccess = () =>
 	<PageWrapper>
 		<HeaderBackCloseDark title={'코코지 하우스 세팅'}/>
-		<StepperThird marginTop={16} marginBottom={16}/>
-
-		<TitleImage
-			source={require('../../../../../assets/kokozi-house/wifi/complete/text.png')}
-			width={176}
-		/>
+		<StepperSecond marginTop={16} marginBottom={16}/>
+		<ScreenImage width={176} source={ImagePaths.kokoziHouse.wifi.complete.text}/>
 
 		<WifiName>와이파이 이름 : mywifi-2.5G</WifiName>
-
-		<AutoHeightImage
-			source={require('../../../../../assets/kokozi-house/wifi/complete/image.png')}
-			width={240}
-		/>
+		<AutoHeightImage width={240} source={ImagePaths.kokoziHouse.wifi.complete.image}/>
 
 		<SubmitButton>
 			<ButtonText>다음</ButtonText>
 		</SubmitButton>
-
 		<CaptionText>도움이 필요해요</CaptionText>
 
 		<StatusBar barStyle="dark-content" backgroundColor={BeigeSecondColor}/>

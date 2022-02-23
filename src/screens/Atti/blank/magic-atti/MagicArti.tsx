@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
 import PagerView from 'react-native-pager-view'
-import {View} from 'react-native'
+import ImagePaths from '../../../../common/ImagePaths'
+import AutoHeightImage from 'react-native-auto-height-image'
+import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
 
 const PageWrapper = styled.SafeAreaView`
   display: flex;
@@ -16,12 +17,7 @@ const ViewPager = styled(PagerView)`
   flex: 1;
 `
 
-const StyledText = styled.Image`
-  width: 50%;
-  margin: 14% auto 0;
-`
-
-const StyledButton = styled.TouchableOpacity`
+const ButtonWrapper = styled.TouchableOpacity`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,46 +33,42 @@ const StyledButton = styled.TouchableOpacity`
   background-color: ${primaryColor};
 `
 
-const StyledButtonText = styled.Text`
+const ButtonText = styled.Text`
   color: white;
   font-weight: bold;
   font-size: 18px;
 `
 
-const StyledImage = styled.Image`
-  width: 100%;
-  height: 50%;
+const SliderItemWrapper = styled.View`
+  display: flex;
+  align-items: center;
 `
 
-const SecondText = styled.Text`
-  width: 60%;
+const ScreenText = styled(AutoHeightImage)`
+  margin-top: 40px;
 `
 
-const MagicArti = () => <PageWrapper>
-	<ViewPager showPageIndicator>
-		<View>
-			<StyledText
-				resizeMode="contain"
-				source={require('../../../../../assets/atti/magic-atti/blank/first/text.png')}/>
-			<StyledImage
-				resizeMode="contain"
-				source={require('../../../../../assets/atti/magic-atti/blank/first/image.png')}/>
-			<StyledButton>
-				<StyledButtonText>매직아띠 등록하기</StyledButtonText>
-			</StyledButton>
-		</View>
-		<View>
-			<SecondText
-				resizeMode="contain"
-				source={require('../../../../../assets/atti/magic-atti/blank/second/text.png')}/>
-			<StyledImage
-				resizeMode="contain"
-				source={require('../../../../../assets/atti/magic-atti/blank/second/image.png')}/>
-			<StyledButton>
-				<StyledButtonText>매직아띠 등록하기</StyledButtonText>
-			</StyledButton>
-		</View>
-	</ViewPager>
-</PageWrapper>
+const ScreenImage = styled(AutoHeightImage)`
+  margin-top: 16px;
+  margin-bottom: 58px;
+`
+
+const renderSliderItem =
+	<SliderItemWrapper>
+		<ScreenText width={182} source={ImagePaths.arti.magicArti.blank.first.text}/>
+		<ScreenImage width={200} source={ImagePaths.arti.magicArti.blank.first.image}/>
+		<ButtonWrapper>
+			<ButtonText>매직아띠 등록하기</ButtonText>
+		</ButtonWrapper>
+	</SliderItemWrapper>
+
+const MagicArti = () =>
+	<PageWrapper>
+		<ViewPager showPageIndicator>
+			{renderSliderItem}
+			{renderSliderItem}
+			{renderSliderItem}
+		</ViewPager>
+	</PageWrapper>
 
 export default MagicArti

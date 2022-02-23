@@ -1,11 +1,4 @@
 export const primaryColor = '#109724'
-export const backgroundSecondaryColor = '#FFF8F1'
-export const placeholderTextColor = '#CEC0AF'
-export const playerBackgroundColor = '#FFF8F1'
-export const secondaryColor = '#EEE1D2'
-export const textCaptionColor = '#908579'
-export const textDarkColor = '#02294C'
-
 export const yellowColor = '#FEC200'
 export const navyColor = '#02294C'
 export const beigeColor = '#D8B275'

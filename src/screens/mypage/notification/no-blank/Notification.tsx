@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {Paragraph, Subheading} from 'react-native-paper'
-import {BeigeSecondColor, primaryColor, secondaryColor, textDarkColor} from '../../../../common/Colors'
-import {FlatList} from 'react-native'
+import {FlatList, Text} from 'react-native'
 import {notificationData} from './data/data'
+import ImagePaths from '../../../../common/ImagePaths'
+import AutoHeightImage from 'react-native-auto-height-image'
+import {BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../../common/Colors'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -23,48 +24,49 @@ const ListItem = styled.TouchableOpacity`
 
   border: none;
   border-bottom-width: 1px;
-  border-bottom-color: ${secondaryColor};
+  border-bottom-color: ${BeigeThirdColor};
 `
 const ItemTextContainer = styled.View`
   display: flex;
   flex-grow: 1;
 `
 
-const ItemDate = styled(Paragraph)`
+const ItemDate = styled(Text)`
   color: ${primaryColor};
+  font-size: 14px;
   font-weight: bold;
 `
 
-const ItemTitle = styled(Subheading)`
-  color: ${textDarkColor};
+const ItemTitle = styled(Text)`
+  color: ${navyColor};
+  margin-top: 4px;
+  font-size: 14px;
   font-weight: bold;
 `
 
-const ItemContent = styled(Subheading)`
-  color: ${textDarkColor};
+const ItemContent = styled(Text)`
+  color: ${navyColor};
+  font-size: 14px;
 `
 
-const Arrow = styled.Image`
-  width: 24px;
-  height: 24px;
+const Arrow = styled(AutoHeightImage)`
   margin-right: 20px;
 `
 
-const RenderItem = ({item}) => <>
+const RenderItem = ({item}) =>
 	<ListItem>
 		<ItemTextContainer>
-			<ItemDate>{item.date.toString()}</ItemDate>
+			<ItemDate>{item.date}</ItemDate>
 			<ItemTitle>{item.title}</ItemTitle>
 			<ItemContent>{item.content}</ItemContent>
 		</ItemTextContainer>
-		<Arrow source={require('../../../../../assets/components/icons/arrow-right.png')}/>
+		<Arrow width={24} source={ImagePaths.components.icons.arrowRight}/>
 	</ListItem>
-</>
 
-const Notification = () => {
-	return <PageWrapper>
+const Notification = () =>
+	<PageWrapper>
 		<FlatList data={notificationData} renderItem={RenderItem}/>
 	</PageWrapper>
-}
+
 
 export default Notification

@@ -1,10 +1,12 @@
 import React from 'react'
-import {StatusBar} from 'react-native'
-import {BeigeForthColor, BeigeSecondColor, primaryColor} from '../../../../../common/Colors'
 import styled from '@emotion/native'
-import {Button, Caption, Paragraph, TextInput} from 'react-native-paper'
-import HeaderCloseLight from '../../../../../components/header/light/HeaderCloseLight'
-import {StepperSecond} from '../../../../../components/stepper/Stepper'
+import {StatusBar, Text, TouchableOpacity} from 'react-native'
+import {TextInput} from 'react-native-paper'
+import {BeigeFifthColor, BeigeForthColor, BeigeSecondColor, primaryColor} from '../../../../../common/Colors'
+import HeaderCloseLight from '../../../../../components/global/header/light/HeaderCloseLight'
+import {StepperSecond} from '../../../../../components/global/stepper/Stepper'
+import ImagePaths from '../../../../../common/ImagePaths'
+import AutoHeightImage from 'react-native-auto-height-image'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -14,34 +16,34 @@ const PageWrapper = styled.SafeAreaView`
 const Body = styled.View`
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100%;
   flex: 1;
 `
 
-const TitleText = styled.Image`
-  margin-top: 40px;
-`
-
-const TitleImage = styled.Image`
-  height: 260px;
+const ScreenImage = styled(AutoHeightImage)`
   margin-top: 100px;
 `
 
-const CaptionText = styled(Caption)`
+const CaptionText = styled(Text)`
   width: 100%;
   text-align: left;
+  margin-top: 112px;
   margin-left: 30px;
+  color: ${BeigeFifthColor};
 `
 
-const Input = styled(TextInput)`
+const NameInput = styled(TextInput)`
   width: 94%;
   height: 50px;
-  border-radius: 20px;
+  background-color: transparent;
 `
 
-const ConfirmButton = styled(Button)`
+const ConfirmButton = styled(TouchableOpacity)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 94%;
+  height: 50px;
   margin-top: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -49,32 +51,28 @@ const ConfirmButton = styled(Button)`
   border-radius: 10px;
 `
 
-const ButtonText = styled(Paragraph)`
+const ButtonText = styled(Text)`
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
 `
 
 const RegisterSecond = () => <PageWrapper>
 	<HeaderCloseLight title="매직 아띠 등록"/>
 	<Body>
-		<StepperSecond/>
-		<TitleText
-			resizeMode="contain"
-			source={require('../../../../../../assets/atti/register/name/title2.png')}
-		/>
-		<TitleImage
-			resizeMode="center"
-			source={require('../../../../../../assets/atti/register/name/image2.png')}
-		/>
+		<StepperSecond marginTop={16} marginBottom={32}/>
+		<AutoHeightImage width={328} source={ImagePaths.arti.register.name.text}/>
+		<ScreenImage width={124} source={ImagePaths.arti.register.name.image}/>
+
 		<CaptionText>매직아띠 이름</CaptionText>
-		<Input
+		<NameInput
 			mode="outlined"
 			placeholder="공백 포함 8자"
+			outlineColor={BeigeForthColor}
 			activeOutlineColor={BeigeForthColor}
 			placeholderTextColor={BeigeForthColor}
 		/>
-		<ConfirmButton mode="contained">
+		<ConfirmButton>
 			<ButtonText> 매직아띠 등록 </ButtonText>
 		</ConfirmButton>
 	</Body>

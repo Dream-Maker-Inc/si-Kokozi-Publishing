@@ -1,10 +1,11 @@
 import React from 'react'
-import {StatusBar, TouchableOpacity} from 'react-native'
-import {BeigeSecondColor, primaryColor} from '../../../../../common/Colors'
 import styled from '@emotion/native'
-import {Button, Paragraph} from 'react-native-paper'
-import HeaderCloseLight from '../../../../../components/header/light/HeaderCloseLight'
-import {StepperThird} from '../../../../../components/stepper/Stepper'
+import {StatusBar, Text, TouchableOpacity} from 'react-native'
+import {BeigeSecondColor, primaryColor} from '../../../../../common/Colors'
+import HeaderCloseLight from '../../../../../components/global/header/light/HeaderCloseLight'
+import {StepperThird} from '../../../../../components/global/stepper/Stepper'
+import ImagePaths from '../../../../../common/ImagePaths'
+import AutoHeightImage from 'react-native-auto-height-image'
 
 const PageWrapper = styled.SafeAreaView`
   flex: 1;
@@ -14,42 +15,36 @@ const PageWrapper = styled.SafeAreaView`
 const Body = styled.View`
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100%;
   flex: 1;
 `
 
-const SuccessText = styled.Image`
-  margin-top: 40px;
-  width: 50%;
-`
-
-const SuccessImage = styled.Image`
-  height: 260px;
+const ScreenImage = styled(AutoHeightImage)`
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 140px;
 `
 
-const ConfirmButton = styled(Button)`
+const ConfirmButton = styled(TouchableOpacity)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 94%;
-  margin-top: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  height: 48px;
   background-color: ${primaryColor};
-  border-radius: 10px;
+  border-radius: 8px;
 `
 
-const ButtonText = styled(Paragraph)`
+const ButtonText = styled(Text)`
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
 `
 
 const CaptionView = styled(TouchableOpacity)`
   margin-top: 20px;
 `
 
-const CaptionText = styled(Paragraph)`
+const CaptionText = styled(Text)`
   color: ${primaryColor};
   font-weight: bold;
 `
@@ -57,16 +52,10 @@ const CaptionText = styled(Paragraph)`
 const RegisterSuccess = () => <PageWrapper>
 	<HeaderCloseLight title="매직 아띠 등록"/>
 	<Body>
-		<StepperThird/>
-		<SuccessText
-			resizeMode="contain"
-			source={require('../../../../../../assets/atti/register/success/text.png')}
-		/>
-		<SuccessImage
-			resizeMode="contain"
-			source={require('../../../../../../assets/atti/register/success/image.png')}
-		/>
-		<ConfirmButton mode="contained">
+		<StepperThird marginTop={16} marginBottom={32}/>
+		<AutoHeightImage width={152} source={ImagePaths.arti.register.success.text}/>
+		<ScreenImage width={156} source={ImagePaths.arti.register.success.image}/>
+		<ConfirmButton>
 			<ButtonText> 플레이리스트 만들기 </ButtonText>
 		</ConfirmButton>
 		<CaptionView>

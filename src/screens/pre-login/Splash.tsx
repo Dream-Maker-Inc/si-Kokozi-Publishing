@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {SafeAreaView} from 'react-native'
+import {SafeAreaView, StatusBar} from 'react-native'
+import AutoHeightImage from 'react-native-auto-height-image'
 import {primaryColor} from '../../common/Colors'
+import ImagePaths from '../../common/ImagePaths'
 
 const PageWrapper = styled(SafeAreaView)`
   display: flex;
@@ -11,13 +13,10 @@ const PageWrapper = styled(SafeAreaView)`
   background-color: ${primaryColor};
 `
 
-const LogoImage = styled.Image`
-  width: 160px;
-  height: 300px;
-`
-
-const Splash = () => <PageWrapper>
-	<LogoImage resizeMode="contain" source={require('../../../assets/logo/image.png')}/>
-</PageWrapper>
+const Splash = () =>
+	<PageWrapper>
+		<AutoHeightImage width={126} source={ImagePaths.logo.image}/>
+		<StatusBar barStyle="dark-content" backgroundColor={primaryColor}/>
+	</PageWrapper>
 
 export default Splash

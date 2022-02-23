@@ -1,10 +1,11 @@
 import React from 'react'
-import {SafeAreaView, StatusBar, TouchableOpacity, View} from 'react-native'
-import HeaderBackEditLight from '../../../components/header/light/HeaderBackEditLight'
-import {beigeColor, BeigeSecondColor, primaryColor, secondaryColor, textDarkColor} from '../../../common/Colors'
 import styled from '@emotion/native'
+import {TextInput} from 'react-native-paper'
+import ImagePaths from '../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {Caption, Paragraph, TextInput} from 'react-native-paper'
+import {SafeAreaView, StatusBar, Text, TouchableOpacity, View} from 'react-native'
+import HeaderBackEditLight from '../../../components/global/header/light/HeaderBackEditLight'
+import {beigeColor, BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../common/Colors'
 
 const PageWrapper = styled(SafeAreaView)`
   display: flex;
@@ -21,15 +22,15 @@ const ProfileImageContainer = styled(TouchableOpacity)`
   height: 100px;
   margin: 40px auto;
   border-radius: 8px;
-  background-color: ${secondaryColor};
+  background-color: ${BeigeThirdColor};
 `
 
 const NicknameContainer = styled(View)`
   width: 90%;
 `
 
-const NicknameCaption = styled(Caption)`
-  color: ${textDarkColor};
+const NicknameCaption = styled(Text)`
+  color: ${navyColor};
   font-size: 13px;
   font-weight: bold;
 `
@@ -43,6 +44,7 @@ const HorizontalContainer = styled(View)`
 
 const NicknameInput = styled(TextInput)`
   flex-grow: 1;
+  margin-top: 8px;
   background-color: transparent;
 `
 
@@ -52,13 +54,13 @@ const ValidateButton = styled(TouchableOpacity)`
   justify-content: center;
   height: 120%;
   min-width: 20%;
-  margin-top: 4px;
+  margin-top: 10px;
   margin-left: 8px;
   border-radius: 8px;
   background-color: ${primaryColor};
 `
 
-const ButtonText = styled(Paragraph)`
+const ButtonText = styled(Text)`
   font-size: 14px;
   font-weight: bold;
   color: white;
@@ -69,10 +71,7 @@ const ProfileEdit = () =>
 		<HeaderBackEditLight title={'내 프로필'}/>
 
 		<ProfileImageContainer>
-			<AutoHeightImage
-				source={require('../../../../assets/components/icons/camera.png')}
-				width={32}
-			/>
+			<AutoHeightImage width={32} source={ImagePaths.components.icons.camera}/>
 		</ProfileImageContainer>
 
 		<NicknameContainer>
@@ -82,7 +81,7 @@ const ProfileEdit = () =>
 					mode="outlined"
 					outlineColor={beigeColor}
 					activeOutlineColor={beigeColor}
-					placeholderTextColor={textDarkColor}
+					placeholderTextColor={navyColor}
 					placeholder="코코지123"
 				/>
 				<ValidateButton>
