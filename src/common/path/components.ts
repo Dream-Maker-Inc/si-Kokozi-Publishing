@@ -10,6 +10,7 @@ const componentsPaths = {
 		close: require(PATH + 'icons/close.png'),
 		edit: require(PATH + 'icons/edit.png'),
 		handle: require(PATH + 'icons/handle.png'),
+		list: require(PATH + 'icons/list.png'),
 		more: require(PATH + 'icons/more.png'),
 		moreBeige: require(PATH + 'icons/more-beige.png'),
 		notification: require(PATH + 'icons/notification.png'),
@@ -23,6 +24,7 @@ const componentsPaths = {
 		refresh: require(PATH + 'icons/refresh.png'),
 		record: require(PATH + 'icons/record.png'),
 		repeat: require(PATH + 'icons/repeat.png'),
+		share: require(PATH + 'icons/share.png'),
 		shuffle: require(PATH + 'icons/shuffle.png'),
 		wifi: require(PATH + 'icons/wifi.png')
 	},
