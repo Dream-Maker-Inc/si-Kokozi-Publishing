@@ -89,8 +89,8 @@
 
 - E. **~~이야기 상세페이지~~**
     - [x] **~~사용자가 직접 녹음한 경우~~**
-        - 데이터 없음 : `./src/screens/story/no-blank/story/detail/blank/MyStoryDetailBlank`
-        -
+        - 데이터 없음 : `./src/screens/story/no-blank/story/detail/blank/MyStoryDetail`
+        - 데이터 있음 : `./src/screens/story/no-blank/story/detail/no-blank/MyStoryDetail`
 
 
 - F. 이야기 공유
