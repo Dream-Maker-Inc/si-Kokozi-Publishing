@@ -94,8 +94,8 @@
 
 
 - F. 이야기 공유
-    - [ ] 플레이리스트에 담기
-    - [ ] 호스트 선택하기
+    - [x] **~~플레이리스트에 담기~~** `./src/screens/story/no-blank/story/share/RecordFinish`
+    - [x] **~~호스트 선택하기~~** `./src/screens/story/no-blank/story/share/SelectHost`
     - [ ] 이야기 공유하기
     - [ ] 이야기 상세
     - [ ] 이야기 공유
