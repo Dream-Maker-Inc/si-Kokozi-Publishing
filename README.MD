@@ -3,7 +3,7 @@
 전체 진행 상황 :
 
 - 전체 화면 개수 `71`
-- 완성 화면 개수 `46`
+- 완성 화면 개수 `51`
 
 ### Pre-login
 
@@ -79,8 +79,8 @@
     - [x] **~~전체보기 - 게스트 이야기~~** `./src/screens/story/no-blank/story/GuestStory`
 
 
-- B. 이야기 삭제
-    - [ ] 이야기 삭제
+- B. **~~이야기 삭제~~**
+    - [x] **~~이야기 삭제~~** `./src/screens/story/no-blank/story/RemoveStory`
 
 
 - D. 플레이리스트에 담기
