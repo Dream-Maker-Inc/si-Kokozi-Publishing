@@ -1,6 +1,6 @@
 import React from 'react'
-import Checklist from './src/screens/story/no-blank/story/share/Checklist'
+import StoryDetail from './src/screens/story/no-blank/story/share/StoryDetail'
 
-const App = () => <Checklist/>
+const App = () => <StoryDetail/>
 
 export default App
