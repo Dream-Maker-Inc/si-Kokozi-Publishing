@@ -1,6 +1,6 @@
 import React from 'react'
-import SelectHost from './src/screens/story/no-blank/story/share/SelectHost'
+import Checklist from './src/screens/story/no-blank/story/share/Checklist'
 
-const App = () => <SelectHost/>
+const App = () => <Checklist/>
 
 export default App

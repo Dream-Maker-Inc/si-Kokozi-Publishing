@@ -2,9 +2,9 @@ import React from 'react'
 import styled from '@emotion/native'
 import {Checkbox} from 'react-native-paper'
 import {Text, TouchableOpacity} from 'react-native'
-import ImagePaths from '../../../../common/ImagePaths'
+import ImagePaths from '../../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {BeigeThirdColor, navyColor, primaryColor} from '../../../../common/Colors'
+import {BeigeThirdColor, navyColor, primaryColor} from '../../../../../common/Colors'
 
 const HostItemWrapper = styled(TouchableOpacity)`
   display: flex;

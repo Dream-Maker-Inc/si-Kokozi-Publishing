@@ -4,7 +4,7 @@ import {BeigeSecondColor, BeigeThirdColor, primaryColor} from '../../../../../co
 import CustomHeader from '../../../../../components/global/header/CustomHeader'
 import {HostData} from '../../data/playlist'
 import React from 'react'
-import RenderHostItem from '../../../../../components/sub/story/share/RenderHostItem'
+import RenderHostItem from '../../../../../components/sub/story/share/select-host/RenderHostItem'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;

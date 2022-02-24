@@ -24,6 +24,9 @@ const storyPaths = {
 			recordFinish: {
 				text: require(PATH + 'story/share/record-finish/text.png'),
 				image: require(PATH + 'story/share/record-finish/image.png'),
+			},
+			checklist: {
+				text: require(PATH + 'story/share/checklist/text.png'),
 			}
 		}
 	},
