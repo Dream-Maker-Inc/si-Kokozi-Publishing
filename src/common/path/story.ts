@@ -19,6 +19,12 @@ const storyPaths = {
 		noBlank: {
 			addGuest: require(PATH + 'story/no-blank/add-guest.png'),
 			pause: require(PATH + 'story/no-blank/pause.png')
+		},
+		share: {
+			recordFinish: {
+				text: require(PATH + 'story/share/record-finish/text.png'),
+				image: require(PATH + 'story/share/record-finish/image.png'),
+			}
 		}
 	},
 	playlist: {

@@ -1,8 +1,6 @@
 import React from 'react'
-import MyStoryDetailBlank from './src/screens/story/no-blank/story/detail/blank/MyStoryDetailBlank'
-import AddToPlaylist from './src/screens/story/no-blank/story/AddToPlaylist'
-import MyStoryDetail from './src/screens/story/no-blank/story/detail/no-blank/MyStoryDetail'
+import SelectHost from './src/screens/story/no-blank/story/share/SelectHost'
 
-const App = () => <MyStoryDetail/>
+const App = () => <SelectHost/>
 
 export default App
