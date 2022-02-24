@@ -3,7 +3,7 @@
 전체 진행 상황 :
 
 - 전체 화면 개수 `71`
-- 완성 화면 개수 `53`
+- 완성 화면 개수 `58`
 
 ### Pre-login
 
@@ -93,12 +93,12 @@
         - 데이터 있음 : `./src/screens/story/no-blank/story/detail/no-blank/MyStoryDetail`
 
 
-- F. 이야기 공유
+- F. **~~이야기 공유~~**
     - [x] **~~플레이리스트에 담기~~** `./src/screens/story/no-blank/story/share/RecordFinish`
     - [x] **~~호스트 선택하기~~** `./src/screens/story/no-blank/story/share/SelectHost`
     - [x] **~~이야기 공유하기~~** `./src/screens/story/no-blank/story/share/Checklist`
     - [x] **~~이야기 상세~~** `./src/screens/story/no-blank/story/share/StoryDetail`
-    - [ ] 이야기 공유
+    - [x] **~~이야기 공유~~** `./src/screens/story/no-blank/story/share/SelectStory`
 
 
 - G. 이야기 녹음
