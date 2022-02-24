@@ -3,7 +3,7 @@
 전체 진행 상황 :
 
 - 전체 화면 개수 `71`
-- 완성 화면 개수 `51`
+- 완성 화면 개수 `53`
 
 ### Pre-login
 
@@ -74,7 +74,7 @@
 
 - A. **~~이야기 탭~~**
     - [x] **~~이야기 탭~~** `./src/screens/story/no-blank/StoryTopTabs`
-      (`BottomTabs` 에서 사용하는 컴포넌트이므올 실행은 `BottomTabs` 에서 하셔야 합니다)
+        - (`BottomTabs` 에서 사용하는 컴포넌트이므올 실행은 `BottomTabs` 에서 하셔야 합니다)
     - [x] **~~전체보기 - 내 이야기~~** `./src/screens/story/no-blank/story/MyStory`
     - [x] **~~전체보기 - 게스트 이야기~~** `./src/screens/story/no-blank/story/GuestStory`
 
@@ -83,12 +83,14 @@
     - [x] **~~이야기 삭제~~** `./src/screens/story/no-blank/story/RemoveStory`
 
 
-- D. 플레이리스트에 담기
-    - [ ] 플레이리스트에 담기
+- D. **~~플레이리스트에 담기~~**
+    - [x] **~~플레이리스트에 담기~~** `./src/screens/story/no-blank/story/AddToPlaylist`
 
 
-- E. 이야기 상세페이지
-    - [ ] 사용자가 직접 녹음한 경우
+- E. **~~이야기 상세페이지~~**
+    - [x] **~~사용자가 직접 녹음한 경우~~**
+        - 데이터 없음 : `./src/screens/story/no-blank/story/detail/blank/MyStoryDetailBlank`
+        -
 
 
 - F. 이야기 공유
