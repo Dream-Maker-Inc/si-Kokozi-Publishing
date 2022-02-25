@@ -102,12 +102,12 @@
 
 
 - G. 이야기 녹음
-    - [ ] 녹음 시작
-    - [ ] 녹음 카운트다운 - 3
+    - [x] **~~녹음 시작~~** `./src/screens/story/record/RecordStart`
+    - [x] **~~녹음 카운트다운 - 3~~** `./src/screens/story/record/RecordCountDown`
     - [ ] 녹음 중
-    - [ ] 확인하기
-    - [ ] 이야기 저장
-    - [ ] 축하해요
+    - [x] **~~확인하기~~** `./src/screens/story/record/RecordCheck`
+    - [x] **~~이야기 저장~~** `./src/screens/story/record/RecordSave`
+    - [x] **~~축하해요~~** `./src/screens/story/record/Congratulations`
 
 
 - H. 플레이리스트 탭
