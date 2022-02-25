@@ -3,8 +3,8 @@ import styled from '@emotion/native'
 import {Text, TouchableOpacity, View} from 'react-native'
 import ImagePaths from '../../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {storyData} from '../../../../../screens/Atti/no-blank/detail/data'
 import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../../../common/Colors'
+import {StoryData} from '../../../../../data/Data'
 
 export const NumberText = styled(Text)`
   color: ${primaryColor};
@@ -63,7 +63,7 @@ type StoryItemModel = {
 const RenderStoryItem = (item: StoryItemModel) =>
 	<StoryItem>
 		<TextContainer>
-			<NumberText>0{item.number}</NumberText>
+			<NumberText>{item.no}</NumberText>
 			<TitleText>{item.title}</TitleText>
 		</TextContainer>
 		<InfoContainer>
@@ -74,7 +74,7 @@ const RenderStoryItem = (item: StoryItemModel) =>
 
 const renderStoryList =
 	<StoryListWrapper>
-		{storyData.map(item => RenderStoryItem(item))}
+		{StoryData.map(item => RenderStoryItem(item))}
 	</StoryListWrapper>
 
 export default renderStoryList

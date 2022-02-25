@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/native'
 import {FlatList, Text} from 'react-native'
-import {notificationData} from './data/data'
+import {notificationData} from '../../../../data/notificationData'
 import ImagePaths from '../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../../common/Colors'

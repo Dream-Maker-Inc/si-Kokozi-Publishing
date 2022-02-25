@@ -4,7 +4,7 @@ import {FlatList, SafeAreaView} from 'react-native'
 import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../../../common/Colors'
 import CustomHeader from '../../../../../components/global/header/CustomHeader'
 import renderGuestList from '../../../../../components/sub/story/share/select-story/RenderGuestList'
-import {playlistData} from '../../../../Atti/no-blank/playlist/data'
+import {PlaylistData} from '../../data/playlist'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
@@ -80,7 +80,7 @@ const StoryListItem = ({item}) =>
 	</ListItemWrapper>
 
 const renderStoryList =
-	<StoryList data={playlistData} renderItem={StoryListItem}/>
+	<StoryList data={PlaylistData} renderItem={StoryListItem}/>
 
 const SelectStory = () =>
 	<PageWrapper>

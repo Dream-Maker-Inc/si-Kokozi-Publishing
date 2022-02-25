@@ -80,8 +80,8 @@ const AttiTopTabs = ({navigation}) => {
 
 		<Tab.Navigator screenOptions={tabOptions}>
 			<Tab.Screen name="모두" component={All}/>
-			<Tab.Screen name="아띠" component={Arti}/>
-			<Tab.Screen name="매직 아띠" component={MagicArti}/>
+			<Tab.Screen name="아띠" component={All}/>
+			<Tab.Screen name="매직 아띠" component={All}/>
 		</Tab.Navigator>
 
 		<ProgressBar

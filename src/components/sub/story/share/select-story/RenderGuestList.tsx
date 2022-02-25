@@ -4,6 +4,7 @@ import {FlatList} from 'react-native'
 import {navyColor} from '../../../../../common/Colors'
 import ImagePaths from '../../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
+import {GuestData} from '../../../../../data/Data'
 
 const ListWrapper = styled.View`
   height: 130px;
@@ -70,7 +71,7 @@ const renderGuestList =
 	<ListWrapper>
 		<FlatList
 			horizontal
-			data={guestListData}
+			data={GuestData}
 			renderItem={RenderGuestListItem}
 			showsHorizontalScrollIndicator={false}
 		/>

@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from '@emotion/native'
 import {Text, TouchableOpacity} from 'react-native'
+import settingData from '../../../../data/settingData'
 import ImagePaths from '../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {settingListData} from '../../../../screens/mypage/data'
 import {BeigeThirdColor, navyColor} from '../../../../common/Colors'
 
 export const Divider = styled.View`
@@ -64,7 +64,7 @@ const RenderItem = (item: ItemModel) =>
 
 const renderList =
 	<ListContainer>
-		{settingListData.map(item => RenderItem(item))}
+		{settingData.map(item => RenderItem(item))}
 	</ListContainer>
 
 export default renderList

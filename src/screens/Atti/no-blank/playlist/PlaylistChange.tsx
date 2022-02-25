@@ -2,11 +2,11 @@ import React from 'react'
 import styled from '@emotion/native'
 import {Title} from 'react-native-paper'
 import {ScrollView, TouchableOpacity} from 'react-native'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 import {BeigeSecondColor, BeigeThirdColor, primaryColor} from '../../../../common/Colors'
+import renderStory from '../../../../components/sub/arti/no-blank/playlist/playlist-change/renderStory'
 import renderProfile from '../../../../components/sub/arti/no-blank/playlist/playlist-change/RenderProfile'
 import renderStoryList from '../../../../components/sub/arti/no-blank/playlist/playlist-change/renderStoryList'
-import renderStory from '../../../../components/sub/arti/no-blank/playlist/playlist-change/renderStory'
-import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 export const ChangeButtonContainer = styled.View`
   position: relative;

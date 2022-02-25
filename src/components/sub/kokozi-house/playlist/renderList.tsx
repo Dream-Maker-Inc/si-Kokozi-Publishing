@@ -1,10 +1,9 @@
 import {FlatList, TouchableOpacity, View} from 'react-native'
-import {playlistData} from '../../../../screens/Atti/no-blank/playlist/data'
 import React from 'react'
 import styled from '@emotion/native'
 import {BeigeFifthColor, BeigeFirstColor, BeigeThirdColor, navyColor, primaryColor} from '../../../../common/Colors'
 import {Caption, Subheading} from 'react-native-paper'
-import {storyData} from '../../../../screens/Atti/no-blank/detail/data'
+import {PlaylistData, StoryData} from '../../../../data/Data'
 
 const StoryListWrapper = styled(View)`
   background-color: ${BeigeFirstColor};
@@ -48,9 +47,9 @@ const ItemAuthor = styled(Caption)`
 
 const renderListItem = () =>
 	<StoryListWrapper>
-		{storyData.map((item, idx) => (
+		{StoryData.map((item, idx) => (
 			<Item key={idx}>
-				<ItemNumber>0{item.number}</ItemNumber>
+				<ItemNumber>{item.no}</ItemNumber>
 				<ItemInfo>
 					<ItemTitle>{item.title}</ItemTitle>
 					<ItemAuthor>{item.title}</ItemAuthor>
@@ -60,6 +59,6 @@ const renderListItem = () =>
 	</StoryListWrapper>
 
 const renderList =
-	<FlatList data={playlistData} renderItem={renderListItem}/>
+	<FlatList data={PlaylistData} renderItem={renderListItem}/>
 
 export default renderList

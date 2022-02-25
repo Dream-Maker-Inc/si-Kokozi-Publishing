@@ -30,7 +30,7 @@ const BlankPlaylist = () =>
 		<StyledScrollView contentContainerStyle={{alignItems: 'center'}}>
 			<ScreenText width={320} source={ImagePaths.story.playlist.blank.text}/>
 			<ScreenImage width={200} source={ImagePaths.story.playlist.blank.image}/>
-			<OutlinedAddButton title="플레이리스트 만들기"/>
+			<OutlinedAddButton icon='plus' title="플레이리스트 만들기"/>
 		</StyledScrollView>
 	</PageWrapper>
 

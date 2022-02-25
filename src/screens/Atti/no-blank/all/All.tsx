@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 import styled from '@emotion/native'
 import {FlatList, StyleSheet} from 'react-native'
 import ImagePaths from '../../../../common/ImagePaths'
-import AutoHeightImage from 'react-native-auto-height-image'
 import {BeigeFirstColor, BeigeSecondColor, BeigeThirdColor} from '../../../../common/Colors'
+import {ArtiData} from '../../../../data/Data'
 
 const PageWrapper = styled.SafeAreaView`
   background-color: ${BeigeSecondColor};
@@ -14,6 +14,11 @@ const ListItem = styled.TouchableOpacity`
   margin: 14px;
   border-radius: 20px;
   background-color: ${BeigeThirdColor};
+`
+
+const ThumbnailImage = styled.Image`
+  width: 156px;
+  height: 172px;
 `
 
 const ItemTextContainer = styled.View`
@@ -30,8 +35,8 @@ const ItemTextContainer = styled.View`
 `
 
 const ItemText = styled.Text`
-  font-weight: bold;
   text-align: center;
+  font-size: 15px;
 `
 
 const styles = StyleSheet.create({
@@ -47,35 +52,22 @@ const styles = StyleSheet.create({
 	}
 })
 
-const All = () => {
-	const [dataSource, setDataSource] = useState([])
+const RenderListItem = ({item}) =>
+	<ListItem>
+		<ThumbnailImage resizeMode="contain" source={ImagePaths.arti.all.thumbnail}/>
+		<ItemTextContainer style={styles.container}>
+			<ItemText>{item.name}</ItemText>
+		</ItemTextContainer>
+	</ListItem>
 
-	useState(() => {
-		const items = Array
-			.apply(null, Array(10))
-			.map((v, i) => {
-				return {
-					id: i,
-					src: ImagePaths.arti.all.thumbnail
-				}
-			})
-		setDataSource(items)
-	}, [])
-
-	return <PageWrapper>
+const All = () =>
+	<PageWrapper>
 		<FlatList
-			data={dataSource}
+			data={ArtiData}
 			numColumns={2}
-			renderItem={() =>
-				<ListItem>
-					<AutoHeightImage width={100} source={ImagePaths.arti.all.thumbnail}/>
-					<ItemTextContainer style={styles.container}>
-						<ItemText>코코지</ItemText>
-					</ItemTextContainer>
-				</ListItem>
-			}
+			renderItem={RenderListItem}
+			showsVerticalScrollIndicator={false}
 		/>
 	</PageWrapper>
-}
 
 export default All

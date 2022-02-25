@@ -63,7 +63,7 @@ const RenderListItem = ({item}) =>
 
 		<ItemContents>
 			<TextContainer>
-				<TitleText>{item.title}</TitleText>
+				<TitleText>{item.name}</TitleText>
 				<CaptionContainer>
 					<CaptionText>{item.date}</CaptionText>
 					<CaptionText>{item.count}개</CaptionText>

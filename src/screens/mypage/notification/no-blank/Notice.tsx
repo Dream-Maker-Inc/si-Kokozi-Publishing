@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {noticeData} from './data/data'
+import {noticeData} from '../../../../data/notificationData'
 import {FlatList, Text} from 'react-native'
 import ImagePaths from '../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
