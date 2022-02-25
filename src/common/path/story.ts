@@ -35,6 +35,18 @@ const storyPaths = {
 			text: require(PATH + 'playlist/blank/text.png'),
 			image: require(PATH + 'playlist/blank/image.png')
 		}
+	},
+	record: {
+		start: {
+			text: require(PATH + 'record/start/text.png'),
+			record: require(PATH + 'record/start/record.png'),
+			countdown: require(PATH + 'record/start/countdown.png'),
+			stop: require(PATH + 'record/start/stop.png')
+		},
+		finish: {
+			text: require(PATH + 'record/finish/text.png'),
+			image: require(PATH + 'record/finish/image.png')
+		}
 	}
 }
 

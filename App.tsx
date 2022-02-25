@@ -1,6 +1,6 @@
 import React from 'react'
-import BottomTabs from './src/screens/BottomTabs'
+import Congratulations from './src/screens/story/record/Congratulations'
 
-const App = () => <BottomTabs/>
+const App = () => <Congratulations/>
 
 export default App
