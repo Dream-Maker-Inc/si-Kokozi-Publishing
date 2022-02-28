@@ -110,8 +110,8 @@
     - [x] **~~축하해요~~** `./src/screens/story/record/Congratulations`
 
 
-- H. 플레이리스트 탭
-    - [ ] 플레이리스트
+- H. **~~플레이리스트 탭~~**
+    - [x] **~~플레이리스트~~** `./src/screens/BottomTabs`
 
 
 - I. 플레이리스트 만들기
