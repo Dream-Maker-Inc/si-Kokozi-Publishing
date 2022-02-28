@@ -5,7 +5,8 @@ import RecordCountDown from './src/screens/story/record/RecordCountDown'
 import RecordCheck from './src/screens/story/record/RecordCheck'
 import RecordSave from './src/screens/story/record/RecordSave'
 import BottomTabs from './src/screens/BottomTabs'
+import Recording from './src/screens/story/record/Recording'
 
-const App = () => <BottomTabs/>
+const App = () => <Recording/>
 
 export default App

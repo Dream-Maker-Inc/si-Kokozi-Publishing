@@ -46,7 +46,8 @@ const storyPaths = {
 		finish: {
 			text: require(PATH + 'record/finish/text.png'),
 			image: require(PATH + 'record/finish/image.png')
-		}
+		},
+		recording: require(PATH + 'record/recording.gif')
 	}
 }
 
