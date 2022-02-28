@@ -101,10 +101,10 @@
     - [x] **~~이야기 공유~~** `./src/screens/story/no-blank/story/share/SelectStory`
 
 
-- G. 이야기 녹음
+- G. **~~이야기 녹음~~**
     - [x] **~~녹음 시작~~** `./src/screens/story/record/RecordStart`
     - [x] **~~녹음 카운트다운 - 3~~** `./src/screens/story/record/RecordCountDown`
-    - [ ] 녹음 중
+    - [x] **~~녹음 중~~** `./src/screens/story/record/Recording`
     - [x] **~~확인하기~~** `./src/screens/story/record/RecordCheck`
     - [x] **~~이야기 저장~~** `./src/screens/story/record/RecordSave`
     - [x] **~~축하해요~~** `./src/screens/story/record/Congratulations`
