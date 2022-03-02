@@ -3,7 +3,7 @@
 전체 진행 상황 :
 
 - 전체 화면 개수 `71`
-- 완성 화면 개수 `65`
+- 완성 화면 개수 `68`
 
 ### Pre-login
 
@@ -116,7 +116,7 @@
 
 - I. **~~플레이리스트 만들기~~**
     - [x] **~~이야기 불러오기~~** `./src/screens/story/no-blank/playlist/PlaylistImport`
-    - [ ] 모든 항목을 채웠을 때
+    - [x] **~~모든 항목을 채웠을 때~~** `./src/screens/story/no-blank/playlist/NewPlaylist`
 
 
 - J. 플레이리스트 삭제
