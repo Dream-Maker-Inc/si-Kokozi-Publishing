@@ -74,7 +74,8 @@ type HeaderBackEditModel = {
 		| 'edit'
 		| 'confirm'
 		| 'plus'
-		| 'change',
+		| 'change'
+		| 'complete',
 
 	rightTwoIcons?: boolean,
 	statusBarColor:
@@ -123,6 +124,8 @@ export const setRightIcon = right => {
 		break
 	case 'change':
 		return <RightText>변경</RightText>
+	case 'complete':
+		return <RightText>완료</RightText>
 	}
 
 	return <AutoHeightImage source={imageSource} width={24}/>
