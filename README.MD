@@ -114,8 +114,8 @@
     - [x] **~~플레이리스트~~** `./src/screens/BottomTabs`
 
 
-- I. 플레이리스트 만들기
-    - [ ] 이야기 불러오기
+- I. **~~플레이리스트 만들기~~**
+    - [x] **~~이야기 불러오기~~** `./src/screens/story/no-blank/playlist/PlaylistImport`
     - [ ] 모든 항목을 채웠을 때
 
 
