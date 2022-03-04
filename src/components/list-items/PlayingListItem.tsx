@@ -47,7 +47,7 @@ const CaptionText = styled.Text`
 const RightContainer = styled.View``
 
 const PlayingListItem = ({item}) =>
-	<ListItem key={item.index.toString()}>
+	<ListItem key={Number(item.index)}>
 		<LeftContainer>
 			<NumberText>{item.index}</NumberText>
 			<VerticalView>
