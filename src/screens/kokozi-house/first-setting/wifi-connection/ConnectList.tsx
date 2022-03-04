@@ -1,18 +1,13 @@
 import React from 'react'
 import styled from '@emotion/native'
-import AutoHeightImage from 'react-native-auto-height-image'
-import {FlatList, SafeAreaView, Text, TouchableOpacity} from 'react-native'
+import {WifiData} from '../../../../data/Data'
 import ImagePaths from '../../../../common/ImagePaths'
+import {FlatList, SafeAreaView, Text} from 'react-native'
+import AutoHeightImage from 'react-native-auto-height-image'
+import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
+import TextListItem from '../../../../components/list-items/TextListItem'
 import {StepperSecond} from '../../../../components/global/stepper/Stepper'
-import {BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../../common/Colors'
 import CustomHeader from '../../../../components/global/header/CustomHeader'
-
-const WifiListData = [
-	'kokozi wifi',
-	'mywifi-2.5G',
-	'fee-wifi',
-	'iptime'
-]
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -31,18 +26,6 @@ const WifiFlatList = styled(FlatList)`
   width: 100%;
 `
 
-const ListItem = styled(TouchableOpacity)`
-  width: 100%;
-  padding: 22px 24px;
-  border-top-width: 1px;
-  border-top-color: ${BeigeThirdColor};
-`
-
-const ItemText = styled(Text)`
-  font-size: 16px;
-  color: ${navyColor};
-`
-
 const HelpText = styled(Text)`
   position: absolute;
   bottom: 47px;
@@ -50,18 +33,13 @@ const HelpText = styled(Text)`
   color: ${primaryColor};
 `
 
-const renderListItem = ({item}) =>
-	<ListItem key={item}>
-		<ItemText>{item}</ItemText>
-	</ListItem>
-
 const ConnectList = () =>
 	<PageWrapper>
 		<CustomHeader statusBarColor="dark" left="back" right="close" title="코코지 하우스 세팅"/>
 		<StepperSecond marginTop={16} marginBottom={16}/>
 
 		<TitleImage width={248} source={ImagePaths.kokoziHouse.wifi.checklist.text}/>
-		<WifiFlatList data={WifiListData} renderItem={renderListItem}/>
+		<WifiFlatList data={WifiData} renderItem={TextListItem}/>
 		<HelpText>도움이 필요해요</HelpText>
 	</PageWrapper>
 

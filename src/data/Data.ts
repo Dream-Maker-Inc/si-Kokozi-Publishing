@@ -94,15 +94,19 @@ export const GuestData = [
 
 export const WifiData = [
 	{
+		index: 1,
 		name: 'kokozi wifi'
 	},
 	{
+		index: 2,
 		name: 'mywifi-2.5G'
 	},
 	{
+		index: 3,
 		name: 'free wifi'
 	},
 	{
+		index: 4,
 		name: 'iptime'
 	},
 ]

@@ -1,9 +1,9 @@
 import React from 'react'
-import {SafeAreaView, Text} from 'react-native'
 import styled from '@emotion/native'
-import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
-import AutoHeightImage from 'react-native-auto-height-image'
+import {SafeAreaView, Text} from 'react-native'
 import ImagePaths from '../../../../common/ImagePaths'
+import AutoHeightImage from 'react-native-auto-height-image'
+import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
 import CustomHeader from '../../../../components/global/header/CustomHeader'
 
 const PageWrapper = styled(SafeAreaView)`

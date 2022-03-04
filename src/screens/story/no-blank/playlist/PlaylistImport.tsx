@@ -90,7 +90,7 @@ const RenderPlaylistItem = ({item}) =>
 			<CaptionText>{item.author}</CaptionText>
 		</TextContainer>
 		<RightContainer>
-			<CaptionText>{item.runningTime}</CaptionText>
+			<CaptionText>{item.time}</CaptionText>
 			<Checkbox status="checked" color={primaryColor}/>
 		</RightContainer>
 	</PlaylistItemWrapper>
