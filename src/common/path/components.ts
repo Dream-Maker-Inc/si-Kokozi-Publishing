@@ -26,6 +26,7 @@ const componentsPaths = {
 		repeat: require(PATH + 'icons/repeat.png'),
 		share: require(PATH + 'icons/share.png'),
 		shuffle: require(PATH + 'icons/shuffle.png'),
+		sound: require(PATH + 'icons/sound.png'),
 		wifi: require(PATH + 'icons/wifi.png')
 	},
 	sns: {
