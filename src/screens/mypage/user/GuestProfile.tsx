@@ -12,32 +12,32 @@ const data = [
 	{
 		title: '까치 까치 설날',
 		author: '친구',
-		runningTime: '3:00'
+		time: '3:00'
 	},
 	{
 		title: '메리 크리스마스',
 		author: '친구',
-		runningTime: '3:00'
+		time: '3:00'
 	},
 	{
 		title: '생일 축하해',
 		author: '친구',
-		runningTime: '3:00'
+		time: '3:00'
 	},
 	{
 		title: '까치 까치 설날',
 		author: '친구',
-		runningTime: '3:00'
+		time: '3:00'
 	},
 	{
 		title: '메리 크리스마스',
 		author: '친구',
-		runningTime: '3:00'
+		time: '3:00'
 	},
 	{
 		title: '생일 축하해',
 		author: '친구',
-		runningTime: '3:00'
+		time: '3:00'
 	},
 ]
 

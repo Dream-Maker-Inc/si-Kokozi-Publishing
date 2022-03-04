@@ -69,7 +69,7 @@ const RenderStoryItem = (item: StoryItemModel) =>
 			<TitleText>{item.title}</TitleText>
 		</TextContainer>
 		<InformationContainer>
-			<RunningTimeText>{item.runningTime}</RunningTimeText>
+			<RunningTimeText>{item.time}</RunningTimeText>
 		</InformationContainer>
 	</StoryItem>
 

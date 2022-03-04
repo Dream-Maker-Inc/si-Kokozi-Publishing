@@ -1,7 +1,7 @@
 import React, {useLayoutEffect} from 'react'
 import Arti from './arti/Arti'
 import All from './all/All'
-import MagicArti from './magic-atti/MagicArti'
+import MagicArti from './magic-arti/MagicArti'
 import ImagePaths from '../../../common/ImagePaths'
 import {BeigeSecondColor, primaryColor} from '../../../common/Colors'
 import BottomPlayer from '../../../components/global/player/BottomPlayer'
@@ -18,7 +18,7 @@ const NavigationOptions = {
 	headerRight: () => <AutoHeightImage width={20} source={ImagePaths.components.icons.more}/>
 }
 
-const BlankAttiTopTabs = ({navigation}) => {
+const BlankArtiTopTabs = ({navigation}) => {
 	useLayoutEffect(() => navigation.setOptions(NavigationOptions))
 
 	return <>
@@ -38,4 +38,4 @@ const BlankAttiTopTabs = ({navigation}) => {
 	</>
 }
 
-export default BlankAttiTopTabs
+export default BlankArtiTopTabs

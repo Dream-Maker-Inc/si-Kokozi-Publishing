@@ -2,34 +2,34 @@ import ImagePaths from '../common/ImagePaths'
 
 export const StoryData = [
 	{
-		no: '01',
+		index: '01',
 		title: '행복한 세상의 아띠',
 		author: '파랑새',
-		runningTime: '2:11'
+		time: '2:11'
 	},
 	{
-		no: '02',
+		index: '02',
 		title: '생일 축하해',
 		author: '친구',
-		runningTime: '5:30'
+		time: '5:30'
 	},
 	{
-		no: '03',
+		index: '03',
 		title: '할머니가 불러주는 자장가',
 		author: '할머니',
-		runningTime: '3:12'
+		time: '3:12'
 	},
 	{
-		no: '04',
+		index: '04',
 		title: '보고 싶구나, 코코지야',
 		author: '할아버지',
-		runningTime: '1:46'
+		time: '1:46'
 	},
 	{
-		no: '05',
+		index: '05',
 		title: 'Hi, how are you?',
 		author: 'English teacher',
-		runningTime: '2:11'
+		time: '2:11'
 	},
 ]
 
@@ -38,19 +38,19 @@ export const PlaylistData = [
 		name: '이야기 플레이리스트',
 		date: '2021.12.28',
 		count: 6,
-		runningTime: 30
+		time: 30
 	},
 	{
 		name: '게스트 플레이리스트',
 		date: '2021.12.28',
 		count: 6,
-		runningTime: 30
+		time: 30
 	},
 	{
 		name: '동요 플레이리스트',
 		date: '2021.12.28',
 		count: 6,
-		runningTime: 30
+		time: 30
 	},
 ]
 

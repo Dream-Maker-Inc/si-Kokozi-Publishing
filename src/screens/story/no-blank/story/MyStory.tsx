@@ -68,7 +68,7 @@ const renderMyStoryListItem = (data: MyStoryListItemModel) =>
 			<HostText>{data.host}</HostText>
 		</VerticalView>
 		<CaptionView>
-			<RunningTimeText>{data.runningTime}</RunningTimeText>
+			<RunningTimeText>{data.time}</RunningTimeText>
 			<AutoHeightImage width={24} source={ImagePaths.components.icons.moreBeige}/>
 		</CaptionView>
 	</ListItemWrapper>

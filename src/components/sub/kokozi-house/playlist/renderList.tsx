@@ -49,7 +49,7 @@ const renderListItem = () =>
 	<StoryListWrapper>
 		{StoryData.map((item, idx) => (
 			<Item key={idx}>
-				<ItemNumber>{item.no}</ItemNumber>
+				<ItemNumber>{item.index}</ItemNumber>
 				<ItemInfo>
 					<ItemTitle>{item.title}</ItemTitle>
 					<ItemAuthor>{item.title}</ItemAuthor>

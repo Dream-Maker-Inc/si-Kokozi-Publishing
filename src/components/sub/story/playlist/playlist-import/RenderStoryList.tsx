@@ -97,9 +97,9 @@ const RightContainer = styled.View`
 
 const RenderLists = () =>
 	StoryData.map(data =>
-		<ListItem key={data.no}>
+		<ListItem key={data.index}>
 			<LeftContainer>
-				<NumberText>{data.no}</NumberText>
+				<NumberText>{data.index}</NumberText>
 				<TextContainer>
 					<TitleText>{data.title}</TitleText>
 					<AuthorText>{data.author}</AuthorText>

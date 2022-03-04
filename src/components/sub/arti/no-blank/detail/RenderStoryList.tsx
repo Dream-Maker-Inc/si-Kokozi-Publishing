@@ -71,7 +71,7 @@ const RenderStoryItem = (item: StoryItemModel) =>
 		</TextContainer>
 
 		<InfoContainer>
-			<RunningTimeText>{item.runningTime}</RunningTimeText>
+			<RunningTimeText>{item.time}</RunningTimeText>
 			<AutoHeightImage width={24} source={ImagePaths.components.icons.play}/>
 		</InfoContainer>
 

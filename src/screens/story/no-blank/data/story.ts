@@ -4,17 +4,17 @@ export const MyStoryData = [
 	{
 		'title': '세 번째 이야기',
 		'host': '호스트',
-		'runningTime': '3:15'
+		'time': '3:15'
 	},
 	{
 		'title': '두 번째 이야기',
 		'host': '호스트',
-		'runningTime': '3:15'
+		'time': '3:15'
 	},
 	{
 		'title': '첫 번째 이야기',
 		'host': '호스트',
-		'runningTime': '3:15'
+		'time': '3:15'
 	},
 ]
 
@@ -57,16 +57,16 @@ export const GuestStoryData = [
 	{
 		'title': '할머니가 불러주는 자장가',
 		'host': '할머니',
-		'runningTime': '3:15'
+		'time': '3:15'
 	},
 	{
 		'title': '나비야',
 		'host': '할머니',
-		'runningTime': '3:15'
+		'time': '3:15'
 	},
 	{
 		'title': '할머니가 불러주는 자장가',
 		'host': '할머니',
-		'runningTime': '3:15'
+		'time': '3:15'
 	},
 ]
