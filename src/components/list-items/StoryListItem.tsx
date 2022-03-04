@@ -1,16 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
+import ImagePaths from '../../common/ImagePaths'
 import {Text, TouchableOpacity, View} from 'react-native'
-import ImagePaths from '../../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../../../common/Colors'
-import {StoryData} from '../../../../../data/Data'
+import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../common/Colors'
 
-export const StoryListWrapper = styled(View)`
-  background-color: ${BeigeSecondColor};
-`
-
-export const StoryItem = styled(TouchableOpacity)`
+const StoryItem = styled(TouchableOpacity)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,34 +18,29 @@ export const StoryItem = styled(TouchableOpacity)`
   border-bottom-color: ${BeigeThirdColor};
   border-bottom-width: 1px;
 `
-
-export const TextContainer = styled(View)`
+const TextContainer = styled(View)`
   display: flex;
   align-items: center;
   flex-direction: row;
   flex-grow: 1;
 `
-
-export const InfoContainer = styled(View)`
+const InfoContainer = styled(View)`
   display: flex;
   align-items: center;
   flex-direction: row;
 `
-
-export const NumberText = styled(Text)`
+const NumberText = styled(Text)`
   color: ${primaryColor};
   font-weight: bold;
   font-size: 17px;
 `
-
-export const TitleText = styled(Text)`
+const TitleText = styled(Text)`
   color: ${navyColor};
   margin-left: 40px;
   font-size: 15px;
   font-weight: bold;
 `
-
-export const RunningTimeText = styled(Text)`
+const RunningTimeText = styled(Text)`
   color: ${BeigeFifthColor};
   margin-right: 20px;
   font-size: 12px;
@@ -62,11 +52,11 @@ type StoryItemModel = {
 	runningTime: string
 }
 
-const RenderStoryItem = (item: StoryItemModel) =>
-	<StoryItem>
+const StoryListItem = (item: StoryItemModel) =>
+	<StoryItem key={item.index}>
 
 		<TextContainer>
-			<NumberText>{item.no}</NumberText>
+			<NumberText>{item.index}</NumberText>
 			<TitleText>{item.title}</TitleText>
 		</TextContainer>
 
@@ -77,9 +67,4 @@ const RenderStoryItem = (item: StoryItemModel) =>
 
 	</StoryItem>
 
-const renderStoryList =
-	<StoryListWrapper>
-		{StoryData.map(item => RenderStoryItem(item))}
-	</StoryListWrapper>
-
-export default renderStoryList
+export default StoryListItem

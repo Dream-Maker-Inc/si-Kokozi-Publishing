@@ -106,42 +106,52 @@ export const WifiData = [
 
 export const ArtiData = [
 	{
+		index: 1,
 		image: ImagePaths.arti.all.thumbnail,
 		name: '코코지'
 	},
 	{
+		index: 2,
 		image: ImagePaths.arti.all.thumbnail,
 		name: '뿅이'
 	},
 	{
+		index: 3,
 		image: ImagePaths.arti.all.thumbnail,
 		name: '코코지'
 	},
 	{
+		index: 4,
 		image: ImagePaths.arti.all.thumbnail,
 		name: '뿅이'
 	},
 	{
+		index: 5,
 		image: ImagePaths.arti.all.thumbnail,
 		name: '코코지'
 	},
 	{
+		index: 6,
 		image: ImagePaths.arti.all.thumbnail,
 		name: '뿅이'
 	},
 	{
+		index: 7,
 		image: ImagePaths.arti.all.thumbnail,
 		name: '코코지'
 	},
 	{
+		index: 8,
 		image: ImagePaths.arti.all.thumbnail,
 		name: '뿅이'
 	},
 	{
+		index: 9,
 		image: ImagePaths.arti.all.thumbnail,
 		name: '코코지'
 	},
 	{
+		index: 10,
 		image: ImagePaths.arti.all.thumbnail,
 		name: '뿅이'
 	},

@@ -44,8 +44,6 @@ const CaptionText = styled.Text`
   color: ${BeigeFifthColor};
 `
 
-const RightContainer = styled.View``
-
 const PlayingListItem = ({item}) =>
 	<ListItem key={Number(item.index)}>
 		<LeftContainer>
@@ -55,9 +53,7 @@ const PlayingListItem = ({item}) =>
 				<CaptionText>{item.author}</CaptionText>
 			</VerticalView>
 		</LeftContainer>
-		<RightContainer>
-			<AutoHeightImage source={ImagePaths.components.icons.sound} width={32}/>
-		</RightContainer>
+		<AutoHeightImage source={ImagePaths.components.icons.sound} width={32}/>
 	</ListItem>
 
 
