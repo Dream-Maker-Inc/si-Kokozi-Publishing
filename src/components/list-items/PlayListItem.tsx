@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from '@emotion/native'
+import ImagePaths from '../../common/ImagePaths'
 import {Text, TouchableOpacity} from 'react-native'
 import AutoHeightImage from 'react-native-auto-height-image'
-import ImagePaths from '../../../../../../common/ImagePaths'
-import {BeigeFifthColor, BeigeThirdColor, navyColor} from '../../../../../../common/Colors'
+import {BeigeFifthColor, BeigeThirdColor, navyColor} from '../../common/Colors'
 
 const ListItemWrapper = styled(TouchableOpacity)`
   display: flex;
@@ -57,8 +57,8 @@ const CaptionText = styled(Text)`
   margin-right: 8px;
 `
 
-const RenderListItem = ({item}) =>
-	<ListItemWrapper>
+const PlayListItem = ({item}) =>
+	<ListItemWrapper key={item.index}>
 		<ItemImage width={80} source={ImagePaths.arti.playlist.thumbnail}/>
 
 		<ItemContents>
@@ -67,7 +67,7 @@ const RenderListItem = ({item}) =>
 				<CaptionContainer>
 					<CaptionText>{item.date}</CaptionText>
 					<CaptionText>{item.count}개</CaptionText>
-					<CaptionText>{item.runningTime}</CaptionText>
+					<CaptionText>{item.time}</CaptionText>
 				</CaptionContainer>
 			</TextContainer>
 			<AutoHeightImage width={24} source={ImagePaths.components.icons.arrowRight}/>
@@ -75,4 +75,4 @@ const RenderListItem = ({item}) =>
 
 	</ListItemWrapper>
 
-export default RenderListItem
+export default PlayListItem

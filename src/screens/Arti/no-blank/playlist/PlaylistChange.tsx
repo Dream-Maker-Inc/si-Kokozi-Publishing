@@ -1,13 +1,18 @@
 import React from 'react'
 import styled from '@emotion/native'
 import {Title} from 'react-native-paper'
-import {ScrollView, TouchableOpacity} from 'react-native'
+import {ScrollView, TouchableOpacity, View} from 'react-native'
 import CustomHeader from '../../../../components/global/header/CustomHeader'
 import {BeigeSecondColor, BeigeThirdColor, primaryColor} from '../../../../common/Colors'
 import renderStory from '../../../../components/sub/arti/no-blank/playlist/playlist-change/renderStory'
 import renderProfile from '../../../../components/sub/arti/no-blank/playlist/playlist-change/RenderProfile'
-import renderStoryList from '../../../../components/sub/arti/no-blank/playlist/playlist-change/renderStoryList'
+import {StoryData} from '../../../../data/Data'
+import StoryHandleListItem from '../../../../components/list-items/StoryHandleListItem'
 
+
+export const StoryListWrapper = styled(View)`
+  background-color: ${BeigeSecondColor};
+`
 export const ChangeButtonContainer = styled.View`
   position: relative;
   display: flex;
@@ -41,7 +46,10 @@ const PlaylistChange = () =>
 		<ScrollView>
 			{renderProfile}
 			{renderStory}
-			{renderStoryList}
+			
+			<StoryListWrapper>
+				{StoryData.map(item => StoryHandleListItem(item))}
+			</StoryListWrapper>
 		</ScrollView>
 
 		<ChangeButtonContainer>

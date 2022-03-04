@@ -1,11 +1,17 @@
 import React from 'react'
+import styled from '@emotion/native'
+import {StoryData} from '../../../../data/Data'
 import {ScrollView, StatusBar} from 'react-native'
-import {BeigeFirstColor} from '../../../../common/Colors'
+import {BeigeFirstColor, BeigeSecondColor} from '../../../../common/Colors'
+import CustomHeader from '../../../../components/global/header/CustomHeader'
 import BottomPlayer from '../../../../components/global/player/BottomPlayer'
 import renderStory from '../../../../components/sub/arti/no-blank/edit/renderStory'
 import renderProfile from '../../../../components/sub/arti/no-blank/edit/renderProfile'
-import renderStoryList from '../../../../components/sub/arti/no-blank/edit/renderStoryList'
-import CustomHeader from '../../../../components/global/header/CustomHeader'
+import StoryHandleListItem from '../../../../components/list-items/StoryHandleListItem'
+
+export const StoryListWrapper = styled.View`
+  background-color: ${BeigeSecondColor};
+`
 
 const Edit = () =>
 	<>
@@ -14,7 +20,10 @@ const Edit = () =>
 		<ScrollView>
 			{renderProfile}
 			{renderStory}
-			{renderStoryList}
+
+			<StoryListWrapper>
+				{StoryData.map(item => StoryHandleListItem(item))}
+			</StoryListWrapper>
 		</ScrollView>
 
 		<BottomPlayer/>

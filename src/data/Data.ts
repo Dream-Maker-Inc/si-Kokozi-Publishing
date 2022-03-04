@@ -35,18 +35,21 @@ export const StoryData = [
 
 export const PlaylistData = [
 	{
+		index: 1,
 		name: '이야기 플레이리스트',
 		date: '2021.12.28',
 		count: 6,
 		time: 30
 	},
 	{
+		index: 2,
 		name: '게스트 플레이리스트',
 		date: '2021.12.28',
 		count: 6,
 		time: 30
 	},
 	{
+		index: 3,
 		name: '동요 플레이리스트',
 		date: '2021.12.28',
 		count: 6,

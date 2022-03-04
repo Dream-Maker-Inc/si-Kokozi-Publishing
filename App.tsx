@@ -1,6 +1,6 @@
 import React from 'react'
-import Detail from './src/screens/Arti/no-blank/detail/Detail'
+import PlaylistEmpty from './src/screens/Arti/no-blank/playlist/PlaylistEmpty'
 
-const App = () => <Detail/>
+const App = () => <PlaylistEmpty/>
 
 export default App

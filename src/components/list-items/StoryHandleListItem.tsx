@@ -1,19 +1,14 @@
 import React from 'react'
 import styled from '@emotion/native'
+import ImagePaths from '../../common/ImagePaths'
 import {Text, TouchableOpacity, View} from 'react-native'
-import ImagePaths from '../../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../../../common/Colors'
-import {StoryData} from '../../../../../data/Data'
+import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../common/Colors'
 
 export const NumberText = styled(Text)`
   color: ${primaryColor};
   font-size: 17px;
   font-weight: bold;
-`
-
-export const StoryListWrapper = styled(View)`
-  background-color: ${BeigeSecondColor};
 `
 
 export const StoryItem = styled(TouchableOpacity)`
@@ -55,15 +50,16 @@ export const RunningTimeText = styled(Text)`
 `
 
 type StoryItemModel = {
-	number: number,
+	index: number,
 	title: string,
-	runningTime: string
+	author: string,
+	time: string,
 }
 
-const RenderStoryItem = (item: StoryItemModel) =>
-	<StoryItem>
+const StoryHandleListItem = (item: StoryItemModel) =>
+	<StoryItem key={item.index}>
 		<TextContainer>
-			<NumberText>{item.no}</NumberText>
+			<NumberText>{item.index}</NumberText>
 			<TitleText>{item.title}</TitleText>
 		</TextContainer>
 		<InfoContainer>
@@ -72,9 +68,4 @@ const RenderStoryItem = (item: StoryItemModel) =>
 		</InfoContainer>
 	</StoryItem>
 
-const renderStoryList =
-	<StoryListWrapper>
-		{StoryData.map(item => RenderStoryItem(item))}
-	</StoryListWrapper>
-
-export default renderStoryList
+export default StoryHandleListItem
