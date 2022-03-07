@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from '@emotion/native'
 import AutoHeightImage from 'react-native-auto-height-image'
-import ImagePaths from '../../../common/ImagePaths'
 import {navyColor} from '../../../common/Colors'
 
 const ItemContainer = styled.TouchableOpacity`
@@ -21,10 +20,15 @@ const TitleText = styled.Text`
   color: ${navyColor};
 `
 
-const VerticalListItem = () =>
+type VerticalListItemModel = {
+	image: string,
+	title: string
+}
+
+const VerticalListItem = (props: VerticalListItemModel) =>
 	<ItemContainer>
-		<ThumbnailImage source={ImagePaths.arti.all.thumbnail} width={56}/>
-		<TitleText>게스트A</TitleText>
+		<ThumbnailImage source={props.image} width={56}/>
+		<TitleText>{props.title}</TitleText>
 	</ItemContainer>
 
 export default VerticalListItem

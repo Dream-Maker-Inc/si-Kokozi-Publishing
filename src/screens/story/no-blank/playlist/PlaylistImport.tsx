@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {Checkbox} from 'react-native-paper'
 import {StoryData} from '../../../../data/Data'
 import {FlatList, SafeAreaView} from 'react-native'
 import CustomHeader from '../../../../components/global/header/CustomHeader'
 import renderTitle from '../../../../components/sub/story/playlist/playlist-import/RenderTitle'
 import renderPickers from '../../../../components/sub/story/playlist/playlist-import/RenderPickers'
-import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../../common/Colors'
+import {BeigeSecondColor, BeigeThirdColor, primaryColor} from '../../../../common/Colors'
+import ListItem from '../../../../components/list-items/components/ListItem'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -22,39 +22,6 @@ const PlayList = styled(FlatList)`
   margin-top: 16px;
   border-top-width: 1px;
   border-top-color: ${BeigeThirdColor};
-`
-
-const PlaylistItemWrapper = styled.View`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 68px;
-  border-bottom-width: 1px;
-  border-bottom-color: ${BeigeThirdColor};
-`
-
-const TextContainer = styled.View`
-  display: flex;
-  margin-left: 24px;
-`
-
-const TitleText = styled.Text`
-  font-size: 15px;
-  color: ${navyColor};
-`
-
-const CaptionText = styled.Text`
-  font-size: 12px;
-  color: ${BeigeFifthColor};
-`
-
-const RightContainer = styled.View`
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  margin-right: 20px;
 `
 
 const ButtonContainer = styled.View`
@@ -83,29 +50,31 @@ const ButtonText = styled.Text`
   font-weight: bold;
 `
 
-const RenderPlaylistItem = ({item}) =>
-	<PlaylistItemWrapper>
-		<TextContainer>
-			<TitleText>{item.title}</TitleText>
-			<CaptionText>{item.author}</CaptionText>
-		</TextContainer>
-		<RightContainer>
-			<CaptionText>{item.time}</CaptionText>
-			<Checkbox status="checked" color={primaryColor}/>
-		</RightContainer>
-	</PlaylistItemWrapper>
-
 const PlaylistImport = () =>
 	<PageWrapper>
+
 		<CustomHeader statusBarColor="dark" left="back" title="불러오기"/>
 		{renderTitle}
 		{renderPickers}
-		<PlayList data={StoryData} renderItem={RenderPlaylistItem}/>
+
+		<PlayList
+			data={StoryData}
+			renderItem={({item}) =>
+				<ListItem
+					title={item.title}
+					caption={item.author}
+					time={item.time}
+					right="checkbox"
+				/>
+			}
+		/>
+
 		<ButtonContainer>
 			<Button>
 				<ButtonText>불러오기</ButtonText>
 			</Button>
 		</ButtonContainer>
+
 	</PageWrapper>
 
 export default PlaylistImport

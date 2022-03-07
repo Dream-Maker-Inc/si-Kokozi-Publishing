@@ -34,23 +34,7 @@ export const GuestProfileData = [
 	{
 		image: ImagePaths.kokoziHouse.thumbnail,
 		name: 'English teacher'
-	},
-	{
-		image: ImagePaths.kokoziHouse.thumbnail,
-		name: '할머니'
-	},
-	{
-		image: ImagePaths.kokoziHouse.thumbnail,
-		name: '친구'
-	},
-	{
-		image: ImagePaths.kokoziHouse.thumbnail,
-		name: '할아버지'
-	},
-	{
-		image: ImagePaths.kokoziHouse.thumbnail,
-		name: 'English teacher'
-	},
+	}
 ]
 
 export const GuestStoryData = [

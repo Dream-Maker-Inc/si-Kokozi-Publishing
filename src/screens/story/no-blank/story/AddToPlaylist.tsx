@@ -3,8 +3,9 @@ import styled from '@emotion/native'
 import {FlatList, SafeAreaView} from 'react-native'
 import {BeigeSecondColor, BeigeThirdColor, primaryColor} from '../../../../common/Colors'
 import CustomHeader from '../../../../components/global/header/CustomHeader'
-import RenderPlaylistListItem from '../../../../components/sub/story/story-main/RenderPlaylistListItem'
 import {PlaylistData} from '../data/playlist'
+import ListItem from '../../../../components/list-items/components/ListItem'
+import ImagePaths from '../../../../common/ImagePaths'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
@@ -42,7 +43,16 @@ const RemoveButtonText = styled.Text`
 const AddToPlaylist = () =>
 	<PageWrapper>
 		<CustomHeader statusBarColor="dark" left="back" title="플레이리스트에 담기"/>
-		<FlatList data={PlaylistData} renderItem={RenderPlaylistListItem}/>
+		<FlatList data={PlaylistData}
+				  renderItem={({item}) =>
+					  <ListItem
+						  thumbnail={ImagePaths.arti.all.thumbnail}
+						  title={item.title}
+						  caption={item.date}
+						  right="checkbox"
+					  />
+				  }
+		/>
 		<ButtonWrapper>
 			<RemoveButton>
 				<RemoveButtonText>담기</RemoveButtonText>

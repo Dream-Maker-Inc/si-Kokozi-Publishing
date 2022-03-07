@@ -11,7 +11,6 @@ const ItemContainer = styled.TouchableOpacity`
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
-  margin-top: 100px;
   padding: 14px 7px;
   border-bottom-color: ${BeigeThirdColor};
   border-bottom-width: 1px;

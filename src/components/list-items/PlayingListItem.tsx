@@ -45,7 +45,7 @@ const CaptionText = styled.Text`
 `
 
 const PlayingListItem = ({item}) =>
-	<ListItem key={Number(item.index)}>
+	<ListItem key={item.index}>
 		<LeftContainer>
 			<NumberText>{item.index}</NumberText>
 			<VerticalView>

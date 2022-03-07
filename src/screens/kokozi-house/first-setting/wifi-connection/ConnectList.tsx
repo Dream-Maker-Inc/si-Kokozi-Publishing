@@ -5,9 +5,9 @@ import ImagePaths from '../../../../common/ImagePaths'
 import {FlatList, SafeAreaView, Text} from 'react-native'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {BeigeSecondColor, primaryColor} from '../../../../common/Colors'
-import TextListItem from '../../../../components/list-items/TextListItem'
 import {StepperSecond} from '../../../../components/global/stepper/Stepper'
 import CustomHeader from '../../../../components/global/header/CustomHeader'
+import ListItem from '../../../../components/list-items/components/ListItem'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -39,7 +39,12 @@ const ConnectList = () =>
 		<StepperSecond marginTop={16} marginBottom={16}/>
 
 		<TitleImage width={248} source={ImagePaths.kokoziHouse.wifi.checklist.text}/>
-		<WifiFlatList data={WifiData} renderItem={TextListItem}/>
+		<WifiFlatList
+			data={WifiData}
+			renderItem={
+				({item}) => <ListItem title={item.name}/>
+			}
+		/>
 		<HelpText>도움이 필요해요</HelpText>
 	</PageWrapper>
 

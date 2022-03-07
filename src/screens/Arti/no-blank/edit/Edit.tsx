@@ -7,10 +7,11 @@ import CustomHeader from '../../../../components/global/header/CustomHeader'
 import BottomPlayer from '../../../../components/global/player/BottomPlayer'
 import renderStory from '../../../../components/sub/arti/no-blank/edit/renderStory'
 import renderProfile from '../../../../components/sub/arti/no-blank/edit/renderProfile'
-import StoryHandleListItem from '../../../../components/list-items/StoryHandleListItem'
+import ListItem from '../../../../components/list-items/components/ListItem'
 
 export const StoryListWrapper = styled.View`
   background-color: ${BeigeSecondColor};
+  padding: 0 16px;
 `
 
 const Edit = () =>
@@ -22,7 +23,16 @@ const Edit = () =>
 			{renderStory}
 
 			<StoryListWrapper>
-				{StoryData.map(item => StoryHandleListItem(item))}
+				{StoryData.map(item =>
+					<ListItem
+						key={item.index}
+						title={item.title}
+						prefix={item.index}
+						caption={item.author}
+						time={item.time}
+						right="handler"
+					/>
+				)}
 			</StoryListWrapper>
 		</ScrollView>
 

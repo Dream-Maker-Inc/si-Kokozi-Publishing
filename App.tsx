@@ -1,7 +1,6 @@
 import React from 'react'
-import ListItem from './src/components/list-items/components/ListItem'
+import PlaylistImport from './src/screens/story/no-blank/playlist/PlaylistImport'
 
-const App = () =>
-	<ListItem prefix="01" title="타이틀"/>
+const App = () => <PlaylistImport/>
 
 export default App

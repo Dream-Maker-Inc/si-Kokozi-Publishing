@@ -1,16 +1,10 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {
-	BeigeFifthColor,
-	BeigeSecondColor,
-	BeigeThirdColor,
-	navyColor,
-	primaryColor
-} from '../../../../../common/Colors'
+import {BeigeFifthColor, BeigeSecondColor} from '../../../../../common/Colors'
 import AutoHeightImage from 'react-native-auto-height-image'
 import ImagePaths from '../../../../../common/ImagePaths'
 import {StoryData} from '../../../../../data/Data'
-import {Checkbox} from 'react-native-paper'
+import ListItem from '../../../../list-items/components/ListItem'
 
 const StoryListWrapper = styled.View`
   width: 100%;
@@ -46,72 +40,6 @@ const List = styled.View`
   padding: 0 16px;
 `
 
-const ListItem = styled.TouchableOpacity`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 68px;
-  border-bottom-color: ${BeigeThirdColor};
-  border-bottom-width: 1px;
-`
-
-const LeftContainer = styled.View`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-`
-
-const TextContainer = styled.View`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-`
-
-const NumberText = styled.Text`
-  font-size: 17px;
-  font-weight: bold;
-  color: ${primaryColor};
-`
-
-const TitleText = styled.Text`
-  font-size: 15px;
-  color: ${navyColor};
-  margin-left: 24px;
-`
-
-const AuthorText = styled.Text`
-  font-size: 12px;
-  color: ${BeigeFifthColor};
-  margin-left: 24px;
-`
-
-const RightContainer = styled.View`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-`
-
-const RenderLists = () =>
-	StoryData.map(data =>
-		<ListItem key={data.index}>
-			<LeftContainer>
-				<NumberText>{data.index}</NumberText>
-				<TextContainer>
-					<TitleText>{data.title}</TitleText>
-					<AuthorText>{data.author}</AuthorText>
-				</TextContainer>
-			</LeftContainer>
-			<RightContainer>
-				<Checkbox status="unchecked" color={primaryColor}/>
-				<AutoHeightImage source={ImagePaths.components.icons.handle} width={24}/>
-			</RightContainer>
-		</ListItem>
-	)
-
 const renderStoryList =
 	<StoryListWrapper>
 
@@ -127,7 +55,9 @@ const renderStoryList =
 		</Header>
 
 		<List>
-			<RenderLists/>
+			{StoryData.map(data =>
+				<ListItem key={data.index} prefix={data.index} title={data.title} caption={data.author} right="both"/>
+			)}
 		</List>
 
 	</StoryListWrapper>

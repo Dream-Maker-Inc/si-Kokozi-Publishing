@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from '@emotion/native'
+import {StoryData} from '../../../../../data/Data'
 import {FlatList, SafeAreaView} from 'react-native'
-import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../../../common/Colors'
 import CustomHeader from '../../../../../components/global/header/CustomHeader'
+import ListItem from '../../../../../components/list-items/components/ListItem'
+import {BeigeSecondColor, BeigeThirdColor, primaryColor} from '../../../../../common/Colors'
 import renderGuestList from '../../../../../components/sub/story/share/select-story/RenderGuestList'
-import {PlaylistData} from '../../data/playlist'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
@@ -14,35 +15,6 @@ const PageWrapper = styled(SafeAreaView)`
 const StoryList = styled(FlatList)`
   border-top-width: 1px;
   border-top-color: ${BeigeThirdColor};
-`
-
-const ListItemWrapper = styled.View`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  width: 100%;
-  height: 68px;
-  border-bottom-width: 1px;
-  border-bottom-color: ${BeigeThirdColor};
-`
-
-const TextContainer = styled.View`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-  margin-left: 24px;
-`
-
-const TitleText = styled.Text`
-  font-size: 15px;
-  color: ${navyColor};
-`
-
-const NameText = styled.Text`
-  font-size: 12px;
-  color: ${BeigeFifthColor};
 `
 
 const ButtonContainer = styled.View`
@@ -71,16 +43,17 @@ const ButtonText = styled.Text`
   font-size: 16px;
 `
 
-const StoryListItem = ({item}) =>
-	<ListItemWrapper>
-		<TextContainer>
-			<TitleText>{item.title}</TitleText>
-			<NameText>{item.name}</NameText>
-		</TextContainer>
-	</ListItemWrapper>
-
 const renderStoryList =
-	<StoryList data={PlaylistData} renderItem={StoryListItem}/>
+	<StoryList data={StoryData}
+			   renderItem={({item}) =>
+				   <ListItem
+					   title={item.title}
+					   caption={item.author}
+					   time={item.time}
+					   right="checkbox"
+				   />
+			   }
+	/>
 
 const SelectStory = () =>
 	<PageWrapper>
