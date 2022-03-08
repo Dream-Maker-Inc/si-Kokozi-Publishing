@@ -1,6 +1,6 @@
 import React from 'react'
-import PlaylistImport from './src/screens/story/no-blank/playlist/PlaylistImport'
+import SettingsTopTabs from './src/screens/mypage/notification/no-blank/SettingsTopTabs'
 
-const App = () => <PlaylistImport/>
+const App = () => <SettingsTopTabs/>
 
 export default App

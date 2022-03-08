@@ -36,6 +36,7 @@ export const StoryData = [
 export const PlaylistData = [
 	{
 		index: 1,
+		thumbnail: ImagePaths.arti.all.thumbnail,
 		name: '이야기 플레이리스트',
 		date: '2021.12.28',
 		count: 6,
@@ -43,6 +44,7 @@ export const PlaylistData = [
 	},
 	{
 		index: 2,
+		thumbnail: ImagePaths.arti.all.thumbnail,
 		name: '게스트 플레이리스트',
 		date: '2021.12.28',
 		count: 6,
@@ -50,6 +52,7 @@ export const PlaylistData = [
 	},
 	{
 		index: 3,
+		thumbnail: ImagePaths.arti.all.thumbnail,
 		name: '동요 플레이리스트',
 		date: '2021.12.28',
 		count: 6,

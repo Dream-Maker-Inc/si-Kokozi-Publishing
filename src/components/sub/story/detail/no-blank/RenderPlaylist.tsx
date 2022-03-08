@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor} from '../../../../../common/Colors'
 import {ScrollView} from 'react-native'
-import AutoHeightImage from 'react-native-auto-height-image'
-import ImagePaths from '../../../../../common/ImagePaths'
+import {PlaylistData} from '../../../../../data/Data'
+import BigVerticalListItem from '../../../../list-items/components/BigVerticalListItem'
+import {BeigeFifthColor, BeigeSecondColor, navyColor} from '../../../../../common/Colors'
 
 const PlaylistWrapper = styled.View`
   width: 100%;
@@ -35,29 +35,6 @@ const PlaylistScrollView = styled(ScrollView)`
   margin-top: 24px;
 `
 
-const PlaylistItemWrapper = styled.View`
-  display: flex;
-  align-items: center;
-  margin-right: 16px;
-`
-
-const PlaylistItemImage = styled(AutoHeightImage)`
-  border-radius: 4px;
-  border: 1px solid ${BeigeThirdColor};
-`
-
-const PlaylistItemText = styled.Text`
-  font-size: 13px;
-  margin-top: 8px;
-  color: ${navyColor};
-`
-
-const renderPlaylistItem =
-	<PlaylistItemWrapper>
-		<PlaylistItemImage source={ImagePaths.kokoziHouse.thumbnail} width={112}/>
-		<PlaylistItemText>이야기 플레이리스트</PlaylistItemText>
-	</PlaylistItemWrapper>
-
 const renderPlaylist =
 	<PlaylistWrapper>
 		<TitleContainer>
@@ -65,10 +42,9 @@ const renderPlaylist =
 			<CountText>4개</CountText>
 		</TitleContainer>
 		<PlaylistScrollView horizontal>
-			{renderPlaylistItem}
-			{renderPlaylistItem}
-			{renderPlaylistItem}
-			{renderPlaylistItem}
+			{PlaylistData.map(item =>
+				<BigVerticalListItem image={item.thumbnail} title={item.name}/>
+			)}
 		</PlaylistScrollView>
 	</PlaylistWrapper>
 

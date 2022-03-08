@@ -54,7 +54,7 @@ const Arrow = styled(AutoHeightImage)`
 `
 
 const RenderItem = ({item}) =>
-	<ListItem key={item.title}>
+	<ListItem key={item.index}>
 		<ItemTextContainer>
 			<ItemDate>{item.date}</ItemDate>
 			<ItemTitle>{item.title}</ItemTitle>
