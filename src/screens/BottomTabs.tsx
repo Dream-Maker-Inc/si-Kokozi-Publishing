@@ -8,6 +8,7 @@ import KokoziHouse from './kokozi-house/KokoziHouse'
 import MyPage from './mypage/MyPage'
 import AttiTopTabs from './Arti/no-blank/TopTabs'
 import StoryTopTabs from './story/no-blank/StoryTopTabs'
+import BlankArtiTopTabs from './Arti/blank/BlankTopTabs';
 
 const Tab = createBottomTabNavigator()
 
@@ -62,7 +63,7 @@ const BottomTabs = () =>
 			})}
 		>
 			<Tab.Screen name="코코지 하우스" component={KokoziHouse}/>
-			<Tab.Screen name="아띠" component={AttiTopTabs}/>
+			<Tab.Screen name="아띠" component={BlankArtiTopTabs}/>
 			<Tab.Screen name="이야기" component={StoryTopTabs}/>
 			<Tab.Screen name="마이페이지" component={MyPage}/>
 		</Tab.Navigator>
