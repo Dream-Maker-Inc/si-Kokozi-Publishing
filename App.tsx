@@ -1,6 +1,6 @@
 import React from 'react'
-import PlaylistDetail from './src/screens/story/no-blank/playlist/PlaylistDetail'
+import PlaylistEdit from './src/screens/story/no-blank/playlist/PlaylistEdit'
 
-const App = () => <PlaylistDetail/>
+const App = () => <PlaylistEdit/>
 
 export default App
