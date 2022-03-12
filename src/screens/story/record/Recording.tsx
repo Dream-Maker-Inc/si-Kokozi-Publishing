@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {Image, SafeAreaView} from 'react-native'
+import {SafeAreaView} from 'react-native'
 import ImagePaths from '../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
 import {BeigeSecondColor, primaryColor} from '../../../common/Colors'
@@ -33,9 +33,9 @@ const TimeText = styled.Text`
 
 const Recording = () =>
 	<PageWrapper>
-		<CustomHeader statusBarColor="dark" left="back" title="확인하기"/>
+		<CustomHeader statusBarColor="dark" title="녹음중" right="close"/>
 		<RecordingAnimationContainer>
-			<Image resizeMode="center" source={ImagePaths.story.record.recording}/>
+			<AutoHeightImage source={ImagePaths.story.record.recording} width={400}/>
 		</RecordingAnimationContainer>
 		<ControllerContainer>
 			<TimeText>3:05</TimeText>

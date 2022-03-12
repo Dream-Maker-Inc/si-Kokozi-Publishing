@@ -1,6 +1,6 @@
 import React from 'react'
-import SelectStory from './src/screens/story/no-blank/story/share/SelectStory'
+import Recording from './src/screens/story/record/Recording'
 
-const App = () => <SelectStory/>
+const App = () => <Recording/>
 
 export default App
