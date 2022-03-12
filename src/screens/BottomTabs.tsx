@@ -6,9 +6,8 @@ import {BeigeSecondColor, primaryColor} from '../common/Colors'
 import ImagePaths from '../common/ImagePaths'
 import KokoziHouse from './kokozi-house/KokoziHouse'
 import MyPage from './mypage/MyPage'
-import AttiTopTabs from './Arti/no-blank/TopTabs'
 import StoryTopTabs from './story/no-blank/StoryTopTabs'
-import BlankArtiTopTabs from './Arti/blank/BlankTopTabs';
+import BlankArtiTopTabs from './Arti/blank/BlankTopTabs'
 
 const Tab = createBottomTabNavigator()
 

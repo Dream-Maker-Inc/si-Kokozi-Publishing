@@ -1,7 +1,6 @@
 import React from 'react'
-import SettingsTopTabs from './src/screens/mypage/notification/no-blank/SettingsTopTabs'
-import BottomTabs from './src/screens/BottomTabs';
+import Edit from './src/screens/Arti/no-blank/edit/Edit'
 
-const App = () => <BottomTabs/>
+const App = () => <Edit/>
 
 export default App

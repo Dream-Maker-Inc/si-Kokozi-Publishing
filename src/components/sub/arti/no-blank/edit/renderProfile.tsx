@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/native'
-import {Text, TouchableOpacity} from 'react-native'
+import {Text} from 'react-native'
 import ImagePaths from '../../../../../common/ImagePaths'
 import {BeigeFirstColor} from '../../../../../common/Colors'
 import AutoHeightImage from 'react-native-auto-height-image'
@@ -39,9 +39,7 @@ const renderProfile =
 		<Thumbnail width={110} source={ImagePaths.arti.detail.thumbnail}/>
 
 		<NameText>매직아띠
-			<TouchableOpacity>
-				<EditIcon width={24} source={ImagePaths.components.icons.edit}/>
-			</TouchableOpacity>
+			<EditIcon width={24} source={ImagePaths.components.icons.edit}/>
 		</NameText>
 
 		<CaptionText>플레이리스트 A</CaptionText>
