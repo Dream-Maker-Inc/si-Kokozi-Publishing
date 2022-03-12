@@ -11,7 +11,6 @@ export const ComponentContainer = styled.View`
   flex-direction: row;
   width: 90%;
   margin: 40px auto 8px;
-  padding: 24px 8px;
   height: 64px;
   border-radius: 12px;
   background-color: ${BeigeThirdColor};
@@ -27,7 +26,7 @@ const TimeContainer = styled.View`
 
 const styles = StyleSheet.create({
 	containerStyle: {
-		marginLeft: 16
+		flex: 1
 	},
 	selectorStyle: {
 		backgroundColor: primaryColor

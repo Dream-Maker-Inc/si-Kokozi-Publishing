@@ -1,6 +1,6 @@
 import React from 'react'
-import RemoveStory from './src/screens/story/no-blank/story/RemoveStory'
+import SelectStory from './src/screens/story/no-blank/story/share/SelectStory'
 
-const App = () => <RemoveStory/>
+const App = () => <SelectStory/>
 
 export default App

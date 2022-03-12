@@ -6,7 +6,7 @@ import {navyColor} from '../../../common/Colors'
 const ItemContainer = styled.TouchableOpacity`
   display: flex;
   align-items: center;
-  width: 112px;
+  width: 56px;
   margin: 8px;
 `
 

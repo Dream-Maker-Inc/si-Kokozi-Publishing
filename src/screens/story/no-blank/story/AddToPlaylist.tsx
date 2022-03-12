@@ -40,18 +40,22 @@ const RemoveButtonText = styled.Text`
   color: white;
 `
 
+const StyledList = styled(FlatList)`
+  padding: 16px;
+`
+
 const AddToPlaylist = () =>
 	<PageWrapper>
 		<CustomHeader statusBarColor="dark" left="back" title="플레이리스트에 담기"/>
-		<FlatList data={PlaylistData}
-				  renderItem={({item}) =>
-					  <ListItem
-						  thumbnail={ImagePaths.arti.all.thumbnail}
-						  title={item.title}
-						  caption={item.date}
-						  right="checkbox"
-					  />
-				  }
+		<StyledList data={PlaylistData}
+			renderItem={({item}) =>
+				<ListItem
+					thumbnail={ImagePaths.arti.all.thumbnail}
+					title={item.title}
+					caption={item.date + '  ' + item.count + '개  ' + item.time + '분'}
+					right="checkbox"
+				/>
+			}
 		/>
 		<ButtonWrapper>
 			<RemoveButton>

@@ -6,7 +6,8 @@ import ImagePaths from '../../../../../common/ImagePaths'
 import VerticalListItem from '../../../../list-items/components/VerticalListItem'
 
 const ListWrapper = styled.View`
-  height: 130px;
+  height: 120px;
+  padding: 8px;
 `
 
 const renderGuestList =
