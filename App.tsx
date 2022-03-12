@@ -1,6 +1,6 @@
 import React from 'react'
-import Recording from './src/screens/story/record/Recording'
+import NewPlaylist from './src/screens/story/no-blank/playlist/NewPlaylist'
 
-const App = () => <Recording/>
+const App = () => <NewPlaylist/>
 
 export default App

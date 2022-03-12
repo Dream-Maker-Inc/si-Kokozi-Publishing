@@ -31,8 +31,12 @@ const CameraIcon = styled(AutoHeightImage)`
   position: absolute;
 `
 
-const TitleInput = styled(TextInput)`
+const TitleContainer = styled.View`
+  margin: 0 auto;
   width: 50%;
+`
+
+const TitleInput = styled(TextInput)`
   height: 30px;
   margin-top: 24px;
   border-bottom-width: 1px;
@@ -43,8 +47,19 @@ const TitleInput = styled(TextInput)`
   color: ${navyColor};
 `
 
-const CaptionInput = styled(TextInput)`
+const CounterText = styled.Text`
+  color: ${BeigeForthColor};
+  margin-top: 2px;
+  font-size: 11px;
+  text-align: right;
+`
+
+const CaptionContainer = styled.View`
+  margin: 0 auto;
   width: 70%;
+`
+
+const CaptionInput = styled(TextInput)`
   height: 20px;
   margin-top: 26px;
   font-size: 13px;
@@ -60,8 +75,16 @@ const renderPlaylistInformation =
 			<ImagePreview source={ImagePaths.arti.all.thumbnail} width={120}/>
 			<CameraIcon source={ImagePaths.components.icons.camera} width={30}/>
 		</ImageContainer>
-		<TitleInput selectionColor={navyColor}/>
-		<CaptionInput selectionColor={navyColor}/>
+
+		<TitleContainer>
+			<TitleInput selectionColor={navyColor}/>
+			<CounterText>10/20</CounterText>
+		</TitleContainer>
+
+		<CaptionContainer>
+			<CaptionInput selectionColor={navyColor}/>
+			<CounterText>27/160</CounterText>
+		</CaptionContainer>
 	</InformationContainer>
 
 export default renderPlaylistInformation
