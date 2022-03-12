@@ -3,7 +3,7 @@ import styled from '@emotion/native'
 import {Text, TouchableOpacity} from 'react-native'
 import ImagePaths from '../../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor, primaryColor} from '../../../../../common/Colors'
+import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, primaryColor} from '../../../../../common/Colors'
 
 export const StoryWrapper = styled.View`
   flex: 1;
@@ -18,10 +18,16 @@ export const Header = styled.View`
   justify-content: space-between;
 `
 
+export const TitleView = styled.View`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+
 export const TitleText = styled(Text)`
-  font-size: 17px;
-  font-weight: bold;
-  color: ${navyColor};
+  font-size: 13px;
+  color: ${BeigeFifthColor};
+  margin-left: 4px;
 `
 
 export const RunningTimeText = styled(Text)`
@@ -73,7 +79,10 @@ const renderStory =
 	<StoryWrapper>
 
 		<Header>
-			<TitleText>이야기</TitleText>
+			<TitleView>
+				<AutoHeightImage source={ImagePaths.components.icons.playlist} width={24}/>
+				<TitleText>플레이리스트 교체</TitleText>
+			</TitleView>
 			<RunningTimeText>총 46분 37초</RunningTimeText>
 		</Header>
 

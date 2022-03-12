@@ -16,7 +16,7 @@ export const StoryListWrapper = styled.View`
 
 const Edit = () =>
 	<>
-		<CustomHeader statusBarColor="light" left="back" title="아띠 프로필" right="edit"/>
+		<CustomHeader statusBarColor="light" left="back" title="아띠 프로필" right="complete"/>
 
 		<ScrollView>
 			{renderProfile}
