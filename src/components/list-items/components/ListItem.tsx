@@ -89,14 +89,14 @@ const ListItem = (props: ListItemModel) =>
 			{props.newIcon && <NewIcon source={ImagePaths.components.icons.new} width={41}/>}
 			{props.time && <TimeText>{props.time}</TimeText>}
 			{props.right === 'more' && <AutoHeightImage source={ImagePaths.components.icons.moreBeige} width={34}/>}
-			{props.right === 'checkbox' && <Checkbox color={primaryColor} status="unchecked"/>}
+			{props.right === 'checkbox' && <Checkbox color={primaryColor} status="checked"/>}
 			{props.right === 'handler' && <AutoHeightImage source={ImagePaths.components.icons.handle} width={24}/>}
 			{props.right === 'play' && <AutoHeightImage source={ImagePaths.components.icons.play} width={24}/>}
 			{props.right === 'arrow' && <AutoHeightImage source={ImagePaths.components.icons.arrowRight} width={24}/>}
 
 			{props.right === 'both' &&
 				<>
-					<Checkbox color={primaryColor} status="unchecked"/>
+					<Checkbox color={primaryColor} status="checked"/>
 					<AutoHeightImage source={ImagePaths.components.icons.handle} width={24}/>
 				</>
 			}

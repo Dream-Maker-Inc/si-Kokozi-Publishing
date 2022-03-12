@@ -1,6 +1,6 @@
 import React from 'react'
-import Edit from './src/screens/Arti/no-blank/edit/Edit'
+import PlaylistImport from './src/screens/story/no-blank/playlist/PlaylistImport'
 
-const App = () => <Edit/>
+const App = () => <PlaylistImport/>
 
 export default App
