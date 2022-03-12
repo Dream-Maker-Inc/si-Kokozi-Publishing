@@ -1,6 +1,6 @@
 import React from 'react'
-import Edit from './src/screens/Arti/no-blank/edit/Edit'
+import RemoveStory from './src/screens/story/no-blank/story/RemoveStory'
 
-const App = () => <Edit/>
+const App = () => <RemoveStory/>
 
 export default App

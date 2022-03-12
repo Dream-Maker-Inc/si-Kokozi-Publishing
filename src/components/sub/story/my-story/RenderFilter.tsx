@@ -34,14 +34,14 @@ const RenderFilter = () => {
 	return <FilterWrapper>
 		<StoryFilterContainer>
 			<StoryFilter selectedValue={storyFilter} dropdownIconColor={BeigeFifthColor} mode="dropdown">
-				<Picker.Item label="AAAA" value="AAAA"/>
-				<Picker.Item label="AAAA" value="AAAA"/>
+				<Picker.Item label="모든 이야기" value="모든 이야기"/>
+				<Picker.Item label="모든 이야기" value="모든 이야기"/>
 			</StoryFilter>
 		</StoryFilterContainer>
 		<StoryFilterContainer>
 			<StoryFilter selectedValue={storyFilter} dropdownIconColor={BeigeFifthColor} mode="dropdown">
-				<Picker.Item label="AAAA" value="AAAA"/>
-				<Picker.Item label="AAAA" value="AAAA"/>
+				<Picker.Item label="최신순" value="최신순"/>
+				<Picker.Item label="최신순" value="최신순"/>
 			</StoryFilter>
 		</StoryFilterContainer>
 	</FilterWrapper>
