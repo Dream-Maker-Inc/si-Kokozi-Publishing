@@ -3,7 +3,7 @@
 전체 진행 상황 :
 
 - 전체 화면 개수 `71`
-- 완성 화면 개수 `68`
+- 완성 화면 개수 `70`
 
 ### Pre-login
 
@@ -119,13 +119,13 @@
     - [x] **~~모든 항목을 채웠을 때~~** `./src/screens/story/no-blank/playlist/NewPlaylist`
 
 
-- J. 플레이리스트 삭제
-    - [ ] 플레이리스트 삭제
+- J. **~~플레이리스트 삭제~~**
+    - [x] **~~플레이리스트 삭제~~**
 
 
-- L. 플레이리스트 편집
-    - [ ] 플레이리스트
-    - [ ] 플레이리스트 편집
+- L. **~~플레이리스트 편집~~**
+    - [x] **~~플레이리스트~~** `./src/screens/story/no-blank/playlist/PlaylistDetail`
+    - [x] **~~플레이리스트 편집~~** `./src/screens/story/no-blank/playlist/PlaylistEdit`
 
 ### 마이페이지
 
