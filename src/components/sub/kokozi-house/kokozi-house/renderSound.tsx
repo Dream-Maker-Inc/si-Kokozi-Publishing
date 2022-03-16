@@ -1,10 +1,10 @@
 import AutoHeightImage from 'react-native-auto-height-image'
 import ImagePaths from '../../../../common/ImagePaths'
-import MultiSlider from '@ptomasroos/react-native-multi-slider'
 import {BeigeForthColor, BeigeThirdColor, primaryColor} from '../../../../common/Colors'
 import React from 'react'
 import styled from '@emotion/native'
 import {StyleSheet} from 'react-native'
+import {Slider} from '@miblanchard/react-native-slider'
 
 export const ComponentContainer = styled.View`
   display: flex;
@@ -21,16 +21,14 @@ export const ComponentContainer = styled.View`
 
 const styles = StyleSheet.create({
 	containerStyle: {
+		width: '86%',
 		marginLeft: 16
 	},
-	selectorStyle: {
-		backgroundColor: primaryColor
-	},
-	markerStyle: {
+	thumbStyle: {
 		width: 24,
 		height: 24,
-		marginTop: 6,
 		backgroundColor: 'white',
+		borderRadius: 20,
 		shadowColor: '#999',
 		shadowOffset: {
 			width: 0,
@@ -53,10 +51,15 @@ export const renderSound =
 			width={24}
 			source={ImagePaths.components.icons.audio}
 		/>
-		<MultiSlider
+		<Slider
+			animateTransitions
 			containerStyle={styles.containerStyle}
-			selectedStyle={styles.selectorStyle}
-			markerStyle={styles.markerStyle}
+			minimumTrackTintColor={primaryColor}
+			thumbStyle={styles.thumbStyle}
+			thumbTouchSize={{
+				width: 24,
+				height: 24,
+			}}
 			trackStyle={styles.trackStyle}
 		/>
 	</ComponentContainer>

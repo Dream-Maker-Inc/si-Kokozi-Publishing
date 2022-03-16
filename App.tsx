@@ -1,6 +1,6 @@
 import React from 'react'
-import PlaylistEdit from './src/screens/story/no-blank/playlist/PlaylistEdit'
+import BottomTabs from './src/screens/BottomTabs'
 
-const App = () => <PlaylistEdit/>
+const App = () => <BottomTabs/>
 
 export default App

@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
 	selectorStyle: {
 		backgroundColor: primaryColor
 	},
-	markerStyle: {
+	thumbStyle: {
 		width: 24,
 		height: 24,
 		marginTop: 6,
@@ -58,7 +58,7 @@ export const renderPlayBar =
 			<MultiSlider
 				containerStyle={styles.containerStyle}
 				selectedStyle={styles.selectorStyle}
-				markerStyle={styles.markerStyle}
+				markerStyle={styles.thumbStyle}
 				trackStyle={styles.trackStyle}
 			/>
 		</ComponentContainer>
