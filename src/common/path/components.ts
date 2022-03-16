@@ -2,6 +2,7 @@ const PATH = 'kokozi/assets/components/'
 
 const componentsPaths = {
 	icons: {
+		arrowDown: require(PATH + 'icons/arrow-down.png'),
 		arrowRight: require(PATH + 'icons/arrow-right.png'),
 		audio: require(PATH + 'icons/audio.png'),
 		back: require(PATH + 'icons/back.png'),

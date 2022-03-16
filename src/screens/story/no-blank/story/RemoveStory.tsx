@@ -4,8 +4,8 @@ import {MyStoryData} from '../data/story'
 import {SafeAreaView} from 'react-native'
 import CustomHeader from '../../../../components/global/header/CustomHeader'
 import ListItem from '../../../../components/list-items/components/ListItem'
-import RenderFilter from '../../../../components/sub/story/my-story/RenderFilter'
 import {BeigeSecondColor, BeigeThirdColor, PlumColor} from '../../../../common/Colors'
+import Picker from '../../../../components/global/picker/Picker'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -41,10 +41,18 @@ const RemoveButtonText = styled.Text`
   color: white;
 `
 
+const PickerWrapper = styled.View`
+  display: flex;
+  flex-direction: row;
+`
+
 const RemoveStory = () =>
 	<PageWrapper>
 		<CustomHeader statusBarColor="dark" left="back" title="이야기 삭제"/>
-		<RenderFilter/>
+		<PickerWrapper>
+			<Picker defaultText="모든 이야기"/>
+			<Picker defaultText="최신순"/>
+		</PickerWrapper>
 		{MyStoryData.map(data =>
 			<ListItem title={data.title} caption={data.host} time={data.time} right="checkbox"/>
 		)}

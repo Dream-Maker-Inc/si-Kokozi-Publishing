@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
-import {SafeAreaView, Text} from 'react-native'
-import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor} from '../../../common/Colors'
 import styled from '@emotion/native'
-import {Picker} from '@react-native-picker/picker'
+import React from 'react'
+import {SafeAreaView, Text} from 'react-native'
 import CustomHeader from '../../../components/global/header/CustomHeader'
+import {BeigeFifthColor, BeigeSecondColor, BeigeThirdColor, navyColor} from '../../../common/Colors'
+import AutoHeightImage from 'react-native-auto-height-image'
+import ImagePaths from '../../../common/ImagePaths'
 
 const PageWrapper = styled(SafeAreaView)`
   flex: 1;
@@ -34,33 +35,34 @@ const ItemText = styled(Text)`
   color: ${navyColor};
 `
 
-const PickerWrapper = styled.View`
-  display: flex;
-  justify-content: center;
-  width: 100px;
-  height: 40px;
-  margin-left: 20px;
-  border-radius: 30px;
-  overflow: hidden;
-`
-
-const HousePicker = styled(Picker)`
-  width: 100%;
-  height: 100%;
-  border-radius: 40px;
-  background-color: ${BeigeThirdColor};
-`
-
 const CaptionText = styled(Text)`
   margin-top: 8px;
   font-size: 12px;
   color: ${BeigeFifthColor};
 `
 
-const SleepingModeSetting = () => {
-	const [selectedLanguage, setSelectedLanguage] = useState()
+const PickerWrapper = styled.TouchableOpacity`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 67px;
+  height: 35px;
+  margin-left: 15px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: ${BeigeThirdColor};
+`
 
-	return <>
+const PickerText = styled.Text`
+  font-size: 13px;
+  margin-right: 8px;
+  color: ${BeigeFifthColor};
+`
+
+const SleepingModeSetting = () =>
+	<>
 		<CustomHeader statusBarColor="dark" title="코코지 하우스 설정" left="back"/>
 
 		<PageWrapper>
@@ -69,16 +71,8 @@ const SleepingModeSetting = () => {
 				<ItemText>잠자기 모드 시간 설정</ItemText>
 
 				<PickerWrapper>
-					<HousePicker
-						selectedValue={selectedLanguage}
-						dropdownIconColor={BeigeFifthColor}
-						mode="dropdown"
-					>
-						<Picker.Item color={BeigeFifthColor} label="3분" value="kokozi"/>
-						<Picker.Item color={BeigeFifthColor} label="5분" value="kokozi"/>
-						<Picker.Item color={BeigeFifthColor} label="10분" value="kokozi"/>
-						<Picker.Item color={BeigeFifthColor} label="잠자기 모드를 설정하지 않음" value="kokozi"/>
-					</HousePicker>
+					<PickerText>3분</PickerText>
+					<AutoHeightImage source={ImagePaths.components.icons.arrowDown} width={16}/>
 				</PickerWrapper>
 			</ContentContainer>
 
@@ -86,6 +80,6 @@ const SleepingModeSetting = () => {
 			<CaptionText>다락방 지붕을 터치하면 잠자기 모드를 해제할 수 있어요.</CaptionText>
 		</PageWrapper>
 	</>
-}
+
 
 export default SleepingModeSetting

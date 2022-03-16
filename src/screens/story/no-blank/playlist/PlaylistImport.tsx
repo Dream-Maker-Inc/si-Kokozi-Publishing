@@ -4,9 +4,9 @@ import {StoryData} from '../../../../data/Data'
 import {FlatList, SafeAreaView} from 'react-native'
 import CustomHeader from '../../../../components/global/header/CustomHeader'
 import renderTitle from '../../../../components/sub/story/playlist/playlist-import/RenderTitle'
-import renderPickers from '../../../../components/sub/story/playlist/playlist-import/RenderPickers'
 import {BeigeSecondColor, BeigeThirdColor, primaryColor} from '../../../../common/Colors'
 import ListItem from '../../../../components/list-items/components/ListItem'
+import Picker from '../../../../components/global/picker/Picker'
 
 const PageWrapper = styled(SafeAreaView)`
   position: relative;
@@ -50,12 +50,22 @@ const ButtonText = styled.Text`
   font-weight: bold;
 `
 
+const PickerWrapper = styled.View`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+`
+
 const PlaylistImport = () =>
 	<PageWrapper>
 
 		<CustomHeader statusBarColor="dark" left="back" title="불러오기"/>
 		{renderTitle}
-		{renderPickers}
+		
+		<PickerWrapper>
+			<Picker defaultText="모든 이야기"/>
+			<Picker defaultText="최신순"/>
+		</PickerWrapper>
 
 		<PlayList
 			data={StoryData}

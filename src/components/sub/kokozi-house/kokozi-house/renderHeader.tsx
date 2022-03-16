@@ -1,8 +1,8 @@
-import styled from '@emotion/native'
-import RenderPicker from './RenderHousePicker'
-import {TouchableOpacity} from 'react-native'
-import ImagePaths from '../../../../common/ImagePaths'
 import React from 'react'
+import styled from '@emotion/native'
+import {TouchableOpacity} from 'react-native'
+import Picker from '../../../global/picker/Picker'
+import ImagePaths from '../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
 
 const HeaderContainer = styled.View`
@@ -19,7 +19,7 @@ const QuestionIcon = styled(AutoHeightImage)`
 
 export const renderHeader =
 	<HeaderContainer>
-		<RenderPicker/>
+		<Picker defaultText="코코지 하우스"/>
 		<TouchableOpacity>
 			<QuestionIcon width={32} source={ImagePaths.components.icons.question}/>
 		</TouchableOpacity>

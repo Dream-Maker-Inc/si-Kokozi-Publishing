@@ -1,6 +1,6 @@
 import React from 'react'
-import RecordCheck from './src/screens/story/record/RecordCheck'
+import Help from './src/screens/mypage/information/Help'
 
-const App = () => <RecordCheck/>
+const App = () => <Help/>
 
 export default App
