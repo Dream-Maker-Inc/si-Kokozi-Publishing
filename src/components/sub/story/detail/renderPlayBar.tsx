@@ -1,8 +1,8 @@
-import MultiSlider from '@ptomasroos/react-native-multi-slider'
 import {BeigeForthColor, BeigeThirdColor, primaryColor} from '../../../../common/Colors'
 import React from 'react'
 import styled from '@emotion/native'
 import {StyleSheet, Text} from 'react-native'
+import {Slider} from '@miblanchard/react-native-slider'
 
 export const ComponentContainer = styled.View`
   display: flex;
@@ -26,16 +26,13 @@ const TimeContainer = styled.View`
 
 const styles = StyleSheet.create({
 	containerStyle: {
-		flex: 1
-	},
-	selectorStyle: {
-		backgroundColor: primaryColor
+		width: '96%',
 	},
 	thumbStyle: {
 		width: 24,
 		height: 24,
-		marginTop: 6,
 		backgroundColor: 'white',
+		borderRadius: 20,
 		shadowColor: '#999',
 		shadowOffset: {
 			width: 0,
@@ -55,10 +52,15 @@ const styles = StyleSheet.create({
 export const renderPlayBar =
 	<>
 		<ComponentContainer>
-			<MultiSlider
+			<Slider
+				animateTransitions
 				containerStyle={styles.containerStyle}
-				selectedStyle={styles.selectorStyle}
-				markerStyle={styles.thumbStyle}
+				minimumTrackTintColor={primaryColor}
+				thumbStyle={styles.thumbStyle}
+				thumbTouchSize={{
+					width: 24,
+					height: 24,
+				}}
 				trackStyle={styles.trackStyle}
 			/>
 		</ComponentContainer>

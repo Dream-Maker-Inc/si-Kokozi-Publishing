@@ -14,7 +14,6 @@
     "@emotion/native": "^11.0.0",
     "@emotion/react": "^11.7.1",
     "@miblanchard/react-native-slider": "^2.1.0",
-    "@ptomasroos/react-native-multi-slider": "^2.2.2",
     "@react-native-community/slider": "4.1.12",
     "@react-native-masked-view/masked-view": "0.2.6",
     "@react-native-picker/picker": "^2.2.1",

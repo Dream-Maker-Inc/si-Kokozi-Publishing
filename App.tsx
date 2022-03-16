@@ -1,6 +1,6 @@
 import React from 'react'
-import BottomTabs from './src/screens/BottomTabs'
+import RecordCheck from './src/screens/story/record/RecordCheck'
 
-const App = () => <BottomTabs/>
+const App = () => <RecordCheck/>
 
 export default App
