@@ -3,7 +3,7 @@ import styled from '@emotion/native'
 import {Checkbox} from 'react-native-paper'
 import ImagePaths from '../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {BeigeFifthColor, BeigeThirdColor, navyColor, primaryColor} from '../../../common/Colors'
+import {BeigeFifthColor, BeigeForthColor, BeigeThirdColor, navyColor, primaryColor} from '../../../common/Colors'
 
 const ItemContainer = styled.TouchableOpacity`
   display: flex;
@@ -89,14 +89,15 @@ const ListItem = (props: ListItemModel) =>
 			{props.newIcon && <NewIcon source={ImagePaths.components.icons.new} width={41}/>}
 			{props.time && <TimeText>{props.time}</TimeText>}
 			{props.right === 'more' && <AutoHeightImage source={ImagePaths.components.icons.moreBeige} width={34}/>}
-			{props.right === 'checkbox' && <Checkbox color={primaryColor} status="checked"/>}
+			{props.right === 'checkbox' &&
+				<Checkbox color={primaryColor} status="checked" uncheckedColor={BeigeForthColor}/>}
 			{props.right === 'handler' && <AutoHeightImage source={ImagePaths.components.icons.handle} width={24}/>}
 			{props.right === 'play' && <AutoHeightImage source={ImagePaths.components.icons.play} width={24}/>}
 			{props.right === 'arrow' && <AutoHeightImage source={ImagePaths.components.icons.arrowRight} width={24}/>}
 
 			{props.right === 'both' &&
 				<>
-					<Checkbox color={primaryColor} status="checked"/>
+					<Checkbox color={primaryColor} status="unchecked" uncheckedColor={BeigeForthColor}/>
 					<AutoHeightImage source={ImagePaths.components.icons.handle} width={24}/>
 				</>
 			}

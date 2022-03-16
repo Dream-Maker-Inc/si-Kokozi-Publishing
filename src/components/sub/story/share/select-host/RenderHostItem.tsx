@@ -4,7 +4,7 @@ import {Checkbox} from 'react-native-paper'
 import {Text, TouchableOpacity} from 'react-native'
 import ImagePaths from '../../../../../common/ImagePaths'
 import AutoHeightImage from 'react-native-auto-height-image'
-import {BeigeThirdColor, navyColor, primaryColor} from '../../../../../common/Colors'
+import {BeigeForthColor, BeigeThirdColor, navyColor, primaryColor} from '../../../../../common/Colors'
 
 const HostItemWrapper = styled(TouchableOpacity)`
   display: flex;
@@ -51,7 +51,7 @@ const RenderHostItem = ({item}) =>
 			<TextContainer>
 				<TitleText>{item.name}</TitleText>
 			</TextContainer>
-			<Checkbox color={primaryColor} status="checked"/>
+			<Checkbox color={primaryColor} status="checked" uncheckedColor={BeigeForthColor}/>
 		</ItemContents>
 
 	</HostItemWrapper>
