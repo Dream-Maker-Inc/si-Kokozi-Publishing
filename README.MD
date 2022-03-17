@@ -120,7 +120,8 @@
 
 
 - J. **~~플레이리스트 삭제~~**
-    - [x] **~~플레이리스트 삭제~~** `./src/screens/story/no-blank/story/RemoveStory`
+    - [x] **~~플레이리스트 삭제~~** `./src/screens/story/no-blank/playlist/PlaylistRemove.tsx` (`StoryTopTabs` 파일의
+      33번줄 `component` 를 `PlaylistRemove`로 변경해야 함)
 
 
 - L. **~~플레이리스트 편집~~**
