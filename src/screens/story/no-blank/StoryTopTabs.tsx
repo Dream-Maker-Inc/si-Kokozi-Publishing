@@ -5,8 +5,8 @@ import {BeigeSecondColor, primaryColor} from '../../../common/Colors'
 import CustomHeader from '../../../components/global/header/CustomHeader'
 import BottomPlayer from '../../../components/global/player/BottomPlayer'
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
-import PlaylistMain from './playlist/PlaylistMain'
 import StoryMain from './story/StoryMain'
+import PlaylistRemove from './playlist/PlaylistRemove'
 
 const Tab = createMaterialTopTabNavigator()
 
@@ -30,7 +30,7 @@ const StoryTopTabs = ({navigation}) => {
 			}}
 		>
 			<Tab.Screen name="이야기" component={StoryMain}/>
-			<Tab.Screen name="플레이리스트" component={PlaylistMain}/>
+			<Tab.Screen name="플레이리스트" component={PlaylistRemove}/>
 		</Tab.Navigator>
 		<BottomPlayer/>
 	</>
